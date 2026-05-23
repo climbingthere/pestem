@@ -1,315 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Pestem -- Local Pest Control in Warren County NJ</title>
-    <meta name="description" content="Pestem is a locally owned pest control company serving Warren County NJ. Prevention-first approach, pet-safe products, and a commitment to our community.">
-    <link rel="icon" type="image/png" href="favicon.png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="About Pestem -- Local Pest Control in Warren County NJ">
-    <meta property="og:description" content="Locally owned pest control built on prevention, safety, and Warren County community values.">
-    <meta property="og:site_name" content="Pestem Pest Control">
-
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Urbanist', sans-serif; font-weight: 400; color: #111827; background: #ffffff; line-height: 1.6; }
-        a { text-decoration: none; color: inherit; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        h1, h2, h3 { font-family: 'Urbanist', sans-serif; font-weight: 900; letter-spacing: -0.5px; }
-        img { max-width: 100%; height: auto; }
-
-        .btn-green { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; }
-        .btn-green:hover { background: #15803d; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4); }
-
-        /* Nav */
-        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #ffffff; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
-        .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 14px 24px; }
-        .nav-logo { font-size: 26px; font-weight: 900; color: #0f172a; letter-spacing: -0.5px; }
-        .nav-logo .green { color: #16a34a; }
-        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-        .nav-links a { color: #111827; font-size: 15px; font-weight: 600; transition: color 0.2s; }
-        .nav-links a:hover { color: #16a34a; }
-        .nav-btn { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 14px; padding: 10px 22px; border-radius: 8px; transition: all 0.3s ease; }
-        .nav-btn:hover { background: #15803d; transform: translateY(-2px); }
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; background: none; border: none; padding: 4px; }
-        .hamburger span { width: 24px; height: 2px; background: #0f172a; transition: 0.3s; display: block; }
-        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #ffffff; z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a { color: #0f172a; font-size: 20px; font-weight: 600; }
-        .mobile-menu a:hover { color: #16a34a; }
-
-        /* Hero */
-        .page-hero { position: relative; padding: 150px 0 90px; overflow: hidden; }
-        .page-hero-bg {
-            position: absolute; inset: 0;
-            background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80') center center / cover no-repeat;
-            z-index: 0;
-        }
-        .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: rgba(15, 23, 42, 0.82); }
-        .page-hero .container { position: relative; z-index: 1; text-align: center; }
-        .page-hero h1 { font-size: clamp(36px, 6vw, 56px); font-weight: 900; color: #ffffff; letter-spacing: -1px; margin-bottom: 16px; }
-        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto; line-height: 1.7; }
-
-        /* Content */
-        .content-section { padding: 80px 0; }
-        .content-section.alt { background: #f8fafc; }
-        .section-tag { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #16a34a; margin-bottom: 12px; }
-        .content-section h2 { font-size: clamp(26px, 3.5vw, 36px); color: #111827; margin-bottom: 20px; }
-        .content-section p { font-size: 15px; color: #6b7280; line-height: 1.8; margin-bottom: 16px; max-width: 720px; }
-
-        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-        .about-img { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; display: block; }
-
-        /* Values */
-        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
-        .value-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px 24px; transition: all 0.3s ease; }
-        .value-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); border-color: #16a34a; }
-        .value-icon { width: 48px; height: 48px; background: rgba(22,163,74,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
-        .value-icon svg { width: 24px; height: 24px; color: #16a34a; }
-        .value-card h3 { font-size: 18px; font-weight: 800; color: #111827; margin-bottom: 10px; }
-        .value-card p { font-size: 14px; color: #6b7280; line-height: 1.7; max-width: 100%; }
-
-        /* Service Areas */
-        .areas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
-        .area-item { background: #0f172a; border-radius: 10px; padding: 18px 24px; text-align: center; color: #ffffff; font-weight: 600; font-size: 15px; transition: all 0.3s ease; }
-        .area-item:hover { background: #16a34a; transform: translateY(-2px); }
-
-        /* CTA */
-        .cta-banner { position: relative; padding: 80px 0; text-align: center; overflow: hidden; }
-        .cta-banner-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80') center center / cover no-repeat; z-index: 0; }
-        .cta-banner-bg::after { content: ''; position: absolute; inset: 0; background: rgba(15, 23, 42, 0.88); }
-        .cta-banner .container { position: relative; z-index: 1; }
-        .cta-banner h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; color: #ffffff; margin-bottom: 16px; }
-        .cta-banner p { font-size: 17px; color: rgba(255,255,255,0.7); margin-bottom: 32px; }
-
-        /* Footer */
-        .footer { background: #0f172a; padding: 60px 0 40px; color: rgba(255,255,255,0.55); }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand .footer-logo { font-size: 22px; font-weight: 900; color: #ffffff; margin-bottom: 12px; }
-        .footer-brand .footer-logo .green { color: #16a34a; }
-        .footer-brand p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.4); }
-        .footer h4 { font-size: 13px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
-        .footer ul { list-style: none; }
-        .footer ul li { margin-bottom: 10px; }
-        .footer ul li a { font-size: 14px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
-        .footer ul li a:hover { color: #16a34a; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; font-size: 13px; }
-
-        @media (max-width: 900px) {
-            .two-col { grid-template-columns: 1fr; gap: 32px; }
-            .values-grid { grid-template-columns: 1fr; }
-            .areas-grid { grid-template-columns: 1fr 1fr; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-        }
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .nav-btn { display: none; }
-            .hamburger { display: flex; }
-            .areas-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .page-hero { padding: 130px 0 70px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Pest 'Em | Warren County NJ Pest Control</title>
+<meta name="description" content="Pest 'Em is a locally owned pest control company serving Warren County NJ. Family-safe treatments, prevention-first approach, based in Blairstown.">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{font-family:'Urbanist',sans-serif;color:#1a1a1a;background:#fff;line-height:1.6;}a{text-decoration:none;color:inherit;}img{max-width:100%;display:block;}
+.nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e5e7eb;padding:0 24px;}.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px;}.nav-logo{font-size:22px;font-weight:900;color:#1a1a1a;}.nav-logo span{color:#2d7a3a;}.nav-links{display:flex;gap:32px;list-style:none;}.nav-links a{font-size:15px;font-weight:500;color:#374151;transition:color 0.2s;}.nav-links a:hover{color:#2d7a3a;}.nav-cta{background:#2d7a3a;color:#fff;padding:10px 22px;border-radius:6px;font-size:15px;font-weight:700;}.nav-phone{font-size:15px;font-weight:700;color:#2d7a3a;margin-right:16px;}
+.hero{background:#0f2d14;padding:90px 24px;text-align:center;}.hero-inner{max-width:800px;margin:0 auto;}.hero h1{font-size:50px;font-weight:900;color:#fff;line-height:1.08;margin-bottom:16px;letter-spacing:-1.5px;}.hero h1 em{color:#5fce73;font-style:normal;}.hero p{font-size:18px;color:rgba(255,255,255,0.7);margin-bottom:32px;line-height:1.7;}
+.btn-green{background:#2d7a3a;color:#fff;padding:14px 28px;border-radius:6px;font-size:16px;font-weight:700;display:inline-block;}
+.section{padding:80px 24px;}.section-inner{max-width:1200px;margin:0 auto;}.section-label{font-size:12px;font-weight:700;color:#2d7a3a;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;}.section-title{font-size:40px;font-weight:900;color:#111;line-height:1.12;letter-spacing:-0.5px;margin-bottom:14px;}.section-sub{font-size:17px;color:#6b7280;max-width:580px;line-height:1.7;}.section-dark{background:#0f1a0f;}.section-dark .section-label{color:#5fce73;}.section-dark .section-title{color:#fff;}.section-dark .section-sub{color:rgba(255,255,255,0.5);}.section-gray{background:#f9fafb;}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}.split-visual{border-radius:14px;background:#0f2d14;height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px;}.split-visual p{color:#5fce73;font-size:14px;font-weight:600;text-align:center;}.split-content h2{font-size:38px;font-weight:900;color:#111;line-height:1.15;letter-spacing:-0.5px;margin-bottom:16px;}.split-content p{font-size:16px;color:#6b7280;margin-bottom:16px;line-height:1.7;}
+.guarantee-box{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:20px 24px;display:flex;align-items:flex-start;gap:14px;margin-top:8px;}.g-check{width:24px;height:24px;background:#2d7a3a;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;}.g-check svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:3;}.g-text{font-size:15px;color:#166534;font-weight:600;line-height:1.5;}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px;}.why-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:32px;}.why-num{font-size:44px;font-weight:900;color:#2d7a3a;opacity:0.5;line-height:1;margin-bottom:14px;}.why-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:10px;}.why-desc{font-size:15px;color:rgba(255,255,255,0.5);line-height:1.7;}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}.town{background:#f0fdf4;border:1px solid #bbf7d0;color:#166534;font-size:14px;font-weight:600;padding:8px 18px;border-radius:20px;}
+.cta-banner{background:#0f2d14;padding:80px 24px;text-align:center;}.cta-banner h2{font-size:42px;font-weight:900;color:#fff;margin-bottom:14px;letter-spacing:-0.5px;}.cta-banner p{font-size:18px;color:rgba(255,255,255,0.65);margin-bottom:32px;}.btn-white{background:#fff;color:#2d7a3a;padding:16px 36px;border-radius:6px;font-size:16px;font-weight:800;display:inline-block;}
+.footer{background:#0a0f0a;padding:64px 24px 32px;}.footer-inner{max-width:1200px;margin:0 auto;}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}.footer-logo{font-size:22px;font-weight:900;color:#fff;margin-bottom:12px;}.footer-logo span{color:#5fce73;}.footer-desc{font-size:14px;color:#4b5563;line-height:1.7;}.footer-col h4{font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;}.footer-col ul{list-style:none;}.footer-col li{margin-bottom:10px;}.footer-col a{font-size:14px;color:#4b5563;}.footer-col a:hover{color:#5fce73;}.footer-bottom{border-top:1px solid #1f2937;padding-top:24px;display:flex;justify-content:space-between;}.footer-copy{font-size:13px;color:#374151;}
+@media(max-width:900px){.split,.why-grid,.footer-grid{grid-template-columns:1fr;}.hero h1{font-size:34px;}.nav-links,.nav-phone{display:none;}.section-title{font-size:28px;}}
+</style>
 </head>
 <body>
 
-    <!-- Nav -->
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">PEST<span class="green">EM</span></a>
-            <ul class="nav-links">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="index.html#service-area">Service Area</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <a href="contact.html" class="nav-btn">Get Free Quote</a>
-            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-    <div class="mobile-menu">
-        <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
-        <a href="services.html" onclick="this.parentElement.classList.remove('open')">Services</a>
-        <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
-        <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
-        <a href="contact.html" class="nav-btn" onclick="this.parentElement.classList.remove('open')">Get Free Quote</a>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Pest <span>'Em</span></a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="tick-control.html">Tick Control</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;">
+      <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
+      <a href="contact.html" class="nav-cta">Get Free Quote</a>
     </div>
+  </div>
+</nav>
 
-    <!-- Hero -->
-    <section class="page-hero">
-        <div class="page-hero-bg"></div>
-        <div class="container">
-            <h1>About Pestem</h1>
-            <p>Locally owned pest control built on prevention, safety, and Warren County community values.</p>
-        </div>
-    </section>
+<div class="hero">
+  <div class="hero-inner">
+    <h1>Local Pest Control You Can <em>Actually Trust</em></h1>
+    <p>We started Pest 'Em because Warren County deserved better than overpriced national chains and unreliable one-shot services. We built a better model.</p>
+  </div>
+</div>
 
-    <!-- Our Story -->
-    <section class="content-section">
-        <div class="container">
-            <div class="two-col">
-                <div>
-                    <div class="section-tag">Our Story</div>
-                    <h2>Built for Warren County</h2>
-                    <p>Pestem started with a simple idea: homeowners in Warren County deserve pest control that actually prevents problems instead of just reacting to them.</p>
-                    <p>Too many national companies send technicians who don't know the local terrain, the seasonal pressures, or the specific pests that thrive in northwestern New Jersey. We're different. We live here. We raise our families here.</p>
-                    <p>We know that the wooded lots in Blairstown face different pest pressures than the suburban neighborhoods in Hackettstown. We know tick season starts earlier than most people think, and that stink bugs start scouting for winter shelter in late August. That local knowledge shapes everything we do.</p>
-                </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Pest control technician spraying lawn" class="about-img" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section">
+  <div class="section-inner">
+    <div class="split">
+      <div class="split-visual">
+        <svg viewBox="0 0 200 200" fill="none" width="160"><circle cx="100" cy="100" r="88" fill="rgba(93,206,115,0.07)" stroke="#5fce73" stroke-width="1" stroke-dasharray="6 4"/><circle cx="100" cy="100" r="58" fill="rgba(93,206,115,0.05)" stroke="#5fce73" stroke-width="1" stroke-dasharray="4 6"/><path d="M100 38 L114 72 L150 72 L122 94 L134 128 L100 108 L66 128 L78 94 L50 72 L86 72 Z" fill="#5fce73" opacity="0.9"/></svg>
+        <p>Blairstown, NJ — Est. 2024</p>
+      </div>
+      <div class="split-content">
+        <div class="section-label">Our Story</div>
+        <h2>Built for Warren County, by Warren County</h2>
+        <p>We live here. We raise our families here. And we got tired of the same pest problems everyone else was dealing with — ticks everywhere, mosquitoes ruining every summer evening, mice finding their way inside every fall.</p>
+        <p>The options were either expensive national chains who didn't know our terrain, or one-time spray-and-pray services that never lasted. So we built Pest 'Em — affordable monthly plans that actually prevent problems before they start.</p>
+        <p>We use low-toxicity, EPA-registered products that are safe for your family and pets once dry (typically 30-60 minutes). We know the wooded lots, the deer trails, the standing water spots that make Warren County a hotspot for ticks and mosquitoes. And we treat accordingly.</p>
+        <div class="guarantee-box"><div class="g-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><div class="g-text">100% Satisfaction Guarantee — if pests return between treatments, we come back free of charge. No questions asked.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Mission -->
-    <section class="content-section alt">
-        <div class="container">
-            <div class="two-col">
-                <div>
-                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80" alt="Family safe outdoor space" class="about-img" loading="lazy">
-                </div>
-                <div>
-                    <div class="section-tag">Our Mission</div>
-                    <h2>Prevention Over Reaction</h2>
-                    <p>Most pest control companies make their money on emergency calls. We'd rather you never need one.</p>
-                    <p>Our prevention-first approach uses scheduled barrier treatments, entry-point sealing, and proactive monitoring to stop pest problems before they start. The result: fewer surprises, lower long-term costs, and a home you can enjoy year-round.</p>
-                    <p>Every product we use is selected for two things: effectiveness and safety. We're parents and pet owners ourselves. We would never apply anything to your property that we wouldn't use on our own.</p>
-                    <a href="contact.html" class="btn-green" style="margin-top: 12px;">Get a Free Quote</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section section-dark">
+  <div class="section-inner">
+    <div class="section-label">Our Approach</div>
+    <h2 class="section-title">What Makes Us Different</h2>
+    <p class="section-sub">We don't just react to pest problems. We prevent them.</p>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-num">01</div><div class="why-title">Prevention Over Reaction</div><div class="why-desc">Monthly barrier treatments create year-round protection. We treat on a schedule so pests never get established on your property in the first place.</div></div>
+      <div class="why-card"><div class="why-num">02</div><div class="why-title">Family-Safe Products</div><div class="why-desc">Every product we use is EPA-registered and low-toxicity. We target the areas where pests live — foundation lines, vegetation borders, entry points — not where your kids and pets play.</div></div>
+      <div class="why-card"><div class="why-num">03</div><div class="why-title">Real Local Service</div><div class="why-desc">Based in Blairstown. When you call, a real person answers. Same-week service available. No national call centers, no automated phone trees, no runaround.</div></div>
+      <div class="why-card"><div class="why-num">04</div><div class="why-title">We Know This Terrain</div><div class="why-desc">Wooded lots, deer populations, standing water — Warren County has unique pest pressure. We've designed our treatment protocols specifically for this area.</div></div>
+      <div class="why-card"><div class="why-num">05</div><div class="why-title">Transparent Pricing</div><div class="why-desc">Simple monthly plans starting at $40/mo. No hidden fees, no surprise charges, no pressure upsells. You know exactly what you're paying for.</div></div>
+      <div class="why-card"><div class="why-num">06</div><div class="why-title">Guaranteed Results</div><div class="why-desc">If pests return between scheduled treatments, we come back and re-treat at no extra cost. That's our promise — and we've never had to break it.</div></div>
+    </div>
+  </div>
+</section>
 
-    <!-- Values -->
-    <section class="content-section">
-        <div class="container" style="text-align:center;">
-            <div class="section-tag">What We Stand For</div>
-            <h2>Our Values</h2>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <h3>Prevention First</h3>
-                    <p>We build treatment plans around stopping pests before they become a problem. Scheduled barrier sprays, exclusion work, and seasonal timing that matches pest lifecycles.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-                    </div>
-                    <h3>Pet & Family Safe</h3>
-                    <p>Every product is vetted for safety. Our treatments are pet-friendly and family-safe once dry, typically within 30 minutes. No compromises.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <h3>Community Rooted</h3>
-                    <p>We're your neighbors, not a franchise. When you call, you talk to someone who knows Warren County. We show up when we say we will, every time.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                    </div>
-                    <h3>Honest Pricing</h3>
-                    <p>No hidden fees, no surprise charges, no high-pressure upsells. Plans start at $40/mo and every price is published right on our website.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-                    </div>
-                    <h3>Fast Response</h3>
-                    <p>Same-week service for new customers. Quotes returned within 24 hours. Emergency callbacks for plan members. We respect your time.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    </div>
-                    <h3>Satisfaction Guaranteed</h3>
-                    <p>If pests return between treatments, so do we -- at no extra charge. Every plan includes our 100% satisfaction guarantee.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Service Area</div>
+    <h2 class="section-title">Proudly Serving Warren County, NJ</h2>
+    <p class="section-sub">We cover all of Warren County and surrounding areas. Call us at (888) 774-4290 to confirm your area.</p>
+    <div class="towns">
+      <span class="town">Blairstown</span><span class="town">Hackettstown</span><span class="town">Hope</span><span class="town">Belvidere</span><span class="town">Oxford</span><span class="town">Columbia</span><span class="town">Allamuchy</span><span class="town">Frelinghuysen</span><span class="town">Hardwick</span><span class="town">Knowlton</span><span class="town">Washington Township</span><span class="town">Phillipsburg</span><span class="town">Vienna</span><span class="town">Johnsonburg</span>
+    </div>
+  </div>
+</section>
 
-    <!-- Service Areas -->
-    <section class="content-section alt">
-        <div class="container" style="text-align:center;">
-            <div class="section-tag">Where We Work</div>
-            <h2>Serving All of Warren County</h2>
-            <p style="max-width: 560px; margin: 0 auto 16px;">We provide pest control services to homeowners throughout Warren County, New Jersey and surrounding areas.</p>
-            <div class="areas-grid">
-                <div class="area-item">Blairstown</div>
-                <div class="area-item">Hackettstown</div>
-                <div class="area-item">Washington</div>
-                <div class="area-item">Belvidere</div>
-                <div class="area-item">Phillipsburg</div>
-                <div class="area-item">Oxford</div>
-                <div class="area-item">Hope</div>
-                <div class="area-item">Great Meadows</div>
-                <div class="area-item">Knowlton</div>
-            </div>
-        </div>
-    </section>
+<div class="cta-banner">
+  <h2>Ready to Protect Your Home?</h2>
+  <p>Get a free quote today. Same-week service available across Warren County, NJ.</p>
+  <a href="contact.html" class="btn-white">Get Your Free Quote</a>
+</div>
 
-    <!-- CTA -->
-    <section class="cta-banner">
-        <div class="cta-banner-bg"></div>
-        <div class="container">
-            <h2>Ready to work with a local team you can trust?</h2>
-            <p>Get a free quote and see why Warren County homeowners choose Pestem.</p>
-            <a href="contact.html" class="btn-green">Get Your Free Quote</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">PEST<span class="green">EM</span></div>
-                    <p>Warren County's trusted pest control company. Prevention-first, pet-safe, locally owned and operated.</p>
-                </div>
-                <div>
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="tick-control.html">Tick Control</a></li>
-                        <li><a href="services.html#mosquito">Mosquito Control</a></li>
-                        <li><a href="services.html#rodent">Rodent Prevention</a></li>
-                        <li><a href="services.html#stinkbug">Stink Bugs</a></li>
-                        <li><a href="services.html#lanternfly">Lanternflies</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Service Areas</h4>
-                    <ul>
-                        <li><a href="#">Blairstown</a></li>
-                        <li><a href="#">Hackettstown</a></li>
-                        <li><a href="#">Belvidere</a></li>
-                        <li><a href="#">Phillipsburg</a></li>
-                        <li><a href="#">Oxford</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="tel:9085550190">(908) 555-0190</a></li>
-                        <li><a href="mailto:info@pestem.com">info@pestem.com</a></li>
-                        <li><a href="contact.html">Get a Quote</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">&copy; 2026 Pestem Pest Control. All rights reserved. Warren County, NJ.</div>
-        </div>
-    </footer>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><div class="footer-logo">Pest <span>'Em</span></div><p class="footer-desc">Warren County's trusted pest control team. Prevention-first, pet-safe, locally owned out of Blairstown, NJ.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="tick-control.html">Tick Control</a></li><li><a href="mosquito-control.html">Mosquito Control</a></li><li><a href="rodent-control.html">Rodent Prevention</a></li><li><a href="stink-bug-control.html">Stink Bug Control</a></li><li><a href="lanternfly-control.html">Lanternfly Control</a></li><li><a href="wasp-control.html">Wasp Removal</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">All Services</a></li><li><a href="contact.html">Contact</a></li><li><a href="index.html#pricing">Pricing</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:8887744290">(888) 774-4290</a></li><li><a href="mailto:info@pestem.com">info@pestem.com</a></li><li><a>Blairstown, NJ 07825</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2026 Pest 'Em LLC. All rights reserved.</span><span class="footer-copy">Warren County, NJ</span></div>
+  </div>
+</footer>
 
 </body>
 </html>

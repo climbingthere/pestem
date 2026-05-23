@@ -1,539 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pestem Pest Control | Warren County NJ | Tick & Pest Prevention</title>
-    <meta name="description" content="Warren County NJ pest control experts. Preventative monthly plans from $40/mo for ticks, mosquitoes, rodents, stink bugs, and more. Family and pet safe. Blairstown-based.">
-
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="favicon.png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Pestem Pest Control | Warren County NJ | Tick & Pest Prevention">
-    <meta property="og:description" content="Warren County NJ pest control experts. Preventative monthly plans from $40/mo. Family and pet safe.">
-    <meta property="og:site_name" content="Pestem Pest Control">
-
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Urbanist', sans-serif; font-weight: 400; color: #111827; background: #ffffff; line-height: 1.6; }
-        a { text-decoration: none; color: inherit; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        h1, h2, h3 { font-family: 'Urbanist', sans-serif; font-weight: 900; letter-spacing: -0.5px; }
-        img { max-width: 100%; height: auto; }
-
-        /* ========== BUTTONS ========== */
-        .btn-green { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 16px; padding: 16px 32px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; }
-        .btn-green:hover { background: #15803d; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4); }
-        .btn-outline { display: inline-block; border: 2px solid #ffffff; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 32px; border-radius: 8px; cursor: pointer; transition: all 0.3s ease; background: transparent; }
-        .btn-outline:hover { background: rgba(255, 255, 255, 0.15); }
-        .btn-white { display: inline-block; background: #ffffff; color: #0f172a; font-weight: 700; font-size: 16px; padding: 16px 32px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; }
-        .btn-white:hover { background: #f1f5f9; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3); }
-
-        /* ========== STICKY NAV ========== */
-        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 0; background: #ffffff; box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06); }
-        .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 14px 24px; }
-        .nav-logo { font-size: 26px; font-weight: 900; color: #0f172a; letter-spacing: -0.5px; }
-        .nav-logo .green { color: #16a34a; }
-        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-        .nav-links a { color: #111827; font-size: 15px; font-weight: 600; transition: color 0.2s; }
-        .nav-links a:hover { color: #16a34a; }
-        .nav-btn { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 14px; padding: 10px 22px; border-radius: 8px; transition: all 0.3s ease; }
-        .nav-btn:hover { background: #15803d; transform: translateY(-2px); }
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; background: none; border: none; padding: 4px; }
-        .hamburger span { width: 24px; height: 2px; background: #0f172a; transition: 0.3s; display: block; }
-        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #ffffff; z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a { color: #0f172a; font-size: 20px; font-weight: 600; }
-        .mobile-menu a:hover { color: #16a34a; }
-
-        /* ========== HERO ========== */
-        .hero {
-            position: relative;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            padding: 140px 0 100px;
-            overflow: hidden;
-        }
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center center / cover no-repeat;
-            z-index: 0;
-        }
-        .hero-bg::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to right, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.65) 100%);
-        }
-        .hero .container { position: relative; z-index: 1; }
-        .hero h1 { font-size: clamp(38px, 6vw, 60px); font-weight: 900; letter-spacing: -1px; line-height: 1.1; margin-bottom: 20px; max-width: 700px; color: #ffffff; }
-        .hero .sub { font-size: clamp(17px, 2.2vw, 20px); color: rgba(255, 255, 255, 0.8); max-width: 540px; margin-bottom: 36px; font-weight: 400; line-height: 1.7; }
-        .hero-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-
-        /* ========== TRUST BAR ========== */
-        .trust-bar { background: #f8fafc; padding: 48px 0; border-bottom: 1px solid #e5e7eb; }
-        .trust-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-        .trust-item { display: flex; align-items: center; gap: 14px; padding: 12px 0; }
-        .trust-icon { width: 48px; height: 48px; border-radius: 10px; background: rgba(22, 163, 74, 0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .trust-icon svg { width: 22px; height: 22px; color: #16a34a; }
-        .trust-item h3 { font-size: 15px; font-weight: 700; color: #111827; margin-bottom: 2px; }
-        .trust-item p { font-size: 13px; color: #6b7280; font-weight: 400; }
-
-        /* ========== SERVICES GRID ========== */
-        .services { background: #ffffff; padding: 100px 0; }
-        .section-header { text-align: center; margin-bottom: 56px; }
-        .section-header h2 { font-size: clamp(30px, 4.5vw, 44px); color: #111827; margin-bottom: 12px; }
-        .section-header p { font-size: 17px; color: #6b7280; max-width: 560px; margin: 0 auto; }
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .service-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; transition: all 0.3s ease; }
-        .service-card:hover { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1); transform: translateY(-4px); }
-        .service-card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
-        .service-card-body { padding: 24px; }
-        .service-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: #111827; }
-        .service-card p { font-size: 14px; color: #6b7280; margin-bottom: 14px; line-height: 1.6; }
-        .service-card .learn-more { color: #16a34a; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; gap: 4px; }
-        .service-card .learn-more:hover { color: #15803d; }
-
-        /* ========== WHY US (Split Layout) ========== */
-        .why-us { background: #f8fafc; padding: 100px 0; }
-        .why-us-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .why-us-img { border-radius: 12px; width: 100%; height: 480px; object-fit: cover; display: block; }
-        .why-us-content h2 { font-size: clamp(28px, 4vw, 38px); color: #111827; margin-bottom: 20px; }
-        .why-us-content p { font-size: 16px; color: #6b7280; line-height: 1.7; margin-bottom: 28px; }
-        .why-us-list { list-style: none; }
-        .why-us-list li { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid #e5e7eb; font-size: 15px; color: #374151; }
-        .why-us-list li:last-child { border-bottom: none; }
-        .why-us-list li svg { width: 22px; height: 22px; color: #16a34a; flex-shrink: 0; margin-top: 1px; }
-
-        /* ========== PRICING ========== */
-        .pricing { background: #ffffff; padding: 100px 0; }
-        .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
-        .pricing-card { background: #ffffff; border: 2px solid #e5e7eb; border-radius: 16px; padding: 36px 28px; text-align: center; transition: all 0.3s ease; position: relative; }
-        .pricing-card:hover { box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08); transform: translateY(-4px); }
-        .pricing-card.featured { border-color: #16a34a; box-shadow: 0 8px 30px rgba(22, 163, 74, 0.12); }
-        .pricing-badge { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: #16a34a; color: #ffffff; font-size: 12px; font-weight: 800; padding: 6px 20px; border-radius: 100px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .pricing-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; color: #111827; }
-        .pricing-card .price { font-size: 44px; font-weight: 900; color: #111827; line-height: 1; margin-bottom: 4px; }
-        .pricing-card .price span { font-size: 18px; font-weight: 500; color: #6b7280; }
-        .pricing-card .contract { font-size: 13px; color: #9ca3af; margin-bottom: 24px; }
-        .pricing-card ul { list-style: none; text-align: left; margin-bottom: 28px; }
-        .pricing-card ul li { padding: 10px 0; font-size: 14px; color: #374151; border-bottom: 1px solid #f3f4f6; display: flex; align-items: center; gap: 10px; }
-        .pricing-card ul li:last-child { border-bottom: none; }
-        .check-icon { color: #16a34a; font-weight: 700; font-size: 16px; flex-shrink: 0; }
-        .pricing-card .btn-green { width: 100%; text-align: center; }
-
-        /* ========== TESTIMONIALS ========== */
-        .testimonials { background: #f8fafc; padding: 100px 0; }
-        .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-        .testimonial-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px 24px; }
-        .testimonial-stars { color: #f59e0b; font-size: 18px; margin-bottom: 16px; letter-spacing: 2px; }
-        .testimonial-card p { font-size: 15px; color: #374151; line-height: 1.7; margin-bottom: 20px; }
-        .testimonial-author { font-size: 15px; font-weight: 700; color: #111827; }
-        .testimonial-location { font-size: 13px; color: #9ca3af; font-weight: 400; }
-
-        /* ========== SERVICE AREA ========== */
-        .service-area { background: #ffffff; padding: 80px 0; }
-        .area-content { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 40px; }
-        .area-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-        .area-tag { background: #f8fafc; border: 1px solid #e5e7eb; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; color: #374151; transition: all 0.2s ease; }
-        .area-tag:hover { border-color: #16a34a; color: #16a34a; }
-        .area-map { border-radius: 12px; overflow: hidden; border: 1px solid #e5e7eb; height: 320px; }
-        .area-map iframe { width: 100%; height: 100%; border: 0; }
-
-        /* ========== CTA SECTION ========== */
-        .cta-section { position: relative; padding: 100px 0; text-align: center; overflow: hidden; }
-        .cta-bg {
-            position: absolute;
-            inset: 0;
-            background: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80') center center / cover no-repeat;
-            z-index: 0;
-        }
-        .cta-bg::after { content: ''; position: absolute; inset: 0; background: rgba(15, 23, 42, 0.88); }
-        .cta-section .container { position: relative; z-index: 1; }
-        .cta-section h2 { font-size: clamp(28px, 5vw, 42px); color: #ffffff; margin-bottom: 12px; }
-        .cta-section p { font-size: 18px; color: rgba(255, 255, 255, 0.75); margin-bottom: 32px; }
-        .cta-actions { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
-        .cta-phone { color: #ffffff; font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
-
-        /* ========== FOOTER ========== */
-        .footer { background: #0f172a; padding: 80px 0 40px; color: rgba(255, 255, 255, 0.55); }
-        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand .footer-logo { font-size: 24px; font-weight: 900; color: #ffffff; margin-bottom: 12px; }
-        .footer-brand .footer-logo .green { color: #16a34a; }
-        .footer-brand p { font-size: 14px; line-height: 1.7; }
-        .footer h4 { color: #ffffff; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
-        .footer ul { list-style: none; }
-        .footer ul li { margin-bottom: 10px; }
-        .footer ul li a { font-size: 14px; color: rgba(255, 255, 255, 0.55); transition: color 0.2s; }
-        .footer ul li a:hover { color: #16a34a; }
-        .footer-contact-item { font-size: 14px; margin-bottom: 10px; }
-        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 24px; text-align: center; font-size: 13px; }
-
-        /* ========== RESPONSIVE ========== */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .nav-btn { display: none; }
-            .hamburger { display: flex; }
-            .hero { padding: 130px 0 80px; min-height: 500px; }
-            .trust-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
-            .services-grid { grid-template-columns: 1fr; }
-            .why-us-inner { grid-template-columns: 1fr; }
-            .why-us-img { height: 300px; }
-            .pricing-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-            .testimonial-grid { grid-template-columns: 1fr; }
-            .area-content { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pest 'Em | Warren County NJ Pest Control | Ticks, Mosquitoes & More</title>
+<meta name="description" content="Warren County's trusted pest control experts. Tick control, mosquito treatment, rodent prevention and more. Monthly plans from $40/mo. Serving Blairstown, Hackettstown, Hope, and surrounding NJ areas.">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{font-family:'Urbanist',sans-serif;color:#1a1a1a;background:#fff;line-height:1.6;}a{text-decoration:none;color:inherit;}img{max-width:100%;display:block;}
+.nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e5e7eb;padding:0 24px;}.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px;}.nav-logo{font-size:22px;font-weight:900;color:#1a1a1a;}.nav-logo span{color:#2d7a3a;}.nav-links{display:flex;gap:32px;list-style:none;}.nav-links a{font-size:15px;font-weight:500;color:#374151;transition:color 0.2s;}.nav-links a:hover{color:#2d7a3a;}.nav-cta{background:#2d7a3a;color:#fff;padding:10px 22px;border-radius:6px;font-size:15px;font-weight:700;}.nav-phone{font-size:15px;font-weight:700;color:#2d7a3a;margin-right:16px;}
+.hero{background:#0f2d14;padding:90px 24px;}.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;}.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(93,206,115,0.12);border:1px solid rgba(93,206,115,0.25);color:#5fce73;font-size:13px;font-weight:600;padding:6px 14px;border-radius:20px;margin-bottom:20px;}.hero-stars{color:#fbbf24;}.hero h1{font-size:50px;font-weight:900;color:#fff;line-height:1.08;margin-bottom:16px;letter-spacing:-1.5px;}.hero h1 em{color:#5fce73;font-style:normal;}.hero p{font-size:18px;color:rgba(255,255,255,0.7);margin-bottom:32px;line-height:1.7;}.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}.btn-green{background:#2d7a3a;color:#fff;padding:14px 28px;border-radius:6px;font-size:16px;font-weight:700;display:inline-block;}.btn-ghost{background:transparent;color:#fff;padding:14px 28px;border-radius:6px;font-size:16px;font-weight:700;border:2px solid rgba(255,255,255,0.25);display:inline-block;}
+.pest-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}.pest-mini{background:rgba(255,255,255,0.05);border:1px solid rgba(93,206,115,0.2);border-radius:12px;padding:18px;text-align:center;}.pest-mini svg{width:54px;height:54px;margin:0 auto 8px;}.pest-mini span{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);display:block;}
+.trust-bar{background:#2d7a3a;padding:16px 24px;}.trust-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;}.trust-item{color:#fff;font-size:14px;font-weight:600;}
+.section{padding:80px 24px;}.section-inner{max-width:1200px;margin:0 auto;}.section-label{font-size:12px;font-weight:700;color:#2d7a3a;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;}.section-title{font-size:40px;font-weight:900;color:#111;line-height:1.12;letter-spacing:-0.5px;margin-bottom:14px;}.section-sub{font-size:17px;color:#6b7280;max-width:580px;line-height:1.7;}.section-dark{background:#0f1a0f;}.section-dark .section-label{color:#5fce73;}.section-dark .section-title{color:#fff;}.section-dark .section-sub{color:rgba(255,255,255,0.5);}.section-gray{background:#f9fafb;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}.service-card{border-radius:14px;overflow:hidden;border:1px solid #e5e7eb;background:#fff;display:block;transition:box-shadow 0.2s,transform 0.2s;}.service-card:hover{box-shadow:0 12px 40px rgba(0,0,0,0.1);transform:translateY(-3px);}.svc-icon{background:#0f2d14;height:180px;position:relative;overflow:hidden;}.svc-icon img{width:100%;height:100%;object-fit:cover;display:block;}.svc-icon::after{content:'';position:absolute;inset:0;background:rgba(15,45,20,0.45);pointer-events:none;}.svc-body{padding:24px;}.svc-title{font-size:20px;font-weight:800;color:#111;margin-bottom:8px;}.svc-desc{font-size:15px;color:#6b7280;margin-bottom:14px;line-height:1.6;}.svc-link{font-size:14px;font-weight:700;color:#2d7a3a;}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px;}.why-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:32px;}.why-num{font-size:44px;font-weight:900;color:#2d7a3a;opacity:0.5;line-height:1;margin-bottom:14px;}.why-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:10px;}.why-desc{font-size:15px;color:rgba(255,255,255,0.5);line-height:1.7;}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}.split-visual{border-radius:14px;background:#0f2d14;height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:40px;}.split-visual p{color:#5fce73;font-size:14px;font-weight:600;text-align:center;}.split-content h2{font-size:38px;font-weight:900;color:#111;line-height:1.15;letter-spacing:-0.5px;margin-bottom:16px;}.split-content p{font-size:16px;color:#6b7280;margin-bottom:16px;line-height:1.7;}.guarantee-box{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:20px 24px;display:flex;align-items:flex-start;gap:14px;margin-top:8px;}.g-check{width:24px;height:24px;background:#2d7a3a;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;}.g-check svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:3;}.g-text{font-size:15px;color:#166534;font-weight:600;line-height:1.5;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}.price-card{border:2px solid #e5e7eb;border-radius:14px;padding:36px;position:relative;background:#fff;}.price-card.featured{border-color:#2d7a3a;box-shadow:0 8px 40px rgba(45,122,58,0.12);}.price-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#2d7a3a;color:#fff;font-size:12px;font-weight:700;padding:4px 18px;border-radius:20px;white-space:nowrap;}.price-name{font-size:13px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;}.price-amount{font-size:52px;font-weight:900;color:#111;line-height:1;margin-bottom:4px;}.price-amount sup{font-size:24px;font-weight:700;vertical-align:top;margin-top:10px;}.price-amount span{font-size:18px;font-weight:500;color:#9ca3af;}.price-period{font-size:13px;color:#9ca3af;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #f3f4f6;}.price-features{list-style:none;margin-bottom:28px;}.price-features li{font-size:15px;color:#374151;padding:9px 0;border-bottom:1px solid #f9fafb;display:flex;align-items:center;gap:12px;}.price-features li:last-child{border-bottom:none;}.check{width:20px;height:20px;background:#dcfce7;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;}.check svg{width:10px;height:10px;stroke:#2d7a3a;fill:none;stroke-width:3;}.price-btn{display:block;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:700;background:#f3f4f6;color:#111;}.price-card.featured .price-btn{background:#2d7a3a;color:#fff;}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}.t-card{background:#fff;border-radius:14px;padding:28px;border:1px solid #e5e7eb;}.t-stars{color:#fbbf24;font-size:15px;letter-spacing:3px;margin-bottom:14px;}.t-text{font-size:15px;color:#374151;line-height:1.75;margin-bottom:20px;}.t-author{display:flex;align-items:center;gap:12px;}.t-initial{width:44px;height:44px;border-radius:50%;background:#2d7a3a;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;}.t-name{font-size:15px;font-weight:700;color:#111;}.t-loc{font-size:13px;color:#9ca3af;}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}.town{background:#f0fdf4;border:1px solid #bbf7d0;color:#166534;font-size:14px;font-weight:600;padding:8px 18px;border-radius:20px;}
+.cta-banner{background:#0f2d14;padding:80px 24px;text-align:center;}.cta-banner h2{font-size:42px;font-weight:900;color:#fff;margin-bottom:14px;letter-spacing:-0.5px;}.cta-banner p{font-size:18px;color:rgba(255,255,255,0.65);margin-bottom:32px;}.btn-white{background:#fff;color:#2d7a3a;padding:16px 36px;border-radius:6px;font-size:16px;font-weight:800;display:inline-block;}
+.footer{background:#0a0f0a;padding:64px 24px 32px;}.footer-inner{max-width:1200px;margin:0 auto;}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}.footer-logo{font-size:22px;font-weight:900;color:#fff;margin-bottom:12px;}.footer-logo span{color:#5fce73;}.footer-desc{font-size:14px;color:#4b5563;line-height:1.7;}.footer-col h4{font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;}.footer-col ul{list-style:none;}.footer-col li{margin-bottom:10px;}.footer-col a{font-size:14px;color:#4b5563;}.footer-col a:hover{color:#5fce73;}.footer-bottom{border-top:1px solid #1f2937;padding-top:24px;display:flex;justify-content:space-between;}.footer-copy{font-size:13px;color:#374151;}
+@media(max-width:900px){.hero-inner,.services-grid,.why-grid,.pricing-grid,.t-grid,.footer-grid,.split{grid-template-columns:1fr;}.pest-grid{display:none;}.hero h1{font-size:34px;}.nav-links,.nav-phone{display:none;}.section-title{font-size:28px;}}
+</style>
 </head>
 <body>
 
-    <!-- ========== NAV ========== -->
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">PEST<span class="green">EM</span></a>
-            <ul class="nav-links">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#service-area">Service Area</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <a href="contact.html" class="nav-btn">Get Free Quote</a>
-            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <a href="index.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Home</a>
-        <a href="services.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Services</a>
-        <a href="about.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">About</a>
-        <a href="contact.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Contact</a>
-        <a href="contact.html" class="nav-btn" style="margin-top: 16px;">Get Free Quote</a>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">Pest <span>'Em</span></a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="tick-control.html">Tick Control</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;">
+      <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
+      <a href="contact.html" class="nav-cta">Get Free Quote</a>
     </div>
+  </div>
+</nav>
 
-    <!-- ========== HERO ========== -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <h1>Warren County's Trusted Pest Control Experts</h1>
-            <p class="sub">Preventative monthly plans from $40/mo. Ticks, mosquitoes, rodents and more. Locally owned, family safe, no contracts you can't cancel.</p>
-            <div class="hero-ctas">
-                <a href="contact.html" class="btn-green">Get a Free Quote</a>
-                <a href="tel:9085550190" class="btn-outline">Call (908) 555-0190</a>
-            </div>
-        </div>
-    </section>
+<div class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5-Star Rated in Warren County</div>
+      <h1>Warren County's <em>Pest Control</em> Experts</h1>
+      <p>Preventative monthly plans from $40/mo. Ticks, mosquitoes, rodents, and more — stopped before they become your problem.</p>
+      <div class="hero-btns">
+        <a href="contact.html" class="btn-green">Get a Free Quote</a>
+        <a href="#pricing" class="btn-ghost">View Plans</a>
+      </div>
+    </div>
+    <div class="pest-grid">
+      <div class="pest-mini">
+        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="55" rx="22" ry="26" fill="#5fce73"/><ellipse cx="50" cy="34" rx="12" ry="10" fill="#5fce73"/><line x1="28" y1="44" x2="8" y2="30" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="28" y1="55" x2="6" y2="53" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="28" y1="65" x2="8" y2="76" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="72" y1="44" x2="92" y2="30" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="72" y1="55" x2="94" y2="53" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="72" y1="65" x2="92" y2="76" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><circle cx="44" cy="32" r="3.5" fill="#0f2d14"/><circle cx="56" cy="32" r="3.5" fill="#0f2d14"/></svg>
+        <span>Tick Control</span>
+      </div>
+      <div class="pest-mini">
+        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="60" rx="8" ry="20" fill="#5fce73"/><circle cx="50" cy="36" r="12" fill="#5fce73"/><path d="M50 36 Q26 16 10 26" stroke="#5fce73" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M50 36 Q74 16 90 26" stroke="#5fce73" stroke-width="3" stroke-linecap="round" fill="none"/><line x1="46" y1="28" x2="42" y2="14" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="54" y1="28" x2="58" y2="14" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="80" x2="50" y2="94" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="41" y1="70" x2="30" y2="84" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="59" y1="70" x2="70" y2="84" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><circle cx="44" cy="33" r="3" fill="#0f2d14"/><circle cx="56" cy="33" r="3" fill="#0f2d14"/><line x1="50" y1="48" x2="50" y2="62" stroke="#0f2d14" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/></svg>
+        <span>Mosquito Control</span>
+      </div>
+      <div class="pest-mini">
+        <svg viewBox="0 0 100 100" fill="none"><path d="M50 18 L74 34 L74 66 L50 80 L26 66 L26 34 Z" fill="#5fce73"/><path d="M50 24 L70 38 L70 62 L50 74 L30 62 L30 38 Z" fill="#3a9e4a" opacity="0.35"/><line x1="26" y1="38" x2="10" y2="28" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="26" y1="50" x2="8" y2="50" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="26" y1="62" x2="10" y2="72" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="74" y1="38" x2="90" y2="28" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="74" y1="50" x2="92" y2="50" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="74" y1="62" x2="90" y2="72" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><circle cx="43" cy="30" r="3.5" fill="#0f2d14"/><circle cx="57" cy="30" r="3.5" fill="#0f2d14"/><line x1="44" y1="18" x2="38" y2="8" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="56" y1="18" x2="62" y2="8" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <span>Stink Bugs</span>
+      </div>
+      <div class="pest-mini">
+        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="46" cy="64" rx="26" ry="20" fill="#5fce73"/><circle cx="62" cy="46" r="18" fill="#5fce73"/><ellipse cx="46" cy="32" rx="10" ry="13" fill="#5fce73" opacity="0.8"/><ellipse cx="74" cy="32" rx="10" ry="13" fill="#5fce73" opacity="0.8"/><ellipse cx="46" cy="32" rx="6" ry="9" fill="#3a9e4a" opacity="0.4"/><ellipse cx="74" cy="32" rx="6" ry="9" fill="#3a9e4a" opacity="0.4"/><circle cx="57" cy="44" r="3.5" fill="#0f2d14"/><circle cx="69" cy="44" r="3.5" fill="#0f2d14"/><path d="M18 72 Q8 82 6 92" stroke="#5fce73" stroke-width="3" stroke-linecap="round" fill="none"/><line x1="50" y1="50" x2="37" y2="45" stroke="#5fce73" stroke-width="1.5" stroke-linecap="round"/><line x1="50" y1="53" x2="36" y2="53" stroke="#5fce73" stroke-width="1.5" stroke-linecap="round"/><line x1="50" y1="56" x2="37" y2="61" stroke="#5fce73" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <span>Rodent Prevention</span>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <!-- ========== TRUST BAR ========== -->
-    <section class="trust-bar">
-        <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 12 15 16 10"/></svg>
-                    </div>
-                    <div>
-                        <h3>Satisfaction Guaranteed</h3>
-                        <p>Free re-treatment if pests return</p>
-                    </div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1.25-3.17C8.5 20.33 10.2 21 12 21c4.97 0 9-4.03 9-9 0-3.87-2.44-7.17-5.87-8.44"/><path d="M17 8V2l4 4-4 4"/></svg>
-                    </div>
-                    <div>
-                        <h3>Pet & Family Safe</h3>
-                        <p>EPA-approved, safe once dry</p>
-                    </div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                    </div>
-                    <div>
-                        <h3>Warren County Local</h3>
-                        <p>Based in Blairstown, NJ</p>
-                    </div>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                    </div>
-                    <div>
-                        <h3>Same-Week Service</h3>
-                        <p>Fast scheduling, no wait</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">&#10003; Locally Owned &amp; Operated</div>
+    <div class="trust-item">&#10003; Pet &amp; Family Safe Treatments</div>
+    <div class="trust-item">&#10003; Same-Week Service Available</div>
+    <div class="trust-item">&#10003; 100% Satisfaction Guaranteed</div>
+  </div>
+</div>
 
-    <!-- ========== SERVICES GRID ========== -->
-    <section class="services" id="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>What We Treat</h2>
-                <p>Comprehensive pest control for Warren County homes and properties.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=600&q=80" alt="Close-up of a tick on a leaf" class="service-card-img" loading="lazy">
-                    <div class="service-card-body">
-                        <h3>Tick Control</h3>
-                        <p>Yard-wide barrier treatments that eliminate ticks at every life stage. Protect your family from Lyme disease all season long.</p>
-                        <a href="tick-control.html" class="learn-more">Learn More &#8594;</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?w=600&q=80" alt="Mosquito on skin" class="service-card-img" loading="lazy">
-                    <div class="service-card-body">
-                        <h3>Mosquito Control</h3>
-                        <p>Monthly barrier sprays and larvicide treatments so you can actually use your backyard from May through October.</p>
-                        <a href="services.html#mosquito" class="learn-more">Learn More &#8594;</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=600&q=80" alt="Mouse close-up" class="service-card-img" loading="lazy">
-                    <div class="service-card-body">
-                        <h3>Rodent Prevention</h3>
-                        <p>We seal entry points and install monitoring stations so mice and rats never make it inside your walls.</p>
-                        <a href="services.html#rodent" class="learn-more">Learn More &#8594;</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1591025207163-942350e47db2?w=600&q=80" alt="Stink bug on a leaf" class="service-card-img" loading="lazy">
-                    <div class="service-card-body">
-                        <h3>Stink Bugs</h3>
-                        <p>Exterior perimeter treatments in late summer stop the fall invasion before stink bugs find their way inside.</p>
-                        <a href="services.html#stinkbug" class="learn-more">Learn More &#8594;</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1598662957563-ee4965d4d72c?w=600&q=80" alt="Spotted lanternfly" class="service-card-img" loading="lazy">
-                    <div class="service-card-body">
-                        <h3>Spotted Lanternflies</h3>
-                        <p>Targeted trunk treatments and barrier sprays to protect your trees and outdoor living areas from SLF damage.</p>
-                        <a href="services.html#lanternfly" class="learn-more">Learn More &#8594;</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=600&q=80" alt="Ant close-up" class="service-card-img" loading="lazy">
-                    <div class="service-card-body">
-                        <h3>General Pest Control</h3>
-                        <p>Ants, spiders, wasps, centipedes -- quarterly interior and exterior treatments keep your home pest-free year round.</p>
-                        <a href="services.html#ants" class="learn-more">Learn More &#8594;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">What We Handle</div>
+    <h2 class="section-title">Every Pest Warren County Deals With</h2>
+    <p class="section-sub">From ticks in the backyard to mice in the walls — targeted, safe treatments that start before the problem does.</p>
+    <div class="services-grid">
 
-    <!-- ========== WHY US ========== -->
-    <section class="why-us">
-        <div class="container">
-            <div class="why-us-inner">
-                <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1000&q=80" alt="Beautiful New Jersey home with maintained lawn" class="why-us-img" loading="lazy">
-                <div class="why-us-content">
-                    <h2>Why Homeowners Choose Pestem</h2>
-                    <p>We're not a franchise or a call center. We're your neighbors in Warren County, and we treat your property like it's our own.</p>
-                    <ul class="why-us-list">
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <div><strong>Prevention-first approach.</strong> We treat before bugs show up, not after you have a problem. That saves you money and headaches.</div>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <div><strong>We know this area.</strong> Blairstown lots face different pest pressures than Hackettstown neighborhoods. We tailor every treatment to your property.</div>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <div><strong>Straight talk, honest pricing.</strong> No high-pressure upsells. Plans start at $40/mo and every price is right on the website.</div>
-                        </li>
-                        <li>
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                            <div><strong>We stand behind our work.</strong> If pests come back between treatments, so do we -- at no extra charge. Period.</div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+      <a href="tick-control.html" class="service-card">
+        <div class="svc-icon">
+          <img src="https://images.unsplash.com/photo-1696006985991-876279342017?w=800&h=360&fit=crop&q=80" alt="Close-up of a tick" loading="lazy">
         </div>
-    </section>
+        <div class="svc-body">
+          <div class="svc-title">Tick Control</div>
+          <div class="svc-desc">Seasonal barrier treatments that create a protective perimeter around your yard. Lyme disease is real in Warren County — we take it seriously.</div>
+          <span class="svc-link">Learn more &rarr;</span>
+        </div>
+      </a>
 
-    <!-- ========== PRICING ========== -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Simple Monthly Plans</h2>
-                <p>No hidden fees. All plans include our satisfaction guarantee and free re-treatments.</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Basic</h3>
-                    <div class="price">$40<span>/mo</span></div>
-                    <div class="contract">12-month plan</div>
-                    <ul>
-                        <li><span class="check-icon">&#10003;</span> Quarterly perimeter spray</li>
-                        <li><span class="check-icon">&#10003;</span> Ant and spider control</li>
-                        <li><span class="check-icon">&#10003;</span> Satisfaction guarantee</li>
-                        <li><span class="check-icon">&#10003;</span> Free re-treatments</li>
-                    </ul>
-                    <a href="contact.html" class="btn-green">Get Started</a>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Most Popular</div>
-                    <h3>Standard</h3>
-                    <div class="price">$45<span>/mo</span></div>
-                    <div class="contract">12-month plan</div>
-                    <ul>
-                        <li><span class="check-icon">&#10003;</span> Monthly perimeter treatment</li>
-                        <li><span class="check-icon">&#10003;</span> Tick and mosquito control</li>
-                        <li><span class="check-icon">&#10003;</span> Rodent monitoring stations</li>
-                        <li><span class="check-icon">&#10003;</span> Stink bug prevention</li>
-                        <li><span class="check-icon">&#10003;</span> Free re-treatments</li>
-                    </ul>
-                    <a href="contact.html" class="btn-green">Get Started</a>
-                </div>
-                <div class="pricing-card">
-                    <h3>Full Protection</h3>
-                    <div class="price">$50<span>/mo</span></div>
-                    <div class="contract">12-month plan</div>
-                    <ul>
-                        <li><span class="check-icon">&#10003;</span> Everything in Standard</li>
-                        <li><span class="check-icon">&#10003;</span> Interior treatments included</li>
-                        <li><span class="check-icon">&#10003;</span> Spotted lanternfly control</li>
-                        <li><span class="check-icon">&#10003;</span> Priority same-day scheduling</li>
-                    </ul>
-                    <a href="contact.html" class="btn-green">Get Started</a>
-                </div>
-            </div>
+      <a href="mosquito-control.html" class="service-card">
+        <div class="svc-icon">
+          <img src="https://images.unsplash.com/photo-1707943768467-84fe5c76a40c?w=800&h=360&fit=crop&q=80" alt="Close-up of a mosquito" loading="lazy">
         </div>
-    </section>
+        <div class="svc-body">
+          <div class="svc-title">Mosquito Control</div>
+          <div class="svc-desc">Barrier spray treatments that eliminate mosquitoes at rest in shrubs and vegetation. Reclaim your backyard for evenings, cookouts, and kids.</div>
+          <span class="svc-link">Learn more &rarr;</span>
+        </div>
+      </a>
 
-    <!-- ========== TESTIMONIALS ========== -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <h2>What Our Customers Say</h2>
-                <p>Real feedback from Warren County homeowners.</p>
-            </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p>"We moved to Blairstown last spring and the tick problem was unreal. Pestem started treating our yard monthly and we haven't pulled a single tick off the kids or the dog since. Worth every penny."</p>
-                    <div class="testimonial-author">Sarah M.</div>
-                    <div class="testimonial-location">Blairstown, NJ</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p>"I called on a Monday about mice in our garage. They were out Wednesday, sealed up every gap, and set traps. Haven't had an issue since. Quick, honest, and they actually call back when they say they will."</p>
-                    <div class="testimonial-author">David R.</div>
-                    <div class="testimonial-location">Hope, NJ</div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p>"We were nervous about chemicals with a toddler, but they walked us through everything. Safe once dry, they text before they come, and our yard is actually usable again in the summer. Huge difference."</p>
-                    <div class="testimonial-author">Jen & Mike T.</div>
-                    <div class="testimonial-location">Hackettstown, NJ</div>
-                </div>
-            </div>
+      <a href="stink-bug-control.html" class="service-card">
+        <div class="svc-icon">
+          <img src="https://images.unsplash.com/photo-1693853311346-7174761a6835?w=800&h=360&fit=crop&q=80" alt="Close-up of a brown marmorated stink bug" loading="lazy">
         </div>
-    </section>
+        <div class="svc-body">
+          <div class="svc-title">Stink Bug Control</div>
+          <div class="svc-desc">Stink bugs love to overwinter inside NJ homes. We treat the exterior in late summer and fall to stop them from getting in before the cold hits.</div>
+          <span class="svc-link">Learn more &rarr;</span>
+        </div>
+      </a>
 
-    <!-- ========== SERVICE AREA ========== -->
-    <section class="service-area" id="service-area">
-        <div class="container">
-            <div class="section-header">
-                <h2>Serving Warren County, NJ</h2>
-                <p>Locally owned and operated out of Blairstown. We know these towns because we live here.</p>
-            </div>
-            <div class="area-content">
-                <div>
-                    <div class="area-tags">
-                        <span class="area-tag">Blairstown</span>
-                        <span class="area-tag">Hackettstown</span>
-                        <span class="area-tag">Hope</span>
-                        <span class="area-tag">Columbia</span>
-                        <span class="area-tag">Belvidere</span>
-                        <span class="area-tag">Allamuchy</span>
-                        <span class="area-tag">Washington Twp</span>
-                        <span class="area-tag">Phillipsburg</span>
-                        <span class="area-tag">Oxford</span>
-                        <span class="area-tag">Vienna</span>
-                        <span class="area-tag">Frelinghuysen</span>
-                        <span class="area-tag">Knowlton</span>
-                        <span class="area-tag">Great Meadows</span>
-                        <span class="area-tag">Hardwick</span>
-                    </div>
-                </div>
-                <div class="area-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193575.4296210842!2d-75.15!3d40.85!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c38f3b8b6b9c71%3A0x4eab5c44e4a99e2!2sWarren%20County%2C%20NJ!5e0!3m2!1sen!2sus!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
+      <a href="lanternfly-control.html" class="service-card">
+        <div class="svc-icon">
+          <img src="https://images.unsplash.com/photo-1615507131862-e142f9975d7c?w=800&h=360&fit=crop&q=80" alt="Spotted lanternfly on a leaf" loading="lazy">
         </div>
-    </section>
+        <div class="svc-body">
+          <div class="svc-title">Spotted Lanternfly</div>
+          <div class="svc-desc">An invasive species that's devastating NJ trees, vines, and gardens. We treat surfaces and vegetation where lanternflies feed and lay their egg masses.</div>
+          <span class="svc-link">Learn more &rarr;</span>
+        </div>
+      </a>
 
-    <!-- ========== CTA SECTION ========== -->
-    <section class="cta-section">
-        <div class="cta-bg"></div>
-        <div class="container">
-            <h2>Schedule Your Free Pest Inspection Today</h2>
-            <p>No pressure, no obligation. Just a straight answer on what your property needs.</p>
-            <div class="cta-actions">
-                <a href="contact.html" class="btn-green">Request a Free Quote</a>
-                <a href="tel:9085550190" class="cta-phone">(908) 555-0190</a>
-            </div>
+      <a href="rodent-control.html" class="service-card">
+        <div class="svc-icon">
+          <img src="https://images.unsplash.com/photo-1564360652218-5b338ba60325?w=800&h=360&fit=crop&q=80" alt="Close-up of a mouse" loading="lazy">
         </div>
-    </section>
+        <div class="svc-body">
+          <div class="svc-title">Rodent Prevention</div>
+          <div class="svc-desc">Wooded Warren County lots mean constant mouse and rat pressure, especially in fall. We seal entry points and treat the perimeter before they move in.</div>
+          <span class="svc-link">Learn more &rarr;</span>
+        </div>
+      </a>
 
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">PEST<span class="green">EM</span></div>
-                    <p>Warren County's pest control experts. Preventative treatments that keep your home and family safe, year-round. Based in Blairstown, NJ.</p>
-                </div>
-                <div>
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="tick-control.html">Tick Control</a></li>
-                        <li><a href="services.html#mosquito">Mosquito Control</a></li>
-                        <li><a href="services.html#rodent">Rodent Prevention</a></li>
-                        <li><a href="services.html#stinkbug">Stink Bugs</a></li>
-                        <li><a href="services.html#lanternfly">Lanternflies</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact</h4>
-                    <div class="footer-contact-item"><a href="tel:9085550190">(908) 555-0190</a></div>
-                    <div class="footer-contact-item"><a href="mailto:info@pestem.com">info@pestem.com</a></div>
-                    <div class="footer-contact-item">Blairstown, NJ 07825</div>
-                    <div class="footer-contact-item" style="margin-top: 16px;">Mon-Fri: 8am - 6pm<br>Sat: 9am - 2pm</div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                &copy; 2026 Pestem Pest Control. All rights reserved.
-            </div>
+      <a href="wasp-control.html" class="service-card">
+        <div class="svc-icon">
+          <img src="https://images.unsplash.com/photo-1584626022615-991cab97c3ce?w=800&h=360&fit=crop&q=80" alt="Close-up of a wasp" loading="lazy">
         </div>
-    </footer>
+        <div class="svc-body">
+          <div class="svc-title">Wasp &amp; Hornet Removal</div>
+          <div class="svc-desc">Nests tucked in eaves, decks, and sheds are a sting risk all summer. We remove them safely and treat to stop them from rebuilding in the same spot.</div>
+          <span class="svc-link">Learn more &rarr;</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="section-inner">
+    <div class="section-label">Why Pest 'Em</div>
+    <h2 class="section-title">We Stop Problems Before They Start</h2>
+    <p class="section-sub">Most pest companies show up after you already have a problem. We work differently.</p>
+    <div class="why-grid">
+      <div class="why-card"><div class="why-num">01</div><div class="why-title">Prevention-First</div><div class="why-desc">Monthly barrier treatments create year-round protection so pests never get a foothold on your property.</div></div>
+      <div class="why-card"><div class="why-num">02</div><div class="why-title">Pet &amp; Family Safe</div><div class="why-desc">All products are safe once dry — about 30–60 minutes. We spray where bugs live, not where your family does.</div></div>
+      <div class="why-card"><div class="why-num">03</div><div class="why-title">Local &amp; Reliable</div><div class="why-desc">Based in Blairstown. Real person answers the phone. Same-week service, no national call centers, no runaround.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="section-inner">
+    <div class="split">
+      <div class="split-visual">
+        <svg viewBox="0 0 200 200" fill="none" width="160"><circle cx="100" cy="100" r="88" fill="rgba(93,206,115,0.07)" stroke="#5fce73" stroke-width="1" stroke-dasharray="6 4"/><circle cx="100" cy="100" r="58" fill="rgba(93,206,115,0.05)" stroke="#5fce73" stroke-width="1" stroke-dasharray="4 6"/><path d="M100 38 L114 72 L150 72 L122 94 L134 128 L100 108 L66 128 L78 94 L50 72 L86 72 Z" fill="#5fce73" opacity="0.9"/></svg>
+        <p>Warren County Protected</p>
+      </div>
+      <div class="split-content">
+        <div class="section-label">About Pest 'Em</div>
+        <h2>Your Local Warren County Pest Control Team</h2>
+        <p>We started Pest 'Em because the options in our area were either overpriced national chains or unreliable one-shot services. We built a better model — affordable monthly plans that actually prevent problems from starting.</p>
+        <p>Based in Blairstown, we know this terrain. Wooded lots, deer trails, standing water — all the reasons Warren County has serious tick, mosquito, and rodent pressure. We treat accordingly.</p>
+        <div class="guarantee-box"><div class="g-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div><div class="g-text">100% Satisfaction Guarantee — if pests return between treatments, we come back free of charge. No questions asked.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="pricing">
+  <div class="section-inner">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Simple Monthly Plans. No Surprises.</h2>
+    <p class="section-sub">All plans are 12-month contracts. We show up, do the work, and come back free if anything gets through.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-name">Basic</div>
+        <div class="price-amount"><sup>$</sup>40<span>/mo</span></div>
+        <div class="price-period">Billed monthly &bull; 12-month contract</div>
+        <ul class="price-features">
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Quarterly exterior perimeter spray</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Ant &amp; spider control</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Stink bug prevention</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Free re-treatments if needed</li>
+        </ul>
+        <a href="contact.html" class="price-btn">Get Started</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Most Popular</div>
+        <div class="price-name">Standard</div>
+        <div class="price-amount"><sup>$</sup>45<span>/mo</span></div>
+        <div class="price-period">Billed monthly &bull; 12-month contract</div>
+        <ul class="price-features">
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Everything in Basic</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Tick barrier treatments</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Mosquito control (spring–fall)</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Spotted lanternfly treatments</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Free re-treatments</li>
+        </ul>
+        <a href="contact.html" class="price-btn">Get Started</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Full Protection</div>
+        <div class="price-amount"><sup>$</sup>50<span>/mo</span></div>
+        <div class="price-period">Billed monthly &bull; 12-month contract</div>
+        <ul class="price-features">
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Everything in Standard</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Rodent prevention</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Interior treatments</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Wasp &amp; hornet removal</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Priority scheduling</li>
+        </ul>
+        <a href="contact.html" class="price-btn">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-gray">
+  <div class="section-inner">
+    <div class="section-label">Reviews</div>
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="t-grid">
+      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"We live on a wooded lot in Blairstown and tick season was a nightmare with our two dogs. Since starting the monthly plan we haven't found a single tick on the property. Absolutely worth it."</p><div class="t-author"><div class="t-initial">S</div><div><div class="t-name">Sarah M.</div><div class="t-loc">Blairstown, NJ</div></div></div></div>
+      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"Finally a local company that actually shows up and does great work. The mosquito treatments made our backyard usable again all summer. Highly recommend to anyone in Warren County."</p><div class="t-author"><div class="t-initial">J</div><div><div class="t-name">Jason D.</div><div class="t-loc">Hope, NJ</div></div></div></div>
+      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"Super responsive, came the same week I called. Explained everything before they started and were very careful around our kids and pets. Six months in and zero pest issues."</p><div class="t-author"><div class="t-initial">K</div><div><div class="t-name">Karen R.</div><div class="t-loc">Hackettstown, NJ</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Service Area</div>
+    <h2 class="section-title">Proudly Serving Warren County, NJ</h2>
+    <p class="section-sub">We cover all of Warren County and surrounding areas. Call us at (888) 774-4290 to confirm your area.</p>
+    <div class="towns"><span class="town">Blairstown</span><span class="town">Hackettstown</span><span class="town">Hope</span><span class="town">Belvidere</span><span class="town">Columbia</span><span class="town">Allamuchy</span><span class="town">Washington Township</span><span class="town">Phillipsburg</span><span class="town">Oxford</span><span class="town">Vienna</span><span class="town">Johnsonburg</span><span class="town">Knowlton</span></div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <h2>Ready to Protect Your Home?</h2>
+  <p>Get a free quote today. Same-week service available across Warren County, NJ.</p>
+  <a href="contact.html" class="btn-white">Get Your Free Quote</a>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div><div class="footer-logo">Pest <span>'Em</span></div><p class="footer-desc">Warren County's trusted pest control team. Prevention-first, pet-safe, locally owned out of Blairstown, NJ.</p></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="tick-control.html">Tick Control</a></li><li><a href="mosquito-control.html">Mosquito Control</a></li><li><a href="rodent-control.html">Rodent Prevention</a></li><li><a href="stink-bug-control.html">Stink Bug Control</a></li><li><a href="lanternfly-control.html">Lanternfly Control</a></li><li><a href="wasp-control.html">Wasp Removal</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">All Services</a></li><li><a href="contact.html">Contact</a></li><li><a href="#pricing">Pricing</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:8887744290">(888) 774-4290</a></li><li><a href="mailto:info@pestem.com">info@pestem.com</a></li><li><a>Blairstown, NJ 07825</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2026 Pest 'Em LLC. All rights reserved.</span><span class="footer-copy">Warren County, NJ</span></div>
+  </div>
+</footer>
 
 </body>
 </html>

@@ -12,35 +12,37 @@
     <meta property="og:description" content="Professional tick control for Warren County NJ homes. Barrier treatments from spring through fall. Pet-safe, family-safe.">
     <meta property="og:site_name" content="Pestem Pest Control">
 
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Urbanist', sans-serif; font-weight: 400; color: #111827; background: #ffffff; line-height: 1.6; }
+        body { font-family: 'Lato', sans-serif; font-weight: 400; color: #111827; background: #ffffff; line-height: 1.6; }
         a { text-decoration: none; color: inherit; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        h1, h2, h3 { font-family: 'Urbanist', sans-serif; font-weight: 900; letter-spacing: -0.5px; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -0.5px; }
         img { max-width: 100%; height: auto; }
 
         .btn-green { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; }
         .btn-green:hover { background: #15803d; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4); }
 
         /* Nav */
-        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #ffffff; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
-        .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 14px 24px; }
-        .nav-logo { font-size: 26px; font-weight: 900; color: #0f172a; letter-spacing: -0.5px; }
-        .nav-logo .green { color: #16a34a; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; }
+        .nav-logo { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 900; color: #1e40af; letter-spacing: -0.5px; }
         .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-        .nav-links a { color: #111827; font-size: 15px; font-weight: 600; transition: color 0.2s; }
-        .nav-links a:hover { color: #16a34a; }
-        .nav-btn { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 14px; padding: 10px 22px; border-radius: 8px; transition: all 0.3s ease; }
-        .nav-btn:hover { background: #15803d; transform: translateY(-2px); }
+        .nav-links a { color: #374151; font-size: 15px; font-weight: 700; transition: color 0.2s; }
+        .nav-links a:hover { color: #1e40af; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-phone { color: #1e40af; font-weight: 900; font-size: 15px; }
+        .nav-phone:hover { color: #16a34a; }
+        .nav-btn { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 14px; padding: 11px 24px; border-radius: 6px; transition: all 0.3s ease; }
+        .nav-btn:hover { background: #15803d; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(22,163,74,0.3); }
         .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; background: none; border: none; padding: 4px; }
-        .hamburger span { width: 24px; height: 2px; background: #0f172a; transition: 0.3s; display: block; }
-        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #ffffff; z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+        .hamburger span { width: 24px; height: 2.5px; background: #1e40af; transition: 0.3s; display: block; border-radius: 2px; }
+        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #ffffff; z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
         .mobile-menu.open { display: flex; }
-        .mobile-menu a { color: #0f172a; font-size: 20px; font-weight: 600; }
+        .mobile-menu a { color: #1e40af; font-size: 20px; font-weight: 700; }
         .mobile-menu a:hover { color: #16a34a; }
 
         /* Hero */
@@ -50,7 +52,7 @@
             background: url('https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=1600&q=80') center center / cover no-repeat;
             z-index: 0;
         }
-        .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to right, rgba(15,23,42,0.92) 0%, rgba(15,23,42,0.7) 100%); }
+        .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,20,40,0.9) 0%, rgba(30,64,175,0.6) 100%); }
         .page-hero .container { position: relative; z-index: 1; }
         .page-hero h1 { font-size: clamp(36px, 6vw, 56px); font-weight: 900; color: #ffffff; letter-spacing: -1px; margin-bottom: 16px; max-width: 650px; }
         .page-hero p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 560px; line-height: 1.7; }
@@ -97,16 +99,18 @@
         .cta-banner p { font-size: 17px; color: rgba(255,255,255,0.7); margin-bottom: 32px; }
 
         /* Footer */
-        .footer { background: #0f172a; padding: 60px 0 40px; color: rgba(255,255,255,0.55); }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand .footer-logo { font-size: 22px; font-weight: 900; color: #ffffff; margin-bottom: 12px; }
-        .footer-brand .footer-logo .green { color: #16a34a; }
-        .footer-brand p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.4); }
-        .footer h4 { font-size: 13px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+        .footer { background: #111827; padding: 80px 0 40px; color: rgba(255,255,255,0.5); }
+        .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        .footer-brand .footer-logo { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; color: #ffffff; margin-bottom: 14px; }
+        .footer-brand p { font-size: 14px; line-height: 1.7; }
+        .footer h4 { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
         .footer ul { list-style: none; }
         .footer ul li { margin-bottom: 10px; }
-        .footer ul li a { font-size: 14px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+        .footer ul li a { font-size: 14px; color: rgba(255,255,255,0.5); transition: color 0.2s; }
         .footer ul li a:hover { color: #16a34a; }
+        .footer-contact-item { font-size: 14px; margin-bottom: 10px; }
+        .footer-contact-item a { color: rgba(255,255,255,0.5); }
+        .footer-contact-item a:hover { color: #16a34a; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; font-size: 13px; }
 
         @media (max-width: 900px) {
@@ -117,10 +121,11 @@
         }
         @media (max-width: 768px) {
             .nav-links { display: none; }
+            .nav-right .nav-phone { display: none; }
             .nav-btn { display: none; }
             .hamburger { display: flex; }
             .footer-grid { grid-template-columns: 1fr; }
-            .page-hero { padding: 130px 0 70px; }
+            .page-hero { padding: 120px 0 70px; }
         }
     </style>
 </head>
@@ -129,14 +134,17 @@
     <!-- Nav -->
     <nav class="nav">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo">PEST<span class="green">EM</span></a>
+            <a href="index.html" class="nav-logo">PESTEM</a>
             <ul class="nav-links">
                 <li><a href="services.html">Services</a></li>
+                <li><a href="tick-control.html">Tick Control</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="index.html#service-area">Service Area</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <a href="contact.html" class="nav-btn">Get Free Quote</a>
+            <div class="nav-right">
+                <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
+                <a href="contact.html" class="nav-btn">Get Free Quote</a>
+            </div>
             <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
@@ -145,8 +153,10 @@
     <div class="mobile-menu">
         <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
         <a href="services.html" onclick="this.parentElement.classList.remove('open')">Services</a>
+        <a href="tick-control.html" onclick="this.parentElement.classList.remove('open')">Tick Control</a>
         <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
         <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
+        <a href="tel:8887744290" onclick="this.parentElement.classList.remove('open')" style="color: #16a34a; font-weight: 900;">(888) 774-4290</a>
         <a href="contact.html" class="nav-btn" onclick="this.parentElement.classList.remove('open')">Get Free Quote</a>
     </div>
 
@@ -276,8 +286,17 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="footer-logo">PEST<span class="green">EM</span></div>
-                    <p>Warren County's trusted pest control company. Prevention-first, pet-safe, locally owned and operated.</p>
+                    <div class="footer-logo">PESTEM</div>
+                    <p>Warren County's pest control experts. Preventative treatments that keep your home and family safe, year-round. Based in Blairstown, NJ.</p>
+                </div>
+                <div>
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
                 <div>
                     <h4>Services</h4>
@@ -290,27 +309,14 @@
                     </ul>
                 </div>
                 <div>
-                    <h4>Service Areas</h4>
-                    <ul>
-                        <li><a href="#">Blairstown</a></li>
-                        <li><a href="#">Hackettstown</a></li>
-                        <li><a href="#">Hope</a></li>
-                        <li><a href="#">Belvidere</a></li>
-                        <li><a href="#">Phillipsburg</a></li>
-                        <li><a href="#">Oxford</a></li>
-                    </ul>
-                </div>
-                <div>
                     <h4>Contact</h4>
-                    <ul>
-                        <li><a href="tel:9085550190">(908) 555-0190</a></li>
-                        <li><a href="mailto:info@pestem.com">info@pestem.com</a></li>
-                        <li><a href="contact.html">Get a Quote</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
+                    <div class="footer-contact-item"><a href="tel:8887744290">(888) 774-4290</a></div>
+                    <div class="footer-contact-item"><a href="mailto:info@pestem.com">info@pestem.com</a></div>
+                    <div class="footer-contact-item">Blairstown, NJ 07825</div>
+                    <div class="footer-contact-item" style="margin-top: 16px;">Mon-Fri: 8am - 6pm<br>Sat: 9am - 2pm</div>
                 </div>
             </div>
-            <div class="footer-bottom">&copy; 2026 Pestem Pest Control. All rights reserved. Warren County, NJ.</div>
+            <div class="footer-bottom">&copy; 2026 Pestem Pest Control. All rights reserved.</div>
         </div>
     </footer>
 
