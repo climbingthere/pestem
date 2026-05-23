@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 190" width="540" height="190">
+  <defs>
+    <style>
+      .main-text { font-family: 'Arial Black', 'Impact', sans-serif; font-weight: 900; font-size: 94px; }
+      .sub-text { font-family: 'Arial Black', 'Impact', sans-serif; font-weight: 900; font-size: 24px; letter-spacing: 8px; }
+    </style>
+  </defs>
+
+  <!-- === Custom "P" with tick/bug body as the bowl === -->
+  <g>
+    <!-- P vertical stroke -->
+    <rect x="24" y="22" width="20" height="126" rx="2" fill="#5fce73"/>
+
+    <!-- Bug body/abdomen = bowl of the P -->
+    <path d="M44 26 C54 16, 78 8, 96 20 C112 32, 114 52, 110 62 C106 74, 92 84, 76 86 C58 88, 44 78, 44 76"
+          fill="#5fce73"/>
+
+    <!-- Bug head -->
+    <ellipse cx="86" cy="10" rx="8" ry="7" fill="#5fce73"/>
+
+    <!-- Antennae -->
+    <line x1="80" y1="4" x2="70" y2="-8" stroke="#5fce73" stroke-width="2.8" stroke-linecap="round"/>
+    <line x1="92" y1="4" x2="102" y2="-8" stroke="#5fce73" stroke-width="2.8" stroke-linecap="round"/>
+    <circle cx="68" cy="-10" r="1.8" fill="#5fce73"/>
+    <circle cx="104" cy="-10" r="1.8" fill="#5fce73"/>
+
+    <!-- Right-side tick legs (4 visible, tick has 8 total) -->
+    <path d="M110 24 L126 14 L134 4" stroke="#5fce73" stroke-width="3.2" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+    <path d="M114 38 L130 32 L138 24" stroke="#5fce73" stroke-width="3.2" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+    <path d="M114 54 L130 60 L138 68" stroke="#5fce73" stroke-width="3.2" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+    <path d="M110 68 L126 78 L134 88" stroke="#5fce73" stroke-width="3.2" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+  </g>
+
+  <!-- "est 'Em" with color change via tspan -->
+  <text x="132" y="146" class="main-text">
+    <tspan fill="#ffffff">est </tspan><tspan fill="#5fce73">'Em</tspan>
+  </text>
+
+  <!-- "PEST CONTROL" subtext centered under wordmark -->
+  <text x="278" y="184" class="sub-text" fill="rgba(255,255,255,0.65)" text-anchor="middle">PEST CONTROL</text>
+</svg>
