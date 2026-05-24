@@ -3,315 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pest 'Em | Pest Control Blairstown NJ | Year-Round Protection</title>
-<meta name="description" content="Blairstown NJ's trusted pest control. Year-round monthly service — exterior barrier spray spring through fall, interior protection all winter. $49/mo flat rate. Call (888) 774-4290.">
+<title>Pest 'Em | Blairstown NJ Pest Control | Year-Round Monthly Service</title>
+<meta name="description" content="Blairstown's #1 pest control. Exterior barrier spray April-October, interior protection November-March. One flat monthly rate, 12-month contracts. Ticks, mosquitoes, rodents, stink bugs, lanternflies. (888) 774-4290.">
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Urbanist',sans-serif;color:#1a1a1a;background:#fff;line-height:1.6;}
-a{text-decoration:none;color:inherit;}
-img{max-width:100%;display:block;}
-
-/* Nav */
-.nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e5e7eb;padding:0 24px;}
-.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px;}
-.nav-links{display:flex;gap:32px;list-style:none;}
-.nav-links a{font-size:15px;font-weight:600;color:#374151;transition:color 0.2s;}
-.nav-links a:hover{color:#2d7a3a;}
-.nav-right{display:flex;align-items:center;gap:16px;}
-.nav-phone{font-size:15px;font-weight:700;color:#2d7a3a;}
-.nav-cta{background:#2d7a3a;color:#fff;padding:10px 22px;border-radius:6px;font-size:15px;font-weight:700;transition:background 0.2s;}
-.nav-cta:hover{background:#246831;}
-
-/* Hero */
-.hero{background:#0f2d14;padding:100px 24px;}
-.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;}
-.hero-badge{display:inline-block;background:rgba(95,206,115,0.1);border:1px solid rgba(95,206,115,0.25);color:#5fce73;font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;margin-bottom:24px;}
-.hero h1{font-size:52px;font-weight:900;color:#fff;line-height:1.08;margin-bottom:18px;letter-spacing:-1.5px;}
-.hero-sub{font-size:18px;color:rgba(255,255,255,0.7);margin-bottom:36px;line-height:1.7;max-width:520px;}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
-.btn-green{background:#2d7a3a;color:#fff;padding:15px 30px;border-radius:6px;font-size:16px;font-weight:700;display:inline-block;transition:background 0.2s;}
-.btn-green:hover{background:#246831;}
-.btn-ghost{background:transparent;color:#fff;padding:15px 30px;border-radius:6px;font-size:16px;font-weight:700;border:2px solid rgba(255,255,255,0.3);display:inline-block;transition:border-color 0.2s;}
-.btn-ghost:hover{border-color:rgba(255,255,255,0.6);}
-.pest-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-.pest-mini{background:rgba(255,255,255,0.04);border:1px solid rgba(95,206,115,0.2);border-radius:12px;padding:24px 16px;text-align:center;}
-.pest-mini svg{width:56px;height:56px;margin:0 auto 10px;}
-.pest-mini span{font-size:13px;font-weight:600;color:rgba(255,255,255,0.6);display:block;}
-
-/* Trust Bar */
-.trust-bar{background:#2d7a3a;padding:18px 24px;}
-.trust-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap;}
-.trust-item{color:#fff;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;}
-.trust-item svg{width:16px;height:16px;flex-shrink:0;}
-
-/* Sections */
-.section{padding:90px 24px;}
-.section-inner{max-width:1200px;margin:0 auto;}
-.section-label{font-size:12px;font-weight:700;color:#2d7a3a;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;}
-.section-title{font-size:42px;font-weight:900;color:#111;line-height:1.12;letter-spacing:-0.5px;margin-bottom:16px;}
-.section-sub{font-size:17px;color:#6b7280;max-width:600px;line-height:1.7;}
-.section-gray{background:#f9fafb;}
-.section-dark{background:#0f2d14;}
-.section-dark .section-label{color:#5fce73;}
-.section-dark .section-title{color:#fff;}
-.section-dark .section-sub{color:rgba(255,255,255,0.6);}
-
-/* How It Works */
-.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px;}
-.step-card{text-align:center;padding:36px 28px;}
-.step-num{width:52px;height:52px;border-radius:50%;background:#f0fdf4;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:900;color:#2d7a3a;margin:0 auto 20px;}
-.step-title{font-size:20px;font-weight:800;color:#111;margin-bottom:10px;}
-.step-desc{font-size:15px;color:#6b7280;line-height:1.7;}
-
-/* Services Grid */
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
-.service-card{border-radius:14px;overflow:hidden;border:1px solid #e5e7eb;background:#fff;display:block;transition:box-shadow 0.2s,transform 0.2s;}
-.service-card:hover{box-shadow:0 12px 40px rgba(0,0,0,0.1);transform:translateY(-3px);}
-.svc-img{height:200px;position:relative;overflow:hidden;}
-.svc-img img{width:100%;height:100%;object-fit:cover;display:block;}
-.svc-img::after{content:'';position:absolute;inset:0;background:rgba(15,45,20,0.4);pointer-events:none;}
-.svc-body{padding:24px;}
-.svc-title{font-size:20px;font-weight:800;color:#111;margin-bottom:8px;}
-.svc-desc{font-size:15px;color:#6b7280;margin-bottom:14px;line-height:1.6;}
-.svc-link{font-size:14px;font-weight:700;color:#2d7a3a;}
-
-/* Seasonal */
-.seasonal-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;}
-.season-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:36px;}
-.season-icon{margin-bottom:16px;}
-.season-icon svg{width:40px;height:40px;}
-.season-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:12px;}
-.season-desc{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.7;}
-.seasonal-callout{margin-top:40px;background:rgba(95,206,115,0.08);border:1px solid rgba(95,206,115,0.2);border-radius:12px;padding:24px 28px;}
-.seasonal-callout p{font-size:16px;color:rgba(255,255,255,0.85);line-height:1.7;font-style:italic;}
-
-/* Pricing */
-.pricing-card{max-width:520px;margin:48px auto 0;border:2px solid #2d7a3a;border-radius:16px;padding:48px;text-align:center;background:#fff;box-shadow:0 8px 40px rgba(45,122,58,0.08);}
-.pricing-name{font-size:13px;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;}
-.pricing-amount{font-size:64px;font-weight:900;color:#111;line-height:1;margin-bottom:4px;}
-.pricing-amount sup{font-size:28px;font-weight:700;vertical-align:top;position:relative;top:12px;}
-.pricing-amount span{font-size:20px;font-weight:500;color:#6b7280;}
-.pricing-period{font-size:14px;color:#6b7280;margin-bottom:28px;padding-bottom:28px;border-bottom:1px solid #f3f4f6;}
-.pricing-features{list-style:none;text-align:left;margin-bottom:32px;}
-.pricing-features li{font-size:15px;color:#374151;padding:10px 0;display:flex;align-items:center;gap:12px;border-bottom:1px solid #f9fafb;}
-.pricing-features li:last-child{border-bottom:none;}
-.check{width:22px;height:22px;background:#dcfce7;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
-.check svg{width:11px;height:11px;stroke:#2d7a3a;fill:none;stroke-width:3;}
-.pricing-btn{display:inline-block;background:#2d7a3a;color:#fff;padding:16px 40px;border-radius:8px;font-size:16px;font-weight:700;transition:background 0.2s;}
-.pricing-btn:hover{background:#246831;}
-
-/* About / Split */
-.split{display:grid;grid-template-columns:0.8fr 1.2fr;gap:60px;align-items:center;}
-.split-visual{border-radius:14px;background:#0f2d14;height:400px;display:flex;align-items:center;justify-content:center;padding:40px;}
-.split-visual svg{width:120px;height:120px;}
-.split-content h2{font-size:36px;font-weight:900;color:#111;line-height:1.15;letter-spacing:-0.5px;margin-bottom:18px;}
-.split-content p{font-size:16px;color:#6b7280;margin-bottom:16px;line-height:1.7;}
-.split-sign{font-size:15px;font-weight:700;color:#111;margin-top:8px;margin-bottom:24px;}
-.guarantee-box{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:10px;padding:20px 24px;display:flex;align-items:flex-start;gap:14px;}
-.g-check{width:24px;height:24px;background:#2d7a3a;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px;}
-.g-check svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:3;}
-.g-text{font-size:15px;color:#166534;font-weight:600;line-height:1.5;}
-
-/* Testimonials */
-.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
-.t-card{background:#fff;border-radius:14px;padding:28px;border:1px solid #e5e7eb;}
-.t-text{font-size:15px;color:#374151;line-height:1.75;margin-bottom:20px;}
-.t-author{display:flex;align-items:center;gap:12px;}
-.t-initial{width:44px;height:44px;border-radius:50%;background:#2d7a3a;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;}
-.t-name{font-size:15px;font-weight:700;color:#111;}
-.t-loc{font-size:13px;color:#9ca3af;}
-
-/* CTA Banner */
-.cta-banner{background:#0f2d14;padding:90px 24px;text-align:center;}
-.cta-banner h2{font-size:42px;font-weight:900;color:#fff;margin-bottom:14px;letter-spacing:-0.5px;}
-.cta-banner p{font-size:18px;color:rgba(255,255,255,0.65);margin-bottom:36px;}
-.btn-white{background:#fff;color:#2d7a3a;padding:16px 36px;border-radius:6px;font-size:16px;font-weight:800;display:inline-block;transition:opacity 0.2s;}
-.btn-white:hover{opacity:0.9;}
-
-/* Footer */
-.footer{background:#0a0f0a;padding:64px 24px 32px;}
-.footer-inner{max-width:1200px;margin:0 auto;}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}
-.footer-brand p{font-size:14px;color:#4b5563;line-height:1.7;margin-top:12px;}
-.footer-col h4{font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;}
-.footer-col ul{list-style:none;}
-.footer-col li{margin-bottom:10px;}
-.footer-col a{font-size:14px;color:#4b5563;transition:color 0.2s;}
-.footer-col a:hover{color:#5fce73;}
-.footer-bottom{border-top:1px solid #1f2937;padding-top:24px;display:flex;justify-content:space-between;}
-.footer-copy{font-size:13px;color:#374151;}
-
-/* Responsive */
-@media(max-width:900px){
-  .hero-inner,.services-grid,.steps-grid,.seasonal-grid,.t-grid,.footer-grid,.split{grid-template-columns:1fr;}
-  .pest-grid{display:none;}
-  .hero h1{font-size:36px;}
-  .hero{padding:60px 24px;}
-  .nav-links,.nav-phone{display:none;}
-  .section-title{font-size:30px;}
-  .pricing-card{padding:32px 24px;}
-  .split-visual{height:240px;}
-  .trust-inner{gap:20px;}
-}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{font-family:'Urbanist',sans-serif;color:#1a1a1a;background:#fff;line-height:1.6;}a{text-decoration:none;color:inherit;}img{max-width:100%;display:block;}
+.nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e5e7eb;padding:0 24px;}.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px;}.nav-links{display:flex;gap:28px;list-style:none;}.nav-links a{font-size:15px;font-weight:600;color:#374151;transition:color 0.2s;}.nav-links a:hover{color:#2d7a3a;}.nav-cta{background:#2d7a3a;color:#fff;padding:10px 22px;border-radius:6px;font-size:15px;font-weight:700;transition:background 0.2s;}.nav-cta:hover{background:#246b30;}.nav-phone{font-size:15px;font-weight:700;color:#0f2d14;margin-right:16px;}
+.hero{background:#0f2d14;padding:90px 24px;}.hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;}.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(95,206,115,0.1);border:1px solid rgba(95,206,115,0.25);color:#5fce73;font-size:13px;font-weight:700;padding:6px 16px;border-radius:20px;margin-bottom:20px;}.hero h1{font-size:46px;font-weight:900;color:#fff;line-height:1.1;margin-bottom:18px;letter-spacing:-1.5px;}.hero p{font-size:17px;color:rgba(255,255,255,0.7);margin-bottom:32px;line-height:1.7;}.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}.btn-green{background:#2d7a3a;color:#fff;padding:14px 28px;border-radius:6px;font-size:16px;font-weight:700;display:inline-block;transition:background 0.2s;}.btn-green:hover{background:#246b30;}.btn-ghost{background:transparent;color:#fff;padding:14px 28px;border-radius:6px;font-size:16px;font-weight:700;border:2px solid rgba(255,255,255,0.3);display:inline-block;transition:border-color 0.2s;}.btn-ghost:hover{border-color:rgba(255,255,255,0.6);}
+.pest-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}.pest-mini{background:rgba(255,255,255,0.04);border:1px solid rgba(95,206,115,0.2);border-radius:12px;padding:18px;text-align:center;}.pest-mini svg{width:54px;height:54px;margin:0 auto 8px;}.pest-mini span{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);display:block;}
+.trust-bar{background:#2d7a3a;padding:18px 24px;}.trust-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:40px;flex-wrap:wrap;}.trust-item{color:#fff;font-size:14px;font-weight:600;}
+.section{padding:80px 24px;}.section-inner{max-width:1200px;margin:0 auto;}.section-label{font-size:12px;font-weight:700;color:#2d7a3a;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;}.section-title{font-size:40px;font-weight:900;color:#111;line-height:1.12;letter-spacing:-0.5px;margin-bottom:14px;}.section-sub{font-size:17px;color:#6b7280;max-width:620px;line-height:1.7;}.section-dark{background:#0f1a0f;}.section-dark .section-label{color:#5fce73;}.section-dark .section-title{color:#fff;}.section-dark .section-sub{color:rgba(255,255,255,0.5);}
+.problem-body{font-size:17px;color:#374151;line-height:1.8;max-width:740px;margin-top:24px;}.pull-quote{background:#f0fdf4;border-left:4px solid #2d7a3a;padding:24px 28px;margin-top:28px;font-size:18px;font-weight:700;color:#0f2d14;line-height:1.6;max-width:740px;}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px;}.step-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:32px;}.step-num{font-size:48px;font-weight:900;color:#2d7a3a;line-height:1;margin-bottom:14px;}.step-title{font-size:20px;font-weight:800;color:#fff;margin-bottom:10px;}.step-desc{font-size:15px;color:rgba(255,255,255,0.55);line-height:1.7;}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}.service-card{border-radius:14px;overflow:hidden;border:1px solid #e5e7eb;background:#fff;display:block;transition:box-shadow 0.2s,transform 0.2s;}.service-card:hover{box-shadow:0 12px 40px rgba(0,0,0,0.1);transform:translateY(-3px);}.svc-icon{background:#0f2d14;height:180px;display:flex;align-items:center;justify-content:center;}.svc-icon svg{width:80px;height:80px;}.svc-body{padding:24px;}.svc-title{font-size:20px;font-weight:800;color:#111;margin-bottom:8px;}.svc-desc{font-size:15px;color:#6b7280;margin-bottom:14px;line-height:1.6;}.svc-link{font-size:14px;font-weight:700;color:#2d7a3a;}
+.seasonal{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;}.season-col{background:#f9fafb;border-radius:14px;padding:36px;border:1px solid #e5e7eb;}.season-col h3{font-size:22px;font-weight:800;color:#0f2d14;margin-bottom:6px;}.season-col .season-months{font-size:14px;font-weight:600;color:#2d7a3a;margin-bottom:20px;}.season-col ul{list-style:none;}.season-col li{font-size:15px;color:#374151;padding:10px 0;border-bottom:1px solid #e5e7eb;display:flex;align-items:flex-start;gap:10px;line-height:1.5;}.season-col li:last-child{border-bottom:none;}.season-col li::before{content:'';width:8px;height:8px;background:#2d7a3a;border-radius:50%;flex-shrink:0;margin-top:7px;}
+.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}.price-card{border:2px solid #e5e7eb;border-radius:14px;padding:36px;position:relative;background:#fff;}.price-card.featured{border-color:#2d7a3a;box-shadow:0 8px 40px rgba(45,122,58,0.12);}.price-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#2d7a3a;color:#fff;font-size:12px;font-weight:700;padding:4px 18px;border-radius:20px;white-space:nowrap;}.price-name{font-size:13px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;}.price-amount{font-size:52px;font-weight:900;color:#111;line-height:1;margin-bottom:4px;}.price-amount sup{font-size:24px;font-weight:700;vertical-align:top;margin-top:10px;}.price-amount span{font-size:18px;font-weight:500;color:#9ca3af;}.price-period{font-size:13px;color:#9ca3af;margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid #f3f4f6;}.price-features{list-style:none;margin-bottom:28px;}.price-features li{font-size:15px;color:#374151;padding:9px 0;border-bottom:1px solid #f9fafb;display:flex;align-items:center;gap:12px;}.price-features li:last-child{border-bottom:none;}.check{width:20px;height:20px;background:#dcfce7;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;}.check svg{width:10px;height:10px;stroke:#2d7a3a;fill:none;stroke-width:3;}.price-btn{display:block;text-align:center;padding:14px;border-radius:8px;font-size:15px;font-weight:700;background:#f3f4f6;color:#111;transition:background 0.2s;}.price-btn:hover{background:#e5e7eb;}.price-card.featured .price-btn{background:#2d7a3a;color:#fff;}.price-card.featured .price-btn:hover{background:#246b30;}
+.t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}.t-card{background:#fff;border-radius:14px;padding:28px;border:1px solid #e5e7eb;}.t-stars{color:#fbbf24;font-size:15px;letter-spacing:3px;margin-bottom:14px;}.t-text{font-size:15px;color:#374151;line-height:1.75;margin-bottom:20px;}.t-author{display:flex;align-items:center;gap:12px;}.t-initial{width:44px;height:44px;border-radius:50%;background:#2d7a3a;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;}.t-name{font-size:15px;font-weight:700;color:#111;}.t-loc{font-size:13px;color:#9ca3af;}
+.towns{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;}.town{background:#f0fdf4;border:1px solid #bbf7d0;color:#166534;font-size:14px;font-weight:600;padding:8px 18px;border-radius:20px;}
+.cta-banner{background:#0f2d14;padding:80px 24px;text-align:center;}.cta-banner h2{font-size:40px;font-weight:900;color:#fff;margin-bottom:14px;letter-spacing:-0.5px;}.cta-banner p{font-size:18px;color:rgba(255,255,255,0.65);margin-bottom:32px;}.btn-white{background:#fff;color:#2d7a3a;padding:16px 36px;border-radius:6px;font-size:16px;font-weight:800;display:inline-block;transition:background 0.2s;}.btn-white:hover{background:#f0fdf4;}.cta-phone{font-size:18px;font-weight:700;color:rgba(255,255,255,0.8);margin-top:16px;}
+.footer{background:#0a0f0a;padding:64px 24px 32px;}.footer-inner{max-width:1200px;margin:0 auto;}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;}.footer-brand{font-size:22px;font-weight:900;color:#fff;margin-bottom:4px;}.footer-tagline{font-size:13px;font-weight:700;color:#5fce73;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;}.footer-desc{font-size:14px;color:#4b5563;line-height:1.7;}.footer-col h4{font-size:12px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:16px;}.footer-col ul{list-style:none;}.footer-col li{margin-bottom:10px;}.footer-col a{font-size:14px;color:#4b5563;transition:color 0.2s;}.footer-col a:hover{color:#5fce73;}.footer-bottom{border-top:1px solid #1f2937;padding-top:24px;display:flex;justify-content:space-between;}.footer-copy{font-size:13px;color:#374151;}
+@media(max-width:768px){.hero-inner,.services-grid,.steps-grid,.pricing-grid,.t-grid,.footer-grid,.seasonal{grid-template-columns:1fr;}.pest-grid{display:none;}.hero h1{font-size:32px;}.nav-links,.nav-phone{display:none;}.section-title{font-size:28px;}.cta-banner h2{font-size:28px;}.pull-quote{font-size:16px;}}
 </style>
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html"><img src="logo.png" alt="Pest 'Em" style="height:52px;"></a>
+    <a href="index.html"><img src="logo.png" alt="Pest 'Em" style="height:48px;"></a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nav-right">
+    <div style="display:flex;align-items:center;">
       <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
       <a href="contact.html" class="nav-cta">Get Free Quote</a>
     </div>
   </div>
 </nav>
 
-<!-- Hero -->
-<section class="hero">
+<div class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-badge">Blairstown's #1 Pest Control</div>
-      <h1>Year-Round Pest Control That Actually Shows Up</h1>
-      <p class="hero-sub">Monthly exterior spray April through October. Interior protection all winter. One flat rate, no surprises. Serving Blairstown, NJ.</p>
+      <div class="hero-badge">Blairstown's #1 Rated Pest Control</div>
+      <h1>Exterior Spray in Summer. Interior Protection in Winter. One Flat Monthly Rate.</h1>
+      <p>12-month contracts. Monthly service year-round. Real treatments every visit — not the same spray in a snowstorm.</p>
       <div class="hero-btns">
         <a href="contact.html" class="btn-green">Get a Free Quote</a>
-        <a href="tel:8887744290" class="btn-ghost">Call (888) 774-4290</a>
+        <a href="tel:8887744290" class="btn-ghost">(888) 774-4290</a>
       </div>
     </div>
     <div class="pest-grid">
       <div class="pest-mini">
-        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="55" rx="22" ry="26" fill="#5fce73"/><ellipse cx="50" cy="34" rx="12" ry="10" fill="#5fce73"/><line x1="28" y1="44" x2="8" y2="30" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="28" y1="55" x2="6" y2="53" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="28" y1="65" x2="8" y2="76" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="72" y1="44" x2="92" y2="30" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="72" y1="55" x2="94" y2="53" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="72" y1="65" x2="92" y2="76" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><circle cx="44" cy="32" r="3" fill="#0f2d14"/><circle cx="56" cy="32" r="3" fill="#0f2d14"/></svg>
-        <span>Tick Control</span>
+        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="52" rx="20" ry="25" fill="#5fce73"/><ellipse cx="50" cy="28" rx="10" ry="8" fill="#5fce73"/><line x1="30" y1="38" x2="12" y2="26" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="48" x2="10" y2="46" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="58" x2="12" y2="68" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="68" x2="14" y2="82" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="38" x2="88" y2="26" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="48" x2="90" y2="46" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="58" x2="88" y2="68" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="68" x2="86" y2="82" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <span>Ticks</span>
       </div>
       <div class="pest-mini">
-        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="60" rx="8" ry="20" fill="#5fce73"/><circle cx="50" cy="36" r="12" fill="#5fce73"/><path d="M50 36 Q26 16 10 26" stroke="#5fce73" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M50 36 Q74 16 90 26" stroke="#5fce73" stroke-width="3" stroke-linecap="round" fill="none"/><line x1="46" y1="28" x2="42" y2="14" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="54" y1="28" x2="58" y2="14" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="80" x2="50" y2="94" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="41" y1="70" x2="30" y2="84" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="59" y1="70" x2="70" y2="84" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><circle cx="44" cy="33" r="3" fill="#0f2d14"/><circle cx="56" cy="33" r="3" fill="#0f2d14"/></svg>
-        <span>Mosquito Control</span>
+        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="62" rx="7" ry="18" fill="#5fce73"/><circle cx="50" cy="38" r="10" fill="#5fce73"/><line x1="50" y1="28" x2="50" y2="12" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><path d="M40 36 Q28 20 18 24" stroke="#5fce73" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M60 36 Q72 20 82 24" stroke="#5fce73" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M38 32 Q24 26 16 30" stroke="#5fce73" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/><path d="M62 32 Q76 26 84 30" stroke="#5fce73" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/><line x1="44" y1="64" x2="34" y2="80" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="80" x2="50" y2="94" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="64" x2="66" y2="80" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Mosquitoes</span>
       </div>
       <div class="pest-mini">
-        <svg viewBox="0 0 100 100" fill="none"><path d="M50 18 L74 34 L74 66 L50 80 L26 66 L26 34 Z" fill="#5fce73"/><path d="M50 24 L70 38 L70 62 L50 74 L30 62 L30 38 Z" fill="#3a9e4a" opacity="0.35"/><line x1="26" y1="38" x2="10" y2="28" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="26" y1="50" x2="8" y2="50" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="26" y1="62" x2="10" y2="72" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="74" y1="38" x2="90" y2="28" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="74" y1="50" x2="92" y2="50" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><line x1="74" y1="62" x2="90" y2="72" stroke="#5fce73" stroke-width="3" stroke-linecap="round"/><circle cx="43" cy="30" r="3" fill="#0f2d14"/><circle cx="57" cy="30" r="3" fill="#0f2d14"/></svg>
-        <span>Stink Bug</span>
+        <svg viewBox="0 0 100 100" fill="none"><path d="M50 20 L72 35 L72 65 L50 80 L28 65 L28 35 Z" fill="#5fce73"/><line x1="28" y1="40" x2="12" y2="30" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="28" y1="50" x2="10" y2="50" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="28" y1="60" x2="12" y2="70" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="40" x2="88" y2="30" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="50" x2="90" y2="50" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="60" x2="88" y2="70" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="44" y1="20" x2="40" y2="10" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="20" x2="60" y2="10" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/></svg>
+        <span>Stink Bugs</span>
       </div>
       <div class="pest-mini">
-        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="46" cy="64" rx="26" ry="20" fill="#5fce73"/><circle cx="62" cy="46" r="18" fill="#5fce73"/><ellipse cx="46" cy="32" rx="10" ry="13" fill="#5fce73" opacity="0.8"/><ellipse cx="74" cy="32" rx="10" ry="13" fill="#5fce73" opacity="0.8"/><circle cx="57" cy="44" r="3" fill="#0f2d14"/><circle cx="69" cy="44" r="3" fill="#0f2d14"/><path d="M18 72 Q8 82 6 92" stroke="#5fce73" stroke-width="3" stroke-linecap="round" fill="none"/></svg>
-        <span>Mouse</span>
+        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="42" cy="58" rx="22" ry="18" fill="#5fce73"/><circle cx="68" cy="44" r="14" fill="#5fce73"/><ellipse cx="56" cy="30" rx="8" ry="10" fill="#5fce73"/><ellipse cx="78" cy="30" rx="8" ry="10" fill="#5fce73"/><circle cx="63" cy="42" r="2.5" fill="#0f2d14"/><circle cx="73" cy="42" r="2.5" fill="#0f2d14"/><path d="M20 64 Q10 74 8 88" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+        <span>Rodents</span>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Trust Bar -->
-<div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item"><svg viewBox="0 0 16 16" fill="none"><path d="M8 1L2 4v4c0 3.5 2.5 6.5 6 7.5 3.5-1 6-4 6-7.5V4L8 1z" stroke="#fff" stroke-width="1.5" fill="none"/></svg> Locally Owned &amp; Operated</div>
-    <div class="trust-item"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6.5" stroke="#fff" stroke-width="1.5"/><path d="M5 8l2 2 4-4" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Pet &amp; Family Safe Products</div>
-    <div class="trust-item"><svg viewBox="0 0 16 16" fill="none"><path d="M1 8h14M8 1v14" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> Free Re-Treatments</div>
-    <div class="trust-item"><svg viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="10" rx="1.5" stroke="#fff" stroke-width="1.5" fill="none"/><path d="M5 8h6M5 11h3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg> No Surprise Charges</div>
   </div>
 </div>
 
-<!-- How It Works -->
-<section class="section" id="how-it-works">
-  <div class="section-inner" style="text-align:center;">
-    <div class="section-label">The Process</div>
-    <h2 class="section-title">Simple. Consistent. Year-Round.</h2>
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">Blairstown Owned &amp; Operated</div>
+    <div class="trust-item">Pet &amp; Family Safe Products</div>
+    <div class="trust-item">12-Month Protection Plans</div>
+    <div class="trust-item">100% Satisfaction Guarantee</div>
+  </div>
+</div>
+
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="section-label">Why We Exist</div>
+    <h2 class="section-title">Why We Left Terminix</h2>
+    <div class="problem-body">
+      <p>After 3 years as one of Terminix's top specialists, our founder watched the same thing happen to thousands of homeowners: paying for mosquito spray in January, locked into contracts that ran the same treatment every month regardless of what was actually needed. Pest 'Em was built around one rule — we treat what needs treating, when it needs treating.</p>
+    </div>
+    <div class="pull-quote">No mosquito spray in a snowstorm. No made-up line items. Just real pest control, every month, all year.</div>
+  </div>
+</section>
+
+<section class="section section-dark" id="how-it-works">
+  <div class="section-inner">
+    <div class="section-label">How It Works</div>
+    <h2 class="section-title">Three Steps to Year-Round Protection</h2>
     <div class="steps-grid">
       <div class="step-card">
-        <div class="step-num">1</div>
-        <div class="step-title">We Assess</div>
-        <div class="step-desc">Quick property walkthrough to identify pressure points, entry areas, and pest activity unique to your lot.</div>
+        <div class="step-num">01</div>
+        <div class="step-title">We Assess Your Property</div>
+        <div class="step-desc">We walk the exterior, identify active pressure points, note entry points, and build your treatment plan around what's actually on your property.</div>
       </div>
       <div class="step-card">
-        <div class="step-num">2</div>
-        <div class="step-title">We Treat</div>
-        <div class="step-desc">Monthly exterior barrier spray in warm months. Interior service in winter. Every visit matches the season.</div>
+        <div class="step-num">02</div>
+        <div class="step-title">Monthly Treatments, Every Season</div>
+        <div class="step-desc">April through October: exterior barrier spray targeting ticks, mosquitoes, ants, wasps, and stink bugs. November through March: interior treatments — rodent stations, crack &amp; crevice spray, spider control, foundation inspection.</div>
       </div>
       <div class="step-card">
-        <div class="step-num">3</div>
-        <div class="step-title">We Maintain</div>
-        <div class="step-desc">Free re-treatments if anything gets through. Same tech every visit. No call center runaround.</div>
+        <div class="step-num">03</div>
+        <div class="step-title">You Stay Protected Year-Round</div>
+        <div class="step-desc">One flat monthly rate. Same tech every visit. If pests return between treatments, we come back free.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section class="section section-gray" id="services">
+<section class="section" id="services">
   <div class="section-inner">
-    <div class="section-label">What We Handle</div>
-    <h2 class="section-title">Every Pest Blairstown Deals With</h2>
+    <div class="section-label">What We Treat</div>
+    <h2 class="section-title">Targeted Treatments for Every Pest</h2>
+    <p class="section-sub">Each service uses specific products matched to the pest — no generic one-spray-fits-all approach.</p>
     <div class="services-grid">
 
       <a href="tick-control.html" class="service-card">
-        <div class="svc-img">
-          <img src="https://images.unsplash.com/photo-1696006985991-876279342017?w=800&h=400&fit=crop&q=80" alt="Tick on a leaf" loading="lazy">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="52" rx="20" ry="25" fill="none" stroke="#fff" stroke-width="2.5"/><ellipse cx="50" cy="28" rx="10" ry="8" fill="none" stroke="#fff" stroke-width="2.5"/><line x1="30" y1="38" x2="12" y2="26" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="48" x2="10" y2="46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="58" x2="12" y2="68" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="68" x2="14" y2="82" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="38" x2="88" y2="26" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="48" x2="90" y2="46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="58" x2="88" y2="68" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="68" x2="86" y2="82" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
         </div>
         <div class="svc-body">
           <div class="svc-title">Tick Control</div>
-          <div class="svc-desc">Seasonal barrier treatments that create a protective perimeter around your yard. Lyme disease prevention starts here.</div>
+          <div class="svc-desc">Bifenthrin-based perimeter barrier spray along lawn edges, wooded borders, and deer trails. Monthly treatments April through October eliminate tick populations before they reach your family.</div>
           <span class="svc-link">Learn more &rarr;</span>
         </div>
       </a>
 
       <a href="mosquito-control.html" class="service-card">
-        <div class="svc-img">
-          <img src="https://images.unsplash.com/photo-1707943768467-84fe5c76a40c?w=800&h=400&fit=crop&q=80" alt="Mosquito close-up" loading="lazy">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="62" rx="7" ry="18" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="50" cy="38" r="10" fill="none" stroke="#fff" stroke-width="2.5"/><line x1="50" y1="28" x2="50" y2="12" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M40 36 Q28 20 18 24" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M60 36 Q72 20 82 24" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M38 32 Q24 26 16 30" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/><path d="M62 32 Q76 26 84 30" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/><line x1="44" y1="64" x2="34" y2="80" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="80" x2="50" y2="94" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="64" x2="66" y2="80" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <div class="svc-body">
           <div class="svc-title">Mosquito Control</div>
-          <div class="svc-desc">Barrier spray that eliminates mosquitoes where they rest. Reclaim your backyard for evenings and cookouts.</div>
+          <div class="svc-desc">Permethrin barrier treatment targeting resting sites in shrubs, under decks, and dense vegetation. We spray where mosquitoes harbor during the day so they never make it to your evening.</div>
           <span class="svc-link">Learn more &rarr;</span>
         </div>
       </a>
 
       <a href="stink-bug-control.html" class="service-card">
-        <div class="svc-img">
-          <img src="https://images.unsplash.com/photo-1693853311346-7174761a6835?w=800&h=400&fit=crop&q=80" alt="Stink bug on surface" loading="lazy">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><path d="M50 20 L72 35 L72 65 L50 80 L28 65 L28 35 Z" fill="none" stroke="#fff" stroke-width="2.5"/><line x1="28" y1="40" x2="12" y2="30" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="28" y1="50" x2="10" y2="50" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="28" y1="60" x2="12" y2="70" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="40" x2="88" y2="30" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="50" x2="90" y2="50" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="60" x2="88" y2="70" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="44" y1="20" x2="40" y2="10" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="20" x2="60" y2="10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <div class="svc-body">
           <div class="svc-title">Stink Bug Control</div>
-          <div class="svc-desc">Exterior treatment in late summer and fall stops them from overwintering inside your home.</div>
+          <div class="svc-desc">Exterior residual spray in late summer prevents overwintering entry. Interior crack-and-crevice treatment in winter targets stink bugs already inside walls, attics, and window frames.</div>
           <span class="svc-link">Learn more &rarr;</span>
         </div>
       </a>
 
       <a href="lanternfly-control.html" class="service-card">
-        <div class="svc-img">
-          <img src="https://images.unsplash.com/photo-1615507131862-e142f9975d7c?w=800&h=400&fit=crop&q=80" alt="Spotted lanternfly" loading="lazy">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="58" rx="14" ry="20" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="50" cy="34" r="8" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M36 50 Q20 42 14 52 Q18 64 36 62" stroke="#fff" stroke-width="2" fill="none"/><path d="M64 50 Q80 42 86 52 Q82 64 64 62" stroke="#fff" stroke-width="2" fill="none"/><circle cx="24" cy="54" r="2" fill="#fff" opacity="0.5"/><circle cx="76" cy="54" r="2" fill="#fff" opacity="0.5"/><line x1="44" y1="28" x2="38" y2="18" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="28" x2="62" y2="18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <div class="svc-body">
           <div class="svc-title">Spotted Lanternfly</div>
-          <div class="svc-desc">Invasive species devastating NJ trees and gardens. We treat surfaces where lanternflies feed and lay eggs.</div>
+          <div class="svc-desc">Dinotefuran-based systemic and contact treatments on tree-of-heaven, ornamentals, and hardscape surfaces where lanternflies congregate. We target adults and egg masses seasonally.</div>
           <span class="svc-link">Learn more &rarr;</span>
         </div>
       </a>
 
       <a href="rodent-control.html" class="service-card">
-        <div class="svc-img">
-          <img src="https://images.unsplash.com/photo-1564360652218-5b338ba60325?w=800&h=400&fit=crop&q=80" alt="Mouse" loading="lazy">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="42" cy="58" rx="22" ry="18" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="68" cy="44" r="14" fill="none" stroke="#fff" stroke-width="2.5"/><ellipse cx="56" cy="30" rx="8" ry="10" fill="none" stroke="#fff" stroke-width="2"/><ellipse cx="78" cy="30" rx="8" ry="10" fill="none" stroke="#fff" stroke-width="2"/><circle cx="63" cy="42" r="2.5" fill="#fff"/><circle cx="73" cy="42" r="2.5" fill="#fff"/><path d="M20 64 Q10 74 8 88" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none"/><line x1="80" y1="48" x2="92" y2="46" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="80" y1="50" x2="92" y2="52" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="80" y1="46" x2="90" y2="42" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
         </div>
         <div class="svc-body">
           <div class="svc-title">Rodent Prevention</div>
-          <div class="svc-desc">Bait stations, perimeter treatment, and entry point sealing before mice and rats move in for winter.</div>
+          <div class="svc-desc">Protecta LP bait stations monitored and refilled monthly. Entry point identification, exclusion recommendations, and interior snap-trap placement when activity is detected.</div>
           <span class="svc-link">Learn more &rarr;</span>
         </div>
       </a>
 
       <a href="wasp-control.html" class="service-card">
-        <div class="svc-img">
-          <img src="https://images.unsplash.com/photo-1584626022615-991cab97c3ce?w=800&h=400&fit=crop&q=80" alt="Wasp on nest" loading="lazy">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="34" rx="12" ry="10" fill="none" stroke="#fff" stroke-width="2.5"/><ellipse cx="50" cy="62" rx="10" ry="14" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="46" y="43" width="8" height="6" rx="3" fill="none" stroke="#fff" stroke-width="2"/><line x1="42" y1="56" x2="42" y2="62" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="58" y1="56" x2="58" y2="62" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="44" y1="64" x2="44" y2="68" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="56" y1="64" x2="56" y2="68" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><path d="M38 30 Q28 18 22 20" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M62 30 Q72 18 78 20" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><line x1="44" y1="26" x2="38" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="26" x2="62" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="76" x2="50" y2="86" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="44" y1="74" x2="36" y2="86" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="74" x2="64" y2="86" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <div class="svc-body">
           <div class="svc-title">Wasp &amp; Hornet Removal</div>
-          <div class="svc-desc">Safe nest removal from eaves, decks, and sheds. We treat to prevent them from rebuilding.</div>
+          <div class="svc-desc">Nest removal plus cypermethrin residual treatment on eaves, soffits, and deck structures. Monthly prevention sprays stop rebuilding in the same high-traffic areas all season long.</div>
           <span class="svc-link">Learn more &rarr;</span>
         </div>
       </a>
@@ -320,146 +197,130 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
-<!-- Seasonal Model -->
-<section class="section section-dark">
+<section class="section" style="background:#f9fafb;" id="seasonal">
   <div class="section-inner">
-    <div class="section-label">Year-Round Value</div>
-    <h2 class="section-title">Real Service Every Season</h2>
-    <p class="section-sub">Most companies bill you year-round and disappear in winter. We show up every month — exterior when it matters, interior when it's cold.</p>
-    <div class="seasonal-grid">
-      <div class="season-card">
-        <div class="season-icon"><svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="8" fill="#5fce73"/><line x1="20" y1="4" x2="20" y2="10" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="20" y1="30" x2="20" y2="36" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="4" y1="20" x2="10" y2="20" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="20" x2="36" y2="20" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="8.7" y1="8.7" x2="12.9" y2="12.9" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="27.1" y1="27.1" x2="31.3" y2="31.3" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="8.7" y1="31.3" x2="12.9" y2="27.1" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="27.1" y1="12.9" x2="31.3" y2="8.7" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/></svg></div>
-        <div class="season-title">April through October</div>
-        <div class="season-desc">Monthly exterior barrier spray. Ticks, mosquitoes, ants, wasps, lanternflies. Product reapplied monthly because it breaks down — every visit is earned.</div>
+    <div class="section-label">Seasonal Breakdown</div>
+    <h2 class="section-title">The Right Treatment at the Right Time</h2>
+    <p class="section-sub">Your flat monthly rate covers different work depending on the season — because what your property needs in July is not what it needs in January.</p>
+    <div class="seasonal">
+      <div class="season-col">
+        <h3>Exterior Season</h3>
+        <div class="season-months">April - October (7 visits)</div>
+        <ul>
+          <li>Monthly exterior barrier spray around full perimeter</li>
+          <li>Bifenthrin-based perimeter treatment — 3 ft up foundation, 3 ft out on lawn edge</li>
+          <li>Targeted mosquito barrier in shrubs and vegetation (resting sites)</li>
+          <li>Tick control along lawn perimeter and wooded edges</li>
+          <li>Wasp and hornet nest prevention and removal</li>
+          <li>Spotted lanternfly surface and vegetation treatment</li>
+        </ul>
       </div>
-      <div class="season-card">
-        <div class="season-icon"><svg viewBox="0 0 40 40" fill="none"><line x1="20" y1="2" x2="20" y2="38" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="20" x2="38" y2="20" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="7.3" y1="7.3" x2="32.7" y2="32.7" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="32.7" y1="7.3" x2="7.3" y2="32.7" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="8" r="2" fill="#5fce73"/><circle cx="20" cy="32" r="2" fill="#5fce73"/><circle cx="8" cy="20" r="2" fill="#5fce73"/><circle cx="32" cy="20" r="2" fill="#5fce73"/><circle cx="11" cy="11" r="1.5" fill="#5fce73"/><circle cx="29" cy="29" r="1.5" fill="#5fce73"/><circle cx="29" cy="11" r="1.5" fill="#5fce73"/><circle cx="11" cy="29" r="1.5" fill="#5fce73"/></svg></div>
-        <div class="season-title">November through March</div>
-        <div class="season-desc">Monthly interior visit. Rodent bait stations, crack and crevice treatment, spider control, foundation inspection. Real work, not a checkbox.</div>
+      <div class="season-col">
+        <h3>Interior Season</h3>
+        <div class="season-months">November - March (5 visits)</div>
+        <ul>
+          <li>Monthly interior visit, same flat rate</li>
+          <li>Rodent bait station inspection and refill (Protecta LP stations)</li>
+          <li>Crack and crevice spray along baseboards, entry points, plumbing gaps</li>
+          <li>Spider treatment in basement, garage, utility areas</li>
+          <li>Stink bug interior treatment (overwintering in walls and attic)</li>
+          <li>Foundation exterior inspection — seal recommendations, moisture assessment</li>
+        </ul>
       </div>
-    </div>
-    <div class="seasonal-callout">
-      <p>"Former Terminix specialist. We left because charging for mosquito spray in January isn't pest control — it's billing for billing's sake."</p>
     </div>
   </div>
 </section>
 
-<!-- Pricing -->
 <section class="section" id="pricing">
-  <div class="section-inner" style="text-align:center;">
-    <div class="section-label">Pricing</div>
-    <h2 class="section-title">One Plan. Everything Covered.</h2>
-    <div class="pricing-card">
-      <div class="pricing-name">Full Protection Plan</div>
-      <div class="pricing-amount"><sup>$</sup>49<span>/mo</span></div>
-      <div class="pricing-period">12-month agreement &middot; Exterior + Interior &middot; All pests covered</div>
-      <ul class="pricing-features">
-        <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Monthly exterior barrier spray (April&ndash;Oct)</li>
-        <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Monthly interior service (Nov&ndash;Mar)</li>
-        <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Tick &amp; mosquito barrier treatments</li>
-        <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Stink bug &amp; lanternfly prevention</li>
-        <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Rodent perimeter &amp; bait station monitoring</li>
-        <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Wasp &amp; hornet nest removal</li>
-        <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Free re-treatments between visits</li>
-        <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>No contracts auto-renew without your approval</li>
-      </ul>
-      <a href="contact.html" class="pricing-btn">Get Started — Free First Quote</a>
-    </div>
-  </div>
-</section>
-
-<!-- About -->
-<section class="section section-gray" id="about">
   <div class="section-inner">
-    <div class="split">
-      <div class="split-visual">
-        <svg viewBox="0 0 120 120" fill="none"><path d="M60 10L14 30v30c0 22 18 40 46 48 28-8 46-26 46-48V30L60 10z" fill="rgba(95,206,115,0.1)" stroke="#5fce73" stroke-width="2"/><path d="M60 30L42 38v16c0 10 8 20 18 24 10-4 18-14 18-24V38L60 30z" fill="#5fce73" opacity="0.3"/><path d="M52 56l6 6 12-12" stroke="#5fce73" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">Simple. Flat. Year-Round.</h2>
+    <p class="section-sub">All plans are 12-month contracts. Cancel anytime after your first year. 100% satisfaction guarantee on every visit.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-name">Basic</div>
+        <div class="price-amount"><sup>$</sup>40<span>/mo</span></div>
+        <div class="price-period">Exterior season only (April-Oct) &bull; 7 monthly visits</div>
+        <ul class="price-features">
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Monthly perimeter barrier spray</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Ants, spiders, wasps</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Free re-treatments between visits</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>100% satisfaction guarantee</li>
+        </ul>
+        <a href="contact.html" class="price-btn">Get Started</a>
       </div>
-      <div class="split-content">
-        <div class="section-label">Our Story</div>
-        <h2>Why We Started Pest 'Em</h2>
-        <p>After three years as a top specialist at Terminix, I got tired of the model. Charging homeowners for mosquito spray in January. Locking people into contracts that don't change with the seasons. I built Pest 'Em around one rule: we only do what actually needs doing.</p>
-        <p>Every visit has a purpose. Every charge is earned.</p>
-        <div class="split-sign">— Pest 'Em, Blairstown NJ</div>
-        <div class="guarantee-box">
-          <div class="g-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>
-          <div class="g-text">100% Satisfaction Guarantee — if anything gets through between treatments, we come back free. No questions asked.</div>
-        </div>
+      <div class="price-card featured">
+        <div class="price-badge">Most Popular</div>
+        <div class="price-name">Standard</div>
+        <div class="price-amount"><sup>$</sup>45<span>/mo</span></div>
+        <div class="price-period">Full year-round &bull; 12 monthly visits</div>
+        <ul class="price-features">
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Exterior season + interior winter visits</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Tick &amp; mosquito barrier treatments</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Stink bug &amp; lanternfly control</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Rodent bait station monitoring</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Free re-treatments between visits</li>
+        </ul>
+        <a href="contact.html" class="price-btn">Get Started</a>
+      </div>
+      <div class="price-card">
+        <div class="price-name">Premium</div>
+        <div class="price-amount"><sup>$</sup>55<span>/mo</span></div>
+        <div class="price-period">Everything in Standard + extras &bull; 12 visits</div>
+        <ul class="price-features">
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Everything in Standard</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Interior spray treatments included</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Roach &amp; rodent bait station installation</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Priority scheduling</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Same-week service guarantee</li>
+        </ul>
+        <a href="contact.html" class="price-btn">Get Started</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Testimonials -->
-<section class="section">
+<section class="section" style="background:#f9fafb;">
   <div class="section-inner">
     <div class="section-label">Reviews</div>
-    <h2 class="section-title">What Our Customers Say</h2>
+    <h2 class="section-title">What Blairstown Homeowners Say</h2>
     <div class="t-grid">
-      <div class="t-card">
-        <p class="t-text">"Tick season used to be a nightmare with our dogs. Haven't found one since we started. Absolutely worth every dollar."</p>
-        <div class="t-author"><div class="t-initial">S</div><div><div class="t-name">Sarah M.</div><div class="t-loc">Blairstown, NJ</div></div></div>
-      </div>
-      <div class="t-card">
-        <p class="t-text">"Finally a local company that actually shows up. Mosquito treatments made our backyard usable all summer."</p>
-        <div class="t-author"><div class="t-initial">J</div><div><div class="t-name">Jason D.</div><div class="t-loc">Blairstown, NJ</div></div></div>
-      </div>
-      <div class="t-card">
-        <p class="t-text">"Showed up same week, explained everything, careful around our kids and pets. Six months in, zero issues."</p>
-        <div class="t-author"><div class="t-initial">K</div><div><div class="t-name">Karen R.</div><div class="t-loc">Blairstown, NJ</div></div></div>
-      </div>
+      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"We have two dogs and a wooded half-acre. Before Pest 'Em, we were pulling ticks off the dogs daily from April to October. Since they started the monthly barrier spray, we have found zero ticks on the property. Not one. Worth every penny of the $45."</p><div class="t-author"><div class="t-initial">S</div><div><div class="t-name">Sarah M.</div><div class="t-loc">Blairstown, NJ</div></div></div></div>
+      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"Our backyard was unusable after 6pm all summer. Mosquitoes everywhere. Pest 'Em did the first barrier spray and within 48 hours we were eating dinner outside again. They come back every month and the mosquitoes have not returned. Finally a company that does what they say."</p><div class="t-author"><div class="t-initial">J</div><div><div class="t-name">Jason D.</div><div class="t-loc">Blairstown, NJ</div></div></div></div>
+      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"Called on a Monday, they were here Wednesday. Explained exactly what they spray and where, made sure we knew it was safe for our kids and cats once it dries. Six months in — no ants, no spiders, no stink bugs. The winter rodent checks are a huge bonus too."</p><div class="t-author"><div class="t-initial">K</div><div><div class="t-name">Karen R.</div><div class="t-loc">Blairstown, NJ</div></div></div></div>
     </div>
   </div>
 </section>
 
-<!-- CTA Banner -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-label">Service Area</div>
+    <h2 class="section-title">Serving Blairstown First</h2>
+    <p class="section-sub">We started in Blairstown because it's home. Our routes now extend across Warren County — same quality, same tech, same commitment to showing up and doing real work every visit.</p>
+    <div class="towns"><span class="town">Blairstown</span><span class="town">Hackettstown</span><span class="town">Hope</span><span class="town">Belvidere</span><span class="town">Columbia</span><span class="town">Allamuchy</span><span class="town">Washington Township</span><span class="town">Phillipsburg</span><span class="town">Oxford</span></div>
+  </div>
+</section>
+
 <div class="cta-banner">
-  <h2>Ready to Protect Your Home?</h2>
-  <p>Get a free quote today. Same-week service available in Blairstown, NJ.</p>
-  <a href="contact.html" class="btn-white">Get Your Free Quote</a>
+  <h2>Ready to Stop Guessing What's in Your Yard?</h2>
+  <p>Get a free quote. Same-week service. One flat rate, all year.</p>
+  <a href="contact.html" class="btn-white">Get My Free Quote</a>
+  <div class="cta-phone"><a href="tel:8887744290" style="color:rgba(255,255,255,0.8);">(888) 774-4290</a></div>
 </div>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <img src="logo.png" alt="Pest 'Em" style="height:40px;">
-        <p>Blairstown's trusted pest control. Year-round monthly service, pet-safe products, locally owned and operated.</p>
+      <div>
+        <div class="footer-brand">Pest 'Em</div>
+        <div class="footer-tagline">WE GET 'EM ALL</div>
+        <p class="footer-desc">Blairstown's year-round pest control. Exterior barrier spray in summer, interior protection in winter. One flat monthly rate, real treatments every visit.</p>
       </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="tick-control.html">Tick Control</a></li>
-          <li><a href="mosquito-control.html">Mosquito Control</a></li>
-          <li><a href="stink-bug-control.html">Stink Bug Control</a></li>
-          <li><a href="lanternfly-control.html">Lanternfly Control</a></li>
-          <li><a href="rodent-control.html">Rodent Prevention</a></li>
-          <li><a href="wasp-control.html">Wasp Removal</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="tel:8887744290">(888) 774-4290</a></li>
-          <li><a href="mailto:info@pestem.com">info@pestem.com</a></li>
-          <li><a>Blairstown, NJ</a></li>
-        </ul>
-      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="tick-control.html">Tick Control</a></li><li><a href="mosquito-control.html">Mosquito Control</a></li><li><a href="stink-bug-control.html">Stink Bug Control</a></li><li><a href="lanternfly-control.html">Lanternfly Control</a></li><li><a href="rodent-control.html">Rodent Prevention</a></li><li><a href="wasp-control.html">Wasp Removal</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#pricing">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:8887744290">(888) 774-4290</a></li><li><a href="mailto:info@pestem.com">info@pestem.com</a></li><li>Blairstown, NJ</li></ul></div>
     </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">&copy; 2026 Pest 'Em. All rights reserved.</span>
-      <span class="footer-copy">Blairstown, NJ</span>
-    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2026 Pest 'Em. Blairstown, NJ.</span><span class="footer-copy">Warren County, NJ</span></div>
   </div>
 </footer>
 
