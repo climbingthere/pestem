@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotted Lanternfly Control NJ -- Protect Your Trees | Pest 'Em</title>
+    <meta name="description" content="Professional spotted lanternfly control in Warren County NJ. Contact insecticide and egg mass removal. Protect your trees from May through November. Free quote.">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Spotted Lanternfly Control NJ -- Protect Your Trees | Pest 'Em">
+    <meta property="og:description" content="Spotted lanternfly is destroying NJ trees. Contact spray and egg mass removal to protect your property.">
+    <meta property="og:site_name" content="Pest 'Em Pest Control">
+
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Urbanist', sans-serif; font-weight: 400; color: #111827; background: #ffffff; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        h1, h2, h3 { font-family: 'Urbanist', sans-serif; font-weight: 900; letter-spacing: -0.5px; }
+        img { max-width: 100%; height: auto; }
+
+        .btn-green { display: inline-block; background: #2d7a3a; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; }
+        .btn-green:hover { background: #1e5c2a; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(45, 122, 58, 0.4); }
+
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
+        .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; }
+        .nav-logo { font-family: 'Urbanist', sans-serif; font-size: 28px; font-weight: 900; color: #0f2d14; letter-spacing: -0.5px; }
+        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+        .nav-links a { color: #374151; font-size: 15px; font-weight: 700; transition: color 0.2s; }
+        .nav-links a:hover { color: #0f2d14; }
+        .nav-right { display: flex; align-items: center; gap: 20px; }
+        .nav-phone { color: #0f2d14; font-weight: 900; font-size: 15px; }
+        .nav-phone:hover { color: #5fce73; }
+        .nav-btn { display: inline-block; background: #2d7a3a; color: #ffffff; font-weight: 700; font-size: 14px; padding: 11px 24px; border-radius: 6px; transition: all 0.3s ease; }
+        .nav-btn:hover { background: #1e5c2a; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(45,122,58,0.3); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; background: none; border: none; padding: 4px; }
+        .hamburger span { width: 24px; height: 2.5px; background: #0f2d14; transition: 0.3s; display: block; border-radius: 2px; }
+        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #ffffff; z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { color: #0f2d14; font-size: 20px; font-weight: 700; }
+        .mobile-menu a:hover { color: #5fce73; }
+
+        .page-hero { position: relative; padding: 150px 0 90px; overflow: hidden; }
+        .page-hero-bg { position: absolute; inset: 0; background: #0f2d14; z-index: 0; }
+        .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,45,20,0.95) 0%, rgba(45,122,58,0.7) 100%); }
+        .page-hero .container { position: relative; z-index: 1; }
+        .page-hero h1 { font-size: clamp(36px, 6vw, 56px); font-weight: 900; color: #ffffff; letter-spacing: -1px; margin-bottom: 16px; max-width: 700px; }
+        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 560px; line-height: 1.7; }
+
+        .content-section { padding: 80px 0; }
+        .content-section.alt { background: #f8fafc; }
+        .section-tag { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #2d7a3a; margin-bottom: 12px; }
+        .content-section h2 { font-size: clamp(26px, 3.5vw, 36px); color: #111827; margin-bottom: 20px; }
+        .content-section p { font-size: 15px; color: #6b7280; line-height: 1.8; margin-bottom: 16px; max-width: 720px; }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+
+        .risk-list { list-style: none; margin: 24px 0; }
+        .risk-list li { padding: 12px 0; font-size: 15px; color: #374151; display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid #e5e7eb; }
+        .risk-list li:last-child { border-bottom: none; }
+        .risk-list li svg { width: 18px; height: 18px; color: #2d7a3a; flex-shrink: 0; margin-top: 2px; }
+        .risk-list.warn li svg { color: #ef4444; }
+
+        .stat-boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .stat-box { background: #0f2d14; border-radius: 12px; padding: 32px 24px; text-align: center; color: #ffffff; }
+        .stat-box .stat-num { font-size: 40px; font-weight: 900; color: #5fce73; margin-bottom: 4px; }
+        .stat-box .stat-label { font-size: 14px; color: rgba(255,255,255,0.55); }
+
+        .schedule-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+        .schedule-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px 24px; text-align: center; transition: all 0.3s ease; }
+        .schedule-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); border-color: #5fce73; }
+        .schedule-card .month { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #2d7a3a; margin-bottom: 8px; }
+        .schedule-card h3 { font-size: 18px; font-weight: 800; color: #111827; margin-bottom: 10px; }
+        .schedule-card p { font-size: 14px; color: #6b7280; line-height: 1.7; max-width: 100%; }
+
+        .cta-banner { position: relative; padding: 80px 0; text-align: center; overflow: hidden; }
+        .cta-banner-bg { position: absolute; inset: 0; background: #0f2d14; z-index: 0; }
+        .cta-banner-bg::after { content: ''; position: absolute; inset: 0; background: rgba(15, 45, 20, 0.92); }
+        .cta-banner .container { position: relative; z-index: 1; }
+        .cta-banner h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; color: #ffffff; margin-bottom: 16px; }
+        .cta-banner p { font-size: 17px; color: rgba(255,255,255,0.7); margin-bottom: 32px; }
+
+        .footer { background: #0f2d14; padding: 80px 0 40px; color: rgba(255,255,255,0.5); }
+        .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+        .footer-brand .footer-logo { font-family: 'Urbanist', sans-serif; font-size: 26px; font-weight: 900; color: #ffffff; margin-bottom: 14px; }
+        .footer-brand p { font-size: 14px; line-height: 1.7; }
+        .footer h4 { font-family: 'Urbanist', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
+        .footer ul { list-style: none; }
+        .footer ul li { margin-bottom: 10px; }
+        .footer ul li a { font-size: 14px; color: rgba(255,255,255,0.5); transition: color 0.2s; }
+        .footer ul li a:hover { color: #5fce73; }
+        .footer-contact-item { font-size: 14px; margin-bottom: 10px; }
+        .footer-contact-item a { color: rgba(255,255,255,0.5); }
+        .footer-contact-item a:hover { color: #5fce73; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; font-size: 13px; }
+
+        @media (max-width: 900px) {
+            .two-col { grid-template-columns: 1fr; gap: 32px; }
+            .schedule-grid { grid-template-columns: 1fr; }
+            .stat-boxes { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-right .nav-phone { display: none; }
+            .nav-btn { display: none; }
+            .hamburger { display: flex; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .page-hero { padding: 120px 0 70px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">Pest 'Em</a>
+            <ul class="nav-links">
+                <li><a href="services.html">Services</a></li>
+                <li><a href="tick-control.html">Tick Control</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
+                <a href="contact.html" class="nav-btn">Get Free Quote</a>
+            </div>
+            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu">
+        <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
+        <a href="services.html" onclick="this.parentElement.classList.remove('open')">Services</a>
+        <a href="tick-control.html" onclick="this.parentElement.classList.remove('open')">Tick Control</a>
+        <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
+        <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
+        <a href="tel:8887744290" onclick="this.parentElement.classList.remove('open')" style="color: #5fce73; font-weight: 900;">(888) 774-4290</a>
+        <a href="contact.html" class="nav-btn" onclick="this.parentElement.classList.remove('open')">Get Free Quote</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container">
+            <h1>Spotted Lanternfly Is Destroying NJ Trees. We Stop It.</h1>
+            <p>Contact insecticide treatments and egg mass removal to protect your trees and property. Active season coverage from May through November, plus winter egg removal to break the cycle.</p>
+        </div>
+    </section>
+
+    <!-- Treatment -->
+    <section class="content-section">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <div class="section-tag">Treatment Method</div>
+                    <h2>Contact Insecticide and Egg Mass Removal</h2>
+                    <p>We apply contact insecticide (bifenthrin or permethrin) directly to tree trunks, stems, and surfaces where spotted lanternflies feed. These insects congregate on bark and lower trunks, making targeted treatment highly effective.</p>
+                    <p>We also target egg masses on trees, rocks, and structures -- physically scraping them off and spraying the surface to prevent re-laying. Repeat applications every 3 to 4 weeks during the active season (May through November) keep populations under control.</p>
+                    <p>Importantly, we do not use systemic insecticides that are absorbed through the soil. Our contact-only approach stays on the surface and breaks down quickly, protecting pollinators and the surrounding ecosystem.</p>
+                </div>
+                <div>
+                    <ul class="risk-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Bifenthrin or permethrin contact spray on tree trunks and stems</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Physical egg mass removal from trees, rocks, and structures</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Treatments every 3-4 weeks during active season</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Contact-only -- no systemic soil-absorbed insecticides</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Safe for pollinators when applied to bark, not flowers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="two-col">
+                <div>
+                    <div class="section-tag">Kid Safety</div>
+                    <h2>Safe for Your Children</h2>
+                    <p>Treated surfaces (tree bark and lower trunks) should be avoided for 2 hours after application. We do not treat play equipment, swing sets, or active-use areas -- only the trees and surfaces where lanternflies feed.</p>
+                    <p>After the 2-hour window, all treated surfaces are safe. Our technicians clearly mark which trees were treated so you know exactly where the product was applied.</p>
+                </div>
+                <div>
+                    <div class="section-tag">Pet Safety</div>
+                    <h2>Safe for Dogs and Cats</h2>
+                    <p>The same 2-hour dry window applies to pets. Once the product has dried on tree bark and surfaces, it poses no risk to dogs or cats. We avoid spraying near pet water bowls, feeding areas, and spots where pets rest outdoors.</p>
+                    <p>If your dog has a favorite tree to lie under or your cat frequents a specific area of the yard, let us know and we will work around it.</p>
+                    <a href="contact.html" class="btn-green" style="margin-top:8px;">Schedule Your Treatment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wildlife -->
+    <section class="content-section">
+        <div class="container">
+            <div style="text-align:center; max-width:700px; margin: 0 auto 20px;">
+                <div class="section-tag">Wildlife and Environment</div>
+                <h2>Contact-Only Spray Protects the Ecosystem</h2>
+                <p style="max-width:600px; margin: 0 auto;">We never use systemic insecticides that get absorbed into the soil and travel through the tree. Our contact-only approach targets lanternflies directly while protecting everything else.</p>
+            </div>
+            <div class="stat-boxes">
+                <div class="stat-box">
+                    <div class="stat-num">Zero</div>
+                    <div class="stat-label">Systemic insecticides -- contact spray only</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">3-4 wk</div>
+                    <div class="stat-label">Treatment cycle during active season</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-num">12 mo.</div>
+                    <div class="stat-label">Year-round protection including winter egg removal</div>
+                </div>
+            </div>
+            <div style="max-width:720px; margin: 40px auto 0;">
+                <p style="font-size:15px; color:#6b7280; line-height:1.8;">When applied correctly to bark and structural surfaces (not flowers), our treatment does not affect pollinators. The product breaks down quickly on surfaces exposed to sunlight and weather, leaving no lasting environmental residue.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule -->
+    <section class="content-section alt">
+        <div class="container">
+            <div style="text-align:center; max-width:700px; margin: 0 auto 20px;">
+                <div class="section-tag">Treatment Schedule</div>
+                <h2>Year-Round Lanternfly Management</h2>
+                <p style="max-width:600px; margin: 0 auto;">We fight lanternflies in every stage of their lifecycle -- from winter egg masses to active-season adults.</p>
+            </div>
+            <div class="schedule-grid">
+                <div class="schedule-card">
+                    <div class="month">January - March</div>
+                    <h3>Egg Mass Removal</h3>
+                    <p>We inspect trees, rocks, and structures for egg masses and physically remove them before they hatch. This dramatically reduces next season's population.</p>
+                </div>
+                <div class="schedule-card">
+                    <div class="month">May - August</div>
+                    <h3>Active Season Spray</h3>
+                    <p>Contact insecticide applied to tree trunks and feeding surfaces every 3-4 weeks as nymphs and adults emerge and feed.</p>
+                </div>
+                <div class="schedule-card">
+                    <div class="month">September - November</div>
+                    <h3>Late Season and Egg Prevention</h3>
+                    <p>Continued treatments as adults lay eggs. We target adult populations and begin identifying new egg mass locations for winter removal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-banner">
+        <div class="cta-banner-bg"></div>
+        <div class="container">
+            <h2>Protect your trees from spotted lanternfly damage</h2>
+            <p>Get a free lanternfly control quote for your property. We handle the full lifecycle.</p>
+            <a href="contact.html" class="btn-green">Get Your Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">Pest 'Em</div>
+                    <p>Warren County's pest control experts. Preventative treatments that keep your home and family safe, year-round. Based in Blairstown, NJ.</p>
+                </div>
+                <div>
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="tick-control.html">Tick Control</a></li>
+                        <li><a href="mosquito-control.html">Mosquito Control</a></li>
+                        <li><a href="rodent-control.html">Rodent Control</a></li>
+                        <li><a href="stink-bug-control.html">Stink Bugs</a></li>
+                        <li><a href="lanternfly-control.html">Lanternflies</a></li>
+                        <li><a href="wasp-control.html">Wasp Control</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <div class="footer-contact-item"><a href="tel:8887744290">(888) 774-4290</a></div>
+                    <div class="footer-contact-item"><a href="mailto:info@pestem.com">info@pestem.com</a></div>
+                    <div class="footer-contact-item">Blairstown, NJ 07825</div>
+                    <div class="footer-contact-item" style="margin-top: 16px;">Mon-Fri: 8am - 6pm<br>Sat: 9am - 2pm</div>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Pest 'Em Pest Control. All rights reserved.</div>
+        </div>
+    </footer>
+
+</body>
+</html>

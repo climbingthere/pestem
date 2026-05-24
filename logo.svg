@@ -1,41 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 190" width="540" height="190">
-  <defs>
-    <style>
-      .main-text { font-family: 'Arial Black', 'Impact', sans-serif; font-weight: 900; font-size: 94px; }
-      .sub-text { font-family: 'Arial Black', 'Impact', sans-serif; font-weight: 900; font-size: 24px; letter-spacing: 8px; }
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 140">
+  <!-- Shield -->
+  <path d="M50,8 L90,8 Q102,8 102,22 L102,62 Q102,88 78,98 L52,108 L26,98 Q2,88 2,62 L2,22 Q2,8 14,8 Z" fill="#2d7a3a"/>
+  <!-- Shield crease line -->
+  <line x1="52" y1="18" x2="52" y2="102" stroke="#1a4d24" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- === Custom "P" with tick/bug body as the bowl === -->
-  <g>
-    <!-- P vertical stroke -->
-    <rect x="24" y="22" width="20" height="126" rx="2" fill="#2d7a3a"/>
-
-    <!-- Bug body/abdomen = bowl of the P -->
-    <path d="M44 26 C54 16, 78 8, 96 20 C112 32, 114 52, 110 62 C106 74, 92 84, 76 86 C58 88, 44 78, 44 76"
-          fill="#2d7a3a"/>
-
-    <!-- Bug head -->
-    <ellipse cx="86" cy="10" rx="8" ry="7" fill="#2d7a3a"/>
-
-    <!-- Antennae -->
-    <line x1="80" y1="4" x2="70" y2="-8" stroke="#2d7a3a" stroke-width="2.8" stroke-linecap="round"/>
-    <line x1="92" y1="4" x2="102" y2="-8" stroke="#2d7a3a" stroke-width="2.8" stroke-linecap="round"/>
-    <circle cx="68" cy="-10" r="1.8" fill="#2d7a3a"/>
-    <circle cx="104" cy="-10" r="1.8" fill="#2d7a3a"/>
-
-    <!-- Right-side tick legs (4 visible, tick has 8 total) -->
-    <path d="M110 24 L126 14 L134 4" stroke="#2d7a3a" stroke-width="3.2" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
-    <path d="M114 38 L130 32 L138 24" stroke="#2d7a3a" stroke-width="3.2" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
-    <path d="M114 54 L130 60 L138 68" stroke="#2d7a3a" stroke-width="3.2" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
-    <path d="M110 68 L126 78 L134 88" stroke="#2d7a3a" stroke-width="3.2" stroke-linecap="round" fill="none" stroke-linejoin="round"/>
+  <!-- Bug/Tick silhouette inside shield -->
+  <g fill="none" stroke="#5fce73" stroke-width="3.5" stroke-linecap="round">
+    <!-- Head -->
+    <circle cx="52" cy="38" r="6" fill="#5fce73" stroke="none"/>
+    <!-- Body (oval) -->
+    <ellipse cx="52" cy="62" rx="12" ry="18" fill="#5fce73" stroke="none"/>
+    <!-- Left legs -->
+    <line x1="40" y1="50" x2="28" y2="42"/>
+    <line x1="40" y1="58" x2="26" y2="56"/>
+    <line x1="40" y1="66" x2="26" y2="70"/>
+    <line x1="42" y1="74" x2="30" y2="82"/>
+    <!-- Right legs -->
+    <line x1="64" y1="50" x2="76" y2="42"/>
+    <line x1="64" y1="58" x2="78" y2="56"/>
+    <line x1="64" y1="66" x2="78" y2="70"/>
+    <line x1="62" y1="74" x2="74" y2="82"/>
   </g>
 
-  <!-- "est 'Em" with color change via tspan -->
-  <text x="132" y="146" class="main-text">
-    <tspan fill="#2d7a3a">est </tspan><tspan fill="#5fce73">'Em</tspan>
-  </text>
+  <!-- "Pest 'Em" wordmark -->
+  <text x="130" y="82" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-weight="900" font-size="72" fill="#0f2d14" letter-spacing="-1">Pest &#x2019;Em</text>
 
-  <!-- "PEST CONTROL" subtext centered under wordmark -->
-  <text x="278" y="184" class="sub-text" fill="#1a1a1a" text-anchor="middle">PEST CONTROL</text>
+  <!-- "WE GET 'EM ALL" tagline -->
+  <text x="133" y="112" font-family="'Arial Black', 'Helvetica Neue', sans-serif" font-weight="900" font-size="22" fill="#2d7a3a" letter-spacing="3">WE GET &#x2019;EM ALL</text>
 </svg>
