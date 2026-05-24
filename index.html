@@ -4,84 +4,242 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pest 'Em | Blairstown NJ Pest Control | Year-Round Monthly Service</title>
-<meta name="description" content="Blairstown's #1 pest control. Exterior barrier spray April-October, interior protection November-March. One flat monthly rate, 12-month contracts. Ticks, mosquitoes, rodents, stink bugs, lanternflies. (888) 774-4290.">
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<meta name="description" content="Warren County's year-round pest control experts. Exterior barrier spray April-October, interior protection November-March. One flat monthly rate. Ticks, mosquitoes, rodents, stink bugs, lanternflies. (888) 774-4290.">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Navigation -->
 <nav class="nav">
   <div class="nav-inner">
-    <a href="index.html"><img src="logo.png" alt="Pest 'Em" style="height:52px;"></a>
+    <a href="index.html" class="nav-logo"><img src="logo.png" alt="Pest 'Em" style="height:52px;"></a>
     <ul class="nav-links">
-      <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
       <li><a href="#pricing">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div style="display:flex;align-items:center;">
+    <div class="nav-right">
       <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
       <a href="contact.html" class="nav-cta">Get Free Quote</a>
     </div>
+    <button class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
-<div class="hero">
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg-pattern"></div>
   <div class="hero-inner">
-    <div>
-      <div class="hero-badge">Blairstown's #1 Rated Pest Control</div>
-      <h1>Exterior Spray in Summer. Interior Protection in Winter. One Flat Monthly Rate.</h1>
-      <p>12-month contracts. Monthly service year-round. Real treatments every visit — not the same spray in a snowstorm.</p>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Serving Warren County, NJ
+      </div>
+      <h1>Warren County's Year-Round Pest Control Experts</h1>
+      <p class="hero-sub">Exterior spray April&ndash;October. Interior protection November&ndash;March. One flat monthly rate &mdash; real treatments every visit, not the same spray in a snowstorm.</p>
       <div class="hero-btns">
-        <a href="contact.html" class="btn-green">Get a Free Quote</a>
-        <a href="tel:8887744290" class="btn-ghost">(888) 774-4290</a>
+        <a href="contact.html" class="btn-primary">Get a Free Quote</a>
+        <a href="tel:8887744290" class="btn-outline-light">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (888) 774-4290
+        </a>
+      </div>
+      <div class="hero-trust">
+        <div class="hero-trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5fce73" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Pet &amp; Family Safe
+        </div>
+        <div class="hero-trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5fce73" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          Same-Week Service
+        </div>
+        <div class="hero-trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5fce73" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+          100% Satisfaction Guarantee
+        </div>
       </div>
     </div>
-    <div class="pest-grid">
-      <div class="pest-mini">
-        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="52" rx="20" ry="25" fill="#5fce73"/><ellipse cx="50" cy="28" rx="10" ry="8" fill="#5fce73"/><line x1="30" y1="38" x2="12" y2="26" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="48" x2="10" y2="46" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="58" x2="12" y2="68" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="68" x2="14" y2="82" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="38" x2="88" y2="26" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="48" x2="90" y2="46" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="58" x2="88" y2="68" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="68" x2="86" y2="82" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/></svg>
-        <span>Ticks</span>
-      </div>
-      <div class="pest-mini">
-        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="62" rx="7" ry="18" fill="#5fce73"/><circle cx="50" cy="38" r="10" fill="#5fce73"/><line x1="50" y1="28" x2="50" y2="12" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><path d="M40 36 Q28 20 18 24" stroke="#5fce73" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M60 36 Q72 20 82 24" stroke="#5fce73" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M38 32 Q24 26 16 30" stroke="#5fce73" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/><path d="M62 32 Q76 26 84 30" stroke="#5fce73" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.6"/><line x1="44" y1="64" x2="34" y2="80" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="80" x2="50" y2="94" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="64" x2="66" y2="80" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/></svg>
-        <span>Mosquitoes</span>
-      </div>
-      <div class="pest-mini">
-        <svg viewBox="0 0 100 100" fill="none"><path d="M50 20 L72 35 L72 65 L50 80 L28 65 L28 35 Z" fill="#5fce73"/><line x1="28" y1="40" x2="12" y2="30" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="28" y1="50" x2="10" y2="50" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="28" y1="60" x2="12" y2="70" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="40" x2="88" y2="30" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="50" x2="90" y2="50" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="60" x2="88" y2="70" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round"/><line x1="44" y1="20" x2="40" y2="10" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="20" x2="60" y2="10" stroke="#5fce73" stroke-width="2" stroke-linecap="round"/></svg>
-        <span>Stink Bugs</span>
-      </div>
-      <div class="pest-mini">
-        <svg viewBox="0 0 100 100" fill="none"><ellipse cx="42" cy="58" rx="22" ry="18" fill="#5fce73"/><circle cx="68" cy="44" r="14" fill="#5fce73"/><ellipse cx="56" cy="30" rx="8" ry="10" fill="#5fce73"/><ellipse cx="78" cy="30" rx="8" ry="10" fill="#5fce73"/><circle cx="63" cy="42" r="2.5" fill="#0f2d14"/><circle cx="73" cy="42" r="2.5" fill="#0f2d14"/><path d="M20 64 Q10 74 8 88" stroke="#5fce73" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
-        <span>Rodents</span>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-header">Monthly Protection Includes</div>
+        <div class="hero-card-items">
+          <div class="hero-card-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5fce73" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Perimeter Barrier Spray</span>
+          </div>
+          <div class="hero-card-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5fce73" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Tick &amp; Mosquito Control</span>
+          </div>
+          <div class="hero-card-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5fce73" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Rodent Bait Stations</span>
+          </div>
+          <div class="hero-card-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5fce73" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Interior Winter Visits</span>
+          </div>
+          <div class="hero-card-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#5fce73" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Free Re-Treatments</span>
+          </div>
+        </div>
+        <div class="hero-card-price">
+          Starting at <strong>$40/mo</strong>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
-<div class="trust-bar">
-  <div class="trust-inner">
-    <div class="trust-item">Blairstown Owned &amp; Operated</div>
-    <div class="trust-item">Pet &amp; Family Safe Products</div>
-    <div class="trust-item">12-Month Protection Plans</div>
-    <div class="trust-item">100% Satisfaction Guarantee</div>
-  </div>
-</div>
-
-<section class="section" id="about">
-  <div class="section-inner">
-    <div class="section-label">Why We Exist</div>
-    <h2 class="section-title">Why We Left Terminix</h2>
-    <div class="problem-body">
-      <p>After 3 years as one of Terminix's top specialists, our founder watched the same thing happen to thousands of homeowners: paying for mosquito spray in January, locked into contracts that ran the same treatment every month regardless of what was actually needed. Pest 'Em was built around one rule — we treat what needs treating, when it needs treating.</p>
-    </div>
-    <div class="pull-quote">No mosquito spray in a snowstorm. No made-up line items. Just real pest control, every month, all year.</div>
   </div>
 </section>
 
+<!-- Trust Bar -->
+<div class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Blairstown Owned &amp; Operated
+    </div>
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Pet &amp; Family Safe Products
+    </div>
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      12-Month Protection Plans
+    </div>
+    <div class="trust-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      100% Satisfaction Guarantee
+    </div>
+  </div>
+</div>
+
+<!-- Why Us -->
+<section class="section" id="why-us">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Why Pest 'Em</div>
+      <h2 class="section-title">Not Your Average Bug Spray Company</h2>
+      <p class="section-sub">We built Pest 'Em because national chains charge you for mosquito spray in January. That ends here.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d7a3a" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+        </div>
+        <h3 class="why-title">We Left Terminix</h3>
+        <p class="why-desc">Owner spent 3 years as a top Terminix specialist. Left because they charge for mosquito spray in January. We don't.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d7a3a" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3 class="why-title">Year-Round, Not Year-Same</h3>
+        <p class="why-desc">Exterior spray in warm months, interior visits in winter. Every visit is the right treatment for that season.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2d7a3a" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <h3 class="why-title">Blairstown Local</h3>
+        <p class="why-desc">Based here. Real person answers the phone. Same-week service.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="section section-alt" id="services">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-label">Our Services</div>
+      <h2 class="section-title">Targeted Treatments for Every Pest</h2>
+      <p class="section-sub">Each service uses specific products matched to the pest &mdash; no generic one-spray-fits-all approach.</p>
+    </div>
+    <div class="services-grid">
+
+      <a href="tick-control.html" class="service-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="52" rx="20" ry="25" fill="none" stroke="#fff" stroke-width="2.5"/><ellipse cx="50" cy="28" rx="10" ry="8" fill="none" stroke="#fff" stroke-width="2.5"/><line x1="30" y1="38" x2="12" y2="26" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="48" x2="10" y2="46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="58" x2="12" y2="68" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="68" x2="14" y2="82" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="38" x2="88" y2="26" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="48" x2="90" y2="46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="58" x2="88" y2="68" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="68" x2="86" y2="82" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title">Tick Control</div>
+          <div class="svc-desc">Monthly bifenthrin barrier spray along lawn edges and wooded borders. April&ndash;October.</div>
+          <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
+      <a href="mosquito-control.html" class="service-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="62" rx="7" ry="18" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="50" cy="38" r="10" fill="none" stroke="#fff" stroke-width="2.5"/><line x1="50" y1="28" x2="50" y2="12" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M40 36 Q28 20 18 24" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M60 36 Q72 20 82 24" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><line x1="44" y1="64" x2="34" y2="80" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="80" x2="50" y2="94" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="64" x2="66" y2="80" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title">Mosquito Control</div>
+          <div class="svc-desc">Barrier spray targeting resting sites in shrubs and vegetation. Reclaim your yard.</div>
+          <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
+      <a href="stink-bug-control.html" class="service-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><path d="M50 20 L72 35 L72 65 L50 80 L28 65 L28 35 Z" fill="none" stroke="#fff" stroke-width="2.5"/><line x1="28" y1="40" x2="12" y2="30" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="28" y1="50" x2="10" y2="50" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="28" y1="60" x2="12" y2="70" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="40" x2="88" y2="30" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="50" x2="90" y2="50" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="60" x2="88" y2="70" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="44" y1="20" x2="40" y2="10" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="20" x2="60" y2="10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title">Stink Bug Control</div>
+          <div class="svc-desc">Exterior seal treatment on entry points before fall overwintering season.</div>
+          <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
+      <a href="lanternfly-control.html" class="service-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="58" rx="14" ry="20" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="50" cy="34" r="8" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M36 50 Q20 42 14 52 Q18 64 36 62" stroke="#fff" stroke-width="2" fill="none"/><path d="M64 50 Q80 42 86 52 Q82 64 64 62" stroke="#fff" stroke-width="2" fill="none"/><line x1="44" y1="28" x2="38" y2="18" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="28" x2="62" y2="18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title">Spotted Lanternfly</div>
+          <div class="svc-desc">Surface and vegetation treatment for this invasive species destroying NJ trees.</div>
+          <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
+      <a href="rodent-control.html" class="service-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="42" cy="58" rx="22" ry="18" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="68" cy="44" r="14" fill="none" stroke="#fff" stroke-width="2.5"/><ellipse cx="56" cy="30" rx="8" ry="10" fill="none" stroke="#fff" stroke-width="2"/><ellipse cx="78" cy="30" rx="8" ry="10" fill="none" stroke="#fff" stroke-width="2"/><circle cx="63" cy="42" r="2.5" fill="#fff"/><circle cx="73" cy="42" r="2.5" fill="#fff"/><path d="M20 64 Q10 74 8 88" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title">Rodent Prevention</div>
+          <div class="svc-desc">Perimeter treatment and bait station monitoring. Exterior and interior.</div>
+          <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
+      <a href="wasp-control.html" class="service-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="34" rx="12" ry="10" fill="none" stroke="#fff" stroke-width="2.5"/><ellipse cx="50" cy="62" rx="10" ry="14" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="46" y="43" width="8" height="6" rx="3" fill="none" stroke="#fff" stroke-width="2"/><path d="M38 30 Q28 18 22 20" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M62 30 Q72 18 78 20" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><line x1="44" y1="26" x2="38" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="26" x2="62" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="76" x2="50" y2="86" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="44" y1="74" x2="36" y2="86" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="74" x2="64" y2="86" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <div class="svc-body">
+          <div class="svc-title">Wasp &amp; Hornet Removal</div>
+          <div class="svc-desc">Nest removal and prevention treatment. Safe same-day service.</div>
+          <span class="svc-link">Learn more <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- How It Works -->
 <section class="section section-dark" id="how-it-works">
   <div class="section-inner">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">Three Steps to Year-Round Protection</h2>
+    <div class="section-header">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Three Steps to Year-Round Protection</h2>
+    </div>
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-num">01</div>
@@ -90,8 +248,8 @@
       </div>
       <div class="step-card">
         <div class="step-num">02</div>
-        <div class="step-title">Monthly Treatments, Every Season</div>
-        <div class="step-desc">April through October: exterior barrier spray targeting ticks, mosquitoes, ants, wasps, and stink bugs. November through March: interior treatments — rodent stations, crack &amp; crevice spray, spider control, foundation inspection.</div>
+        <div class="step-title">Monthly Seasonal Treatments</div>
+        <div class="step-desc">April through October: exterior barrier spray. November through March: interior treatments &mdash; rodent stations, crack &amp; crevice spray, spider control.</div>
       </div>
       <div class="step-card">
         <div class="step-num">03</div>
@@ -102,132 +260,67 @@
   </div>
 </section>
 
-<section class="section" id="services">
+<!-- Seasonal Breakdown -->
+<section class="section" id="seasonal">
   <div class="section-inner">
-    <div class="section-label">What We Treat</div>
-    <h2 class="section-title">Targeted Treatments for Every Pest</h2>
-    <p class="section-sub">Each service uses specific products matched to the pest — no generic one-spray-fits-all approach.</p>
-    <div class="services-grid">
-
-      <a href="tick-control.html" class="service-card">
-        <div class="svc-icon">
-          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="52" rx="20" ry="25" fill="none" stroke="#fff" stroke-width="2.5"/><ellipse cx="50" cy="28" rx="10" ry="8" fill="none" stroke="#fff" stroke-width="2.5"/><line x1="30" y1="38" x2="12" y2="26" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="48" x2="10" y2="46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="58" x2="12" y2="68" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="30" y1="68" x2="14" y2="82" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="38" x2="88" y2="26" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="48" x2="90" y2="46" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="58" x2="88" y2="68" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="70" y1="68" x2="86" y2="82" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="svc-body">
-          <div class="svc-title">Tick Control</div>
-          <div class="svc-desc">Bifenthrin-based perimeter barrier spray along lawn edges, wooded borders, and deer trails. Monthly treatments April through October eliminate tick populations before they reach your family.</div>
-          <span class="svc-link">Learn more &rarr;</span>
-        </div>
-      </a>
-
-      <a href="mosquito-control.html" class="service-card">
-        <div class="svc-icon">
-          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="62" rx="7" ry="18" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="50" cy="38" r="10" fill="none" stroke="#fff" stroke-width="2.5"/><line x1="50" y1="28" x2="50" y2="12" stroke="#fff" stroke-width="2" stroke-linecap="round"/><path d="M40 36 Q28 20 18 24" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M60 36 Q72 20 82 24" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M38 32 Q24 26 16 30" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/><path d="M62 32 Q76 26 84 30" stroke="#fff" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.7"/><line x1="44" y1="64" x2="34" y2="80" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="80" x2="50" y2="94" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="64" x2="66" y2="80" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <div class="svc-body">
-          <div class="svc-title">Mosquito Control</div>
-          <div class="svc-desc">Permethrin barrier treatment targeting resting sites in shrubs, under decks, and dense vegetation. We spray where mosquitoes harbor during the day so they never make it to your evening.</div>
-          <span class="svc-link">Learn more &rarr;</span>
-        </div>
-      </a>
-
-      <a href="stink-bug-control.html" class="service-card">
-        <div class="svc-icon">
-          <svg viewBox="0 0 100 100" fill="none"><path d="M50 20 L72 35 L72 65 L50 80 L28 65 L28 35 Z" fill="none" stroke="#fff" stroke-width="2.5"/><line x1="28" y1="40" x2="12" y2="30" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="28" y1="50" x2="10" y2="50" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="28" y1="60" x2="12" y2="70" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="40" x2="88" y2="30" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="50" x2="90" y2="50" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="72" y1="60" x2="88" y2="70" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><line x1="44" y1="20" x2="40" y2="10" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="20" x2="60" y2="10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <div class="svc-body">
-          <div class="svc-title">Stink Bug Control</div>
-          <div class="svc-desc">Exterior residual spray in late summer prevents overwintering entry. Interior crack-and-crevice treatment in winter targets stink bugs already inside walls, attics, and window frames.</div>
-          <span class="svc-link">Learn more &rarr;</span>
-        </div>
-      </a>
-
-      <a href="lanternfly-control.html" class="service-card">
-        <div class="svc-icon">
-          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="58" rx="14" ry="20" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="50" cy="34" r="8" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M36 50 Q20 42 14 52 Q18 64 36 62" stroke="#fff" stroke-width="2" fill="none"/><path d="M64 50 Q80 42 86 52 Q82 64 64 62" stroke="#fff" stroke-width="2" fill="none"/><circle cx="24" cy="54" r="2" fill="#fff" opacity="0.5"/><circle cx="76" cy="54" r="2" fill="#fff" opacity="0.5"/><line x1="44" y1="28" x2="38" y2="18" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="28" x2="62" y2="18" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <div class="svc-body">
-          <div class="svc-title">Spotted Lanternfly</div>
-          <div class="svc-desc">Dinotefuran-based systemic and contact treatments on tree-of-heaven, ornamentals, and hardscape surfaces where lanternflies congregate. We target adults and egg masses seasonally.</div>
-          <span class="svc-link">Learn more &rarr;</span>
-        </div>
-      </a>
-
-      <a href="rodent-control.html" class="service-card">
-        <div class="svc-icon">
-          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="42" cy="58" rx="22" ry="18" fill="none" stroke="#fff" stroke-width="2.5"/><circle cx="68" cy="44" r="14" fill="none" stroke="#fff" stroke-width="2.5"/><ellipse cx="56" cy="30" rx="8" ry="10" fill="none" stroke="#fff" stroke-width="2"/><ellipse cx="78" cy="30" rx="8" ry="10" fill="none" stroke="#fff" stroke-width="2"/><circle cx="63" cy="42" r="2.5" fill="#fff"/><circle cx="73" cy="42" r="2.5" fill="#fff"/><path d="M20 64 Q10 74 8 88" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none"/><line x1="80" y1="48" x2="92" y2="46" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="80" y1="50" x2="92" y2="52" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="80" y1="46" x2="90" y2="42" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="svc-body">
-          <div class="svc-title">Rodent Prevention</div>
-          <div class="svc-desc">Protecta LP bait stations monitored and refilled monthly. Entry point identification, exclusion recommendations, and interior snap-trap placement when activity is detected.</div>
-          <span class="svc-link">Learn more &rarr;</span>
-        </div>
-      </a>
-
-      <a href="wasp-control.html" class="service-card">
-        <div class="svc-icon">
-          <svg viewBox="0 0 100 100" fill="none"><ellipse cx="50" cy="34" rx="12" ry="10" fill="none" stroke="#fff" stroke-width="2.5"/><ellipse cx="50" cy="62" rx="10" ry="14" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="46" y="43" width="8" height="6" rx="3" fill="none" stroke="#fff" stroke-width="2"/><line x1="42" y1="56" x2="42" y2="62" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="58" y1="56" x2="58" y2="62" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="44" y1="64" x2="44" y2="68" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><line x1="56" y1="64" x2="56" y2="68" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/><path d="M38 30 Q28 18 22 20" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M62 30 Q72 18 78 20" stroke="#fff" stroke-width="2" stroke-linecap="round" fill="none"/><line x1="44" y1="26" x2="38" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="26" x2="62" y2="16" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="50" y1="76" x2="50" y2="86" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="44" y1="74" x2="36" y2="86" stroke="#fff" stroke-width="2" stroke-linecap="round"/><line x1="56" y1="74" x2="64" y2="86" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-        </div>
-        <div class="svc-body">
-          <div class="svc-title">Wasp &amp; Hornet Removal</div>
-          <div class="svc-desc">Nest removal plus cypermethrin residual treatment on eaves, soffits, and deck structures. Monthly prevention sprays stop rebuilding in the same high-traffic areas all season long.</div>
-          <span class="svc-link">Learn more &rarr;</span>
-        </div>
-      </a>
-
+    <div class="section-header">
+      <div class="section-label">Seasonal Approach</div>
+      <h2 class="section-title">The Right Treatment at the Right Time</h2>
+      <p class="section-sub">Your flat monthly rate covers different work depending on the season &mdash; because what your property needs in July is not what it needs in January.</p>
     </div>
-  </div>
-</section>
-
-<section class="section" style="background:#f9fafb;" id="seasonal">
-  <div class="section-inner">
-    <div class="section-label">Seasonal Breakdown</div>
-    <h2 class="section-title">The Right Treatment at the Right Time</h2>
-    <p class="section-sub">Your flat monthly rate covers different work depending on the season — because what your property needs in July is not what it needs in January.</p>
     <div class="seasonal">
       <div class="season-col">
+        <div class="season-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2d7a3a" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </div>
         <h3>Exterior Season</h3>
-        <div class="season-months">April - October (7 visits)</div>
+        <div class="season-months">April &ndash; October (7 visits)</div>
         <ul>
           <li>Monthly exterior barrier spray around full perimeter</li>
-          <li>Bifenthrin-based perimeter treatment — 3 ft up foundation, 3 ft out on lawn edge</li>
-          <li>Targeted mosquito barrier in shrubs and vegetation (resting sites)</li>
+          <li>Bifenthrin treatment &mdash; 3 ft up foundation, 3 ft out</li>
+          <li>Targeted mosquito barrier in shrubs and vegetation</li>
           <li>Tick control along lawn perimeter and wooded edges</li>
           <li>Wasp and hornet nest prevention and removal</li>
-          <li>Spotted lanternfly surface and vegetation treatment</li>
+          <li>Spotted lanternfly surface treatment</li>
         </ul>
       </div>
       <div class="season-col">
+        <div class="season-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2d7a3a" stroke-width="2"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="8" y1="20" x2="8" y2="20"/><line x1="12" y1="18" x2="12" y2="18"/><line x1="12" y1="22" x2="12" y2="22"/><line x1="16" y1="16" x2="16" y2="16"/><line x1="16" y1="20" x2="16" y2="20"/></svg>
+        </div>
         <h3>Interior Season</h3>
-        <div class="season-months">November - March (5 visits)</div>
+        <div class="season-months">November &ndash; March (5 visits)</div>
         <ul>
           <li>Monthly interior visit, same flat rate</li>
-          <li>Rodent bait station inspection and refill (Protecta LP stations)</li>
-          <li>Crack and crevice spray along baseboards, entry points, plumbing gaps</li>
+          <li>Rodent bait station inspection and refill</li>
+          <li>Crack and crevice spray along baseboards and entry points</li>
           <li>Spider treatment in basement, garage, utility areas</li>
-          <li>Stink bug interior treatment (overwintering in walls and attic)</li>
-          <li>Foundation exterior inspection — seal recommendations, moisture assessment</li>
+          <li>Stink bug interior treatment (overwintering)</li>
+          <li>Foundation inspection and seal recommendations</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="pricing">
+<!-- Pricing -->
+<section class="section section-alt" id="pricing">
   <div class="section-inner">
-    <div class="section-label">Pricing</div>
-    <h2 class="section-title">Simple. Flat. Year-Round.</h2>
-    <p class="section-sub">All plans are 12-month contracts. Cancel anytime after your first year. 100% satisfaction guarantee on every visit.</p>
+    <div class="section-header">
+      <div class="section-label">Pricing</div>
+      <h2 class="section-title">Simple. Flat. Year-Round.</h2>
+      <p class="section-sub">All plans are 12-month contracts. Cancel anytime after your first year. 100% satisfaction guarantee on every visit.</p>
+    </div>
     <div class="pricing-grid">
       <div class="price-card">
         <div class="price-name">Basic</div>
         <div class="price-amount"><sup>$</sup>40<span>/mo</span></div>
-        <div class="price-period">Exterior season only (April-Oct) &bull; 7 monthly visits</div>
+        <div class="price-period">Exterior season only (April&ndash;Oct)</div>
         <ul class="price-features">
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Monthly perimeter barrier spray</li>
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Ants, spiders, wasps</li>
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Free re-treatments between visits</li>
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>100% satisfaction guarantee</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Perimeter barrier spray</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Ants, wasps, spiders</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Free re-treatments</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>100% satisfaction guarantee</li>
         </ul>
         <a href="contact.html" class="price-btn">Get Started</a>
       </div>
@@ -237,24 +330,25 @@
         <div class="price-amount"><sup>$</sup>45<span>/mo</span></div>
         <div class="price-period">Full year-round &bull; 12 monthly visits</div>
         <ul class="price-features">
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Exterior season + interior winter visits</li>
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Tick &amp; mosquito barrier treatments</li>
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Stink bug &amp; lanternfly control</li>
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Rodent bait station monitoring</li>
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Free re-treatments between visits</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>All exterior pests covered</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Interior winter visits</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Tick &amp; mosquito barrier</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Stink bug &amp; lanternfly</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Rodent bait monitoring</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Free re-treatments</li>
         </ul>
         <a href="contact.html" class="price-btn">Get Started</a>
       </div>
       <div class="price-card">
         <div class="price-name">Premium</div>
         <div class="price-amount"><sup>$</sup>55<span>/mo</span></div>
-        <div class="price-period">Everything in Standard + extras &bull; 12 visits</div>
+        <div class="price-period">Everything + extras &bull; 12 visits</div>
         <ul class="price-features">
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Everything in Standard</li>
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Interior spray treatments included</li>
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Roach &amp; rodent bait station installation</li>
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Priority scheduling</li>
-          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke-width="2.5"/></svg></span>Same-week service guarantee</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Everything in Standard</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Rodent bait station installation</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Interior spray treatments</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Priority scheduling</li>
+          <li><span class="check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" stroke="#2d7a3a" fill="none" stroke-width="2.5"/></svg></span>Same-week service guarantee</li>
         </ul>
         <a href="contact.html" class="price-btn">Get Started</a>
       </div>
@@ -262,49 +356,178 @@
   </div>
 </section>
 
-<section class="section" style="background:#f9fafb;">
+<!-- Testimonials -->
+<section class="section" id="testimonials">
   <div class="section-inner">
-    <div class="section-label">Reviews</div>
-    <h2 class="section-title">What Blairstown Homeowners Say</h2>
+    <div class="section-header">
+      <div class="section-label">Reviews</div>
+      <h2 class="section-title">What Blairstown Homeowners Say</h2>
+    </div>
     <div class="t-grid">
-      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"We have two dogs and a wooded half-acre. Before Pest 'Em, we were pulling ticks off the dogs daily from April to October. Since they started the monthly barrier spray, we have found zero ticks on the property. Not one. Worth every penny of the $45."</p><div class="t-author"><div class="t-initial">S</div><div><div class="t-name">Sarah M.</div><div class="t-loc">Blairstown, NJ</div></div></div></div>
-      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"Our backyard was unusable after 6pm all summer. Mosquitoes everywhere. Pest 'Em did the first barrier spray and within 48 hours we were eating dinner outside again. They come back every month and the mosquitoes have not returned. Finally a company that does what they say."</p><div class="t-author"><div class="t-initial">J</div><div><div class="t-name">Jason D.</div><div class="t-loc">Blairstown, NJ</div></div></div></div>
-      <div class="t-card"><div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="t-text">"Called on a Monday, they were here Wednesday. Explained exactly what they spray and where, made sure we knew it was safe for our kids and cats once it dries. Six months in — no ants, no spiders, no stink bugs. The winter rodent checks are a huge bonus too."</p><div class="t-author"><div class="t-initial">K</div><div><div class="t-name">Karen R.</div><div class="t-loc">Blairstown, NJ</div></div></div></div>
+      <div class="t-card">
+        <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="t-text">"We have two dogs and a wooded half-acre. Before Pest 'Em, we were pulling ticks off the dogs daily from April to October. Since they started the monthly barrier spray, we have found zero ticks on the property. Not one. Worth every penny of the $45."</p>
+        <div class="t-author">
+          <div class="t-initial">S</div>
+          <div><div class="t-name">Sarah M.</div><div class="t-loc">Blairstown, NJ</div></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="t-text">"Our backyard was unusable after 6pm all summer. Mosquitoes everywhere. Pest 'Em did the first barrier spray and within 48 hours we were eating dinner outside again. They come back every month and the mosquitoes have not returned."</p>
+        <div class="t-author">
+          <div class="t-initial">J</div>
+          <div><div class="t-name">Jason D.</div><div class="t-loc">Blairstown, NJ</div></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="t-text">"Called on a Monday, they were here Wednesday. Explained exactly what they spray and where, made sure we knew it was safe for our kids and cats once it dries. Six months in &mdash; no ants, no spiders, no stink bugs."</p>
+        <div class="t-author">
+          <div class="t-initial">K</div>
+          <div><div class="t-name">Karen R.</div><div class="t-loc">Blairstown, NJ</div></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section">
+<!-- Service Area -->
+<section class="section section-alt" id="service-area">
   <div class="section-inner">
-    <div class="section-label">Service Area</div>
-    <h2 class="section-title">Serving Blairstown First</h2>
-    <p class="section-sub">We started in Blairstown because it's home. Our routes now extend across Warren County — same quality, same tech, same commitment to showing up and doing real work every visit.</p>
-    <div class="towns"><span class="town">Blairstown</span><span class="town">Hackettstown</span><span class="town">Hope</span><span class="town">Belvidere</span><span class="town">Columbia</span><span class="town">Allamuchy</span><span class="town">Washington Township</span><span class="town">Phillipsburg</span><span class="town">Oxford</span></div>
+    <div class="section-header">
+      <div class="section-label">Service Area</div>
+      <h2 class="section-title">Serving Warren County, NJ</h2>
+      <p class="section-sub">We started in Blairstown because it's home. Our routes now extend across Warren County &mdash; same quality, same commitment to showing up every visit.</p>
+    </div>
+    <div class="towns">
+      <span class="town">Blairstown</span>
+      <span class="town">Hackettstown</span>
+      <span class="town">Hope</span>
+      <span class="town">Belvidere</span>
+      <span class="town">Columbia</span>
+      <span class="town">Allamuchy</span>
+      <span class="town">Washington Township</span>
+      <span class="town">Phillipsburg</span>
+      <span class="town">Oxford</span>
+    </div>
   </div>
 </section>
 
-<div class="cta-banner">
-  <h2>Ready to Stop Guessing What's in Your Yard?</h2>
-  <p>Get a free quote. Same-week service. One flat rate, all year.</p>
-  <a href="contact.html" class="btn-white">Get My Free Quote</a>
-  <div class="cta-phone"><a href="tel:8887744290" style="color:rgba(255,255,255,0.8);">(888) 774-4290</a></div>
-</div>
+<!-- CTA Banner -->
+<section class="cta-banner">
+  <div class="cta-banner-inner">
+    <h2>Ready to Stop Guessing What's in Your Yard?</h2>
+    <p>Get a free quote. Same-week service. One flat rate, all year.</p>
+    <div class="cta-btns">
+      <a href="contact.html" class="btn-white">Get My Free Quote</a>
+      <a href="tel:8887744290" class="cta-phone-link">(888) 774-4290</a>
+    </div>
+  </div>
+</section>
 
+<!-- Footer -->
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-grid">
-      <div>
+      <div class="footer-brand-col">
         <div class="footer-brand">Pest 'Em</div>
         <div class="footer-tagline">WE GET 'EM ALL</div>
-        <p class="footer-desc">Blairstown's year-round pest control. Exterior barrier spray in summer, interior protection in winter. One flat monthly rate, real treatments every visit.</p>
+        <p class="footer-desc">Warren County's year-round pest control. Exterior barrier spray in summer, interior protection in winter. One flat monthly rate, real treatments every visit.</p>
       </div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="tick-control.html">Tick Control</a></li><li><a href="mosquito-control.html">Mosquito Control</a></li><li><a href="stink-bug-control.html">Stink Bug Control</a></li><li><a href="lanternfly-control.html">Lanternfly Control</a></li><li><a href="rodent-control.html">Rodent Prevention</a></li><li><a href="wasp-control.html">Wasp Removal</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="#pricing">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:8887744290">(888) 774-4290</a></li><li><a href="mailto:info@pestem.com">info@pestem.com</a></li><li>Blairstown, NJ</li></ul></div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="tick-control.html">Tick Control</a></li>
+          <li><a href="mosquito-control.html">Mosquito Control</a></li>
+          <li><a href="stink-bug-control.html">Stink Bug Control</a></li>
+          <li><a href="lanternfly-control.html">Lanternfly Control</a></li>
+          <li><a href="rodent-control.html">Rodent Prevention</a></li>
+          <li><a href="wasp-control.html">Wasp Removal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">All Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:8887744290">(888) 774-4290</a></li>
+          <li><a href="mailto:info@pestem.com">info@pestem.com</a></li>
+          <li>Blairstown, NJ</li>
+          <li>Warren County</li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-bottom"><span class="footer-copy">&copy; 2026 Pest 'Em. Blairstown, NJ.</span><span class="footer-copy">Warren County, NJ</span></div>
+    <div class="footer-bottom">
+      <span class="footer-copy">&copy; 2026 Pest 'Em. Blairstown, NJ. All rights reserved.</span>
+      <span class="footer-copy">Warren County's Year-Round Pest Control</span>
+    </div>
   </div>
 </footer>
+
+<script>
+// Mobile nav toggle
+const toggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+const navRight = document.querySelector('.nav-right');
+if (toggle) {
+  toggle.addEventListener('click', function() {
+    this.classList.toggle('active');
+    navLinks.classList.toggle('nav-open');
+    navRight.classList.toggle('nav-open');
+  });
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Close mobile nav if open
+      if (navLinks.classList.contains('nav-open')) {
+        toggle.classList.remove('active');
+        navLinks.classList.remove('nav-open');
+        navRight.classList.remove('nav-open');
+      }
+    }
+  });
+});
+
+// Animate elements on scroll
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-in');
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('.service-card, .step-card, .price-card, .t-card, .why-card, .season-col').forEach(el => {
+  el.classList.add('animate-target');
+  observer.observe(el);
+});
+
+// Navbar shadow on scroll
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 10) {
+    nav.classList.add('nav-scrolled');
+  } else {
+    nav.classList.remove('nav-scrolled');
+  }
+});
+</script>
 
 </body>
 </html>
