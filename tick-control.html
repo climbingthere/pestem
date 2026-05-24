@@ -1,324 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tick Control Warren County NJ -- Lyme Disease Protection | Pestem</title>
-    <meta name="description" content="Professional tick control in Warren County NJ. Protect your family from Lyme disease with targeted yard treatments. Spring through fall coverage, pet-safe products. Free quote.">
-    <link rel="icon" type="image/png" href="favicon.png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Tick Control Warren County NJ -- Lyme Disease Protection | Pestem">
-    <meta property="og:description" content="Professional tick control for Warren County NJ homes. Barrier treatments from spring through fall. Pet-safe, family-safe.">
-    <meta property="og:site_name" content="Pestem Pest Control">
-
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Lato', sans-serif; font-weight: 400; color: #111827; background: #ffffff; line-height: 1.6; }
-        a { text-decoration: none; color: inherit; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -0.5px; }
-        img { max-width: 100%; height: auto; }
-
-        .btn-green { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; }
-        .btn-green:hover { background: #15803d; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4); }
-
-        /* Nav */
-        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
-        .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; }
-        .nav-logo { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 900; color: #1e40af; letter-spacing: -0.5px; }
-        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-        .nav-links a { color: #374151; font-size: 15px; font-weight: 700; transition: color 0.2s; }
-        .nav-links a:hover { color: #1e40af; }
-        .nav-right { display: flex; align-items: center; gap: 20px; }
-        .nav-phone { color: #1e40af; font-weight: 900; font-size: 15px; }
-        .nav-phone:hover { color: #16a34a; }
-        .nav-btn { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 14px; padding: 11px 24px; border-radius: 6px; transition: all 0.3s ease; }
-        .nav-btn:hover { background: #15803d; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(22,163,74,0.3); }
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; background: none; border: none; padding: 4px; }
-        .hamburger span { width: 24px; height: 2.5px; background: #1e40af; transition: 0.3s; display: block; border-radius: 2px; }
-        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #ffffff; z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a { color: #1e40af; font-size: 20px; font-weight: 700; }
-        .mobile-menu a:hover { color: #16a34a; }
-
-        /* Hero */
-        .page-hero { position: relative; padding: 150px 0 90px; overflow: hidden; }
-        .page-hero-bg {
-            position: absolute; inset: 0;
-            background: url('https://images.unsplash.com/photo-1559827291-72ee739d0d9a?w=1600&q=80') center center / cover no-repeat;
-            z-index: 0;
-        }
-        .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,20,40,0.9) 0%, rgba(30,64,175,0.6) 100%); }
-        .page-hero .container { position: relative; z-index: 1; }
-        .page-hero h1 { font-size: clamp(36px, 6vw, 56px); font-weight: 900; color: #ffffff; letter-spacing: -1px; margin-bottom: 16px; max-width: 650px; }
-        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 560px; line-height: 1.7; }
-
-        /* Content sections */
-        .content-section { padding: 80px 0; }
-        .content-section.alt { background: #f8fafc; }
-        .section-tag { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #16a34a; margin-bottom: 12px; }
-        .content-section h2 { font-size: clamp(26px, 3.5vw, 36px); color: #111827; margin-bottom: 20px; }
-        .content-section p { font-size: 15px; color: #6b7280; line-height: 1.8; margin-bottom: 16px; max-width: 720px; }
-
-        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-
-        /* Risk list */
-        .risk-list { list-style: none; margin: 24px 0; }
-        .risk-list li { padding: 12px 0; font-size: 15px; color: #374151; display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid #e5e7eb; }
-        .risk-list li:last-child { border-bottom: none; }
-        .risk-list li svg { width: 18px; height: 18px; color: #16a34a; flex-shrink: 0; margin-top: 2px; }
-        .risk-list.warn li svg { color: #ef4444; }
-
-        /* Stats */
-        .stat-boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
-        .stat-box { background: #0f172a; border-radius: 12px; padding: 32px 24px; text-align: center; color: #ffffff; }
-        .stat-box .stat-num { font-size: 40px; font-weight: 900; color: #16a34a; margin-bottom: 4px; }
-        .stat-box .stat-label { font-size: 14px; color: rgba(255,255,255,0.55); }
-
-        /* Schedule cards */
-        .schedule-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
-        .schedule-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px 24px; text-align: center; transition: all 0.3s ease; }
-        .schedule-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); border-color: #16a34a; }
-        .schedule-card .month { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #16a34a; margin-bottom: 8px; }
-        .schedule-card h3 { font-size: 18px; font-weight: 800; color: #111827; margin-bottom: 10px; }
-        .schedule-card p { font-size: 14px; color: #6b7280; line-height: 1.7; max-width: 100%; }
-
-        /* Image section */
-        .content-img { width: 100%; height: 340px; object-fit: cover; border-radius: 12px; display: block; margin-bottom: 24px; }
-
-        /* CTA */
-        .cta-banner { position: relative; padding: 80px 0; text-align: center; overflow: hidden; }
-        .cta-banner-bg { position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&q=80') center center / cover no-repeat; z-index: 0; }
-        .cta-banner-bg::after { content: ''; position: absolute; inset: 0; background: rgba(15, 23, 42, 0.88); }
-        .cta-banner .container { position: relative; z-index: 1; }
-        .cta-banner h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; color: #ffffff; margin-bottom: 16px; }
-        .cta-banner p { font-size: 17px; color: rgba(255,255,255,0.7); margin-bottom: 32px; }
-
-        /* Footer */
-        .footer { background: #111827; padding: 80px 0 40px; color: rgba(255,255,255,0.5); }
-        .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand .footer-logo { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 900; color: #ffffff; margin-bottom: 14px; }
-        .footer-brand p { font-size: 14px; line-height: 1.7; }
-        .footer h4 { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
-        .footer ul { list-style: none; }
-        .footer ul li { margin-bottom: 10px; }
-        .footer ul li a { font-size: 14px; color: rgba(255,255,255,0.5); transition: color 0.2s; }
-        .footer ul li a:hover { color: #16a34a; }
-        .footer-contact-item { font-size: 14px; margin-bottom: 10px; }
-        .footer-contact-item a { color: rgba(255,255,255,0.5); }
-        .footer-contact-item a:hover { color: #16a34a; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; font-size: 13px; }
-
-        @media (max-width: 900px) {
-            .two-col { grid-template-columns: 1fr; gap: 32px; }
-            .schedule-grid { grid-template-columns: 1fr; }
-            .stat-boxes { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-        }
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .nav-right .nav-phone { display: none; }
-            .nav-btn { display: none; }
-            .hamburger { display: flex; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .page-hero { padding: 120px 0 70px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tick Control | Pest 'Em | Blairstown NJ</title>
+<meta name="description" content="Professional tick control in Blairstown NJ. Bifenthrin perimeter barrier spray monthly April through October. Safe for pets and kids once dry. (888) 774-4290.">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Nav -->
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">PESTEM</a>
-            <ul class="nav-links">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="tick-control.html">Tick Control</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-right">
-                <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
-                <a href="contact.html" class="nav-btn">Get Free Quote</a>
-            </div>
-            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-    <div class="mobile-menu">
-        <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
-        <a href="services.html" onclick="this.parentElement.classList.remove('open')">Services</a>
-        <a href="tick-control.html" onclick="this.parentElement.classList.remove('open')">Tick Control</a>
-        <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
-        <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
-        <a href="tel:8887744290" onclick="this.parentElement.classList.remove('open')" style="color: #16a34a; font-weight: 900;">(888) 774-4290</a>
-        <a href="contact.html" class="nav-btn" onclick="this.parentElement.classList.remove('open')">Get Free Quote</a>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html"><img src="logo.png" alt="Pest 'Em" style="height:48px;"></a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;">
+      <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
+      <a href="contact.html" class="nav-cta">Get Free Quote</a>
     </div>
+  </div>
+</nav>
 
-    <!-- Hero -->
-    <section class="page-hero">
-        <div class="page-hero-bg"></div>
-        <div class="container">
-            <h1>Tick Control for Warren County Homes</h1>
-            <p>Professional tick treatments that protect your family from Lyme disease. Targeted yard applications from spring through fall, using pet-safe products that actually work.</p>
-        </div>
-    </section>
+<div class="page-hero" style="padding:60px 24px;">
+  <div class="page-hero-inner">
+    <div class="hero-badge">Tick Control</div>
+    <h1>Professional Tick Control for Blairstown Properties</h1>
+    <p>Monthly bifenthrin barrier spray eliminates ticks at the lawn edge before they reach your family or pets. Targeted perimeter treatment from April through October.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-green">Get a Free Quote</a>
+      <a href="tel:8887744290" class="btn-ghost">(888) 774-4290</a>
+    </div>
+  </div>
+</div>
 
-    <!-- Why Ticks are Dangerous -->
-    <section class="content-section">
-        <div class="container">
-            <div class="two-col">
-                <div>
-                    <div class="section-tag">The Risk</div>
-                    <h2>Why Tick Control Matters Here</h2>
-                    <p>Warren County sits in one of the highest-risk zones for Lyme disease in the entire country. Wooded lots, high deer populations, and humid summers create the perfect storm for blacklegged ticks.</p>
-                    <p>Lyme disease can cause lasting neurological damage, chronic joint pain, and fatigue if not caught early. Prevention is far more effective than treatment -- and far less expensive.</p>
-                </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80" alt="Warren County NJ home" class="content-img" loading="lazy">
-                    <ul class="risk-list warn">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg> NJ reports 3,000+ Lyme cases annually</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg> Warren County is classified high-incidence for Lyme</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg> Tick season runs March through November</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg> Nymphal ticks (hardest to spot) peak May-July</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg> Children and pets are at highest risk</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="content-section">
+  <div class="content-inner">
+    <div class="content-block">
+      <div class="section-label">What We Treat</div>
+      <h2>Ticks in Blairstown, NJ</h2>
+      <p>Blairstown sits at the intersection of farmland and forest — prime tick habitat. Deer ticks (black-legged ticks) and lone star ticks thrive in the leaf litter, tall grass, and wooded edges that border most properties in Warren County.</p>
+      <p>Ticks are active from early spring through late fall, with peak activity from May through July. They don't jump or fly — they crawl up from ground level at the boundary where your mowed lawn meets unmaintained vegetation, brush lines, and wooded areas.</p>
+      <p>Lyme disease, anaplasmosis, and babesiosis are all transmitted by ticks found in our area. Prevention means treating the zones where ticks wait for hosts — not spraying open lawn where they don't survive.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Stats -->
-    <section class="content-section alt">
-        <div class="container" style="text-align:center;">
-            <div class="section-tag">By The Numbers</div>
-            <h2>The Tick Problem in New Jersey</h2>
-            <div class="stat-boxes">
-                <div class="stat-box">
-                    <div class="stat-num">3,000+</div>
-                    <div class="stat-label">Lyme cases reported annually in NJ</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">9 mo.</div>
-                    <div class="stat-label">Active tick season in Warren County</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">95%</div>
-                    <div class="stat-label">Reduction with proper yard treatment</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="content-section" style="background:#f9fafb;">
+  <div class="content-inner">
+    <div class="content-block">
+      <div class="section-label">How We Treat It</div>
+      <h2>Our Tick Control Process</h2>
+    </div>
+    <div class="steps-grid" style="margin-top:32px;">
+      <div class="step-card" style="background:#fff;border:1px solid #e5e7eb;">
+        <div class="step-num">01</div>
+        <div class="step-title" style="color:#111;">Bifenthrin Barrier Spray</div>
+        <div class="step-desc" style="color:#6b7280;">We use Bifen IT (bifenthrin 7.9%) as our primary product — a professional-grade synthetic pyrethroid that kills ticks on contact and provides 30-day residual protection. Permethrin is used as a secondary treatment along the yard perimeter for extended knockdown.</div>
+      </div>
+      <div class="step-card" style="background:#fff;border:1px solid #e5e7eb;">
+        <div class="step-num">02</div>
+        <div class="step-title" style="color:#111;">Targeted Application Zones</div>
+        <div class="step-desc" style="color:#6b7280;">We spray a 3-foot barrier at lawn edges, wooded boundaries, shrub beds, and leaf litter areas. We also treat along fence lines, stone walls, and any transition zones between maintained lawn and wild vegetation. We do NOT spray open lawn — ticks don't live there.</div>
+      </div>
+      <div class="step-card" style="background:#fff;border:1px solid #e5e7eb;">
+        <div class="step-num">03</div>
+        <div class="step-title" style="color:#111;">Monthly, April Through October</div>
+        <div class="step-desc" style="color:#6b7280;">Treatments run monthly during tick season — seven visits total. Each visit re-establishes the barrier that breaks down naturally over 30 days. Consistent monthly application prevents population buildup throughout the entire active season.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Treatment Approach -->
-    <section class="content-section">
-        <div class="container">
-            <div style="text-align:center; max-width:700px; margin: 0 auto 20px;">
-                <div class="section-tag">Our Approach</div>
-                <h2>How Pestem Tick Control Works</h2>
-                <p style="max-width:600px; margin: 0 auto;">We use a multi-step treatment program timed to the tick lifecycle, targeting ticks when they're most vulnerable throughout the season.</p>
-            </div>
-            <div class="schedule-grid">
-                <div class="schedule-card">
-                    <div class="month">April - May</div>
-                    <h3>Early Season Treatment</h3>
-                    <p>First application targets overwintering adult ticks and early-stage nymphs. Focus on leaf litter, stone walls, and wood line edges where they emerge.</p>
-                </div>
-                <div class="schedule-card">
-                    <div class="month">June - August</div>
-                    <h3>Peak Season Protection</h3>
-                    <p>Monthly treatments during peak nymph season -- the most dangerous window. Barrier sprays on yard perimeter, play areas, and high-traffic zones.</p>
-                </div>
-                <div class="schedule-card">
-                    <div class="month">September - November</div>
-                    <h3>Late Season Defense</h3>
-                    <p>Final treatments target adult ticks before they lay eggs for next year, breaking the reproduction cycle and reducing next season's population.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="content-section">
+  <div class="content-inner">
+    <div class="content-block">
+      <div class="section-label">Safety</div>
+      <h2>Safe for Your Family and Pets</h2>
+    </div>
+    <div class="safety-grid">
+      <div class="safety-card">
+        <h4>Pet Safety</h4>
+        <p>Bifenthrin is safe for dogs and cats once the spray has dried completely — typically 30 to 45 minutes. We recommend keeping pets inside during application and for the drying period. Once dry, the product bonds to surfaces and is not absorbed through paws.</p>
+      </div>
+      <div class="safety-card">
+        <h4>Kid Safety</h4>
+        <p>Children can return to treated areas once the spray is fully dry (30-45 minutes). The product is applied at lawn edges and wooded borders — not play areas, sandboxes, or open lawn where kids spend time. Targeted application means minimal contact exposure.</p>
+      </div>
+      <div class="safety-card">
+        <h4>Wildlife Safety</h4>
+        <p>Our perimeter-only approach avoids broadcast spraying that would affect beneficial insects on open lawn. We do not treat flowering plants or pollinator gardens. The 3-foot edge treatment targets tick habitat specifically while leaving the rest of your yard untouched.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- What We Treat -->
-    <section class="content-section alt">
-        <div class="container">
-            <div class="two-col">
-                <div>
-                    <div class="section-tag">Treatment Areas</div>
-                    <h2>Where We Treat on Your Property</h2>
-                    <p>Ticks don't live in sunny, mowed lawn. They concentrate in specific habitat zones. We target these areas precisely, maximizing effectiveness while using less product.</p>
-                    <ul class="risk-list">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Yard perimeter and woodland edges</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Stone walls and rock borders</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Under decks, porches, and sheds</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Gardens, mulch beds, and ground cover</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Children's play areas and pet zones</li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&q=80" alt="Kids playing safely outside" class="content-img" loading="lazy">
-                    <div class="section-tag">Pet & Family Safe</div>
-                    <h2>Safe for Kids and Pets</h2>
-                    <p>Every product is selected for its safety profile. Once dry (usually about 30 minutes), treated areas are completely safe for children and pets. We use targeted application methods to minimize environmental impact.</p>
-                    <p>Our technicians walk your property with you, explain exactly what we're applying, and answer any questions about product safety. No surprises, no jargon.</p>
-                    <a href="contact.html" class="btn-green" style="margin-top:8px;">Schedule Your First Treatment</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="cta-banner">
+  <h2>Ready to Get Ticks Under Control?</h2>
+  <p>Get a free quote. Monthly barrier spray starting at $45/month.</p>
+  <a href="contact.html" class="btn-white">Get My Free Quote</a>
+  <div class="cta-phone"><a href="tel:8887744290" style="color:rgba(255,255,255,0.8);">(888) 774-4290</a></div>
+</div>
 
-    <!-- CTA -->
-    <section class="cta-banner">
-        <div class="cta-banner-bg"></div>
-        <div class="container">
-            <h2>Protect your yard from ticks this season</h2>
-            <p>Get a free tick control quote for your Warren County property. Same-week service available.</p>
-            <a href="contact.html" class="btn-green">Get Your Free Quote</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">PESTEM</div>
-                    <p>Warren County's pest control experts. Preventative treatments that keep your home and family safe, year-round. Based in Blairstown, NJ.</p>
-                </div>
-                <div>
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="tick-control.html">Tick Control</a></li>
-                        <li><a href="services.html#mosquito">Mosquito Control</a></li>
-                        <li><a href="services.html#rodent">Rodent Prevention</a></li>
-                        <li><a href="services.html#stinkbug">Stink Bugs</a></li>
-                        <li><a href="services.html#lanternfly">Lanternflies</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact</h4>
-                    <div class="footer-contact-item"><a href="tel:8887744290">(888) 774-4290</a></div>
-                    <div class="footer-contact-item"><a href="mailto:info@pestem.com">info@pestem.com</a></div>
-                    <div class="footer-contact-item">Blairstown, NJ 07825</div>
-                    <div class="footer-contact-item" style="margin-top: 16px;">Mon-Fri: 8am - 6pm<br>Sat: 9am - 2pm</div>
-                </div>
-            </div>
-            <div class="footer-bottom">&copy; 2026 Pestem Pest Control. All rights reserved.</div>
-        </div>
-    </footer>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Pest 'Em</div>
+        <div class="footer-tagline">WE GET 'EM ALL</div>
+        <p class="footer-desc">Blairstown's year-round pest control. Exterior barrier spray in summer, interior protection in winter. One flat monthly rate, real treatments every visit.</p>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="tick-control.html">Tick Control</a></li><li><a href="mosquito-control.html">Mosquito Control</a></li><li><a href="stink-bug-control.html">Stink Bug Control</a></li><li><a href="lanternfly-control.html">Lanternfly Control</a></li><li><a href="rodent-control.html">Rodent Prevention</a></li><li><a href="wasp-control.html">Wasp Removal</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="index.html#about">About Us</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:8887744290">(888) 774-4290</a></li><li><a href="mailto:info@pestem.com">info@pestem.com</a></li><li>Blairstown, NJ</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2026 Pest 'Em. Blairstown, NJ.</span><span class="footer-copy">Warren County, NJ</span></div>
+  </div>
+</footer>
 
 </body>
 </html>

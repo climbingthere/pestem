@@ -1,298 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get a Free Pest Control Quote -- Warren County NJ | Pestem</title>
-    <meta name="description" content="Request a free pest control quote for your Warren County NJ home. Same-week service available. Call (888) 774-4290 or fill out our form.">
-    <link rel="icon" type="image/png" href="favicon.png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Get a Free Pest Control Quote -- Pestem | Warren County NJ">
-    <meta property="og:description" content="Request a free pest control quote. Same-week service available in Warren County NJ.">
-    <meta property="og:site_name" content="Pestem Pest Control">
-
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Lato', sans-serif; font-weight: 400; color: #111827; background: #ffffff; line-height: 1.6; }
-        a { text-decoration: none; color: inherit; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -0.5px; }
-        img { max-width: 100%; height: auto; }
-
-        .btn-green { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; }
-        .btn-green:hover { background: #15803d; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4); }
-
-        /* Nav */
-        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
-        .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; }
-        .nav-logo { font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 900; color: #1e40af; letter-spacing: -0.5px; }
-        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-        .nav-links a { color: #374151; font-size: 15px; font-weight: 700; transition: color 0.2s; }
-        .nav-links a:hover { color: #1e40af; }
-        .nav-right { display: flex; align-items: center; gap: 20px; }
-        .nav-phone { color: #1e40af; font-weight: 900; font-size: 15px; }
-        .nav-phone:hover { color: #16a34a; }
-        .nav-btn { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 14px; padding: 11px 24px; border-radius: 6px; transition: all 0.3s ease; }
-        .nav-btn:hover { background: #15803d; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(22,163,74,0.3); }
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; background: none; border: none; padding: 4px; }
-        .hamburger span { width: 24px; height: 2.5px; background: #1e40af; transition: 0.3s; display: block; border-radius: 2px; }
-        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #ffffff; z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a { color: #1e40af; font-size: 20px; font-weight: 700; }
-        .mobile-menu a:hover { color: #16a34a; }
-
-        /* Hero */
-        .page-hero { position: relative; padding: 150px 0 90px; text-align: center; overflow: hidden; }
-        .page-hero-bg {
-            position: absolute; inset: 0;
-            background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1600&q=80') center center / cover no-repeat;
-            z-index: 0;
-        }
-        .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,20,40,0.9) 0%, rgba(30,64,175,0.6) 100%); }
-        .page-hero .container { position: relative; z-index: 1; }
-        .page-hero h1 { font-size: clamp(36px, 6vw, 56px); font-weight: 900; color: #ffffff; letter-spacing: -1px; margin-bottom: 16px; }
-        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto; }
-
-        /* Contact Section */
-        .contact-section { padding: 80px 0; }
-        .contact-layout { display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: start; }
-
-        /* Form */
-        .form-card h2 { font-size: 28px; font-weight: 900; color: #111827; margin-bottom: 8px; }
-        .form-card .form-sub { font-size: 15px; color: #6b7280; margin-bottom: 32px; }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
-        .form-group { margin-bottom: 16px; }
-        .form-group label { display: block; font-size: 13px; font-weight: 700; color: #111827; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .form-group input,
-        .form-group select,
-        .form-group textarea { width: 100%; padding: 14px 16px; border: 1px solid #d1d5db; border-radius: 8px; font-family: 'Lato', sans-serif; font-size: 15px; color: #111827; background: #f8fafc; transition: border-color 0.2s, box-shadow 0.2s; outline: none; }
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus { border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,0.1); background: #ffffff; }
-        .form-group textarea { resize: vertical; min-height: 120px; }
-        .form-group select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' viewBox='0 0 24 24' stroke='%23999' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 16px center; }
-        .btn-submit { display: inline-block; background: #16a34a; color: #ffffff; font-weight: 700; font-size: 16px; padding: 16px 40px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; font-family: 'Lato', sans-serif; width: 100%; }
-        .btn-submit:hover { background: #15803d; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(22, 163, 74, 0.35); }
-
-        /* Sidebar */
-        .sidebar-card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 12px; padding: 28px 24px; margin-bottom: 20px; }
-        .sidebar-card h3 { font-size: 18px; font-weight: 800; color: #111827; margin-bottom: 16px; }
-        .contact-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
-        .contact-item:last-child { margin-bottom: 0; }
-        .contact-item svg { width: 20px; height: 20px; color: #16a34a; flex-shrink: 0; margin-top: 2px; }
-        .contact-item .item-label { font-size: 12px; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
-        .contact-item .item-value { font-size: 15px; color: #111827; font-weight: 600; }
-        .contact-item .item-value a { color: #16a34a; }
-        .contact-item .item-value a:hover { text-decoration: underline; }
-        .hour-row { display: flex; justify-content: space-between; padding: 8px 0; font-size: 14px; border-bottom: 1px solid #e5e7eb; }
-        .hour-row:last-child { border-bottom: none; }
-        .hour-row .day { color: #6b7280; }
-        .hour-row .time { font-weight: 600; color: #111827; }
-        .sidebar-dark { background: #0f172a; border-color: #0f172a; }
-        .sidebar-dark h3 { color: #ffffff; }
-        .sidebar-dark p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.7; }
-
-        /* Footer */
-        .footer { background: #0f172a; padding: 60px 0 40px; color: rgba(255,255,255,0.55); }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand .footer-logo { font-size: 22px; font-weight: 900; color: #ffffff; margin-bottom: 12px; }
-        .footer-brand .footer-logo .green { color: #16a34a; }
-        .footer-brand p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.4); }
-        .footer h4 { font-size: 13px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
-        .footer ul { list-style: none; }
-        .footer ul li { margin-bottom: 10px; }
-        .footer ul li a { font-size: 14px; color: rgba(255,255,255,0.45); transition: color 0.2s; }
-        .footer ul li a:hover { color: #16a34a; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; font-size: 13px; }
-
-        @media (max-width: 900px) {
-            .contact-layout { grid-template-columns: 1fr; gap: 40px; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-        }
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .nav-btn { display: none; }
-            .hamburger { display: flex; }
-            .form-row { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .page-hero { padding: 130px 0 70px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Your Free Quote | Pest 'Em | Blairstown NJ</title>
+<meta name="description" content="Get a free pest control quote from Pest 'Em. Same-week service in Blairstown, NJ. Call (888) 774-4290 or fill out the form.">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Nav -->
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">PESTEM</a>
-            <ul class="nav-links">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="tick-control.html">Tick Control</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-right">
-                <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
-                <a href="contact.html" class="nav-btn">Get Free Quote</a>
-            </div>
-            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-    <div class="mobile-menu">
-        <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
-        <a href="services.html" onclick="this.parentElement.classList.remove('open')">Services</a>
-        <a href="tick-control.html" onclick="this.parentElement.classList.remove('open')">Tick Control</a>
-        <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
-        <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
-        <a href="tel:8887744290" onclick="this.parentElement.classList.remove('open')" style="color: #16a34a; font-weight: 900;">(888) 774-4290</a>
-        <a href="contact.html" class="nav-btn" onclick="this.parentElement.classList.remove('open')">Get Free Quote</a>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html"><img src="logo.png" alt="Pest 'Em" style="height:52px;"></a>
+    <ul class="nav-links">
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;">
+      <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
+      <a href="contact.html" class="nav-cta">Get Free Quote</a>
     </div>
+  </div>
+</nav>
 
-    <!-- Hero -->
-    <section class="page-hero">
-        <div class="page-hero-bg"></div>
-        <div class="container">
-            <h1>Get a Free Quote</h1>
-            <p>Tell us about your pest problem and we'll get back to you within one business day with a customized quote.</p>
-        </div>
-    </section>
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Get Your Free Quote</h1>
+    <p>Same-week service in Blairstown, NJ.</p>
+  </div>
+</div>
 
-    <!-- Contact Form -->
-    <section class="contact-section">
-        <div class="container">
-            <div class="contact-layout">
-                <div class="form-card">
-                    <h2>Request Your Quote</h2>
-                    <p class="form-sub">Fill out the form below and a Pestem team member will reach out to schedule your free inspection.</p>
-                    <form action="mailto:info@pestem.com" method="post" enctype="text/plain">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" placeholder="John Smith" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" placeholder="(908) 555-1234" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="service">Service of Interest</label>
-                                <select id="service" name="service">
-                                    <option value="">Select a service...</option>
-                                    <option value="tick-control">Tick Control</option>
-                                    <option value="mosquito-control">Mosquito Control</option>
-                                    <option value="rodent-prevention">Rodent Prevention</option>
-                                    <option value="stink-bugs">Stink Bug Prevention</option>
-                                    <option value="lanternfly">Spotted Lanternfly Treatment</option>
-                                    <option value="ants-spiders">Ants & Spiders</option>
-                                    <option value="full-plan">Full Protection Plan</option>
-                                    <option value="other">Other / Not Sure</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="address">Property Address</label>
-                            <input type="text" id="address" name="address" placeholder="123 Main St, Hackettstown, NJ 07840">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your pest issue, property size, or any concerns..."></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">Send Quote Request</button>
-                    </form>
-                </div>
-                <div class="contact-sidebar">
-                    <div class="sidebar-card">
-                        <h3>Contact Info</h3>
-                        <div class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            <div>
-                                <div class="item-label">Phone</div>
-                                <div class="item-value"><a href="tel:8887744290">(888) 774-4290</a></div>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                            <div>
-                                <div class="item-label">Email</div>
-                                <div class="item-value"><a href="mailto:info@pestem.com">info@pestem.com</a></div>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            <div>
-                                <div class="item-label">Service Area</div>
-                                <div class="item-value">Warren County, NJ</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="sidebar-card">
-                        <h3>Business Hours</h3>
-                        <div class="hour-row"><span class="day">Monday - Friday</span><span class="time">8:00 AM - 6:00 PM</span></div>
-                        <div class="hour-row"><span class="day">Saturday</span><span class="time">9:00 AM - 2:00 PM</span></div>
-                        <div class="hour-row"><span class="day">Sunday</span><span class="time">Closed</span></div>
-                    </div>
-                    <div class="sidebar-card sidebar-dark">
-                        <h3>Same-Week Service</h3>
-                        <p>Most quotes are returned within 24 hours. We offer same-week service for new customers throughout Warren County.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="content-section">
+  <div class="content-inner">
+    <div class="content-grid">
+      <div>
+        <form class="contact-form" action="mailto:info@pestem.com" method="POST" enctype="text/plain">
+          <label>Name
+            <input type="text" name="name" required>
+          </label>
+          <label>Phone
+            <input type="tel" name="phone" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Address
+            <input type="text" name="address" required>
+          </label>
+          <label>What's your main pest concern?
+            <select name="pest_concern" required>
+              <option value="">Select one...</option>
+              <option value="Ticks">Ticks</option>
+              <option value="Mosquitoes">Mosquitoes</option>
+              <option value="Rodents">Rodents</option>
+              <option value="Stink Bugs">Stink Bugs</option>
+              <option value="Lanternflies">Lanternflies</option>
+              <option value="Wasps">Wasps</option>
+              <option value="General/Not Sure">General/Not Sure</option>
+            </select>
+          </label>
+          <label>Message (optional)
+            <textarea name="message"></textarea>
+          </label>
+          <button type="submit">Submit Request</button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <p><strong>Phone:</strong> <a href="tel:8887744290">(888) 774-4290</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@pestem.com">info@pestem.com</a></p>
+        <p><strong>Address:</strong> Blairstown, NJ 07825</p>
+        <p><strong>Hours:</strong> Mon-Sat 8am-6pm</p>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">PEST<span class="green">EM</span></div>
-                    <p>Warren County's trusted pest control company. Prevention-first, pet-safe, locally owned and operated.</p>
-                </div>
-                <div>
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="tick-control.html">Tick Control</a></li>
-                        <li><a href="services.html#mosquito">Mosquito Control</a></li>
-                        <li><a href="services.html#rodent">Rodent Prevention</a></li>
-                        <li><a href="services.html#stinkbug">Stink Bugs</a></li>
-                        <li><a href="services.html#lanternfly">Lanternflies</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Service Areas</h4>
-                    <ul>
-                        <li><a href="#">Blairstown</a></li>
-                        <li><a href="#">Hackettstown</a></li>
-                        <li><a href="#">Belvidere</a></li>
-                        <li><a href="#">Phillipsburg</a></li>
-                        <li><a href="#">Oxford</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="tel:8887744290">(888) 774-4290</a></li>
-                        <li><a href="mailto:info@pestem.com">info@pestem.com</a></li>
-                        <li><a href="contact.html">Get a Quote</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">&copy; 2026 Pestem Pest Control. All rights reserved. Warren County, NJ.</div>
-        </div>
-    </footer>
+        <h3 style="margin-top:40px;">What to Expect</h3>
+        <p><strong>Step 1:</strong> We call within 24 hours of receiving your request to discuss your pest concerns and property.</p>
+        <p><strong>Step 2:</strong> Schedule your free walkthrough -- we assess your property, identify pressure points, and note entry areas.</p>
+        <p><strong>Step 3:</strong> Get your custom plan -- a seasonal treatment schedule tailored to your property and pest pressure, with a clear flat monthly rate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Pest 'Em</div>
+        <div class="footer-tagline">WE GET 'EM ALL</div>
+        <p class="footer-desc">Blairstown's year-round pest control. Exterior barrier spray in summer, interior protection in winter. One flat monthly rate, real treatments every visit.</p>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="tick-control.html">Tick Control</a></li><li><a href="mosquito-control.html">Mosquito Control</a></li><li><a href="stink-bug-control.html">Stink Bug Control</a></li><li><a href="lanternfly-control.html">Lanternfly Control</a></li><li><a href="rodent-control.html">Rodent Prevention</a></li><li><a href="wasp-control.html">Wasp Removal</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:8887744290">(888) 774-4290</a></li><li><a href="mailto:info@pestem.com">info@pestem.com</a></li><li>Blairstown, NJ</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2026 Pest 'Em. Blairstown, NJ.</span><span class="footer-copy">Warren County, NJ</span></div>
+  </div>
+</footer>
 
 </body>
 </html>

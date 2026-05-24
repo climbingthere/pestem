@@ -1,320 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mosquito Control NJ -- Family-Safe Yard Treatments | Pest 'Em</title>
-    <meta name="description" content="Professional mosquito control in Warren County NJ. Monthly barrier spray treatments from spring through fall. Safe for kids, pets, and wildlife. Free quote.">
-    <link rel="icon" type="image/png" href="favicon.png">
-
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Mosquito Control NJ -- Family-Safe Yard Treatments | Pest 'Em">
-    <meta property="og:description" content="Stop mosquitoes before they ruin your summer. Monthly barrier treatments, safe for kids and pets.">
-    <meta property="og:site_name" content="Pest 'Em Pest Control">
-
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Urbanist', sans-serif; font-weight: 400; color: #111827; background: #ffffff; line-height: 1.6; }
-        a { text-decoration: none; color: inherit; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-        h1, h2, h3 { font-family: 'Urbanist', sans-serif; font-weight: 900; letter-spacing: -0.5px; }
-        img { max-width: 100%; height: auto; }
-
-        .btn-green { display: inline-block; background: #2d7a3a; color: #ffffff; font-weight: 700; font-size: 16px; padding: 14px 28px; border-radius: 8px; border: none; cursor: pointer; transition: all 0.3s ease; }
-        .btn-green:hover { background: #1e5c2a; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(45, 122, 58, 0.4); }
-
-        /* Nav */
-        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: #ffffff; box-shadow: 0 2px 16px rgba(0,0,0,0.07); }
-        .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 72px; }
-        .nav-logo { font-family: 'Urbanist', sans-serif; font-size: 28px; font-weight: 900; color: #0f2d14; letter-spacing: -0.5px; }
-        .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
-        .nav-links a { color: #374151; font-size: 15px; font-weight: 700; transition: color 0.2s; }
-        .nav-links a:hover { color: #0f2d14; }
-        .nav-right { display: flex; align-items: center; gap: 20px; }
-        .nav-phone { color: #0f2d14; font-weight: 900; font-size: 15px; }
-        .nav-phone:hover { color: #5fce73; }
-        .nav-btn { display: inline-block; background: #2d7a3a; color: #ffffff; font-weight: 700; font-size: 14px; padding: 11px 24px; border-radius: 6px; transition: all 0.3s ease; }
-        .nav-btn:hover { background: #1e5c2a; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(45,122,58,0.3); }
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; background: none; border: none; padding: 4px; }
-        .hamburger span { width: 24px; height: 2.5px; background: #0f2d14; transition: 0.3s; display: block; border-radius: 2px; }
-        .mobile-menu { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #ffffff; z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
-        .mobile-menu.open { display: flex; }
-        .mobile-menu a { color: #0f2d14; font-size: 20px; font-weight: 700; }
-        .mobile-menu a:hover { color: #5fce73; }
-
-        /* Hero */
-        .page-hero { position: relative; padding: 150px 0 90px; overflow: hidden; }
-        .page-hero-bg {
-            position: absolute; inset: 0;
-            background: #0f2d14;
-            z-index: 0;
-        }
-        .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(15,45,20,0.95) 0%, rgba(45,122,58,0.7) 100%); }
-        .page-hero .container { position: relative; z-index: 1; }
-        .page-hero h1 { font-size: clamp(36px, 6vw, 56px); font-weight: 900; color: #ffffff; letter-spacing: -1px; margin-bottom: 16px; max-width: 650px; }
-        .page-hero p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 560px; line-height: 1.7; }
-
-        /* Content sections */
-        .content-section { padding: 80px 0; }
-        .content-section.alt { background: #f8fafc; }
-        .section-tag { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #2d7a3a; margin-bottom: 12px; }
-        .content-section h2 { font-size: clamp(26px, 3.5vw, 36px); color: #111827; margin-bottom: 20px; }
-        .content-section p { font-size: 15px; color: #6b7280; line-height: 1.8; margin-bottom: 16px; max-width: 720px; }
-
-        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-
-        /* Risk list */
-        .risk-list { list-style: none; margin: 24px 0; }
-        .risk-list li { padding: 12px 0; font-size: 15px; color: #374151; display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid #e5e7eb; }
-        .risk-list li:last-child { border-bottom: none; }
-        .risk-list li svg { width: 18px; height: 18px; color: #2d7a3a; flex-shrink: 0; margin-top: 2px; }
-        .risk-list.warn li svg { color: #ef4444; }
-
-        /* Stats */
-        .stat-boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
-        .stat-box { background: #0f2d14; border-radius: 12px; padding: 32px 24px; text-align: center; color: #ffffff; }
-        .stat-box .stat-num { font-size: 40px; font-weight: 900; color: #5fce73; margin-bottom: 4px; }
-        .stat-box .stat-label { font-size: 14px; color: rgba(255,255,255,0.55); }
-
-        /* Schedule cards */
-        .schedule-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
-        .schedule-card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px 24px; text-align: center; transition: all 0.3s ease; }
-        .schedule-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); border-color: #5fce73; }
-        .schedule-card .month { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #2d7a3a; margin-bottom: 8px; }
-        .schedule-card h3 { font-size: 18px; font-weight: 800; color: #111827; margin-bottom: 10px; }
-        .schedule-card p { font-size: 14px; color: #6b7280; line-height: 1.7; max-width: 100%; }
-
-        /* CTA */
-        .cta-banner { position: relative; padding: 80px 0; text-align: center; overflow: hidden; }
-        .cta-banner-bg { position: absolute; inset: 0; background: #0f2d14; z-index: 0; }
-        .cta-banner-bg::after { content: ''; position: absolute; inset: 0; background: rgba(15, 45, 20, 0.92); }
-        .cta-banner .container { position: relative; z-index: 1; }
-        .cta-banner h2 { font-size: clamp(28px, 4vw, 40px); font-weight: 900; color: #ffffff; margin-bottom: 16px; }
-        .cta-banner p { font-size: 17px; color: rgba(255,255,255,0.7); margin-bottom: 32px; }
-
-        /* Footer */
-        .footer { background: #0f2d14; padding: 80px 0 40px; color: rgba(255,255,255,0.5); }
-        .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-        .footer-brand .footer-logo { font-family: 'Urbanist', sans-serif; font-size: 26px; font-weight: 900; color: #ffffff; margin-bottom: 14px; }
-        .footer-brand p { font-size: 14px; line-height: 1.7; }
-        .footer h4 { font-family: 'Urbanist', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 20px; }
-        .footer ul { list-style: none; }
-        .footer ul li { margin-bottom: 10px; }
-        .footer ul li a { font-size: 14px; color: rgba(255,255,255,0.5); transition: color 0.2s; }
-        .footer ul li a:hover { color: #5fce73; }
-        .footer-contact-item { font-size: 14px; margin-bottom: 10px; }
-        .footer-contact-item a { color: rgba(255,255,255,0.5); }
-        .footer-contact-item a:hover { color: #5fce73; }
-        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; text-align: center; font-size: 13px; }
-
-        @media (max-width: 900px) {
-            .two-col { grid-template-columns: 1fr; gap: 32px; }
-            .schedule-grid { grid-template-columns: 1fr; }
-            .stat-boxes { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-        }
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .nav-right .nav-phone { display: none; }
-            .nav-btn { display: none; }
-            .hamburger { display: flex; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .page-hero { padding: 120px 0 70px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mosquito Control | Pest 'Em | Blairstown NJ</title>
+<meta name="description" content="Professional mosquito control in Blairstown NJ. Bifenthrin barrier spray targeting resting sites monthly May through September. Safe for families. (888) 774-4290.">
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Nav -->
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="index.html" class="nav-logo">Pest 'Em</a>
-            <ul class="nav-links">
-                <li><a href="services.html">Services</a></li>
-                <li><a href="tick-control.html">Tick Control</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="nav-right">
-                <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
-                <a href="contact.html" class="nav-btn">Get Free Quote</a>
-            </div>
-            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-    <div class="mobile-menu">
-        <a href="index.html" onclick="this.parentElement.classList.remove('open')">Home</a>
-        <a href="services.html" onclick="this.parentElement.classList.remove('open')">Services</a>
-        <a href="tick-control.html" onclick="this.parentElement.classList.remove('open')">Tick Control</a>
-        <a href="about.html" onclick="this.parentElement.classList.remove('open')">About</a>
-        <a href="contact.html" onclick="this.parentElement.classList.remove('open')">Contact</a>
-        <a href="tel:8887744290" onclick="this.parentElement.classList.remove('open')" style="color: #5fce73; font-weight: 900;">(888) 774-4290</a>
-        <a href="contact.html" class="nav-btn" onclick="this.parentElement.classList.remove('open')">Get Free Quote</a>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html"><img src="logo.png" alt="Pest 'Em" style="height:48px;"></a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#how-it-works">How It Works</a></li>
+      <li><a href="index.html#pricing">Pricing</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;">
+      <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
+      <a href="contact.html" class="nav-cta">Get Free Quote</a>
     </div>
+  </div>
+</nav>
 
-    <!-- Hero -->
-    <section class="page-hero">
-        <div class="page-hero-bg"></div>
-        <div class="container">
-            <h1>Stop Mosquitoes Before They Ruin Your Summer</h1>
-            <p>Professional mosquito barrier treatments that let your family enjoy the yard again. Monthly applications from spring through fall, using products that are safe for kids, pets, and wildlife.</p>
-        </div>
-    </section>
+<div class="page-hero" style="padding:60px 24px;">
+  <div class="page-hero-inner">
+    <div class="hero-badge">Mosquito Control</div>
+    <h1>Mosquito Barrier Spray for Blairstown Yards</h1>
+    <p>Monthly bifenthrin treatments targeting mosquito resting sites in shrubs and dense vegetation. Take your backyard back from May through September.</p>
+    <div class="hero-btns">
+      <a href="contact.html" class="btn-green">Get a Free Quote</a>
+      <a href="tel:8887744290" class="btn-ghost">(888) 774-4290</a>
+    </div>
+  </div>
+</div>
 
-    <!-- What We Spray -->
-    <section class="content-section">
-        <div class="container">
-            <div class="two-col">
-                <div>
-                    <div class="section-tag">Treatment Method</div>
-                    <h2>What We Spray and How It Works</h2>
-                    <p>We apply a pyrethrin/pyrethroid barrier spray targeting the areas where mosquitoes actually rest during daylight hours -- shrubs, ground cover, low vegetation, and shaded perimeter areas. Mosquitoes spend most of the day hiding in these spots, coming out only at dawn and dusk to feed.</p>
-                    <p>Our barrier treatment coats these resting surfaces so mosquitoes contact the product before they ever reach you. Monthly applications from April through October keep your yard protected throughout the entire mosquito season.</p>
-                </div>
-                <div>
-                    <ul class="risk-list">
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Pyrethrin/pyrethroid barrier spray -- proven effective against mosquitoes</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Targets shrubs, ground cover, and shaded vegetation where mosquitoes rest</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Monthly applications April through October</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Products dry within 30-60 minutes</li>
-                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Free re-treatment if mosquito activity continues between visits</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="content-section">
+  <div class="content-inner">
+    <div class="content-block">
+      <div class="section-label">What We Treat</div>
+      <h2>Mosquitoes in Blairstown, NJ</h2>
+      <p>Warren County's mix of streams, wetlands, and shaded properties creates ideal mosquito breeding and harboring conditions. Blairstown homeowners deal with aggressive mosquito populations from late May through September — making evenings outdoors miserable without treatment.</p>
+      <p>Mosquitoes don't fly far from where they rest during the day. They hide in the undersides of shrubs, dense ground cover, shaded vegetation, and areas near standing water. When evening comes, they emerge from these resting sites to feed — which is why barrier treatment works so effectively.</p>
+      <p>Asian tiger mosquitoes and common house mosquitoes are both present in our area. Both species rest in vegetation during daylight hours and are active at dawn and dusk, making yard enjoyment difficult without a residual barrier in place.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Safety -->
-    <section class="content-section alt">
-        <div class="container">
-            <div class="two-col">
-                <div>
-                    <div class="section-tag">Kid Safety</div>
-                    <h2>Safe for Your Children</h2>
-                    <p>We treat only vegetation and the yard perimeter -- not open lawn or play areas where kids spend their time. Products dry within 30 to 60 minutes. We ask that children stay inside or away from treated areas for one hour after application.</p>
-                    <p>Once the product has dried, treated surfaces are completely safe. Kids can run, play, and roll in the grass without any concern. Our technicians will walk you through exactly what was applied and where before they leave.</p>
-                </div>
-                <div>
-                    <div class="section-tag">Pet Safety</div>
-                    <h2>Safe for Dogs and Cats</h2>
-                    <p>The same 30 to 60 minute dry time applies to pets. Keep dogs and cats indoors during the treatment and for one hour afterward. Once the product is dry, it is non-toxic to pets and they can use the yard freely.</p>
-                    <p>We avoid spraying near pet water bowls, food stations, and pet doors. If your dog has a favorite spot in the yard, let us know and we will adjust our application accordingly.</p>
-                    <a href="contact.html" class="btn-green" style="margin-top:8px;">Schedule Your First Treatment</a>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="content-section" style="background:#f9fafb;">
+  <div class="content-inner">
+    <div class="content-block">
+      <div class="section-label">How We Treat It</div>
+      <h2>Our Mosquito Control Process</h2>
+    </div>
+    <div class="steps-grid" style="margin-top:32px;">
+      <div class="step-card" style="background:#fff;border:1px solid #e5e7eb;">
+        <div class="step-num">01</div>
+        <div class="step-title" style="color:#111;">Bifenthrin Barrier Spray</div>
+        <div class="step-desc" style="color:#6b7280;">We apply bifenthrin-based barrier spray to mosquito resting sites. This professional-grade residual insecticide kills mosquitoes on contact when they land on treated surfaces and continues working for up to 30 days between applications.</div>
+      </div>
+      <div class="step-card" style="background:#fff;border:1px solid #e5e7eb;">
+        <div class="step-num">02</div>
+        <div class="step-title" style="color:#111;">Resting Site Targeting</div>
+        <div class="step-desc" style="color:#6b7280;">We treat the undersides of shrubs, dense vegetation, shaded areas under decks and porches, and foliage around standing water sources. These are the places mosquitoes spend 90% of their time — kill them here and they never make it to your evening barbecue.</div>
+      </div>
+      <div class="step-card" style="background:#fff;border:1px solid #e5e7eb;">
+        <div class="step-num">03</div>
+        <div class="step-title" style="color:#111;">Monthly, May Through September</div>
+        <div class="step-desc" style="color:#6b7280;">Five monthly treatments cover the full mosquito season in Blairstown. We apply in early morning when pollinators are less active and mosquitoes are still resting in vegetation. Each treatment provides continuous protection until the next visit.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Wildlife -->
-    <section class="content-section">
-        <div class="container">
-            <div style="text-align:center; max-width:700px; margin: 0 auto 20px;">
-                <div class="section-tag">Wildlife and Environment</div>
-                <h2>Responsible Treatment That Protects Local Wildlife</h2>
-                <p style="max-width:600px; margin: 0 auto;">Our products break down rapidly in sunlight -- they are photodegradable and do not persist in the environment. We take specific steps to protect the ecosystem around your property.</p>
-            </div>
-            <div class="stat-boxes">
-                <div class="stat-box">
-                    <div class="stat-num">Zero</div>
-                    <div class="stat-label">Aquatic toxicity risk when applied to vegetation only</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">30 min</div>
-                    <div class="stat-label">Dry time before yard is safe for everyone</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-num">7 mo.</div>
-                    <div class="stat-label">Full season coverage, April through October</div>
-                </div>
-            </div>
-            <div style="max-width:720px; margin: 40px auto 0;">
-                <p style="font-size:15px; color:#6b7280; line-height:1.8;">We avoid spraying near pollinator gardens, flowering plants, and standing water sources. Our technicians are trained to identify and protect areas that support bees, butterflies, and beneficial insects. The products we use break down quickly in UV light, leaving no lasting residue in soil or water.</p>
-            </div>
-        </div>
-    </section>
+<section class="content-section">
+  <div class="content-inner">
+    <div class="content-block">
+      <div class="section-label">Safety</div>
+      <h2>Safe for Your Family and Pets</h2>
+    </div>
+    <div class="safety-grid">
+      <div class="safety-card">
+        <h4>Pet Safety</h4>
+        <p>The barrier spray is safe for dogs and cats once fully dry — typically 30 to 60 minutes depending on humidity. Keep pets inside during application. Once the product dries, it bonds to leaf surfaces and is not transferable to fur or paws during normal yard activity.</p>
+      </div>
+      <div class="safety-card">
+        <h4>Kid Safety</h4>
+        <p>Children can return to the yard once the spray has dried (30-60 minutes). We target vegetation — undersides of leaves, dense shrubs, shaded areas — not open lawn, play structures, or high-traffic areas where kids spend time. Dry product stays on treated surfaces.</p>
+      </div>
+      <div class="safety-card">
+        <h4>Wildlife Safety</h4>
+        <p>We apply in early morning to avoid treating areas where pollinators are actively foraging. We do not spray flowering plants, vegetable gardens, or pollinator beds. Our targeted approach treats mosquito resting sites only — leaving beneficial insects undisturbed in the rest of your landscape.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- Schedule -->
-    <section class="content-section alt">
-        <div class="container">
-            <div style="text-align:center; max-width:700px; margin: 0 auto 20px;">
-                <div class="section-tag">Treatment Schedule</div>
-                <h2>How We Maintain Protection All Season</h2>
-                <p style="max-width:600px; margin: 0 auto;">Monthly treatments from spring through fall keep your yard mosquito-free. If activity picks up between visits, we come back at no charge.</p>
-            </div>
-            <div class="schedule-grid">
-                <div class="schedule-card">
-                    <div class="month">April - May</div>
-                    <h3>Season Kickoff</h3>
-                    <p>First treatments target overwintering mosquitoes as temperatures rise. We establish the initial barrier before populations build up.</p>
-                </div>
-                <div class="schedule-card">
-                    <div class="month">June - August</div>
-                    <h3>Peak Season Protection</h3>
-                    <p>Monthly barrier sprays during peak mosquito season. This is when populations are highest and treatments matter most.</p>
-                </div>
-                <div class="schedule-card">
-                    <div class="month">September - October</div>
-                    <h3>Late Season Coverage</h3>
-                    <p>Final treatments as mosquito activity winds down. Prevents late-season surges and reduces the population going into winter.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="cta-banner">
+  <h2>Ready to Get Mosquitoes Under Control?</h2>
+  <p>Get a free quote. Take your backyard back this summer.</p>
+  <a href="contact.html" class="btn-white">Get My Free Quote</a>
+  <div class="cta-phone"><a href="tel:8887744290" style="color:rgba(255,255,255,0.8);">(888) 774-4290</a></div>
+</div>
 
-    <!-- CTA -->
-    <section class="cta-banner">
-        <div class="cta-banner-bg"></div>
-        <div class="container">
-            <h2>Take your yard back from mosquitoes this season</h2>
-            <p>Get a free mosquito control quote for your property. Same-week service available.</p>
-            <a href="contact.html" class="btn-green">Get Your Free Quote</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">Pest 'Em</div>
-                    <p>Warren County's pest control experts. Preventative treatments that keep your home and family safe, year-round. Based in Blairstown, NJ.</p>
-                </div>
-                <div>
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="tick-control.html">Tick Control</a></li>
-                        <li><a href="mosquito-control.html">Mosquito Control</a></li>
-                        <li><a href="rodent-control.html">Rodent Control</a></li>
-                        <li><a href="stink-bug-control.html">Stink Bugs</a></li>
-                        <li><a href="lanternfly-control.html">Lanternflies</a></li>
-                        <li><a href="wasp-control.html">Wasp Control</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4>Contact</h4>
-                    <div class="footer-contact-item"><a href="tel:8887744290">(888) 774-4290</a></div>
-                    <div class="footer-contact-item"><a href="mailto:info@pestem.com">info@pestem.com</a></div>
-                    <div class="footer-contact-item">Blairstown, NJ 07825</div>
-                    <div class="footer-contact-item" style="margin-top: 16px;">Mon-Fri: 8am - 6pm<br>Sat: 9am - 2pm</div>
-                </div>
-            </div>
-            <div class="footer-bottom">&copy; 2026 Pest 'Em Pest Control. All rights reserved.</div>
-        </div>
-    </footer>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Pest 'Em</div>
+        <div class="footer-tagline">WE GET 'EM ALL</div>
+        <p class="footer-desc">Blairstown's year-round pest control. Exterior barrier spray in summer, interior protection in winter. One flat monthly rate, real treatments every visit.</p>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="tick-control.html">Tick Control</a></li><li><a href="mosquito-control.html">Mosquito Control</a></li><li><a href="stink-bug-control.html">Stink Bug Control</a></li><li><a href="lanternfly-control.html">Lanternfly Control</a></li><li><a href="rodent-control.html">Rodent Prevention</a></li><li><a href="wasp-control.html">Wasp Removal</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="index.html#about">About Us</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#pricing">Pricing</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:8887744290">(888) 774-4290</a></li><li><a href="mailto:info@pestem.com">info@pestem.com</a></li><li>Blairstown, NJ</li></ul></div>
+    </div>
+    <div class="footer-bottom"><span class="footer-copy">&copy; 2026 Pest 'Em. Blairstown, NJ.</span><span class="footer-copy">Warren County, NJ</span></div>
+  </div>
+</footer>
 
 </body>
 </html>
