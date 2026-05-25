@@ -32,10 +32,11 @@ img{max-width:100%;display:block;}
 .nav.nav-open .hamburger span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .nav.nav-open .hamburger span:nth-child(2){opacity:0;}
 .nav.nav-open .hamburger span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.nav-mobile-dropdown{display:none;}
 
 /* HERO */
 .hero{background:#0e2d14;position:relative;overflow:hidden;}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.22;}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.28;}
 .hero-inner{position:relative;max-width:1140px;margin:0 auto;padding:96px 32px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center;}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(95,206,115,0.35);color:#5fce73;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;padding:6px 14px;border-radius:4px;margin-bottom:22px;}
 .hero h1{font-size:clamp(36px,5vw,58px);font-weight:900;color:#fff;line-height:1.08;letter-spacing:-1.5px;margin-bottom:18px;}
@@ -74,22 +75,21 @@ img{max-width:100%;display:block;}
 .brands-strip-label{text-align:center;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#999;margin-bottom:16px;padding:0 32px;}
 .brands-track{display:flex;gap:24px;animation:scrollBrands 30s linear infinite;width:max-content;}
 .brands-track:hover{animation-play-state:paused;}
-.brand-badge{height:48px;padding:0 20px;display:inline-flex;align-items:center;justify-content:center;background:#fff;border:1.5px solid #e0e0e0;border-radius:8px;flex-shrink:0;transition:border-color 0.2s;}
-.brand-badge:hover{border-color:#2a7a3a;}
-.brand-badge img{height:22px;width:auto;object-fit:contain;filter:grayscale(100%) opacity(0.6);transition:filter 0.2s;}
-.brand-badge:hover img{filter:grayscale(0%) opacity(1);}
-.brand-badge-text{font-size:13px;font-weight:600;color:#0e2d14;white-space:nowrap;}
+.brand-badge{height:52px;min-width:120px;padding:0 24px;display:inline-flex;align-items:center;justify-content:center;background:#fff;border:1px solid #e8e8e8;border-radius:6px;flex-shrink:0;transition:border-color 0.2s, box-shadow 0.2s;}
+.brand-badge:hover{border-color:#2a7a3a;box-shadow:0 2px 8px rgba(42,122,58,0.1);}
+.bw-logo{font-family:'Urbanist',sans-serif;white-space:nowrap;}
 @keyframes scrollBrands{
   0%{transform:translateX(0);}
   100%{transform:translateX(-50%);}
 }
 
-/* STATS ROW */
-.stats-strip{background:#0e2d14;padding:56px 32px;}
-.stats-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center;}
-.stat-item{}
-.stat-num{font-size:64px;font-weight:900;color:#fff;line-height:1;margin-bottom:6px;}
-.stat-label{font-size:14px;font-weight:600;color:#5fce73;letter-spacing:0.5px;}
+/* PROOF BAR */
+.proof-bar{background:#f4faf5;border-top:1px solid #d4ead8;border-bottom:1px solid #d4ead8;padding:32px;}
+.proof-bar-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+.proof-item{display:flex;align-items:flex-start;gap:14px;}
+.proof-item svg{width:28px;height:28px;stroke:#2a7a3a;fill:none;stroke-width:2;flex-shrink:0;margin-top:2px;}
+.proof-item strong{display:block;font-size:15px;font-weight:800;color:#0e2d14;margin-bottom:2px;}
+.proof-item span{font-size:13px;color:#666;line-height:1.4;}
 
 /* SECTIONS */
 .section{padding:88px 32px;}
@@ -213,24 +213,7 @@ img{max-width:100%;display:block;}
   .nav-inner{height:64px;}
   .nav-links,.nav-actions{display:none;}
   .hamburger{display:flex;}
-  .nav.nav-open .nav-links,
-  .nav.nav-open .nav-actions{
-    display:flex;
-    flex-direction:column;
-    position:absolute;
-    top:64px;
-    left:0;
-    right:0;
-    background:#fff;
-    padding:20px 24px;
-    box-shadow:0 8px 24px rgba(0,0,0,0.1);
-    z-index:99;
-  }
-  .nav.nav-open .nav-links{gap:16px;border-bottom:1px solid #eee;padding-bottom:16px;}
-  .nav.nav-open .nav-actions{flex-direction:column;align-items:flex-start;gap:12px;top:auto;position:relative;padding-top:0;}
-  .nav.nav-open .nav-links + .nav-actions{position:absolute;top:auto;}
   .nav-mobile-dropdown{
-    display:none;
     position:absolute;
     top:64px;
     left:0;
@@ -252,15 +235,16 @@ img{max-width:100%;display:block;}
   .pricing-row{grid-template-columns:1fr;}
   .pricing-row .price-card.best{order:-1;}
   .trust-bar-inner{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  .stats-inner{grid-template-columns:1fr 1fr;gap:24px;}
-  .stats-strip{padding:40px 20px;}
-  .stat-num{font-size:44px;}
+  .proof-bar-inner{grid-template-columns:1fr 1fr;}
   .footer-inner{flex-direction:column;}
   .bottom-cta{padding:52px 20px;}
   .bottom-cta-inner{grid-template-columns:1fr;}
   .bottom-form{width:100%;max-width:100%;box-sizing:border-box;}
   .reviews-section{padding:52px 20px;}
   .reviews-grid{grid-template-columns:1fr;}
+}
+@media(max-width:480px){
+  .proof-bar-inner{grid-template-columns:1fr;}
 }
 @media(max-width:640px){
   .services-grid{grid-template-columns:1fr;}
@@ -303,7 +287,7 @@ img{max-width:100%;display:block;}
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-img" src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=1600&q=80&fit=crop" alt="Pest control technician spraying exterior of home">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1600&q=80&fit=crop" alt="Pest control technician spraying exterior of home">
   <div class="hero-inner">
     <div>
       <div class="hero-tag">Blairstown, NJ &mdash; Warren County</div>
@@ -391,46 +375,122 @@ img{max-width:100%;display:block;}
 <div class="brands-strip">
   <div class="brands-strip-label">PROFESSIONAL-GRADE PRODUCTS WE USE &amp; TRUST</div>
   <div class="brands-track">
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/BASF-Logo_bw.svg/160px-BASF-Logo_bw.svg.png" alt="BASF"></span>
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Bayer_AG_logo_2.svg/160px-Bayer_AG_logo_2.svg.png" alt="Bayer"></span>
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/FMC_Corporation_logo.svg/160px-FMC_Corporation_logo.svg.png" alt="FMC Corporation"></span>
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Syngenta_logo.svg/160px-Syngenta_logo.svg.png" alt="Syngenta"></span>
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/160px-Google_2015_logo.svg.png" alt="Google"></span>
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Trustpilot_logo_%282022%29.svg/160px-Trustpilot_logo_%282022%29.svg.png" alt="Trustpilot"></span>
-    <span class="brand-badge"><span class="brand-badge-text">Bifen IT</span></span>
-    <span class="brand-badge"><span class="brand-badge-text">Cyzmic CS</span></span>
-    <span class="brand-badge"><span class="brand-badge-text">Advion</span></span>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:18px;font-weight:900;letter-spacing:-0.5px;color:#004a96;">BASF</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:15px;font-weight:800;color:#10384f;">BAYER</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:18px;font-weight:900;color:#003087;">FMC</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:13px;font-weight:800;letter-spacing:1px;color:#00a651;">SYNGENTA</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:13px;font-weight:800;letter-spacing:0.5px;color:#c41230;">TALSTAR PRO</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:14px;font-weight:800;color:#004a96;">TERMIDOR</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:13px;font-weight:800;color:#0e2d14;">BIFEN IT</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:13px;font-weight:800;color:#10384f;">SUSPEND SC</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:13px;font-weight:800;color:#c41230;">TEMPRID FX</span>
+    </div>
+    <div class="brand-badge">
+      <svg width="58" height="20" viewBox="0 0 58 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="16" font-family="Arial,sans-serif" font-size="18" font-weight="700">
+          <tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="brand-badge">
+      <svg width="80" height="20" viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg">
+        <rect width="18" height="18" y="1" rx="2" fill="#00B67A"/>
+        <text x="4" y="14" font-family="Arial" font-size="12" fill="white" font-weight="700">&#9733;</text>
+        <text x="22" y="14" font-family="Arial" font-size="12" font-weight="700" fill="#191919">Trustpilot</text>
+      </svg>
+    </div>
     <!-- Duplicate for seamless loop -->
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/BASF-Logo_bw.svg/160px-BASF-Logo_bw.svg.png" alt="BASF"></span>
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Bayer_AG_logo_2.svg/160px-Bayer_AG_logo_2.svg.png" alt="Bayer"></span>
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/FMC_Corporation_logo.svg/160px-FMC_Corporation_logo.svg.png" alt="FMC Corporation"></span>
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Syngenta_logo.svg/160px-Syngenta_logo.svg.png" alt="Syngenta"></span>
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/160px-Google_2015_logo.svg.png" alt="Google"></span>
-    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Trustpilot_logo_%282022%29.svg/160px-Trustpilot_logo_%282022%29.svg.png" alt="Trustpilot"></span>
-    <span class="brand-badge"><span class="brand-badge-text">Bifen IT</span></span>
-    <span class="brand-badge"><span class="brand-badge-text">Cyzmic CS</span></span>
-    <span class="brand-badge"><span class="brand-badge-text">Advion</span></span>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:18px;font-weight:900;letter-spacing:-0.5px;color:#004a96;">BASF</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:15px;font-weight:800;color:#10384f;">BAYER</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:18px;font-weight:900;color:#003087;">FMC</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:13px;font-weight:800;letter-spacing:1px;color:#00a651;">SYNGENTA</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:13px;font-weight:800;letter-spacing:0.5px;color:#c41230;">TALSTAR PRO</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:14px;font-weight:800;color:#004a96;">TERMIDOR</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:13px;font-weight:800;color:#0e2d14;">BIFEN IT</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:13px;font-weight:800;color:#10384f;">SUSPEND SC</span>
+    </div>
+    <div class="brand-badge">
+      <span class="bw-logo" style="font-size:13px;font-weight:800;color:#c41230;">TEMPRID FX</span>
+    </div>
+    <div class="brand-badge">
+      <svg width="58" height="20" viewBox="0 0 58 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="16" font-family="Arial,sans-serif" font-size="18" font-weight="700">
+          <tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC05">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan>
+        </text>
+      </svg>
+    </div>
+    <div class="brand-badge">
+      <svg width="80" height="20" viewBox="0 0 80 20" xmlns="http://www.w3.org/2000/svg">
+        <rect width="18" height="18" y="1" rx="2" fill="#00B67A"/>
+        <text x="4" y="14" font-family="Arial" font-size="12" fill="white" font-weight="700">&#9733;</text>
+        <text x="22" y="14" font-family="Arial" font-size="12" font-weight="700" fill="#191919">Trustpilot</text>
+      </svg>
+    </div>
   </div>
 </div>
 
-<!-- STATS ROW -->
-<div class="stats-strip">
-  <div class="stats-inner">
-    <div class="stat-item">
-      <div class="stat-num">3 Years</div>
-      <div class="stat-label">Professional Experience</div>
+<!-- PROOF BAR -->
+<div class="proof-bar">
+  <div class="proof-bar-inner">
+    <div class="proof-item">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div>
+        <strong>Licensed &amp; Insured</strong>
+        <span>NJ Certified Pesticide Applicator</span>
+      </div>
     </div>
-    <div class="stat-item">
-      <div class="stat-num">12 Months</div>
-      <div class="stat-label">Year-Round Coverage</div>
+    <div class="proof-item">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <div>
+        <strong>Year-Round Service</strong>
+        <span>12 monthly visits, every plan</span>
+      </div>
     </div>
-    <div class="stat-item">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Satisfaction Guarantee</div>
+    <div class="proof-item">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <div>
+        <strong>100% Guarantee</strong>
+        <span>Free re-treatment if pests return</span>
+      </div>
     </div>
-    <div class="stat-item">
-      <div class="stat-num">$40/mo</div>
-      <div class="stat-label">Starting Rate</div>
+    <div class="proof-item">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div>
+        <strong>Blairstown Local</strong>
+        <span>Serving all of Warren County</span>
+      </div>
     </div>
   </div>
 </div>
