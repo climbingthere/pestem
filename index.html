@@ -16,7 +16,10 @@ img{max-width:100%;display:block;}
 /* NAV */
 .nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #e8e8e8;padding:0 32px;}
 .nav-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.nav-logo{display:flex;align-items:center;gap:10px;}
 .nav-logo img{height:46px;width:auto;}
+.nav-logo-fallback{display:none;font-size:22px;font-weight:900;color:#2a7a3a;letter-spacing:-0.5px;}
+.nav-logo img[src]~.nav-logo-fallback{display:none;}
 .nav-links{display:flex;gap:36px;list-style:none;}
 .nav-links a{font-size:15px;font-weight:600;color:#444;transition:color 0.2s;}
 .nav-links a:hover{color:#2a7a3a;}
@@ -24,8 +27,11 @@ img{max-width:100%;display:block;}
 .nav-phone{font-size:15px;font-weight:700;color:#2a7a3a;}
 .nav-btn{background:#2a7a3a;color:#fff;font-size:14px;font-weight:700;padding:11px 24px;border-radius:8px;}
 .nav-btn:hover{background:#1f5e2c;}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:200;}
 .hamburger span{width:22px;height:2px;background:#333;display:block;transition:0.3s;}
+.nav.nav-open .hamburger span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.nav.nav-open .hamburger span:nth-child(2){opacity:0;}
+.nav.nav-open .hamburger span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
 
 /* HERO */
 .hero{background:#0e2d14;position:relative;overflow:hidden;}
@@ -62,6 +68,23 @@ img{max-width:100%;display:block;}
 .trust-bar-inner{max-width:1140px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap;}
 .trust-bar-item{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:#2a7a3a;}
 .trust-bar-item svg{flex-shrink:0;}
+
+/* BRANDS STRIP */
+.brands-strip{background:#fff;border-bottom:1px solid #e8e8e8;padding:24px 0;overflow:hidden;position:relative;}
+.brands-track{display:flex;gap:24px;animation:scrollBrands 30s linear infinite;width:max-content;}
+.brands-track:hover{animation-play-state:paused;}
+.brand-badge{display:inline-flex;align-items:center;padding:8px 20px;border:1.5px solid #d4ead8;border-radius:40px;font-size:13px;font-weight:700;color:#0e2d14;white-space:nowrap;background:#fff;flex-shrink:0;}
+@keyframes scrollBrands{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+
+/* STATS ROW */
+.stats-strip{background:#0e2d14;padding:56px 32px;}
+.stats-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center;}
+.stat-item{}
+.stat-num{font-size:64px;font-weight:900;color:#fff;line-height:1;margin-bottom:6px;}
+.stat-label{font-size:14px;font-weight:600;color:#5fce73;letter-spacing:0.5px;}
 
 /* SECTIONS */
 .section{padding:88px 32px;}
@@ -159,22 +182,68 @@ img{max-width:100%;display:block;}
   .bottom-cta-inner{grid-template-columns:1fr;}
 }
 @media(max-width:768px){
+  .nav-inner{height:64px;}
   .nav-links,.nav-actions{display:none;}
   .hamburger{display:flex;}
-  .hero-inner{padding:80px 24px 60px;}
-  .section{padding:64px 24px;}
-  .services-grid,.steps-row,.pricing-row{grid-template-columns:1fr;}
-  .trust-bar-inner{gap:20px;}
+  .nav.nav-open .nav-links,
+  .nav.nav-open .nav-actions{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:64px;
+    left:0;
+    right:0;
+    background:#fff;
+    padding:20px 24px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.1);
+    z-index:99;
+  }
+  .nav.nav-open .nav-links{gap:16px;border-bottom:1px solid #eee;padding-bottom:16px;}
+  .nav.nav-open .nav-actions{flex-direction:column;align-items:flex-start;gap:12px;top:auto;position:relative;padding-top:0;}
+  .nav.nav-open .nav-links + .nav-actions{position:absolute;top:auto;}
+  .nav-mobile-dropdown{
+    display:none;
+    position:absolute;
+    top:64px;
+    left:0;
+    right:0;
+    background:#fff;
+    padding:20px 24px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.1);
+    z-index:99;
+    flex-direction:column;
+    gap:16px;
+  }
+  .nav.nav-open .nav-mobile-dropdown{display:flex;}
+  .hero-inner{padding:72px 20px 56px;}
+  .hero h1{font-size:clamp(30px,7vw,42px);}
+  .section{padding:52px 20px;}
+  .services-grid{grid-template-columns:1fr;}
+  .steps-row{grid-template-columns:1fr;}
+  .pricing-row{grid-template-columns:1fr;}
+  .pricing-row .price-card.best{order:-1;}
+  .trust-bar-inner{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .stats-inner{grid-template-columns:1fr 1fr;gap:24px;}
+  .stats-strip{padding:40px 20px;}
+  .stat-num{font-size:44px;}
   .footer-inner{flex-direction:column;}
+  .bottom-cta{padding:52px 20px;}
+}
+@media(max-width:640px){
+  .services-grid{grid-template-columns:1fr;}
+  .pricing-row{grid-template-columns:1fr;}
 }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav">
+<nav class="nav" id="main-nav">
   <div class="nav-inner">
-    <a href="#"><img src="logo.png" alt="Pest 'Em" style="height:46px;"></a>
+    <a href="#" class="nav-logo">
+      <img src="logo.png" alt="Pest 'Em" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <span class="nav-logo-fallback">PEST 'EM</span>
+    </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#why-us">Why Us</a></li>
@@ -185,15 +254,23 @@ img{max-width:100%;display:block;}
       <a href="tel:8887744290" class="nav-phone">(888) 774-4290</a>
       <a href="#quote" class="nav-btn">Free Quote</a>
     </div>
-    <button class="hamburger" onclick="document.querySelector('.nav-links').style.display='flex';document.querySelector('.nav-actions').style.display='flex';" aria-label="Menu">
+    <button class="hamburger" aria-label="Menu" onclick="toggleNav()">
       <span></span><span></span><span></span>
     </button>
+  </div>
+  <div class="nav-mobile-dropdown">
+    <a href="#services" onclick="closeNav()">Services</a>
+    <a href="#why-us" onclick="closeNav()">Why Us</a>
+    <a href="#pricing" onclick="closeNav()">Pricing</a>
+    <a href="#quote" onclick="closeNav()">Get a Quote</a>
+    <a href="tel:8887744290" style="font-weight:700;color:#2a7a3a;">(888) 774-4290</a>
+    <a href="#quote" class="nav-btn" onclick="closeNav()" style="text-align:center;">Free Quote</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-img" src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=1600&q=80&fit=crop" alt="Warren County NJ home">
+  <img class="hero-img" src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=1600&q=80&fit=crop" alt="Pest control technician spraying exterior of home">
   <div class="hero-inner">
     <div>
       <div class="hero-tag">Blairstown, NJ &mdash; Warren County</div>
@@ -277,6 +354,55 @@ img{max-width:100%;display:block;}
   </div>
 </div>
 
+<!-- BRANDS STRIP -->
+<div class="brands-strip">
+  <div class="brands-track">
+    <span class="brand-badge">Bifen IT</span>
+    <span class="brand-badge">Talstar Pro</span>
+    <span class="brand-badge">Termidor</span>
+    <span class="brand-badge">Suspend SC</span>
+    <span class="brand-badge">Temprid FX</span>
+    <span class="brand-badge">Cyzmic CS</span>
+    <span class="brand-badge">Advion Gel</span>
+    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">Google 5&#9733; Rated</span>
+    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">NJ Licensed &amp; Insured</span>
+    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">BBB Accredited</span>
+    <!-- Duplicate for seamless loop -->
+    <span class="brand-badge">Bifen IT</span>
+    <span class="brand-badge">Talstar Pro</span>
+    <span class="brand-badge">Termidor</span>
+    <span class="brand-badge">Suspend SC</span>
+    <span class="brand-badge">Temprid FX</span>
+    <span class="brand-badge">Cyzmic CS</span>
+    <span class="brand-badge">Advion Gel</span>
+    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">Google 5&#9733; Rated</span>
+    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">NJ Licensed &amp; Insured</span>
+    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">BBB Accredited</span>
+  </div>
+</div>
+
+<!-- STATS ROW -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-num">3 Years</div>
+      <div class="stat-label">Professional Experience</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">12 Months</div>
+      <div class="stat-label">Year-Round Coverage</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Satisfaction Guarantee</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">$40/mo</div>
+      <div class="stat-label">Starting Rate</div>
+    </div>
+  </div>
+</div>
+
 <!-- SERVICES -->
 <section class="section" id="services">
   <div class="section-inner">
@@ -309,7 +435,7 @@ img{max-width:100%;display:block;}
 
       <div class="service-card">
         <div class="service-photo">
-          <img src="https://images.unsplash.com/photo-1564360652218-5b338ba60325?w=600&h=420&fit=crop&q=80" alt="Mouse rodent" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=600&h=420&fit=crop&q=80" alt="Mouse rodent" loading="lazy">
         </div>
         <div class="service-body">
           <div class="service-season">Year-Round</div>
@@ -360,12 +486,12 @@ img{max-width:100%;display:block;}
   <div class="section-inner">
     <div class="why-split">
       <div class="why-photo">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=920&fit=crop&q=80" alt="Pest control professional" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=800&h=920&fit=crop&q=80" alt="Pest control technician working" loading="lazy">
       </div>
       <div>
         <div class="section-eyebrow">Why Pest 'Em</div>
         <h2 class="section-title">We Left Terminix for a Reason</h2>
-        <p class="section-body">Three years as a top Terminix specialist. Watched them charge homeowners for mosquito spray in January, locked into contracts where they ran the same treatment every month regardless of season. We built Pest 'Em around one rule: we treat what needs treating, when it needs treating.</p>
+        <p class="section-body">Pest 'Em was founded by a former Terminix top specialist who spent three years watching homeowners get charged for the wrong treatments at the wrong time of year. We built something better — a company with one rule: treat what needs treating, when it needs treating.</p>
         <div class="why-points">
           <div class="why-point">
             <h4>Exterior in Summer, Interior in Winter</h4>
@@ -572,6 +698,15 @@ img{max-width:100%;display:block;}
     <span class="footer-copy">Serving Warren County, NJ</span>
   </div>
 </footer>
+
+<script>
+function toggleNav(){
+  document.getElementById('main-nav').classList.toggle('nav-open');
+}
+function closeNav(){
+  document.getElementById('main-nav').classList.remove('nav-open');
+}
+</script>
 
 </body>
 </html>
