@@ -1,3 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
-  <text x="100" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#5E2750">syngenta</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 45">
+  <!-- Syngenta leaf icon (simplified) -->
+  <path d="M12 8 C12 8 22 12 22 22 C22 32 12 36 12 36 C12 36 2 32 2 22 C2 12 12 8 12 8Z" fill="#00843D"/>
+  <path d="M12 8 C12 8 18 18 12 36" fill="none" stroke="#fff" stroke-width="1.5"/>
+  <!-- Wordmark -->
+  <text x="28" y="30" font-family="Arial,Helvetica,sans-serif" font-size="18" font-weight="700" fill="#3D3D3D" letter-spacing="-0.3">syngenta</text>
 </svg>
