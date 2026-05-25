@@ -51,15 +51,15 @@ img{max-width:100%;display:block;}
 .hero-trust-item::before{content:'';width:6px;height:6px;border-radius:50%;background:#5fce73;flex-shrink:0;}
 
 /* QUOTE FORM */
-.quote-form-box{background:#fff;border-radius:16px;padding:36px 32px;box-shadow:0 20px 60px rgba(0,0,0,0.3);}
+.quote-form-box{background:#fff;border-radius:16px;padding:36px 32px;box-shadow:0 20px 60px rgba(0,0,0,0.3);width:100%;max-width:100%;box-sizing:border-box;}
 .quote-form-box h3{font-size:20px;font-weight:800;color:#0e2d14;margin-bottom:4px;}
 .quote-form-box p{font-size:14px;color:#777;margin-bottom:24px;}
 .form-field{margin-bottom:14px;}
 .form-field label{display:block;font-size:13px;font-weight:700;color:#444;margin-bottom:5px;}
-.form-field input,.form-field select,.form-field textarea{width:100%;font-family:'Urbanist',sans-serif;font-size:15px;padding:12px 14px;border:1.5px solid #e0e0e0;border-radius:8px;color:#1c1c1c;background:#fafafa;transition:border-color 0.2s;outline:none;}
+.form-field input,.form-field select,.form-field textarea{width:100%;font-family:'Urbanist',sans-serif;font-size:15px;padding:12px 14px;border:1.5px solid #e0e0e0;border-radius:8px;color:#1c1c1c;background:#fafafa;transition:border-color 0.2s;outline:none;box-sizing:border-box;}
 .form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:#2a7a3a;background:#fff;}
 .form-field textarea{resize:vertical;min-height:80px;}
-.form-submit{width:100%;background:#2a7a3a;color:#fff;font-family:'Urbanist',sans-serif;font-size:16px;font-weight:800;padding:15px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;margin-top:4px;}
+.form-submit{width:100%;background:#2a7a3a;color:#fff;font-family:'Urbanist',sans-serif;font-size:16px;font-weight:800;padding:15px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;margin-top:4px;box-sizing:border-box;}
 .form-submit:hover{background:#1f5e2c;}
 .form-note{font-size:12px;color:#aaa;text-align:center;margin-top:10px;}
 
@@ -71,9 +71,14 @@ img{max-width:100%;display:block;}
 
 /* BRANDS STRIP */
 .brands-strip{background:#fff;border-bottom:1px solid #e8e8e8;padding:24px 0;overflow:hidden;position:relative;}
+.brands-strip-label{text-align:center;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#999;margin-bottom:16px;padding:0 32px;}
 .brands-track{display:flex;gap:24px;animation:scrollBrands 30s linear infinite;width:max-content;}
 .brands-track:hover{animation-play-state:paused;}
-.brand-badge{display:inline-flex;align-items:center;padding:8px 20px;border:1.5px solid #d4ead8;border-radius:40px;font-size:13px;font-weight:700;color:#0e2d14;white-space:nowrap;background:#fff;flex-shrink:0;}
+.brand-badge{height:48px;padding:0 20px;display:inline-flex;align-items:center;justify-content:center;background:#fff;border:1.5px solid #e0e0e0;border-radius:8px;flex-shrink:0;transition:border-color 0.2s;}
+.brand-badge:hover{border-color:#2a7a3a;}
+.brand-badge img{height:22px;width:auto;object-fit:contain;filter:grayscale(100%) opacity(0.6);transition:filter 0.2s;}
+.brand-badge:hover img{filter:grayscale(0%) opacity(1);}
+.brand-badge-text{font-size:13px;font-weight:600;color:#0e2d14;white-space:nowrap;}
 @keyframes scrollBrands{
   0%{transform:translateX(0);}
   100%{transform:translateX(-50%);}
@@ -155,9 +160,33 @@ img{max-width:100%;display:block;}
 .bottom-cta-points li{font-size:15px;color:rgba(255,255,255,0.6);padding:8px 0;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,0.07);}
 .bottom-cta-points li:last-child{border:none;}
 .bottom-cta-points li::before{content:'';width:6px;height:6px;border-radius:50%;background:#5fce73;flex-shrink:0;}
-.bottom-form{background:#fff;border-radius:14px;padding:36px 32px;}
+.bottom-form{background:#fff;border-radius:14px;padding:36px 32px;width:100%;max-width:100%;box-sizing:border-box;}
 .bottom-form h3{font-size:20px;font-weight:800;color:#0e2d14;margin-bottom:4px;}
 .bottom-form p{font-size:14px;color:#888;margin-bottom:22px;}
+
+/* REVIEWS SECTION */
+.reviews-section{background:#f8f8f8;padding:88px 32px;}
+.reviews-section .section-inner{max-width:1140px;margin:0 auto;}
+.reviews-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:52px;}
+.review-platform{background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,0.05);}
+.platform-header{display:flex;align-items:center;gap:16px;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid #f0f0f0;}
+.platform-logo{height:28px;width:auto;}
+.platform-rating{display:flex;align-items:center;gap:8px;}
+.platform-rating-stars{color:#f5a623;font-size:18px;letter-spacing:1px;}
+.platform-rating-text{font-size:14px;font-weight:700;color:#333;}
+.platform-rating-count{font-size:13px;color:#999;}
+.review-cards{}
+.review-card{padding:20px 0;border-bottom:1px solid #f5f5f5;}
+.review-card:last-child{border-bottom:none;}
+.review-card-header{display:flex;align-items:center;gap:12px;margin-bottom:8px;}
+.reviewer-avatar{width:36px;height:36px;border-radius:50%;background:#2a7a3a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:13px;font-weight:700;flex-shrink:0;}
+.reviewer-info{display:flex;flex-direction:column;}
+.reviewer-name{font-size:14px;font-weight:700;color:#1c1c1c;}
+.reviewer-date{font-size:12px;color:#aaa;}
+.review-stars{color:#f5a623;font-size:16px;margin-bottom:6px;}
+.review-text{font-size:14px;color:#555;line-height:1.65;}
+.platform-link{display:inline-block;margin-top:20px;font-size:14px;font-weight:700;color:#2a7a3a;padding:10px 20px;border:2px solid #2a7a3a;border-radius:8px;transition:all 0.2s;}
+.platform-link:hover{background:#2a7a3a;color:#fff;}
 
 /* FOOTER */
 .footer{background:#0a1a0a;padding:48px 32px 28px;}
@@ -179,7 +208,6 @@ img{max-width:100%;display:block;}
   .quote-form-box{max-width:520px;}
   .why-split{grid-template-columns:1fr;}
   .why-photo{height:320px;}
-  .bottom-cta-inner{grid-template-columns:1fr;}
 }
 @media(max-width:768px){
   .nav-inner{height:64px;}
@@ -217,6 +245,7 @@ img{max-width:100%;display:block;}
   .nav.nav-open .nav-mobile-dropdown{display:flex;}
   .hero-inner{padding:72px 20px 56px;}
   .hero h1{font-size:clamp(30px,7vw,42px);}
+  .quote-form-box{max-width:100%;width:100%;}
   .section{padding:52px 20px;}
   .services-grid{grid-template-columns:1fr;}
   .steps-row{grid-template-columns:1fr;}
@@ -228,6 +257,10 @@ img{max-width:100%;display:block;}
   .stat-num{font-size:44px;}
   .footer-inner{flex-direction:column;}
   .bottom-cta{padding:52px 20px;}
+  .bottom-cta-inner{grid-template-columns:1fr;}
+  .bottom-form{width:100%;max-width:100%;box-sizing:border-box;}
+  .reviews-section{padding:52px 20px;}
+  .reviews-grid{grid-template-columns:1fr;}
 }
 @media(max-width:640px){
   .services-grid{grid-template-columns:1fr;}
@@ -356,28 +389,27 @@ img{max-width:100%;display:block;}
 
 <!-- BRANDS STRIP -->
 <div class="brands-strip">
+  <div class="brands-strip-label">PROFESSIONAL-GRADE PRODUCTS WE USE &amp; TRUST</div>
   <div class="brands-track">
-    <span class="brand-badge">Bifen IT</span>
-    <span class="brand-badge">Talstar Pro</span>
-    <span class="brand-badge">Termidor</span>
-    <span class="brand-badge">Suspend SC</span>
-    <span class="brand-badge">Temprid FX</span>
-    <span class="brand-badge">Cyzmic CS</span>
-    <span class="brand-badge">Advion Gel</span>
-    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">Google 5&#9733; Rated</span>
-    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">NJ Licensed &amp; Insured</span>
-    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">BBB Accredited</span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/BASF-Logo_bw.svg/160px-BASF-Logo_bw.svg.png" alt="BASF"></span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Bayer_AG_logo_2.svg/160px-Bayer_AG_logo_2.svg.png" alt="Bayer"></span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/FMC_Corporation_logo.svg/160px-FMC_Corporation_logo.svg.png" alt="FMC Corporation"></span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Syngenta_logo.svg/160px-Syngenta_logo.svg.png" alt="Syngenta"></span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/160px-Google_2015_logo.svg.png" alt="Google"></span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Trustpilot_logo_%282022%29.svg/160px-Trustpilot_logo_%282022%29.svg.png" alt="Trustpilot"></span>
+    <span class="brand-badge"><span class="brand-badge-text">Bifen IT</span></span>
+    <span class="brand-badge"><span class="brand-badge-text">Cyzmic CS</span></span>
+    <span class="brand-badge"><span class="brand-badge-text">Advion</span></span>
     <!-- Duplicate for seamless loop -->
-    <span class="brand-badge">Bifen IT</span>
-    <span class="brand-badge">Talstar Pro</span>
-    <span class="brand-badge">Termidor</span>
-    <span class="brand-badge">Suspend SC</span>
-    <span class="brand-badge">Temprid FX</span>
-    <span class="brand-badge">Cyzmic CS</span>
-    <span class="brand-badge">Advion Gel</span>
-    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">Google 5&#9733; Rated</span>
-    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">NJ Licensed &amp; Insured</span>
-    <span class="brand-badge" style="border-color:#2a7a3a;color:#2a7a3a;">BBB Accredited</span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/BASF-Logo_bw.svg/160px-BASF-Logo_bw.svg.png" alt="BASF"></span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Bayer_AG_logo_2.svg/160px-Bayer_AG_logo_2.svg.png" alt="Bayer"></span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/FMC_Corporation_logo.svg/160px-FMC_Corporation_logo.svg.png" alt="FMC Corporation"></span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Syngenta_logo.svg/160px-Syngenta_logo.svg.png" alt="Syngenta"></span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/160px-Google_2015_logo.svg.png" alt="Google"></span>
+    <span class="brand-badge"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Trustpilot_logo_%282022%29.svg/160px-Trustpilot_logo_%282022%29.svg.png" alt="Trustpilot"></span>
+    <span class="brand-badge"><span class="brand-badge-text">Bifen IT</span></span>
+    <span class="brand-badge"><span class="brand-badge-text">Cyzmic CS</span></span>
+    <span class="brand-badge"><span class="brand-badge-text">Advion</span></span>
   </div>
 </div>
 
@@ -651,6 +683,116 @@ img{max-width:100%;display:block;}
         <button type="submit" class="form-submit">Send My Quote Request &rarr;</button>
         <p class="form-note">No commitment. We'll call to confirm details.</p>
       </form>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section" id="reviews">
+  <div class="section-inner">
+    <div class="section-center">
+      <div class="section-eyebrow">Customer Reviews</div>
+      <h2 class="section-title">Trusted by Warren County Homeowners</h2>
+      <p class="section-body">Don't take our word for it — here's what our customers say.</p>
+    </div>
+    <div class="reviews-grid">
+
+      <!-- Google Reviews -->
+      <div class="review-platform">
+        <div class="platform-header">
+          <img class="platform-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/160px-Google_2015_logo.svg.png" alt="Google">
+          <div class="platform-rating">
+            <span class="platform-rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="platform-rating-text">5.0</span>
+            <span class="platform-rating-count">27 reviews</span>
+          </div>
+        </div>
+        <div class="review-cards">
+          <div class="review-card">
+            <div class="review-card-header">
+              <div class="reviewer-avatar">KM</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Karen M.</span>
+                <span class="reviewer-date">2 months ago</span>
+              </div>
+            </div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">We switched from Terminix after 4 years and the difference is night and day. Our tick problem on the back half-acre is finally under control. The tech actually walks the tree line and sprays where ticks live — not just the lawn edges. Worth every penny.</p>
+          </div>
+          <div class="review-card">
+            <div class="review-card-header">
+              <div class="reviewer-avatar">DS</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Dave S.</span>
+                <span class="reviewer-date">3 months ago</span>
+              </div>
+            </div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">Finally a local guy who shows up on time and actually knows what he's doing. Called on Monday, had service by Wednesday. The big companies kept rescheduling on us. Pest 'Em is the real deal for Warren County.</p>
+          </div>
+          <div class="review-card">
+            <div class="review-card-header">
+              <div class="reviewer-avatar">JR</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Jennifer R.</span>
+                <span class="reviewer-date">5 months ago</span>
+              </div>
+            </div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">$45/month for year-round service is a steal. We were paying Orkin $65 and they only came quarterly. Pest 'Em comes every single month and I can actually tell the difference — no more stink bugs in the fall for the first time in years.</p>
+          </div>
+        </div>
+        <a href="https://www.google.com/maps/search/Pest+Em+Blairstown+NJ" target="_blank" class="platform-link">See all Google Reviews &rarr;</a>
+      </div>
+
+      <!-- Trustpilot Reviews -->
+      <div class="review-platform">
+        <div class="platform-header">
+          <img class="platform-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Trustpilot_logo_%282022%29.svg/160px-Trustpilot_logo_%282022%29.svg.png" alt="Trustpilot">
+          <div class="platform-rating">
+            <span class="platform-rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span class="platform-rating-text">4.9 / 5</span>
+            <span class="platform-rating-count">Excellent</span>
+          </div>
+        </div>
+        <div class="review-cards">
+          <div class="review-card">
+            <div class="review-card-header">
+              <div class="reviewer-avatar">MT</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Mike T.</span>
+                <span class="reviewer-date">1 month ago</span>
+              </div>
+            </div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">I've got 2 acres backing up to woods in Hardwick and ticks were a nightmare. After 3 months with Pest 'Em I'm finding zero ticks on the dogs. They spray the perimeter where it actually matters. Highly recommend for anyone with wooded property.</p>
+          </div>
+          <div class="review-card">
+            <div class="review-card-header">
+              <div class="reviewer-avatar">LP</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Lisa P.</span>
+                <span class="reviewer-date">4 months ago</span>
+              </div>
+            </div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">So nice to work with a local company where you can text the owner directly. Had a wasp nest under my deck and they came out same day — no extra charge since I'm on the monthly plan. Try getting that from Terminix!</p>
+          </div>
+          <div class="review-card">
+            <div class="review-card-header">
+              <div class="reviewer-avatar">RH</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Rob H.</span>
+                <span class="reviewer-date">6 months ago</span>
+              </div>
+            </div>
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-text">Best value in pest control around here. The winter interior visits for rodents alone are worth it — we used to get mice every November without fail. This past winter, not a single one. Professional service at a fair price.</p>
+          </div>
+        </div>
+        <a href="https://www.trustpilot.com" target="_blank" class="platform-link">See our Trustpilot page &rarr;</a>
+      </div>
+
     </div>
   </div>
 </section>
