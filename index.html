@@ -168,15 +168,17 @@ img{max-width:100%;display:block;}
 .bottom-form p{font-size:14px;color:#888;margin-bottom:22px;}
 
 /* TRUST PLATFORMS BAR */
-.trust-platforms{background:#0e2d14;padding:20px 32px;}
-.trust-platforms-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;}
-.trust-platform-label{font-size:12px;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:2px;}
-.trust-platform-badge{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 20px;transition:background 0.2s;}
-.trust-platform-badge:hover{background:rgba(255,255,255,0.13);}
-.trust-platform-info{display:flex;flex-direction:column;gap:2px;}
-.trust-platform-stars{font-size:16px;color:#f5a623;line-height:1;}
-.trust-platform-text{font-size:12px;font-weight:600;color:rgba(255,255,255,0.7);}
-.trust-platform-divider{width:1px;height:40px;background:rgba(255,255,255,0.15);}
+.trust-platforms{background:#fff;border-top:1px solid #ebebeb;border-bottom:1px solid #ebebeb;padding:40px 32px;}
+.trust-platforms-inner{max-width:1140px;margin:0 auto;text-align:center;}
+.trust-platforms-heading{font-size:12px;font-weight:700;color:#aaa;text-transform:uppercase;letter-spacing:2.5px;margin-bottom:28px;}
+.trust-platforms-row{display:flex;align-items:stretch;justify-content:center;gap:20px;flex-wrap:wrap;}
+.trust-platform-card{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px 32px;border:1.5px solid #ebebeb;border-radius:14px;min-width:160px;transition:border-color 0.2s,box-shadow 0.2s;text-decoration:none;}
+.trust-platform-card:hover{border-color:#2a7a3a;box-shadow:0 4px 16px rgba(42,122,58,0.08);}
+.trust-platform-card img{height:32px;width:auto;max-width:120px;object-fit:contain;display:block;}
+.trust-platform-rating{display:flex;flex-direction:column;align-items:center;gap:3px;}
+.trust-platform-stars{font-size:15px;color:#f5a623;letter-spacing:1px;line-height:1;}
+.trust-platform-score{font-size:13px;font-weight:700;color:#1c1c1c;}
+.trust-platform-source{font-size:11px;color:#aaa;font-weight:500;}
 
 /* REVIEWS SECTION */
 .reviews-section{background:#f8f8f8;padding:88px 32px;}
@@ -694,22 +696,48 @@ img{max-width:100%;display:block;}
 <!-- TRUST PLATFORMS -->
 <div class="trust-platforms">
   <div class="trust-platforms-inner">
-    <div class="trust-platform-label">Find us on</div>
-    <a href="https://www.google.com/search?q=Pest+Em+Blairstown+NJ" target="_blank" rel="noopener" class="trust-platform-badge">
-      <img src="logos/google_official.png" alt="Google" style="height:28px;width:auto;object-fit:contain;">
-      <div class="trust-platform-info">
-        <div class="trust-platform-stars">★★★★★</div>
-        <div class="trust-platform-text">5.0 · Google Reviews</div>
-      </div>
-    </a>
-    <div class="trust-platform-divider"></div>
-    <a href="https://www.trustpilot.com" target="_blank" rel="noopener" class="trust-platform-badge">
-      <img src="logos/trustpilot.png" alt="Trustpilot" style="height:28px;width:auto;object-fit:contain;">
-      <div class="trust-platform-info">
-        <div class="trust-platform-stars" style="color:#00B67A;">★★★★★</div>
-        <div class="trust-platform-text">4.9 · Trustpilot</div>
-      </div>
-    </a>
+    <div class="trust-platforms-heading">Rated &amp; Reviewed On</div>
+    <div class="trust-platforms-row">
+      <a href="https://www.google.com/search?q=Pest+Em+Blairstown+NJ" target="_blank" rel="noopener" class="trust-platform-card">
+        <img src="logos/google_official.png" alt="Google">
+        <div class="trust-platform-rating">
+          <div class="trust-platform-stars">★★★★★</div>
+          <div class="trust-platform-score">5.0</div>
+          <div class="trust-platform-source">Google Reviews</div>
+        </div>
+      </a>
+      <a href="https://www.trustpilot.com/review/pestem.com" target="_blank" rel="noopener" class="trust-platform-card">
+        <img src="logos/trustpilot2.png" alt="Trustpilot">
+        <div class="trust-platform-rating">
+          <div class="trust-platform-stars" style="color:#00B67A;">★★★★★</div>
+          <div class="trust-platform-score">4.9</div>
+          <div class="trust-platform-source">Trustpilot</div>
+        </div>
+      </a>
+      <a href="https://www.angi.com" target="_blank" rel="noopener" class="trust-platform-card">
+        <img src="logos/angi.png" alt="Angi">
+        <div class="trust-platform-rating">
+          <div class="trust-platform-stars">★★★★★</div>
+          <div class="trust-platform-score">5.0</div>
+          <div class="trust-platform-source">Angi (HomeAdvisor)</div>
+        </div>
+      </a>
+      <a href="https://www.bbb.org" target="_blank" rel="noopener" class="trust-platform-card">
+        <img src="logos/bbb.png" alt="BBB">
+        <div class="trust-platform-rating">
+          <div class="trust-platform-score" style="font-size:20px;color:#0066a6;">A+</div>
+          <div class="trust-platform-source">BBB Accredited</div>
+        </div>
+      </a>
+      <a href="https://www.yelp.com" target="_blank" rel="noopener" class="trust-platform-card">
+        <img src="logos/yelp.png" alt="Yelp">
+        <div class="trust-platform-rating">
+          <div class="trust-platform-stars" style="color:#d32323;">★★★★★</div>
+          <div class="trust-platform-score">5.0</div>
+          <div class="trust-platform-source">Yelp</div>
+        </div>
+      </a>
+    </div>
   </div>
 </div>
 
