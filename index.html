@@ -15,22 +15,22 @@ a{text-decoration:none;color:inherit;}
 img{max-width:100%;display:block;}
 
 /* NAV */
-.nav{position:sticky;top:0;z-index:100;background:rgba(6,13,30,0.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.1);box-shadow:0 1px 0 rgba(255,255,255,0.05), 0 4px 24px rgba(0,0,0,0.4);padding:0 32px;}
+.nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid rgba(0,0,0,0.08);box-shadow:0 1px 0 rgba(0,0,0,0.06), 0 4px 20px rgba(0,0,0,0.08);padding:0 32px;}
 .nav-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:76px;}
 .nav-logo{display:flex;align-items:center;gap:10px;}
 .nav-logo img{height:56px;width:auto;}
 .nav-logo-fallback{display:none;font-size:22px;font-weight:900;color:#fff;letter-spacing:-0.5px;}
 .nav-logo img[src]~.nav-logo-fallback{display:none;}
 .nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:15px;font-weight:600;color:rgba(255,255,255,0.8);transition:color 0.2s;}
-.nav-links a:hover{color:#e84040;}
+.nav-links a{font-size:15px;font-weight:600;color:#1e2a3a;transition:color 0.2s;}
+.nav-links a:hover{color:#8B1A2C;}
 .nav-actions{display:flex;align-items:center;gap:16px;}
-.nav-phone{font-size:15px;font-weight:700;color:rgba(255,255,255,0.85);}
-.nav-phone:hover{color:#e84040;}
+.nav-phone{font-size:15px;font-weight:700;color:#1e2a3a;}
+.nav-phone:hover{color:#8B1A2C;}
 .nav-btn{background:#8B1A2C;color:#fff;font-size:14px;font-weight:700;padding:11px 24px;border-radius:8px;}
 .nav-btn:hover{background:#7a1625;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:200;}
-.hamburger span{width:22px;height:2px;background:rgba(255,255,255,0.85);display:block;transition:0.3s;}
+.hamburger span{width:22px;height:2px;background:#1e2a3a;display:block;transition:0.3s;}
 .nav.nav-open .hamburger span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .nav.nav-open .hamburger span:nth-child(2){opacity:0;}
 .nav.nav-open .hamburger span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
@@ -194,18 +194,16 @@ img{max-width:100%;display:block;}
     top:76px;
     left:0;
     right:0;
-    background:rgba(6,13,30,0.96);
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
+    background:#fff;
     padding:20px 24px;
-    box-shadow:0 8px 24px rgba(0,0,0,0.4);
+    box-shadow:0 8px 24px rgba(0,0,0,0.12);
     z-index:99;
     flex-direction:column;
     gap:16px;
-    border-bottom:1px solid rgba(255,255,255,0.1);
+    border-bottom:1px solid rgba(0,0,0,0.08);
   }
-  .nav-mobile-dropdown a{color:rgba(255,255,255,0.85);font-size:15px;font-weight:600;}
-  .nav-mobile-dropdown a:hover{color:#e84040;}
+  .nav-mobile-dropdown a{color:#1e2a3a;font-size:15px;font-weight:600;}
+  .nav-mobile-dropdown a:hover{color:#8B1A2C;}
   .nav.nav-open .nav-mobile-dropdown{display:flex;}
   .hero-inner{padding:72px 20px 56px;}
   .hero h1{font-size:clamp(30px,7vw,42px);}
@@ -516,7 +514,7 @@ img{max-width:100%;display:block;}
     <div class="section-center">
       <div class="section-eyebrow">Our Method</div>
       <h2 class="section-title">Science-Based. Not Calendar-Based.</h2>
-      <p class="section-body" style="margin:0 auto 52px;">We use Integrated Pest Management and Growing Degree Day data to treat at the right time, with the right product, in the right place — nothing more.</p>
+      <p class="section-body" style="margin:0 auto 52px;">We use Integrated Pest Management and Growing Degree Day data to treat at the right time, with the right product, in the right place, nothing more.</p>
     </div>
     <div class="approach-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;">
 
@@ -529,7 +527,7 @@ img{max-width:100%;display:block;}
       <div style="background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:32px 28px;box-shadow:0 4px 32px rgba(0,0,0,0.25),inset 0 1.5px 0 rgba(255,255,255,0.55),inset 0 -1px 0 rgba(0,0,0,0.12);">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#e84040" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:18px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <h4 style="font-size:17px;font-weight:800;color:#fff;margin-bottom:8px;">Treat at the Right Time</h4>
-        <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.65;">We use GDD heat accumulation data to time treatments to peak pest activity — not a fixed calendar. A warm March changes everything.</p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.55);line-height:1.65;">We use GDD heat accumulation data to time treatments to peak pest activity, not a fixed calendar. A warm March changes everything.</p>
       </div>
 
       <div style="background:rgba(255,255,255,0.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:32px 28px;box-shadow:0 4px 32px rgba(0,0,0,0.25),inset 0 1.5px 0 rgba(255,255,255,0.55),inset 0 -1px 0 rgba(0,0,0,0.12);">
@@ -577,8 +575,8 @@ img{max-width:100%;display:block;}
       <div class="section-eyebrow">Our Method</div>
       <h2 class="section-title">Smarter Pest Control, Backed by Science</h2>
       <div style="max-width:740px;margin:0 auto;">
-        <p style="font-size:16px;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:20px;">Most pest control companies show up on a fixed schedule &mdash; every month, same spray, same routine, whether pests are active or not. At Pest &rsquo;Em, we do things differently. We practice Integrated Pest Management (IPM), which means we start by identifying exactly what pest you&rsquo;re dealing with and understanding how it lives, feeds, and reproduces. From there, we work through the most responsible solutions first: sealing entry points, removing the conditions pests need to thrive, and using targeted treatments only where they&rsquo;re needed. Broad-spectrum pesticide applications are a last resort, not a first instinct.</p>
-        <p style="font-size:16px;color:rgba(255,255,255,0.7);line-height:1.8;">We also time our treatments using a method called Growing Degree Days &mdash; GDD for short. Instead of guessing when pests will show up based on the calendar, we track accumulated heat data throughout the season to predict exactly when specific pest populations are hatching, emerging, or hitting their peak. Pest biology runs on temperature, not dates, and a warm March can shift everything by weeks. By monitoring GDD thresholds for each pest we manage, we treat during the narrow window when it will do the most good. That means fewer applications, less product in your environment, and better results than the old &ldquo;spray and pray&rdquo; approach.</p>
+        <p style="font-size:16px;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:20px;">Most pest control companies show up on a fixed schedule: every month, same spray, same routine, whether pests are active or not. At Pest &rsquo;Em, we do things differently. We practice Integrated Pest Management (IPM), which means we start by identifying exactly what pest you&rsquo;re dealing with and understanding how it lives, feeds, and reproduces. From there, we work through the most responsible solutions first: sealing entry points, removing the conditions pests need to thrive, and using targeted treatments only where they&rsquo;re needed. Broad-spectrum pesticide applications are a last resort, not a first instinct.</p>
+        <p style="font-size:16px;color:rgba(255,255,255,0.7);line-height:1.8;">We also time our treatments using a method called Growing Degree Days (GDD). Instead of guessing when pests will show up based on the calendar, we track accumulated heat data throughout the season to predict exactly when specific pest populations are hatching, emerging, or hitting their peak. Pest biology runs on temperature, not dates, and a warm March can shift everything by weeks. By monitoring GDD thresholds for each pest we manage, we treat during the narrow window when it will do the most good. That means fewer applications, less product in your environment, and better results than the old "spray and pray" approach.</p>
       </div>
     </div>
     <div class="steps-row" style="margin-top:48px;">
@@ -594,7 +592,7 @@ img{max-width:100%;display:block;}
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#e84040" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4v6h6"/><path d="M4 20V10a2 2 0 0 1 2-2h2"/><path d="M14 4l6 6"/><rect x="2" y="14" width="4" height="6" rx="1"/><rect x="8" y="12" width="4" height="8" rx="1"/><rect x="14" y="16" width="4" height="4" rx="1"/><line x1="20" y1="10" x2="20" y2="20"/></svg>
         </div>
         <div class="step-title">GDD-Timed Treatments</div>
-        <p class="step-desc">We treat at the biologically optimal moment &mdash; when pests are most vulnerable, not just when the calendar says so.</p>
+        <p class="step-desc">We treat at the biologically optimal moment, when pests are most vulnerable, not just when the calendar says so.</p>
       </div>
       <div class="step">
         <div style="margin-bottom:16px;position:relative;">
