@@ -7,83 +7,85 @@
 <meta name="description" content="Blairstown's local pest control company. Year-round monthly service with exterior spray April through October and interior protection November through March. Ticks, mosquitoes, rodents, stink bugs. Call (888) 774-4290.">
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
+:root{
+  --teal:#1a7a96;
+  --teal-dark:#135c72;
+  --teal-light:#e8f4f8;
+  --green:#2eab83;
+  --green-dark:#238a69;
+  --green-light:#eaf7f2;
+  --charcoal:#1e2b2f;
+  --slate:#4a5a60;
+  --warm-gray:#8a9499;
+  --cream:#f5f3ef;
+  --cream-dark:#ede9e2;
+  --white:#ffffff;
+  --amber:#e8a838;
+  --amber-dark:#c98a1f;
+  --border:#e8e4dd;
+}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Urbanist',sans-serif;color:#4a5568;background:#ffffff;min-height:100vh;line-height:1.6;}
+body{font-family:'Urbanist',sans-serif;color:var(--slate);background:var(--cream);min-height:100vh;line-height:1.6;}
 a{text-decoration:none;color:inherit;}
 img{max-width:100%;display:block;}
 
 /* NAV */
-.nav{position:sticky;top:0;z-index:100;background:#ffffff;border-bottom:1px solid #e8edf2;padding:0 32px;}
+.nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border);padding:0 32px;}
 .nav-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:96px;}
 .nav-logo{display:flex;align-items:center;gap:10px;}
-.nav-logo img{height:100px;width:auto;}
-.nav-logo-fallback{display:none;font-size:22px;font-weight:900;color:#0f1923;letter-spacing:-0.5px;}
+.nav-logo img{height:90px;width:auto;}
+.nav-logo-fallback{display:none;font-size:22px;font-weight:900;color:var(--charcoal);letter-spacing:-0.5px;}
 .nav-logo img[src]~.nav-logo-fallback{display:none;}
 .nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:15px;font-weight:600;color:#0f1923;transition:color 0.2s;}
-.nav-links a:hover{color:#1a7a96;}
+.nav-links a{font-size:15px;font-weight:600;color:var(--charcoal);transition:color 0.2s;}
+.nav-links a:hover{color:var(--teal);}
 .nav-actions{display:flex;align-items:center;gap:16px;}
-.nav-phone{font-size:15px;font-weight:700;color:#0f1923;}
-.nav-phone:hover{color:#1a7a96;}
-.nav-btn{background:#1a7a96;color:#fff;font-size:14px;font-weight:700;padding:11px 24px;border-radius:999px;transition:background 0.2s;}
-.nav-btn:hover{background:#156880;}
+.nav-phone{font-size:15px;font-weight:700;color:var(--charcoal);}
+.nav-phone:hover{color:var(--teal);}
+.nav-btn{background:var(--green);color:#fff;font-size:14px;font-weight:700;padding:12px 24px;border-radius:8px;transition:background 0.2s;}
+.nav-btn:hover{background:var(--green-dark);}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:200;}
-.hamburger span{width:22px;height:2px;background:#0f1923;display:block;transition:0.3s;}
+.hamburger span{width:22px;height:2px;background:var(--charcoal);display:block;transition:0.3s;}
 .nav.nav-open .hamburger span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .nav.nav-open .hamburger span:nth-child(2){opacity:0;}
 .nav.nav-open .hamburger span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
 .nav-mobile-dropdown{display:none;}
 
 /* HERO */
-.hero{background:#f0f8fb;position:relative;overflow:hidden;}
-.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.06;}
-.hero-inner{position:relative;max-width:1140px;margin:0 auto;padding:100px 32px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:64px;align-items:center;}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid #1a7a96;color:#1a7a96;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;padding:6px 14px;border-radius:4px;margin-bottom:22px;}
-.hero h1{font-size:clamp(40px,5vw,64px);font-weight:900;color:#0f1923;line-height:1.08;letter-spacing:-2px;margin-bottom:18px;}
-.hero h1 b{color:#1a7a96;font-weight:900;}
-.hero-sub{font-size:17px;color:#4a5568;line-height:1.75;margin-bottom:32px;max-width:480px;}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
-.btn-primary{background:#1a7a96;color:#fff;font-size:16px;font-weight:800;padding:15px 30px;border-radius:999px;display:inline-block;transition:all 0.2s;}
-.btn-primary:hover{background:#156880;transform:translateY(-2px);}
-.btn-outline{border:2px solid #1a7a96;color:#1a7a96;font-size:16px;font-weight:700;padding:13px 28px;border-radius:999px;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;}
-.btn-outline:hover{background:#1a7a96;color:#fff;}
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;background:var(--teal);overflow:hidden;}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center right;z-index:0;}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(19,92,114,0.95) 0%,rgba(26,122,150,0.85) 30%,rgba(26,122,150,0.5) 55%,rgba(26,122,150,0.1) 75%,transparent 90%);z-index:1;}
+.hero-content{position:relative;z-index:2;max-width:1140px;margin:0 auto;padding:0 32px;width:100%;}
+.hero-text{max-width:580px;}
+.hero h1{font-size:clamp(40px,5vw,64px);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-2px;margin-bottom:20px;}
+.hero h1 b{color:var(--green);font-weight:900;}
+.hero-sub{font-size:18px;color:rgba(255,255,255,0.85);line-height:1.75;margin-bottom:32px;max-width:520px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{background:var(--green);color:#fff;font-size:16px;font-weight:800;padding:15px 30px;border-radius:8px;display:inline-block;transition:all 0.2s;}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-2px);}
+.btn-outline{border:2px solid rgba(255,255,255,0.6);color:#fff;font-size:16px;font-weight:700;padding:13px 28px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;}
+.btn-outline:hover{background:rgba(255,255,255,0.15);border-color:#fff;}
 .hero-trust{display:flex;flex-wrap:wrap;gap:20px;margin-top:36px;}
-.hero-trust-item{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:#4a5568;}
-.hero-trust-item::before{content:'';width:6px;height:6px;border-radius:50%;background:#2eab83;flex-shrink:0;}
-
-/* QUOTE FORM */
-.quote-form-box{background:#ffffff;border:1px solid #e8edf2;border-radius:20px;padding:36px 32px;box-shadow:0 2px 12px rgba(0,0,0,0.08);width:100%;max-width:100%;box-sizing:border-box;}
-.quote-form-box h3{font-size:20px;font-weight:800;color:#0f1923;margin-bottom:4px;}
-.quote-form-box p{font-size:14px;color:#4a5568;margin-bottom:24px;}
-.form-field{margin-bottom:14px;}
-.form-field label{display:block;font-size:13px;font-weight:700;color:#0f1923;margin-bottom:5px;}
-.form-field input,.form-field select,.form-field textarea{width:100%;font-family:'Urbanist',sans-serif;font-size:15px;padding:12px 14px;border:1px solid #e8edf2;border-radius:8px;color:#0f1923;background:#ffffff;transition:border-color 0.2s;outline:none;box-sizing:border-box;}
-.form-field input::placeholder,.form-field textarea::placeholder{color:#a0aec0;}
-.form-field select{color:#4a5568;}
-.form-field select option{background:#fff;color:#0f1923;}
-.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:#1a7a96;box-shadow:0 0 0 3px rgba(26,122,150,0.1);}
-.form-field textarea{resize:vertical;min-height:80px;}
-.form-submit{width:100%;background:#1a7a96;color:#fff;font-family:'Urbanist',sans-serif;font-size:16px;font-weight:800;padding:15px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;margin-top:4px;box-sizing:border-box;}
-.form-submit:hover{background:#156880;}
-.form-note{font-size:12px;color:#718096;text-align:center;margin-top:10px;}
+.hero-trust-item{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:rgba(255,255,255,0.9);}
+.hero-trust-item::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;}
 
 /* TRUST BAR */
-.trust-bar{background:#edf7fb;padding:20px 32px;}
+.trust-bar{background:var(--charcoal);padding:22px 32px;}
 .trust-bar-inner{max-width:1140px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap;}
-.trust-bar-item{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:#0f1923;}
-.trust-bar-item svg{flex-shrink:0;stroke:#1a7a96;}
+.trust-bar-item{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:#fff;}
+.trust-bar-item svg{flex-shrink:0;stroke:var(--teal);}
 
 /* BRANDS STRIP */
-.brands-strip{background:#f7f9fc;padding:28px 0;overflow:hidden;}
-.brands-strip-label{text-align:center;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:#718096;margin-bottom:20px;padding:0 32px;}
+.brands-strip{background:var(--cream);padding:28px 0;overflow:hidden;}
+.brands-strip-label{text-align:center;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--warm-gray);margin-bottom:20px;padding:0 32px;}
 .brands-track{display:flex;gap:16px;animation:scrollBrands 35s linear infinite;width:max-content;align-items:center;}
 .brands-track:hover{animation-play-state:paused;}
-.brand-badge{width:150px;height:108px;padding:14px 16px 12px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:#ffffff;border:1px solid #e8edf2;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,0.08);flex-shrink:0;transition:box-shadow 0.2s,transform 0.2s;}
-.brand-badge:hover{box-shadow:0 4px 20px rgba(0,0,0,0.12);transform:translateY(-2px);}
+.brand-badge{width:150px;height:108px;padding:14px 16px 12px;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--white);border:1px solid var(--border);border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06);flex-shrink:0;transition:box-shadow 0.2s,transform 0.2s;}
+.brand-badge:hover{box-shadow:0 4px 16px rgba(0,0,0,0.1);transform:translateY(-2px);}
 .brand-badge img{width:90px;height:52px;object-fit:contain;display:block;flex-shrink:0;opacity:0.85;}
 .brand-badge:hover img{opacity:1;}
-.brand-name{font-size:11px;font-weight:700;color:#718096;text-transform:uppercase;letter-spacing:0.5px;text-align:center;line-height:1.2;}
+.brand-name{font-size:11px;font-weight:700;color:var(--warm-gray);text-transform:uppercase;letter-spacing:0.5px;text-align:center;line-height:1.2;}
 .bw-logo{font-family:'Urbanist',sans-serif;white-space:nowrap;}
 @keyframes scrollBrands{
   0%{transform:translateX(0);}
@@ -91,89 +93,102 @@ img{max-width:100%;display:block;}
 }
 
 /* PROOF BAR */
-.proof-bar{background:#ffffff;border-top:1px solid #e8edf2;border-bottom:1px solid #e8edf2;padding:32px;}
+.proof-bar{background:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px;}
 .proof-bar-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-.proof-item{display:flex;align-items:flex-start;gap:14px;background:#ffffff;border:1px solid #e8edf2;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:20px;}
-.proof-item svg{width:28px;height:28px;stroke:#1a7a96;fill:none;stroke-width:2;flex-shrink:0;margin-top:2px;}
-.proof-item strong{display:block;font-size:15px;font-weight:800;color:#0f1923;margin-bottom:2px;}
-.proof-item span{font-size:13px;color:#4a5568;line-height:1.4;}
+.proof-item{display:flex;align-items:flex-start;gap:14px;background:var(--white);border:1px solid var(--border);border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.06);padding:20px;}
+.proof-item svg{width:28px;height:28px;stroke:var(--green);fill:none;stroke-width:2;flex-shrink:0;margin-top:2px;}
+.proof-item strong{display:block;font-size:15px;font-weight:800;color:var(--charcoal);margin-bottom:2px;}
+.proof-item span{font-size:13px;color:var(--slate);line-height:1.4;}
 
 /* SECTIONS */
 .section{padding:100px 32px;}
-.section-alt{background:#f7f9fc;}
+.section-cream{background:var(--cream);}
+.section-white{background:var(--white);}
 .section-inner{max-width:1140px;margin:0 auto;}
-.section-eyebrow{font-size:12px;font-weight:700;color:#1a7a96;text-transform:uppercase;letter-spacing:2.5px;margin-bottom:10px;}
-.section-title{font-size:clamp(28px,3.5vw,40px);font-weight:800;color:#0f1923;letter-spacing:-0.5px;margin-bottom:14px;}
-.section-body{font-size:17px;color:#4a5568;max-width:580px;line-height:1.75;}
+.section-eyebrow{font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:3px;margin-bottom:10px;}
+.section-title{font-size:clamp(28px,3.5vw,42px);font-weight:800;color:var(--charcoal);letter-spacing:-0.5px;margin-bottom:14px;}
+.section-body{font-size:17px;color:var(--slate);max-width:580px;line-height:1.75;}
 .section-center{text-align:center;}
 .section-center .section-body{margin:0 auto;}
 
 /* SERVICES */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px;}
-.service-card{border-radius:16px;overflow:hidden;background:#ffffff;border:1px solid #e8edf2;box-shadow:0 2px 12px rgba(0,0,0,0.08);transition:box-shadow 0.25s,transform 0.25s;cursor:default;}
-.service-card:hover{box-shadow:0 8px 30px rgba(0,0,0,0.12);transform:translateY(-4px);}
-.service-photo{height:240px;overflow:hidden;background:#f7f9fc;border-radius:16px 16px 0 0;}
+.service-card{border-radius:16px;overflow:hidden;background:var(--white);border:1px solid var(--border);box-shadow:0 2px 12px rgba(0,0,0,0.06);transition:box-shadow 0.25s,transform 0.25s;cursor:default;}
+.service-card:hover{box-shadow:0 8px 30px rgba(0,0,0,0.1);transform:translateY(-4px);}
+.service-photo{height:220px;overflow:hidden;background:var(--cream);border-radius:16px 16px 0 0;}
 .service-photo img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform 0.4s;}
 .service-card:hover .service-photo img{transform:scale(1.04);}
 .service-body{padding:22px 24px 26px;}
-.service-name{font-size:19px;font-weight:800;color:#0f1923;margin-bottom:6px;}
-.service-desc{font-size:14px;color:#4a5568;line-height:1.65;}
-.service-season{display:inline-block;font-size:11px;font-weight:700;color:#ffffff;background:#1a7a96;padding:4px 12px;border-radius:4px;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;}
+.service-name{font-size:18px;font-weight:800;color:var(--charcoal);margin-bottom:6px;}
+.service-desc{font-size:14px;color:var(--slate);line-height:1.65;}
+.service-season{display:inline-block;font-size:11px;font-weight:700;color:var(--amber);background:var(--charcoal);padding:4px 12px;border-radius:4px;margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;}
 
 /* WHY US */
 .why-split{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
 .why-photo{border-radius:16px;overflow:hidden;height:460px;}
 .why-photo img{width:100%;height:100%;object-fit:cover;}
 .why-points{display:flex;flex-direction:column;gap:28px;margin-top:36px;}
-.why-point{background:#ffffff;border:1px solid #e8edf2;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.08);padding:24px;}
-.why-point h4{font-size:18px;font-weight:800;color:#0f1923;margin-bottom:6px;display:flex;align-items:center;gap:10px;}
-.why-point h4::before{content:'';width:10px;height:10px;border-radius:50%;background:#1a7a96;flex-shrink:0;display:inline-block;}
-.why-point p{font-size:15px;color:#4a5568;line-height:1.7;padding-left:34px;}
+.why-point{background:var(--cream);border:1px solid var(--border);border-radius:12px;padding:24px;}
+.why-point h4{font-size:18px;font-weight:800;color:var(--charcoal);margin-bottom:6px;display:flex;align-items:center;gap:10px;}
+.why-point h4::before{content:'';width:10px;height:10px;border-radius:50%;background:var(--green);flex-shrink:0;display:inline-block;}
+.why-point p{font-size:15px;color:var(--slate);line-height:1.7;padding-left:34px;}
 
 /* HOW IT WORKS */
 .steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:52px;}
-.step{text-align:center;padding:40px 28px;background:#ffffff;border:1px solid #e8edf2;border-radius:16px;box-shadow:0 2px 12px rgba(0,0,0,0.08);}
-.step-num{font-size:52px;font-weight:900;color:#1a7a96;line-height:1;margin-bottom:14px;opacity:0.9;}
-.step-title{font-size:19px;font-weight:800;color:#0f1923;margin-bottom:10px;}
-.step-desc{font-size:14px;color:#4a5568;line-height:1.7;}
+.step{text-align:center;padding:40px 28px;background:var(--cream);border:1px solid var(--border);border-radius:16px;}
+.step-num{font-size:52px;font-weight:900;color:var(--green);line-height:1;margin-bottom:14px;}
+.step-title{font-size:19px;font-weight:800;color:var(--charcoal);margin-bottom:10px;}
+.step-desc{font-size:14px;color:var(--slate);line-height:1.7;}
 
-/* BOTTOM QUOTE SECTION */
-.bottom-cta{background:#f7f9fc;border-top:1px solid #e8edf2;padding:100px 32px;}
+/* APPROACH CARDS */
+.approach-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:32px 28px;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.approach-card h4{font-size:17px;font-weight:800;color:var(--charcoal);margin-bottom:8px;}
+.approach-card p{font-size:14px;color:var(--slate);line-height:1.65;}
+.approach-card svg{margin-bottom:18px;}
+
+/* QUOTE FORM */
+.form-field{margin-bottom:14px;}
+.form-field label{display:block;font-size:13px;font-weight:700;color:var(--charcoal);margin-bottom:5px;}
+.form-field input,.form-field select,.form-field textarea{width:100%;font-family:'Urbanist',sans-serif;font-size:15px;padding:12px 14px;border:1px solid var(--border);border-radius:8px;color:var(--charcoal);background:var(--white);transition:border-color 0.2s;outline:none;box-sizing:border-box;}
+.form-field input::placeholder,.form-field textarea::placeholder{color:#a0aec0;}
+.form-field select{color:var(--slate);}
+.form-field select option{background:#fff;color:var(--charcoal);}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(26,122,150,0.1);}
+.form-field textarea{resize:vertical;min-height:80px;}
+.form-submit{width:100%;background:var(--green);color:#fff;font-family:'Urbanist',sans-serif;font-size:16px;font-weight:800;padding:15px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;margin-top:4px;box-sizing:border-box;}
+.form-submit:hover{background:var(--green-dark);}
+.form-note{font-size:12px;color:var(--warm-gray);text-align:center;margin-top:10px;}
+
+/* BOTTOM CTA + QUOTE */
+.bottom-cta{background:var(--charcoal);padding:100px 32px;}
 .bottom-cta-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-.bottom-cta h2{font-size:clamp(28px,4vw,44px);font-weight:900;color:#0f1923;letter-spacing:-1px;line-height:1.1;margin-bottom:16px;}
-.bottom-cta>div>p{font-size:16px;color:#4a5568;line-height:1.75;margin-bottom:28px;}
+.bottom-cta h2{font-size:clamp(28px,4vw,44px);font-weight:900;color:#fff;letter-spacing:-1px;line-height:1.1;margin-bottom:16px;}
+.bottom-cta>div>p{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.75;margin-bottom:28px;}
 .bottom-cta-points{list-style:none;}
-.bottom-cta-points li{font-size:15px;color:#4a5568;padding:8px 0;display:flex;align-items:center;gap:10px;border-bottom:1px solid #e8edf2;}
+.bottom-cta-points li{font-size:15px;color:rgba(255,255,255,0.7);padding:8px 0;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,0.1);}
 .bottom-cta-points li:last-child{border:none;}
-.bottom-cta-points li::before{content:'';width:6px;height:6px;border-radius:50%;background:#2eab83;flex-shrink:0;}
-.bottom-form{background:#ffffff;border:1px solid #e8edf2;border-radius:20px;padding:36px 32px;box-shadow:0 2px 12px rgba(0,0,0,0.08);width:100%;max-width:100%;box-sizing:border-box;}
-.bottom-form h3{font-size:20px;font-weight:800;color:#0f1923;margin-bottom:4px;}
-.bottom-form p{font-size:14px;color:#4a5568;margin-bottom:22px;}
+.bottom-cta-points li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;}
+.bottom-form{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:36px 32px;box-shadow:0 2px 12px rgba(0,0,0,0.08);width:100%;max-width:100%;box-sizing:border-box;}
+.bottom-form h3{font-size:20px;font-weight:800;color:var(--charcoal);margin-bottom:4px;}
+.bottom-form p{font-size:14px;color:var(--slate);margin-bottom:22px;}
 
 /* FOOTER */
-.footer{background:#0f1923;padding:48px 32px 28px;}
+.footer{background:var(--charcoal);padding:48px 32px 28px;border-top:1px solid rgba(255,255,255,0.05);}
 .footer-inner{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;margin-bottom:36px;}
 .footer-logo img{height:36px;margin-bottom:8px;}
-.footer-tagline{font-size:11px;font-weight:700;color:#1a7a96;text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;}
-.footer-desc{font-size:13px;color:rgba(255,255,255,0.4);max-width:220px;line-height:1.65;}
+.footer-tagline{font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;}
+.footer-desc{font-size:13px;color:rgba(255,255,255,0.6);max-width:220px;line-height:1.65;}
 .footer-col h5{font-size:11px;font-weight:700;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;}
 .footer-col ul{list-style:none;}
 .footer-col li{margin-bottom:10px;}
-.footer-col a{font-size:13px;color:rgba(255,255,255,0.5);transition:color 0.2s;}
-.footer-col a:hover{color:#1a7a96;}
+.footer-col a{font-size:13px;color:rgba(255,255,255,0.6);transition:color 0.2s;}
+.footer-col a:hover{color:var(--green);}
 .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-.footer-copy{font-size:12px;color:rgba(255,255,255,0.25);}
-
-/* APPROACH CARDS */
-.approach-card{background:#ffffff;border:1px solid #e8edf2;border-radius:16px;padding:32px 28px;box-shadow:0 2px 12px rgba(0,0,0,0.08);}
-.approach-card h4{font-size:17px;font-weight:800;color:#0f1923;margin-bottom:8px;}
-.approach-card p{font-size:14px;color:#4a5568;line-height:1.65;}
-.approach-card svg{margin-bottom:18px;}
+.footer-copy{font-size:12px;color:rgba(255,255,255,0.3);}
 
 /* MOBILE */
 @media(max-width:1024px){
-  .hero-inner{grid-template-columns:1fr;gap:48px;}
-  .quote-form-box{max-width:520px;}
+  .hero-text{max-width:100%;}
   .why-split{grid-template-columns:1fr;}
   .why-photo{height:320px;}
 }
@@ -186,20 +201,20 @@ img{max-width:100%;display:block;}
     top:76px;
     left:0;
     right:0;
-    background:#fff;
+    background:var(--white);
     padding:20px 24px;
     box-shadow:0 8px 24px rgba(0,0,0,0.08);
     z-index:99;
     flex-direction:column;
     gap:16px;
-    border-bottom:1px solid #e8edf2;
+    border-bottom:1px solid var(--border);
   }
-  .nav-mobile-dropdown a{color:#0f1923;font-size:15px;font-weight:600;}
-  .nav-mobile-dropdown a:hover{color:#1a7a96;}
+  .nav-mobile-dropdown a{color:var(--charcoal);font-size:15px;font-weight:600;}
+  .nav-mobile-dropdown a:hover{color:var(--teal);}
   .nav.nav-open .nav-mobile-dropdown{display:flex;}
-  .hero-inner{padding:72px 20px 56px;}
+  .hero{min-height:auto;padding:80px 0 60px;}
+  .hero-content{padding:0 20px;}
   .hero h1{font-size:clamp(30px,7vw,42px);}
-  .quote-form-box{max-width:100%;width:100%;}
   .section{padding:60px 20px;}
   .services-grid{grid-template-columns:1fr;}
   .steps-row{grid-template-columns:1fr;}
@@ -247,19 +262,18 @@ img{max-width:100%;display:block;}
     <a href="#approach" onclick="closeNav()">Our Approach</a>
     <a href="#why-us" onclick="closeNav()">Why Us</a>
     <a href="#quote" onclick="closeNav()">Get a Quote</a>
-    <a href="tel:8887744290" style="font-weight:700;color:#1a7a96;">(888) 774-4290</a>
+    <a href="tel:8887744290" onclick="closeNav()" style="font-weight:700;color:var(--teal);">(888) 774-4290</a>
     <a href="#quote" class="nav-btn" onclick="closeNav()" style="text-align:center;">Free Quote</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <img class="hero-img" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&q=80&fit=crop" alt="Pest control technician spraying exterior of home">
-  <div class="hero-inner">
-    <div>
-      <div class="hero-tag">Blairstown, NJ / Warren County</div>
-      <h1>Year-Round Pest Control. <b>One Flat Monthly Rate.</b></h1>
-      <p class="hero-sub">Exterior barrier spray April through October. Interior protection November through March. Real treatments every visit, not the same spray in a snowstorm like the big chains.</p>
+  <img class="hero-bg" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1600&q=80&fit=crop" alt="Pest control technician spraying exterior of home">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Your Home.<br><b>Off Limits.</b></h1>
+      <p class="hero-sub">Year-round pest protection for Warren County homes. Targeted treatments timed to pest biology — not a calendar.</p>
       <div class="hero-btns">
         <a href="#quote" class="btn-primary">Get a Free Quote</a>
         <a href="tel:8887744290" class="btn-outline">
@@ -272,45 +286,6 @@ img{max-width:100%;display:block;}
         <span class="hero-trust-item">Same-Week Service</span>
         <span class="hero-trust-item">No Surprise Charges</span>
         <span class="hero-trust-item">100% Guarantee</span>
-      </div>
-    </div>
-    <div>
-      <div class="quote-form-box">
-        <h3>Get Your Free Quote</h3>
-        <p>We'll get back to you within a few hours.</p>
-        <form action="https://pestem-form.ekirtchakov.workers.dev" method="POST">
-          <div class="form-field">
-            <label>Your Name</label>
-            <input type="text" name="name" placeholder="John Smith" required>
-          </div>
-          <div class="form-field">
-            <label>Phone Number</label>
-            <input type="tel" name="phone" placeholder="(908) 555-0100" required>
-          </div>
-          <div class="form-field">
-            <label>Email Address</label>
-            <input type="email" name="email" placeholder="john@email.com" required>
-          </div>
-          <div class="form-field">
-            <label>Property Address</label>
-            <input type="text" name="address" placeholder="123 Main St, Blairstown NJ">
-          </div>
-          <div class="form-field">
-            <label>Main Pest Concern</label>
-            <select name="pest">
-              <option value="">Select one...</option>
-              <option>Ticks</option>
-              <option>Mosquitoes</option>
-              <option>Rodents</option>
-              <option>Stink Bugs</option>
-              <option>Spotted Lanternfly</option>
-              <option>Wasps / Hornets</option>
-              <option>General / Multiple</option>
-            </select>
-          </div>
-          <button type="submit" class="form-submit">Request My Free Quote &rarr;</button>
-          <p class="form-note">No commitment. We'll call you to confirm details.</p>
-        </form>
       </div>
     </div>
   </div>
@@ -393,7 +368,7 @@ img{max-width:100%;display:block;}
 </div>
 
 <!-- SERVICES -->
-<section class="section section-alt" id="services">
+<section class="section section-cream" id="services">
   <div class="section-inner">
     <div class="section-eyebrow">What We Treat</div>
     <h2 class="section-title">Every Pest That Hits Warren County</h2>
@@ -471,7 +446,7 @@ img{max-width:100%;display:block;}
 </section>
 
 <!-- WHY US -->
-<section class="section" id="why-us">
+<section class="section section-white" id="why-us">
   <div class="section-inner">
     <div class="why-split">
       <div class="why-photo">
@@ -501,7 +476,7 @@ img{max-width:100%;display:block;}
 </section>
 
 <!-- OUR APPROACH: IPM + GDD -->
-<section class="section section-alt" id="approach">
+<section class="section section-cream" id="approach">
   <div class="section-inner">
     <div class="section-center">
       <div class="section-eyebrow">Our Method</div>
@@ -533,7 +508,7 @@ img{max-width:100%;display:block;}
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="section" id="how-it-works">
+<section class="section section-white" id="how-it-works">
   <div class="section-inner">
     <div class="section-center">
       <div class="section-eyebrow">How It Works</div>
@@ -561,14 +536,14 @@ img{max-width:100%;display:block;}
 
 
 <!-- OUR APPROACH: IPM / GDD -->
-<section class="section section-alt" id="our-approach">
+<section class="section section-cream" id="our-approach">
   <div class="section-inner">
     <div class="section-center">
       <div class="section-eyebrow">Our Method</div>
       <h2 class="section-title">Smarter Pest Control, Backed by Science</h2>
       <div style="max-width:740px;margin:0 auto;">
-        <p style="font-size:16px;color:#4a5568;line-height:1.8;margin-bottom:20px;">Most pest control companies show up on a fixed schedule: every month, same spray, same routine, whether pests are active or not. At Pest &rsquo;Em, we do things differently. We practice Integrated Pest Management (IPM), which means we start by identifying exactly what pest you&rsquo;re dealing with and understanding how it lives, feeds, and reproduces. From there, we work through the most responsible solutions first: sealing entry points, removing the conditions pests need to thrive, and using targeted treatments only where they&rsquo;re needed. Broad-spectrum pesticide applications are a last resort, not a first instinct.</p>
-        <p style="font-size:16px;color:#4a5568;line-height:1.8;">We also time our treatments using a method called Growing Degree Days (GDD). Instead of guessing when pests will show up based on the calendar, we track accumulated heat data throughout the season to predict exactly when specific pest populations are hatching, emerging, or hitting their peak. Pest biology runs on temperature, not dates, and a warm March can shift everything by weeks. By monitoring GDD thresholds for each pest we manage, we treat during the narrow window when it will do the most good. That means fewer applications, less product in your environment, and better results than the old "spray and pray" approach.</p>
+        <p style="font-size:16px;color:var(--slate);line-height:1.8;margin-bottom:20px;">Most pest control companies show up on a fixed schedule: every month, same spray, same routine, whether pests are active or not. At Pest &rsquo;Em, we do things differently. We practice Integrated Pest Management (IPM), which means we start by identifying exactly what pest you&rsquo;re dealing with and understanding how it lives, feeds, and reproduces. From there, we work through the most responsible solutions first: sealing entry points, removing the conditions pests need to thrive, and using targeted treatments only where they&rsquo;re needed. Broad-spectrum pesticide applications are a last resort, not a first instinct.</p>
+        <p style="font-size:16px;color:var(--slate);line-height:1.8;">We also time our treatments using a method called Growing Degree Days (GDD). Instead of guessing when pests will show up based on the calendar, we track accumulated heat data throughout the season to predict exactly when specific pest populations are hatching, emerging, or hitting their peak. Pest biology runs on temperature, not dates, and a warm March can shift everything by weeks. By monitoring GDD thresholds for each pest we manage, we treat during the narrow window when it will do the most good. That means fewer applications, less product in your environment, and better results than the old "spray and pray" approach.</p>
       </div>
     </div>
     <div class="steps-row" style="margin-top:48px;">
@@ -609,8 +584,8 @@ img{max-width:100%;display:block;}
         <li>Interior protection November through March</li>
         <li>Custom quote based on your property and needs</li>
         <li>100% satisfaction guarantee with free re-treatments</li>
-        <li>Call or text: <a href="tel:8887744290" style="color:#1a7a96;font-weight:700;">(888) 774-4290</a></li>
-        <li>Email: <a href="mailto:info@pestem.com" style="color:#1a7a96;font-weight:700;">info@pestem.com</a></li>
+        <li>Call or text: <a href="tel:8887744290" style="color:var(--amber);font-weight:700;">(888) 774-4290</a></li>
+        <li>Email: <a href="mailto:info@pestem.com" style="color:var(--amber);font-weight:700;">info@pestem.com</a></li>
       </ul>
     </div>
     <div class="bottom-form">
@@ -657,9 +632,6 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
-<!-- TRUST PLATFORMS -->
-
-
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
@@ -684,7 +656,7 @@ img{max-width:100%;display:block;}
       <ul>
         <li><a href="#why-us">About Us</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
-          <li><a href="#quote">Get a Quote</a></li>
+        <li><a href="#quote">Get a Quote</a></li>
       </ul>
     </div>
     <div class="footer-col">
