@@ -1,0 +1,13 @@
+{
+  "routes": [
+    {
+      "routePath": "/submit",
+      "mountPath": "/",
+      "method": "POST",
+      "module": [
+        "submit.js:onRequestPost"
+      ]
+    }
+  ],
+  "baseURL": "/"
+}
