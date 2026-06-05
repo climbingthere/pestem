@@ -87,7 +87,7 @@ img{max-width:100%;display:block;}
 
 /* SERVICES */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;}
-.service-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;transition:box-shadow 0.2s,transform 0.2s;}
+.service-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:22px 20px;transition:box-shadow 0.2s,transform 0.2s;}
 .service-card:hover{box-shadow:0 8px 28px rgba(26,122,150,0.1);transform:translateY(-3px);}
 .service-icon{width:52px;height:52px;background:var(--teal-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background 0.2s;}
 .service-card:hover .service-icon{background:var(--teal);}
@@ -202,15 +202,15 @@ img{max-width:100%;display:block;}
   .services-grid{grid-template-columns:1fr 1fr;}
   .method-grid{grid-template-columns:1fr;}
   .stats-bar-inner{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  .license-badges{flex-direction:column;align-items:center;}
+  .license-badges{flex-direction:row;}
   .footer-inner{flex-direction:column;}
   .quote-section{padding:56px 20px;}
   .quote-inner{grid-template-columns:1fr;}
   .quote-form-card{padding:28px 24px;}
 }
 @media(max-width:480px){
-  .services-grid{grid-template-columns:1fr;}
-  .stats-bar-inner{grid-template-columns:1fr;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .stats-bar-inner{grid-template-columns:1fr 1fr;}
 }
 </style>
 </head>
@@ -312,7 +312,6 @@ img{max-width:100%;display:block;}
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
         </div>
         <div class="service-name">Tick &amp; Mosquito Control</div>
-        <p class="service-desc">Barrier spray treatments timed to peak pest activity using Growing Degree Day data.</p>
       </div>
 
       <div class="service-card">
@@ -320,7 +319,6 @@ img{max-width:100%;display:block;}
           <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
         <div class="service-name">Rodent Exclusion</div>
-        <p class="service-desc">Exterior bait stations, entry point sealing, and monthly monitoring.</p>
       </div>
 
       <div class="service-card">
@@ -328,7 +326,6 @@ img{max-width:100%;display:block;}
           <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <div class="service-name">Stink Bug &amp; Overwintering Pests</div>
-        <p class="service-desc">Exterior barrier treatment before they migrate inside for winter.</p>
       </div>
 
       <div class="service-card">
@@ -336,7 +333,6 @@ img{max-width:100%;display:block;}
           <svg viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.9C15.5 4.9 17 3.5 17 3.5s1.5 2.5-.5 6.3A7 7 0 0 1 11 20z"/><path d="M11 13V7"/><path d="M7 10h8"/></svg>
         </div>
         <div class="service-name">Spotted Lanternfly</div>
-        <p class="service-desc">Tree banding, systemic treatments, and egg mass identification.</p>
       </div>
 
       <div class="service-card">
@@ -344,7 +340,6 @@ img{max-width:100%;display:block;}
           <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
         </div>
         <div class="service-name">Wasp &amp; Hornet Removal</div>
-        <p class="service-desc">Safe nest removal from eaves, decks, and structures.</p>
       </div>
 
       <div class="service-card">
@@ -352,7 +347,6 @@ img{max-width:100%;display:block;}
           <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
         </div>
         <div class="service-name">General Pest Control</div>
-        <p class="service-desc">Targeted treatment for ants, spiders, and invading insects.</p>
       </div>
 
     </div>
@@ -367,18 +361,18 @@ img{max-width:100%;display:block;}
       <h2 class="section-title">New Jersey Licensed &amp; Insured</h2>
       <p class="section-body">Every treatment is performed by a licensed NJ commercial pesticide applicator. We carry full general liability insurance on every job.</p>
     </div>
-    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:48px;">
-      <div style="background:var(--charcoal);border-radius:10px;padding:20px 36px;text-align:center;">
-        <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:6px;">State of New Jersey</div>
-        <div style="font-size:16px;font-weight:800;color:#fff;">NJ Applicator Business License</div>
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:48px;">
+      <div style="background:var(--charcoal);border-radius:10px;padding:16px 28px;text-align:center;">
+        <div style="font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:5px;">State of New Jersey</div>
+        <div style="font-size:15px;font-weight:800;color:#fff;">Applicator Business License</div>
       </div>
-      <div style="background:var(--charcoal);border-radius:10px;padding:20px 36px;text-align:center;">
-        <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:6px;">NJDEP Category 7A</div>
-        <div style="font-size:16px;font-weight:800;color:#fff;">General &amp; Household Pest Control</div>
+      <div style="background:var(--charcoal);border-radius:10px;padding:16px 28px;text-align:center;">
+        <div style="font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:5px;">NJ Certified</div>
+        <div style="font-size:15px;font-weight:800;color:#fff;">Licensed Applicator</div>
       </div>
-      <div style="background:var(--charcoal);border-radius:10px;padding:20px 36px;text-align:center;">
-        <div style="font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:6px;">Coverage</div>
-        <div style="font-size:16px;font-weight:800;color:#fff;">General Liability Insured</div>
+      <div style="background:var(--charcoal);border-radius:10px;padding:16px 28px;text-align:center;">
+        <div style="font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:5px;">Coverage</div>
+        <div style="font-size:15px;font-weight:800;color:#fff;">General Liability Insured</div>
       </div>
     </div>
   </div>
