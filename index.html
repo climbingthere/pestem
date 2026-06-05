@@ -23,7 +23,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Urbanist',sans-serif;color:var(--slate);background:var(--white);min-height:100vh;line-height:1.6;}
+body{font-family:'Urbanist',sans-serif;color:var(--slate);background:var(--white);min-height:100vh;line-height:1.6;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}
 a{text-decoration:none;color:inherit;}
 img{max-width:100%;display:block;}
 
@@ -50,11 +50,11 @@ img{max-width:100%;display:block;}
 /* HERO */
 .hero{position:relative;min-height:90vh;display:flex;align-items:center;background:var(--teal);overflow:hidden;}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center right;z-index:0;}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(19,92,114,0.96) 0%,rgba(26,122,150,0.88) 35%,rgba(26,122,150,0.4) 65%,transparent 85%);z-index:1;}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(19,92,114,0.95) 0%,rgba(26,122,150,0.82) 30%,rgba(26,122,150,0.3) 55%,transparent 75%);z-index:1;}
 .hero-content{position:relative;z-index:3;max-width:1180px;margin:0 auto;padding:0 32px;width:100%;}
 .hero-text{max-width:560px;}
-.hero-eyebrow{display:inline-block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.9);text-transform:uppercase;letter-spacing:2px;border:1.5px solid var(--teal);background:rgba(26,122,150,0.3);padding:6px 16px;border-radius:50px;margin-bottom:24px;}
-.hero h1{font-size:64px;font-weight:900;color:#fff;line-height:1.05;letter-spacing:-2px;margin-bottom:20px;}
+.hero-eyebrow{display:inline-block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.9);text-transform:uppercase;letter-spacing:4px;border:1.5px solid var(--teal);background:rgba(26,122,150,0.3);padding:6px 16px;border-radius:50px;margin-bottom:24px;}
+.hero h1{font-size:70px;font-weight:900;color:#fff;line-height:1.05;letter-spacing:-2px;margin-bottom:20px;}
 .hero h1 b{color:var(--green);font-weight:900;}
 .hero-sub{font-size:18px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:32px;max-width:480px;}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
@@ -67,7 +67,9 @@ img{max-width:100%;display:block;}
 .hero-trust-item::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;}
 
 /* STATS BAR */
-.stats-bar{background:var(--charcoal);padding:24px 32px;}
+.stats-bar{background:var(--charcoal);padding:24px 32px;position:relative;}
+.stats-bar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--green);animation:statsGlow 3s ease-in-out infinite;}
+@keyframes statsGlow{0%,100%{opacity:0.3;}50%{opacity:1;}}
 .stats-bar-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:center;gap:56px;flex-wrap:wrap;}
 .stats-bar-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#fff;}
 .stats-bar-item svg{flex-shrink:0;width:18px;height:18px;stroke:var(--teal);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
@@ -77,7 +79,7 @@ img{max-width:100%;display:block;}
 .section-cream{background:var(--cream);}
 .section-white{background:var(--white);}
 .section-inner{max-width:1180px;margin:0 auto;}
-.section-eyebrow{font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:3px;margin-bottom:12px;position:relative;padding-top:44px;}
+.section-eyebrow{font-size:11px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:5px;margin-bottom:12px;position:relative;padding-top:44px;}
 .section-eyebrow::before{content:'';position:absolute;top:0;left:0;width:32px;height:3px;background:var(--green);border-radius:2px;}
 .section-center .section-eyebrow::before{left:50%;transform:translateX(-50%);}
 .section-title{font-size:clamp(28px,3.5vw,42px);font-weight:900;color:var(--charcoal);letter-spacing:-0.5px;margin-bottom:14px;}
@@ -87,7 +89,7 @@ img{max-width:100%;display:block;}
 
 /* SERVICES */
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px;}
-.service-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:22px 20px;transition:box-shadow 0.2s,transform 0.2s;}
+.service-card{background:var(--white);border:1px solid var(--border);border-left:3px solid var(--teal);border-radius:16px;padding:22px 20px;transition:box-shadow 0.2s,transform 0.2s;}
 .service-card:hover{box-shadow:0 8px 28px rgba(26,122,150,0.1);transform:translateY(-3px);}
 .service-icon{width:52px;height:52px;background:var(--teal-light);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:background 0.2s;}
 .service-card:hover .service-icon{background:var(--teal);}
@@ -96,17 +98,18 @@ img{max-width:100%;display:block;}
 .service-name{font-size:17px;font-weight:800;color:var(--charcoal);margin-bottom:6px;}
 .service-desc{font-size:14px;color:var(--slate);line-height:1.6;}
 
-/* LICENSES */
-.licenses{padding:88px 32px;}
-.licenses-inner{max-width:1180px;margin:0 auto;}
-.license-badges{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:48px;}
-.license-badge{display:flex;flex-direction:column;align-items:center;gap:12px;background:var(--white);border:2px solid var(--border);border-radius:16px;padding:28px 36px;box-shadow:0 2px 16px rgba(0,0,0,0.06);min-width:200px;}
-.license-badge-seal{width:64px;height:64px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;border:3px solid var(--teal-dark);}
-.license-badge-seal img{width:36px;height:36px;object-fit:contain;}
-.license-badge-seal svg{width:32px;height:32px;stroke:#fff;fill:none;stroke-width:2.5;}
-.license-badge-label{font-size:11px;font-weight:700;color:var(--warm-gray);text-transform:uppercase;letter-spacing:2px;}
-.license-badge-text{font-size:15px;font-weight:800;color:var(--charcoal);text-align:center;line-height:1.3;}
-.license-badge-sub{font-size:12px;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:1px;}
+/* TRUST STRIP */
+.trust-strip{background:var(--charcoal);padding:56px 32px;}
+.trust-strip-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0;}
+.trust-strip-item{flex:1;display:flex;align-items:center;gap:20px;justify-content:center;padding:0 36px;}
+.trust-strip-item:not(:last-child){border-right:1px solid rgba(255,255,255,0.12);}
+.trust-strip-logo{width:64px;height:64px;object-fit:contain;flex-shrink:0;border-radius:8px;background:rgba(255,255,255,0.08);padding:6px;}
+.trust-strip-icon{width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.trust-strip-icon svg{width:40px;height:40px;}
+.trust-strip-text{display:flex;flex-direction:column;gap:2px;}
+.trust-strip-label{font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:3px;}
+.trust-strip-title{font-size:17px;font-weight:800;color:#fff;line-height:1.25;}
+.trust-strip-sub{font-size:13px;color:rgba(255,255,255,0.5);font-weight:500;}
 
 /* CRED ROW */
 .cred-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px;}
@@ -149,7 +152,8 @@ img{max-width:100%;display:block;}
 .faq-a p{font-size:15px;color:var(--slate);line-height:1.7;padding-bottom:20px;}
 
 /* QUOTE FORM SECTION */
-.quote-section{background:var(--charcoal);padding:88px 32px;}
+.quote-section{background:var(--charcoal);padding:88px 32px;position:relative;}
+.quote-section::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px);pointer-events:none;}
 .quote-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
 .quote-left h2{font-size:clamp(28px,4vw,42px);font-weight:900;color:#fff;letter-spacing:-1px;line-height:1.1;margin-bottom:16px;}
 .quote-left p{font-size:16px;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:28px;}
@@ -218,17 +222,16 @@ img{max-width:100%;display:block;}
   .quote-section{padding:56px 20px;}
   .quote-inner{grid-template-columns:1fr;}
   .quote-form-card{padding:28px 24px;}
-  .license-badges{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:16px;}
-  .license-badge{min-width:140px;padding:18px 14px;}
+  .trust-strip-inner{flex-direction:column;gap:28px;}
+  .trust-strip-item{padding:0;justify-content:flex-start;width:100%;max-width:340px;}
+  .trust-strip-item:not(:last-child){border-right:none;border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:28px;}
 }
 @media(max-width:480px){
   .services-grid{grid-template-columns:1fr 1fr;}
   .stats-bar-inner{grid-template-columns:1fr 1fr;}
-  .license-badges{gap:10px;}
-  .license-badge{min-width:0;flex:1 1 0;padding:14px 8px;}
-  .license-badge-text{font-size:12px;}
-  .license-badge-seal{width:48px;height:48px;}
-  .license-badge-seal svg{width:24px;height:24px;}
+  .trust-strip-item{gap:14px;}
+  .trust-strip-logo{width:48px;height:48px;}
+  .trust-strip-title{font-size:15px;}
 }
 </style>
 </head>
@@ -371,38 +374,35 @@ img{max-width:100%;display:block;}
   </div>
 </section>
 
-<!-- LICENSES -->
-<section class="licenses" id="licenses">
-  <div class="licenses-inner">
-    <div class="section-center">
-      <div class="section-eyebrow">Credentials</div>
-      <h2 class="section-title">New Jersey Licensed &amp; Insured</h2>
-      <p class="section-body">Every treatment is performed by a licensed NJ commercial pesticide applicator. We carry full general liability insurance on every job.</p>
+<!-- TRUST STRIP -->
+<section class="trust-strip" id="licenses">
+  <div class="trust-strip-inner">
+    <div class="trust-strip-item">
+      <img src="njdep-logo.png" alt="New Jersey Department of Environmental Protection" class="trust-strip-logo">
+      <div class="trust-strip-text">
+        <span class="trust-strip-label">NJ DEP</span>
+        <span class="trust-strip-title">Licensed Applicator</span>
+        <span class="trust-strip-sub">Commercial Pesticide License</span>
+      </div>
     </div>
-    <div class="license-badges">
-      <div class="license-badge">
-        <div class="license-badge-seal">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-        </div>
-        <div class="license-badge-label">State of New Jersey</div>
-        <div class="license-badge-text">Applicator Business License</div>
-        <div class="license-badge-sub">&#10003; Verified</div>
+    <div class="trust-strip-item">
+      <div class="trust-strip-icon">
+        <svg viewBox="0 0 48 48" fill="none"><path d="M24 4L6 14v12c0 11 18 18 18 18s18-7 18-18V14L24 4z" fill="var(--green)" opacity="0.15" stroke="var(--green)" stroke-width="2.5"/><polyline points="16 24 22 30 34 18" stroke="var(--green)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
       </div>
-      <div class="license-badge">
-        <div class="license-badge-seal">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-        </div>
-        <div class="license-badge-label">NJ Licensed</div>
-        <div class="license-badge-text">Certified Applicator</div>
-        <div class="license-badge-sub">&#10003; Certified</div>
+      <div class="trust-strip-text">
+        <span class="trust-strip-label">Coverage</span>
+        <span class="trust-strip-title">Fully Insured</span>
+        <span class="trust-strip-sub">General Liability on Every Job</span>
       </div>
-      <div class="license-badge">
-        <div class="license-badge-seal">
-          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        </div>
-        <div class="license-badge-label">Coverage</div>
-        <div class="license-badge-text">General Liability Insured</div>
-        <div class="license-badge-sub">&#10003; Active Policy</div>
+    </div>
+    <div class="trust-strip-item">
+      <div class="trust-strip-icon">
+        <svg viewBox="0 0 48 48" fill="none"><polygon points="24 2 30 16 46 18 34 29 37 45 24 37 11 45 14 29 2 18 18 16" fill="var(--amber)" opacity="0.15" stroke="var(--amber)" stroke-width="2.5" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="trust-strip-text">
+        <span class="trust-strip-label">Guarantee</span>
+        <span class="trust-strip-title">100% Guaranteed</span>
+        <span class="trust-strip-sub">Free Re-treatments Between Visits</span>
       </div>
     </div>
   </div>
