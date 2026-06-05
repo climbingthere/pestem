@@ -99,17 +99,17 @@ img{max-width:100%;display:block;}
 .service-desc{font-size:14px;color:var(--slate);line-height:1.6;}
 
 /* TRUST STRIP */
-.trust-strip{background:var(--charcoal);padding:56px 32px;}
+.trust-strip{background:var(--white);padding:56px 32px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
 .trust-strip-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0;}
 .trust-strip-item{flex:1;display:flex;align-items:center;gap:20px;justify-content:center;padding:0 36px;}
-.trust-strip-item:not(:last-child){border-right:1px solid rgba(255,255,255,0.12);}
-.trust-strip-logo{width:64px;height:64px;object-fit:contain;flex-shrink:0;border-radius:8px;background:rgba(255,255,255,0.08);padding:6px;}
+.trust-strip-item:not(:last-child){border-right:1px solid var(--border);}
+.trust-strip-logo{width:64px;height:64px;object-fit:contain;flex-shrink:0;border-radius:8px;background:var(--teal-light);padding:6px;}
 .trust-strip-icon{width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
 .trust-strip-icon svg{width:40px;height:40px;}
 .trust-strip-text{display:flex;flex-direction:column;gap:2px;}
 .trust-strip-label{font-size:10px;font-weight:700;color:var(--green);text-transform:uppercase;letter-spacing:3px;}
-.trust-strip-title{font-size:17px;font-weight:800;color:#fff;line-height:1.25;}
-.trust-strip-sub{font-size:13px;color:rgba(255,255,255,0.5);font-weight:500;}
+.trust-strip-title{font-size:17px;font-weight:800;color:var(--charcoal);line-height:1.25;}
+.trust-strip-sub{font-size:13px;color:var(--slate);font-weight:500;}
 
 /* CRED ROW */
 .cred-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px;}
@@ -224,7 +224,7 @@ img{max-width:100%;display:block;}
   .quote-form-card{padding:28px 24px;}
   .trust-strip-inner{flex-direction:column;gap:28px;}
   .trust-strip-item{padding:0;justify-content:flex-start;width:100%;max-width:340px;}
-  .trust-strip-item:not(:last-child){border-right:none;border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:28px;}
+  .trust-strip-item:not(:last-child){border-right:none;border-bottom:1px solid var(--border);padding-bottom:28px;}
 }
 @media(max-width:480px){
   .services-grid{grid-template-columns:1fr 1fr;}
@@ -378,7 +378,8 @@ img{max-width:100%;display:block;}
 <section class="trust-strip" id="licenses">
   <div class="trust-strip-inner">
     <div class="trust-strip-item">
-      <img src="njdep-logo.png" alt="New Jersey Department of Environmental Protection" class="trust-strip-logo">
+      <img src="njdep-logo.png" alt="New Jersey Department of Environmental Protection" class="trust-strip-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <div style="display:none;width:64px;height:64px;background:var(--teal-light);border-radius:8px;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-size:13px;font-weight:800;color:var(--teal);text-align:center;line-height:1.2;">NJ<br>DEP</span></div>
       <div class="trust-strip-text">
         <span class="trust-strip-label">NJ DEP</span>
         <span class="trust-strip-title">Licensed Applicator</span>
