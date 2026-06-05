@@ -99,10 +99,14 @@ img{max-width:100%;display:block;}
 /* LICENSES */
 .licenses{padding:88px 32px;}
 .licenses-inner{max-width:1180px;margin:0 auto;}
-.license-pills{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:40px;}
-.license-pill{display:flex;align-items:center;gap:10px;background:var(--charcoal);border-radius:12px;padding:16px 24px;}
-.license-pill svg{width:22px;height:22px;stroke:var(--green);fill:none;stroke-width:2;flex-shrink:0;}
-.license-pill span{font-size:14px;font-weight:700;color:#fff;}
+.license-badges{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;margin-top:48px;}
+.license-badge{display:flex;flex-direction:column;align-items:center;gap:12px;background:var(--white);border:2px solid var(--border);border-radius:16px;padding:28px 36px;box-shadow:0 2px 16px rgba(0,0,0,0.06);min-width:200px;}
+.license-badge-seal{width:64px;height:64px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;border:3px solid var(--teal-dark);}
+.license-badge-seal img{width:36px;height:36px;object-fit:contain;}
+.license-badge-seal svg{width:32px;height:32px;stroke:#fff;fill:none;stroke-width:2.5;}
+.license-badge-label{font-size:11px;font-weight:700;color:var(--warm-gray);text-transform:uppercase;letter-spacing:2px;}
+.license-badge-text{font-size:15px;font-weight:800;color:var(--charcoal);text-align:center;line-height:1.3;}
+.license-badge-sub{font-size:12px;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:1px;}
 
 /* METHOD */
 .method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
@@ -198,7 +202,7 @@ img{max-width:100%;display:block;}
   .services-grid{grid-template-columns:1fr 1fr;}
   .method-grid{grid-template-columns:1fr;}
   .stats-bar-inner{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  .license-pills{flex-direction:column;align-items:center;}
+  .license-badges{flex-direction:column;align-items:center;}
   .footer-inner{flex-direction:column;}
   .quote-section{padding:56px 20px;}
   .quote-inner{grid-template-columns:1fr;}
@@ -360,21 +364,33 @@ img{max-width:100%;display:block;}
   <div class="licenses-inner">
     <div class="section-center">
       <div class="section-eyebrow">Credentials</div>
-      <h2 class="section-title">Licensed. Insured. Accountable.</h2>
-      <p class="section-body">Pest'em operates under NJ commercial pesticide applicator credentials. Every treatment performed by a licensed technician.</p>
+      <h2 class="section-title">New Jersey Licensed &amp; Insured</h2>
+      <p class="section-body">Every treatment is performed by a licensed NJ commercial pesticide applicator. We carry full general liability insurance on every job.</p>
     </div>
-    <div class="license-pills">
-      <div class="license-pill">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>NJ Applicator Business License</span>
+    <div class="license-badges">
+      <div class="license-badge">
+        <div class="license-badge-seal">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div class="license-badge-label">State of New Jersey</div>
+        <div class="license-badge-text">Applicator Business<br>License</div>
+        <div class="license-badge-sub">✓ Verified</div>
       </div>
-      <div class="license-pill">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>Category 7A - General Pest Control</span>
+      <div class="license-badge">
+        <div class="license-badge-seal">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div class="license-badge-label">NJDEP Category 7A</div>
+        <div class="license-badge-text">General &amp; Household<br>Pest Control</div>
+        <div class="license-badge-sub">✓ Certified</div>
       </div>
-      <div class="license-pill">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>Fully Insured - General Liability</span>
+      <div class="license-badge">
+        <div class="license-badge-seal">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div class="license-badge-label">Coverage</div>
+        <div class="license-badge-text">General Liability<br>Insured</div>
+        <div class="license-badge-sub">✓ Active Policy</div>
       </div>
     </div>
   </div>
