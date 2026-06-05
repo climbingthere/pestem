@@ -218,10 +218,17 @@ img{max-width:100%;display:block;}
   .quote-section{padding:56px 20px;}
   .quote-inner{grid-template-columns:1fr;}
   .quote-form-card{padding:28px 24px;}
+  .license-badges{flex-direction:row;flex-wrap:wrap;justify-content:center;gap:16px;}
+  .license-badge{min-width:140px;padding:18px 14px;}
 }
 @media(max-width:480px){
   .services-grid{grid-template-columns:1fr 1fr;}
   .stats-bar-inner{grid-template-columns:1fr 1fr;}
+  .license-badges{gap:10px;}
+  .license-badge{min-width:0;flex:1 1 0;padding:14px 8px;}
+  .license-badge-text{font-size:12px;}
+  .license-badge-seal{width:48px;height:48px;}
+  .license-badge-seal svg{width:24px;height:24px;}
 }
 </style>
 </head>
@@ -372,18 +379,30 @@ img{max-width:100%;display:block;}
       <h2 class="section-title">New Jersey Licensed &amp; Insured</h2>
       <p class="section-body">Every treatment is performed by a licensed NJ commercial pesticide applicator. We carry full general liability insurance on every job.</p>
     </div>
-    <div class="cred-row">
-      <div class="cred-pill">
-        <div class="cred-pill-label">State of New Jersey</div>
-        <div class="cred-pill-text">Business License</div>
+    <div class="license-badges">
+      <div class="license-badge">
+        <div class="license-badge-seal">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div class="license-badge-label">State of New Jersey</div>
+        <div class="license-badge-text">Applicator Business License</div>
+        <div class="license-badge-sub">&#10003; Verified</div>
       </div>
-      <div class="cred-pill">
-        <div class="cred-pill-label">NJ Licensed</div>
-        <div class="cred-pill-text">Certified Applicator</div>
+      <div class="license-badge">
+        <div class="license-badge-seal">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div class="license-badge-label">NJ Licensed</div>
+        <div class="license-badge-text">Certified Applicator</div>
+        <div class="license-badge-sub">&#10003; Certified</div>
       </div>
-      <div class="cred-pill">
-        <div class="cred-pill-label">Coverage</div>
-        <div class="cred-pill-text">General Liability Insured</div>
+      <div class="license-badge">
+        <div class="license-badge-seal">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div class="license-badge-label">Coverage</div>
+        <div class="license-badge-text">General Liability Insured</div>
+        <div class="license-badge-sub">&#10003; Active Policy</div>
       </div>
     </div>
   </div>
