@@ -8,18 +8,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
+  --teal:#1B2F5E;
+  --teal-dark:#111d3c;
+  --teal-light:#eef2ff;
   --navy:#1B2F5E;
-  --navy-dark:#132247;
-  --lime-light:#f0fdf4;
+  --navy-dark:#111d3c;
+  --lime-light:#eef2ff;
   --lime:#84CC16;
-  --lime-dark:#65a30d;
-  --charcoal:#1b2a2e;
-  --slate:#4a5a60;
+  --lime-dark:#6aa312;
+  --green:#84CC16;
+  --green-dark:#6aa312;
+  --charcoal:#111d3c;
+  --slate:#4a5568;
   --warm-gray:#8a9499;
-  --cream:#f5f3ef;
+  --cream:#f8faff;
   --white:#ffffff;
-  --amber:#e8a838;
-  --border:#e4e0da;
+  --amber:#84CC16;
+  --border:#dde3f0;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
@@ -38,7 +43,7 @@ img{max-width:100%;display:block;}
 .nav-actions{display:flex;align-items:center;gap:16px;}
 .nav-phone{font-size:15px;font-weight:700;color:var(--charcoal);display:flex;align-items:center;gap:6px;}
 .nav-phone:hover{color:var(--navy);}
-.nav-btn{background:var(--lime);color:#1B2F5E;font-size:14px;font-weight:700;padding:11px 24px;border-radius:8px;transition:background 0.2s;}
+.nav-btn{background:var(--lime);color:var(--charcoal);font-size:14px;font-weight:700;padding:11px 24px;border-radius:8px;transition:background 0.2s;}
 .nav-btn:hover{background:var(--lime-dark);}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:200;}
 .hamburger span{width:22px;height:2px;background:var(--charcoal);display:block;transition:0.3s;}
@@ -50,7 +55,7 @@ img{max-width:100%;display:block;}
 /* HERO */
 .hero{position:relative;min-height:90vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center right;z-index:0;}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(19,34,71,0.96) 0%,rgba(27,47,94,0.88) 30%,rgba(27,47,94,0.3) 55%,transparent 75%);z-index:1;}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(17,29,60,0.96) 0%,rgba(27,47,94,0.88) 30%,rgba(27,47,94,0.3) 55%,transparent 75%);z-index:1;}
 .hero-content{position:relative;z-index:3;max-width:1180px;margin:0 auto;padding:0 32px;width:100%;}
 .hero-text{max-width:560px;}
 .hero-eyebrow{display:inline-block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.9);text-transform:uppercase;letter-spacing:4px;border:1.5px solid var(--navy);background:rgba(27,47,94,0.3);padding:6px 16px;border-radius:50px;margin-bottom:24px;}
@@ -58,7 +63,7 @@ img{max-width:100%;display:block;}
 .hero h1 b{color:var(--lime);font-weight:900;}
 .hero-sub{font-size:18px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:32px;max-width:480px;}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
-.btn-primary{background:var(--lime);color:var(--navy);font-size:16px;font-weight:800;padding:15px 30px;border-radius:8px;display:inline-block;transition:all 0.2s;}
+.btn-primary{background:var(--lime);color:var(--charcoal);font-size:16px;font-weight:800;padding:15px 30px;border-radius:8px;display:inline-block;transition:all 0.2s;}
 .btn-primary:hover{background:var(--lime-dark);transform:translateY(-2px);}
 .btn-outline{border:2px solid rgba(255,255,255,0.5);color:#fff;font-size:16px;font-weight:700;padding:13px 28px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;}
 .btn-outline:hover{background:rgba(255,255,255,0.12);border-color:#fff;}
@@ -173,7 +178,7 @@ img{max-width:100%;display:block;}
 .form-field input::placeholder,.form-field textarea::placeholder{color:#a0aec0;}
 .form-field select{color:var(--slate);}
 .form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(27,47,94,0.1);}
-.form-submit{width:100%;background:var(--lime);color:var(--navy);font-family:'Urbanist',sans-serif;font-size:16px;font-weight:800;padding:15px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;margin-top:4px;}
+.form-submit{width:100%;background:var(--lime);color:var(--charcoal);font-family:'Urbanist',sans-serif;font-size:16px;font-weight:800;padding:15px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;margin-top:4px;}
 .form-submit:hover{background:var(--lime-dark);}
 .form-note{font-size:12px;color:var(--warm-gray);text-align:center;margin-top:10px;}
 
@@ -245,7 +250,7 @@ img{max-width:100%;display:block;}
 <nav class="nav" id="main-nav">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <img src="logo-gemini.png" alt="Pest 'Em" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+      <img src="logo-transparent-new.png?v=4" alt="Pest 'Em" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
       <span class="nav-logo-fallback">PEST 'EM</span>
     </a>
     <ul class="nav-links">
@@ -576,7 +581,7 @@ img{max-width:100%;display:block;}
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="logo-gemini.png" alt="Pest 'Em" style="height:36px;margin-bottom:8px;">
+      <img src="logo-transparent-new.png?v=4" alt="Pest 'Em" style="height:36px;margin-bottom:8px;">
       <div class="footer-tagline">WE GET 'EM ALL</div>
       <p class="footer-desc">Warren County's year-round pest control. Real treatments every month, all year.</p>
     </div>
