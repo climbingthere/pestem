@@ -140,11 +140,18 @@ img{max-width:100%;display:block;}
 }
 
 /* METHOD */
-.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
-.method-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:32px 28px;text-align:center;}
-.method-card svg{margin-bottom:18px;}
-.method-card h4{font-size:17px;font-weight:800;color:var(--charcoal);margin-bottom:8px;}
-.method-card p{font-size:14px;color:var(--slate);line-height:1.65;}
+.method-steps{display:flex;gap:0;margin-top:56px;position:relative;}
+.method-steps::before{content:'';position:absolute;top:28px;left:calc(16.666% + 20px);right:calc(16.666% + 20px);height:2px;background:linear-gradient(90deg,var(--lime),var(--navy));z-index:0;}
+.method-step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 24px;position:relative;z-index:1;}
+.method-step-num{width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--lime);font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:20px;border:3px solid var(--lime);box-shadow:0 0 0 6px var(--cream);}
+.method-step-title{font-size:17px;font-weight:800;color:var(--charcoal);margin-bottom:8px;}
+.method-step-body{font-size:14px;color:var(--slate);line-height:1.65;}
+@media(max-width:768px){
+  .method-steps{flex-direction:column;gap:32px;}
+  .method-steps::before{display:none;}
+  .method-step{flex-direction:row;text-align:left;gap:20px;align-items:flex-start;}
+  .method-step-num{flex-shrink:0;margin-bottom:0;}
+}
 
 /* WHY US */
 .why-split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
@@ -230,7 +237,6 @@ img{max-width:100%;display:block;}
   .hero-content{padding:0 20px;}
   .hero h1{font-size:clamp(32px,8vw,44px);}
   .section{padding:56px 20px;}
-  .method-grid{grid-template-columns:1fr;}
   .stats-bar-inner{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
   .footer-inner{flex-direction:column;}
   .quote-section{padding:56px 20px;}
@@ -246,6 +252,17 @@ img{max-width:100%;display:block;}
   .trust-strip-logo{width:48px;height:48px;}
   .trust-strip-title{font-size:15px;}
 }
+
+/* SCROLL ANIMATIONS */
+.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.reveal-left{opacity:0;transform:translateX(-32px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal-left.visible{opacity:1;transform:translateX(0);}
+.reveal-right{opacity:0;transform:translateX(32px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal-right.visible{opacity:1;transform:translateX(0);}
+.reveal-delay-1{transition-delay:0.1s;}
+.reveal-delay-2{transition-delay:0.2s;}
+.reveal-delay-3{transition-delay:0.3s;}
 </style>
 </head>
 <body>
@@ -314,19 +331,19 @@ img{max-width:100%;display:block;}
 <!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stats-bar-inner">
-    <div class="stats-bar-item">
+    <div class="stats-bar-item reveal">
       <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M3 21l2-6h14l2 6"/></svg>
       Farmer &amp; Family Owned
     </div>
-    <div class="stats-bar-item">
+    <div class="stats-bar-item reveal reveal-delay-1">
       <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
       NJ Licensed &amp; Insured
     </div>
-    <div class="stats-bar-item">
+    <div class="stats-bar-item reveal reveal-delay-2">
       <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/></svg>
       Year-Round Protection
     </div>
-    <div class="stats-bar-item">
+    <div class="stats-bar-item reveal reveal-delay-3">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M12 14l-3 8h6l-3-8"/><path d="M8.5 6.5L6 2"/><path d="M15.5 6.5L18 2"/><polyline points="9.5 8 11 10 15 6"/></svg>
       Satisfaction Guaranteed
     </div>
@@ -336,9 +353,9 @@ img{max-width:100%;display:block;}
 <!-- SERVICES -->
 <section class="section section-cream" id="services">
   <div class="section-inner">
-    <div class="section-eyebrow">What We Do</div>
-    <h2 class="section-title">What We Treat</h2>
-    <p class="section-body">From spring ticks to fall invaders — we cover the pests that actually affect Warren County homes.</p>
+    <div class="section-eyebrow reveal">What We Do</div>
+    <h2 class="section-title reveal reveal-delay-1">What We Treat</h2>
+    <p class="section-body reveal reveal-delay-2">From spring ticks to fall invaders — we cover the pests that actually affect Warren County homes.</p>
     <div class="carousel-wrap">
       <button class="carousel-arrow carousel-prev" onclick="scrollCarousel(-1)" aria-label="Previous">
         <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
@@ -397,7 +414,7 @@ img{max-width:100%;display:block;}
 <!-- TRUST STRIP -->
 <section class="trust-strip" id="licenses">
   <div class="trust-strip-inner">
-    <div class="trust-strip-item">
+    <div class="trust-strip-item reveal reveal-delay-1">
       <img src="njdep-logo.png" alt="New Jersey Department of Environmental Protection" class="trust-strip-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
       <div style="display:none;width:64px;height:64px;background:var(--navy);border-radius:8px;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-size:13px;font-weight:800;color:#fff;text-align:center;line-height:1.2;">NJ<br>DEP</span></div>
       <div class="trust-strip-text">
@@ -406,7 +423,7 @@ img{max-width:100%;display:block;}
         <span class="trust-strip-sub">Commercial Pesticide License</span>
       </div>
     </div>
-    <div class="trust-strip-item">
+    <div class="trust-strip-item reveal reveal-delay-2">
       <img src="icons8-security.png" alt="Fully Insured - General Liability" class="trust-strip-logo" onerror="this.style.display='none'">
       <div class="trust-strip-text">
         <span class="trust-strip-label">General Liability</span>
@@ -414,7 +431,7 @@ img{max-width:100%;display:block;}
         <span class="trust-strip-sub">On every job, every visit</span>
       </div>
     </div>
-    <div class="trust-strip-item">
+    <div class="trust-strip-item reveal reveal-delay-3">
       <img src="icons8-guarantee.png" alt="100% Satisfaction Guaranteed" class="trust-strip-logo" onerror="this.style.display='none'">
       <div class="trust-strip-text">
         <span class="trust-strip-label">Our Promise</span>
@@ -429,24 +446,30 @@ img{max-width:100%;display:block;}
 <section class="section section-cream" id="method">
   <div class="section-inner">
     <div class="section-center">
-      <div class="section-eyebrow">Our Method</div>
-      <h2 class="section-title">Science-Based. Not Calendar-Based.</h2>
+      <div class="section-eyebrow reveal">Our Method</div>
+      <h2 class="section-title reveal reveal-delay-1">Science-Based. Not Calendar-Based.</h2>
     </div>
-    <div class="method-grid">
-      <div class="method-card">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/></svg>
-        <h4>Identify First</h4>
-        <p>We confirm the pest and its biology before any treatment.</p>
+    <div class="method-steps">
+      <div class="method-step reveal reveal-delay-1">
+        <div class="method-step-num">1</div>
+        <div>
+          <div class="method-step-title">Identify First</div>
+          <div class="method-step-body">We confirm the pest and its biology before touching anything. No guesswork.</div>
+        </div>
       </div>
-      <div class="method-card">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <h4>Treat at the Right Time</h4>
-        <p>GDD heat data tells us exactly when pests emerge. We treat that window.</p>
+      <div class="method-step reveal reveal-delay-2">
+        <div class="method-step-num">2</div>
+        <div>
+          <div class="method-step-title">Treat at the Right Time</div>
+          <div class="method-step-body">GDD heat data tells us exactly when pests emerge. We treat that window, not a calendar date.</div>
+        </div>
       </div>
-      <div class="method-card">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--navy)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <h4>Less Product, Better Results</h4>
-        <p>Targeted timing means fewer applications and stronger outcomes.</p>
+      <div class="method-step reveal reveal-delay-3">
+        <div class="method-step-num">3</div>
+        <div>
+          <div class="method-step-title">Less Product, Better Results</div>
+          <div class="method-step-body">Targeted timing means fewer applications, stronger outcomes, and safer treatments for your family.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -456,10 +479,10 @@ img{max-width:100%;display:block;}
 <section class="section section-white" id="why-us">
   <div class="section-inner">
     <div class="why-split">
-      <div class="why-photo">
+      <div class="why-photo reveal-left">
         <img src="tech-spray.jpg" alt="Pest'em technician treating home exterior" loading="lazy">
       </div>
-      <div>
+      <div class="reveal-right">
         <div class="section-eyebrow">Why Pest'em</div>
         <h2 class="section-title">Built Local. Built Different.</h2>
         <p class="why-body">We live and work in Warren County. Our treatments are built around the biology of local pests, not a corporate playbook.</p>
@@ -477,12 +500,12 @@ img{max-width:100%;display:block;}
 <section class="section section-cream" id="faq">
   <div class="section-inner">
     <div class="section-center">
-      <div class="section-eyebrow">FAQ</div>
-      <h2 class="section-title">Common Questions</h2>
+      <div class="section-eyebrow reveal">FAQ</div>
+      <h2 class="section-title reveal reveal-delay-1">Common Questions</h2>
     </div>
     <div class="faq-list">
 
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">
           How often do you treat?
           <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
@@ -490,7 +513,7 @@ img{max-width:100%;display:block;}
         <div class="faq-a"><p>Monthly. Exterior spray spring through fall, interior protection in winter.</p></div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">
           Are the treatments safe for my family and pets?
           <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
@@ -498,7 +521,7 @@ img{max-width:100%;display:block;}
         <div class="faq-a"><p>Yes. We use EPA-registered products applied at label rates. We follow all NJ re-entry interval requirements.</p></div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">
           Do I need to be home?
           <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
@@ -506,7 +529,7 @@ img{max-width:100%;display:block;}
         <div class="faq-a"><p>Not for exterior treatments. We'll notify you before each visit and leave a service report.</p></div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">
           What if pests come back?
           <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
@@ -514,7 +537,7 @@ img{max-width:100%;display:block;}
         <div class="faq-a"><p>We come back free. That's the guarantee, no questions asked.</p></div>
       </div>
 
-      <div class="faq-item">
+      <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">
           What licenses do you hold?
           <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
@@ -530,8 +553,8 @@ img{max-width:100%;display:block;}
 <section class="quote-section" id="quote">
   <div class="quote-inner">
     <div class="quote-left">
-      <h2>Ready to Protect Your Home?</h2>
-      <p>Free quotes for Blairstown and all of Warren County. Same-week service available.</p>
+      <h2 class="reveal">Ready to Protect Your Home?</h2>
+      <p class="reveal reveal-delay-1">Free quotes for Blairstown and all of Warren County. Same-week service available.</p>
       <ul class="quote-points">
         <li>Ticks, mosquitoes, rodents, stink bugs, lanternflies, wasps</li>
         <li>Exterior spray in spring and summer</li>
@@ -687,6 +710,16 @@ function toggleFaq(btn){
   // Keep manual arrow buttons working
   window.scrollCarousel = function(dir){ c.scrollBy({left: dir * 300, behavior:'smooth'}); };
 })();
+
+// Scroll reveal
+var revealObserver = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){ e.target.classList.add('visible'); }
+  });
+}, {threshold:0.15});
+document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el){
+  revealObserver.observe(el);
+});
 </script>
 
 </body>
