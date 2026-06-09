@@ -98,9 +98,10 @@ img{max-width:100%;display:block;}
 .carousel::-webkit-scrollbar{height:4px;}
 .carousel::-webkit-scrollbar-track{background:var(--border);border-radius:2px;}
 .carousel::-webkit-scrollbar-thumb{background:var(--lime);border-radius:2px;}
-.carousel-card{flex:0 0 calc(33.333% - 14px);scroll-snap-align:start;background:var(--navy);border-radius:20px;padding:32px 28px;min-width:260px;}
-.carousel-emoji{font-size:48px;margin-bottom:16px;display:block;}
-.carousel-name{font-size:18px;font-weight:800;color:#fff;margin-bottom:8px;}
+.carousel-card{flex:0 0 calc(33.333% - 14px);scroll-snap-align:start;background:var(--navy);border-radius:20px;overflow:hidden;min-width:260px;}
+.carousel-card-img{width:100%;height:160px;object-fit:cover;display:block;}
+.carousel-card-body{padding:20px 24px;}
+.carousel-name{font-size:17px;font-weight:800;color:#fff;margin-bottom:6px;}
 .carousel-tag{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5;}
 .carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:var(--white);border:2px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,0.1);transition:all 0.2s;z-index:2;}
 .carousel-arrow:hover{background:var(--lime);border-color:var(--lime);}
@@ -344,34 +345,46 @@ img{max-width:100%;display:block;}
       </button>
       <div class="carousel" id="services-carousel">
         <div class="carousel-card">
-          <span class="carousel-emoji">&#129436;</span>
-          <div class="carousel-name">Tick &amp; Mosquito Control</div>
-          <div class="carousel-tag">Exterior barrier spray timed to pest emergence using GDD data</div>
+          <img src="pest-tick.jpg" alt="Tick" class="carousel-card-img">
+          <div class="carousel-card-body">
+            <div class="carousel-name">Tick &amp; Mosquito Control</div>
+            <div class="carousel-tag">Exterior barrier spray timed to pest emergence using GDD data</div>
+          </div>
         </div>
         <div class="carousel-card">
-          <span class="carousel-emoji">&#128045;</span>
-          <div class="carousel-name">Rodent Exclusion</div>
-          <div class="carousel-tag">Bait stations, entry point sealing, and monthly monitoring</div>
+          <img src="pest-rodent.jpg" alt="Rodent" class="carousel-card-img">
+          <div class="carousel-card-body">
+            <div class="carousel-name">Rodent Exclusion</div>
+            <div class="carousel-tag">Bait stations, entry point sealing, and monthly monitoring</div>
+          </div>
         </div>
         <div class="carousel-card">
-          <span class="carousel-emoji">&#128027;</span>
-          <div class="carousel-name">Stink Bug &amp; Overwintering Pests</div>
-          <div class="carousel-tag">Exterior barrier applied before fall migration indoors</div>
+          <img src="pest-stinkbug.jpg" alt="Stink Bug" class="carousel-card-img">
+          <div class="carousel-card-body">
+            <div class="carousel-name">Stink Bug &amp; Overwintering Pests</div>
+            <div class="carousel-tag">Exterior barrier applied before fall migration indoors</div>
+          </div>
         </div>
         <div class="carousel-card">
-          <span class="carousel-emoji">&#129714;</span>
-          <div class="carousel-name">Spotted Lanternfly</div>
-          <div class="carousel-tag">Tree banding, systemic treatments, egg mass removal</div>
+          <img src="pest-lanternfly.jpg" alt="Spotted Lanternfly" class="carousel-card-img">
+          <div class="carousel-card-body">
+            <div class="carousel-name">Spotted Lanternfly</div>
+            <div class="carousel-tag">Tree banding, systemic treatments, egg mass removal</div>
+          </div>
         </div>
         <div class="carousel-card">
-          <span class="carousel-emoji">&#128029;</span>
-          <div class="carousel-name">Wasp &amp; Hornet Removal</div>
-          <div class="carousel-tag">Safe nest removal from eaves, decks, and structures</div>
+          <img src="pest-wasp.jpg" alt="Wasp" class="carousel-card-img">
+          <div class="carousel-card-body">
+            <div class="carousel-name">Wasp &amp; Hornet Removal</div>
+            <div class="carousel-tag">Safe nest removal from eaves, decks, and structures</div>
+          </div>
         </div>
         <div class="carousel-card">
-          <span class="carousel-emoji">&#128028;</span>
-          <div class="carousel-name">General Pest Control</div>
-          <div class="carousel-tag">Targeted treatment for ants, spiders, and invading insects</div>
+          <img src="pest-ant.jpg" alt="Ant" class="carousel-card-img">
+          <div class="carousel-card-body">
+            <div class="carousel-name">General Pest Control</div>
+            <div class="carousel-tag">Targeted treatment for ants, spiders, and invading insects</div>
+          </div>
         </div>
       </div>
       <button class="carousel-arrow carousel-next" onclick="scrollCarousel(1)" aria-label="Next">
@@ -651,10 +664,29 @@ function toggleFaq(btn){
   document.querySelectorAll('.faq-item').forEach(function(el){el.classList.remove('open');});
   if(!wasOpen) item.classList.add('open');
 }
-function scrollCarousel(dir) {
+(function(){
   var c = document.getElementById('services-carousel');
-  c.scrollBy({left: dir * 300, behavior: 'smooth'});
-}
+  if(!c) return;
+  var speed = 1; // px per frame
+  var paused = false;
+  c.addEventListener('mouseenter', function(){ paused = true; });
+  c.addEventListener('mouseleave', function(){ paused = false; });
+  c.addEventListener('touchstart', function(){ paused = true; });
+  c.addEventListener('touchend', function(){ setTimeout(function(){ paused = false; }, 2000); });
+  function tick(){
+    if(!paused){
+      c.scrollLeft += speed;
+      // Reset to start when near end for infinite loop
+      if(c.scrollLeft >= c.scrollWidth - c.clientWidth - 10){
+        c.scrollLeft = 0;
+      }
+    }
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+  // Keep manual arrow buttons working
+  window.scrollCarousel = function(dir){ c.scrollBy({left: dir * 300, behavior:'smooth'}); };
+})();
 </script>
 
 </body>
