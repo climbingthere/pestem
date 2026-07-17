@@ -3,266 +3,277 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pest 'Em | Blairstown NJ Pest Control | (888) 774-4290</title>
-<meta name="description" content="Blairstown's local pest control company. Year-round quarterly service with exterior spray and interior protection. Ticks, mosquitoes, rodents, stink bugs. Call (888) 774-4290.">
+<title>Pest 'Em | Preventive Pest Control in Blairstown NJ | (888) 774-4290</title>
+<meta name="description" content="We Get 'Em All. Quarterly prevention plans that stop pests before they get inside. Exterior barrier spray + interior protection for Warren County NJ homes. Carpenter ants, wasps, roaches, rodents. Call (888) 774-4290.">
 <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --teal:#1B2F5E;
-  --teal-dark:#111d3c;
-  --teal-light:#eef2ff;
   --navy:#1B2F5E;
-  --navy-dark:#111d3c;
-  --lime-light:#eef2ff;
+  --navy-dark:#13224a;
+  --ink:#0d1a3a;
   --lime:#84CC16;
   --lime-dark:#6aa312;
-  --green:#84CC16;
-  --green-dark:#6aa312;
-  --charcoal:#111d3c;
+  --lime-tint:#f4fae8;
   --slate:#4a5568;
-  --warm-gray:#8a9499;
-  --cream:#f8faff;
+  --muted:#7c8698;
+  --bg:#f6f8fc;
   --white:#ffffff;
-  --amber:#84CC16;
-  --border:#dde3f0;
+  --border:#e2e8f4;
+  --shadow-sm:0 1px 3px rgba(13,26,58,0.07);
+  --shadow-md:0 8px 28px rgba(13,26,58,0.1);
+  --shadow-lg:0 24px 60px rgba(13,26,58,0.18);
+  --radius:20px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Urbanist',sans-serif;color:var(--slate);background:var(--white);min-height:100vh;line-height:1.6;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;}
+body{font-family:'Urbanist',sans-serif;color:var(--slate);background:var(--white);line-height:1.6;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip;}
 a{text-decoration:none;color:inherit;}
 img{max-width:100%;display:block;}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px;}
 
-/* NAV */
-.nav{position:sticky;top:0;z-index:100;background:var(--white);border-top:3px solid var(--lime);box-shadow:0 1px 12px rgba(0,0,0,0.06);}
-.nav-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:100px;padding:0 32px;}
-.nav-logo img{height:90px;width:auto;}
-.nav-logo-fallback{display:none;font-size:22px;font-weight:900;color:var(--charcoal);letter-spacing:-0.5px;}
-.nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:15px;font-weight:600;color:var(--charcoal);transition:color 0.2s;}
-.nav-links a:hover{color:var(--navy);}
-.nav-actions{display:flex;align-items:center;gap:16px;}
-.nav-phone{font-size:15px;font-weight:700;color:var(--charcoal);display:flex;align-items:center;gap:6px;}
-.nav-phone:hover{color:var(--navy);}
-.nav-btn{background:var(--lime);color:var(--charcoal);font-size:14px;font-weight:700;padding:11px 24px;border-radius:8px;transition:background 0.2s;}
-.nav-btn:hover{background:var(--lime-dark);}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;z-index:200;}
-.hamburger span{width:22px;height:2px;background:var(--charcoal);display:block;transition:0.3s;}
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:'Urbanist',sans-serif;font-weight:800;border-radius:12px;cursor:pointer;transition:all 0.2s ease;white-space:nowrap;}
+.btn-lime{background:var(--lime);color:var(--ink);font-size:16px;padding:16px 30px;box-shadow:0 6px 18px rgba(132,204,22,0.35);}
+.btn-lime:hover{background:var(--lime-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(132,204,22,0.4);}
+.btn-ghost{border:1.5px solid rgba(255,255,255,0.35);color:#fff;font-size:16px;font-weight:700;padding:15px 26px;}
+.btn-ghost:hover{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.7);}
+.btn svg{flex-shrink:0;}
+
+/* ============ NAV ============ */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1160px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:78px;padding:0 24px;}
+.nav-logo{display:flex;align-items:center;}
+.nav-logo img{height:56px;width:auto;}
+.nav-logo-fallback{display:none;font-size:22px;font-weight:900;color:var(--ink);letter-spacing:-0.5px;}
+.nav-links{display:flex;gap:32px;list-style:none;}
+.nav-links a{font-size:15px;font-weight:600;color:var(--ink);transition:color 0.2s;position:relative;}
+.nav-links a:hover{color:var(--lime-dark);}
+.nav-actions{display:flex;align-items:center;gap:20px;}
+.nav-phone{font-size:15px;font-weight:800;color:var(--navy);display:flex;align-items:center;gap:7px;}
+.nav-phone:hover{color:var(--lime-dark);}
+.nav-btn{background:var(--navy);color:#fff;font-size:14px;font-weight:700;padding:12px 22px;border-radius:10px;transition:all 0.2s;}
+.nav-btn:hover{background:var(--navy-dark);transform:translateY(-1px);}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:6px;z-index:200;}
+.hamburger span{width:24px;height:2px;background:var(--ink);display:block;transition:0.3s;border-radius:2px;}
 .nav.nav-open .hamburger span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .nav.nav-open .hamburger span:nth-child(2){opacity:0;}
 .nav.nav-open .hamburger span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
 .nav-mobile-dropdown{display:none;}
 
-/* HERO */
-.hero{position:relative;min-height:90vh;display:flex;align-items:center;background:var(--navy);overflow:hidden;}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center right;z-index:0;transform:scaleX(-1);}
-.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(17,29,60,0.96) 0%,rgba(27,47,94,0.88) 30%,rgba(27,47,94,0.3) 55%,transparent 75%);z-index:1;}
-.hero-content{position:relative;z-index:3;max-width:1180px;margin:0 auto;padding:0 32px;width:100%;}
-.hero-text{max-width:560px;}
-.hero-eyebrow{display:inline-block;font-size:12px;font-weight:700;color:rgba(255,255,255,0.9);text-transform:uppercase;letter-spacing:4px;border:1.5px solid var(--navy);background:rgba(27,47,94,0.3);padding:6px 16px;border-radius:50px;margin-bottom:24px;}
-.hero h1{font-size:70px;font-weight:900;color:#fff;line-height:1.05;letter-spacing:-2px;margin-bottom:20px;}
+/* ============ HERO ============ */
+.hero{background:linear-gradient(160deg,var(--ink) 0%,var(--navy) 55%,var(--navy-dark) 100%);position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-220px;right:-160px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle,rgba(132,204,22,0.14) 0%,transparent 65%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:-260px;left:-200px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(132,204,22,0.08) 0%,transparent 65%);pointer-events:none;}
+.hero-inner{max-width:1160px;margin:0 auto;padding:84px 24px 96px;display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:center;position:relative;z-index:2;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:800;color:#fff;text-transform:uppercase;letter-spacing:3px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.16);padding:9px 18px;border-radius:50px;margin-bottom:28px;}
+.hero-eyebrow::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 10px var(--lime);}
+.hero h1{font-size:clamp(44px,5.6vw,76px);font-weight:900;color:#fff;line-height:1.02;letter-spacing:-2.5px;margin-bottom:24px;}
 .hero h1 b{color:var(--lime);font-weight:900;}
-.hero-sub{font-size:18px;color:rgba(255,255,255,0.7);line-height:1.7;margin-bottom:32px;max-width:480px;}
-.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
-.btn-primary{background:var(--lime);color:var(--charcoal);font-size:16px;font-weight:800;padding:15px 30px;border-radius:8px;display:inline-block;transition:all 0.2s;}
-.btn-primary:hover{background:var(--lime-dark);transform:translateY(-2px);}
-.btn-outline{border:2px solid rgba(255,255,255,0.5);color:#fff;font-size:16px;font-weight:700;padding:13px 28px;border-radius:8px;display:inline-flex;align-items:center;gap:8px;transition:all 0.2s;}
-.btn-outline:hover{background:rgba(255,255,255,0.12);border-color:#fff;}
-.hero-trust{display:flex;flex-wrap:wrap;gap:20px;margin-top:36px;}
-.hero-trust-item{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:rgba(255,255,255,0.9);}
-.hero-trust-item::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;}
+.hero-sub{font-size:19px;color:rgba(255,255,255,0.72);line-height:1.7;margin-bottom:36px;max-width:460px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:40px;}
+.hero-trust{display:grid;grid-template-columns:repeat(2,minmax(0,max-content));gap:14px 36px;}
+.hero-trust-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:rgba(255,255,255,0.9);}
+.hero-trust-item svg{width:18px;height:18px;flex-shrink:0;stroke:var(--lime);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
 
-/* STATS BAR */
-.stats-bar{background:var(--charcoal);padding:24px 32px;position:relative;}
-.stats-bar::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--lime);animation:statsGlow 3s ease-in-out infinite;}
-@keyframes statsGlow{0%,100%{opacity:0.3;}50%{opacity:1;}}
-.stats-bar-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:center;gap:56px;flex-wrap:wrap;}
-.stats-bar-item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;color:#fff;}
-.stats-bar-item svg{flex-shrink:0;width:18px;height:18px;stroke:var(--lime);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.hero-media{position:relative;}
+.hero-photo{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/5;max-height:600px;box-shadow:var(--shadow-lg);border:1px solid rgba(255,255,255,0.14);}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 62%,rgba(13,26,58,0.55) 100%);}
+.hero-badge{position:absolute;left:-28px;bottom:36px;background:var(--white);border-radius:16px;padding:16px 22px;display:flex;align-items:center;gap:14px;box-shadow:var(--shadow-lg);z-index:3;}
+.hero-badge-icon{width:44px;height:44px;border-radius:12px;background:var(--lime-tint);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.hero-badge-icon svg{width:24px;height:24px;stroke:var(--lime-dark);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.hero-badge-title{font-size:15px;font-weight:900;color:var(--ink);line-height:1.2;}
+.hero-badge-sub{font-size:12.5px;font-weight:600;color:var(--muted);}
+.hero-chip{position:absolute;right:-14px;top:32px;background:var(--lime);color:var(--ink);font-size:13px;font-weight:900;padding:10px 18px;border-radius:50px;box-shadow:0 8px 24px rgba(132,204,22,0.45);z-index:3;letter-spacing:0.3px;}
 
-/* SECTIONS */
-.section{padding:88px 32px;}
-.section-cream{background:var(--cream);}
-.section-white{background:var(--white);}
-.section-inner{max-width:1180px;margin:0 auto;}
-.section-eyebrow{font-size:11px;font-weight:700;color:var(--lime);text-transform:uppercase;letter-spacing:5px;margin-bottom:12px;position:relative;padding-top:44px;}
-.section-eyebrow::before{content:'';position:absolute;top:0;left:0;width:32px;height:3px;background:var(--lime);border-radius:2px;}
-.section-center .section-eyebrow::before{left:50%;transform:translateX(-50%);}
-.section-title{font-size:clamp(28px,3.5vw,42px);font-weight:900;color:var(--charcoal);letter-spacing:-0.5px;margin-bottom:14px;}
-.section-body{font-size:17px;color:var(--slate);max-width:560px;line-height:1.75;}
-.section-center{text-align:center;}
-.section-center .section-body{margin:0 auto;}
+/* ============ CRED BAR ============ */
+.cred-bar{background:var(--ink);border-top:1px solid rgba(255,255,255,0.07);}
+.cred-bar-inner{max-width:1160px;margin:0 auto;padding:22px 24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.cred-bar-item{display:flex;align-items:center;gap:11px;font-size:14px;font-weight:700;color:rgba(255,255,255,0.92);}
+.cred-bar-item svg{flex-shrink:0;width:19px;height:19px;stroke:var(--lime);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 
-/* SERVICES */
-.carousel-wrap{position:relative;margin-top:48px;}
-.carousel{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding-bottom:16px;}
-.carousel::-webkit-scrollbar{height:4px;}
-.carousel::-webkit-scrollbar-track{background:var(--border);border-radius:2px;}
-.carousel::-webkit-scrollbar-thumb{background:var(--lime);border-radius:2px;}
-.carousel-card{flex:0 0 calc(33.333% - 14px);scroll-snap-align:start;background:var(--navy);border-radius:20px;overflow:hidden;min-width:260px;}
-.carousel-card-img{width:100%;height:160px;object-fit:cover;display:block;}
-.carousel-card-body{padding:20px 24px;}
-.carousel-name{font-size:17px;font-weight:800;color:#fff;margin-bottom:6px;}
-.carousel-tag{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5;}
-.carousel-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:var(--white);border:2px solid var(--border);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 12px rgba(0,0,0,0.1);transition:all 0.2s;z-index:2;}
-.carousel-arrow:hover{background:var(--lime);border-color:var(--lime);}
-.carousel-arrow svg{width:18px;height:18px;stroke:var(--charcoal);fill:none;stroke-width:2.5;stroke-linecap:round;}
-.carousel-arrow:hover svg{stroke:var(--charcoal);}
-.carousel-prev{left:-22px;}
-.carousel-next{right:-22px;}
-@media(max-width:768px){
-  .carousel-card{flex:0 0 75vw;}
-  .carousel-arrow{display:none;}
-}
+/* ============ SECTION SCAFFOLD ============ */
+.section{padding:104px 0;}
+.section-bg{background:var(--bg);}
+.section-head{max-width:640px;margin-bottom:56px;}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:800;color:var(--lime-dark);text-transform:uppercase;letter-spacing:4px;margin-bottom:16px;}
+.eyebrow::before{content:'';width:28px;height:3px;background:var(--lime);border-radius:2px;}
+.section-head.center .eyebrow::after{content:'';width:28px;height:3px;background:var(--lime);border-radius:2px;}
+.section-title{font-size:clamp(30px,3.8vw,46px);font-weight:900;color:var(--ink);letter-spacing:-1.2px;line-height:1.1;margin-bottom:16px;}
+.section-body{font-size:17px;color:var(--slate);line-height:1.75;}
 
-/* TRUST STRIP */
-.trust-strip{background:var(--white);padding:56px 32px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
-.trust-strip-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0;}
-.trust-strip-item{flex:1;display:flex;align-items:center;gap:20px;justify-content:center;padding:0 36px;}
-.trust-strip-item:not(:last-child){border-right:1px solid var(--border);}
-.trust-strip-logo{width:64px;height:64px;object-fit:contain;flex-shrink:0;border-radius:8px;background:var(--lime-light);padding:6px;}
-.trust-strip-icon{width:48px;height:48px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
-.trust-strip-icon svg{width:40px;height:40px;}
-.trust-strip-text{display:flex;flex-direction:column;gap:2px;}
-.trust-strip-label{font-size:10px;font-weight:700;color:var(--lime);text-transform:uppercase;letter-spacing:3px;}
-.trust-strip-title{font-size:17px;font-weight:800;color:var(--charcoal);line-height:1.25;}
-.trust-strip-sub{font-size:13px;color:var(--lime);font-weight:500;}
+/* ============ SERVICES GRID ============ */
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.service-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;gap:16px;transition:all 0.25s ease;position:relative;overflow:hidden;box-shadow:var(--shadow-sm);}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--lime);opacity:0;transition:opacity 0.25s;}
+.service-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-color:#d3ddf0;}
+.service-card:hover::before{opacity:1;}
+.service-thumb{width:76px;height:76px;border-radius:16px;overflow:hidden;flex-shrink:0;border:1px solid var(--border);background:var(--bg);}
+.service-thumb img{width:100%;height:100%;object-fit:cover;}
+.service-name{font-size:18px;font-weight:800;color:var(--ink);letter-spacing:-0.3px;line-height:1.25;}
+.service-tag{font-size:14.5px;color:var(--slate);line-height:1.6;}
+.services-cta{margin-top:44px;text-align:center;}
+.services-cta a{font-size:15px;font-weight:800;color:var(--navy);display:inline-flex;align-items:center;gap:8px;border-bottom:2px solid var(--lime);padding-bottom:3px;transition:gap 0.2s;}
+.services-cta a:hover{gap:12px;}
 
-/* CRED ROW */
-.cred-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px;}
-.cred-pill{background:var(--charcoal);border-radius:10px;padding:18px 20px;text-align:center;}
-.cred-pill-label{font-size:10px;font-weight:700;color:var(--lime);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:5px;}
-.cred-pill-text{font-size:15px;font-weight:800;color:#fff;line-height:1.3;}
-@media(max-width:480px){
-  .cred-row{gap:8px;}
-  .cred-pill{padding:12px 10px;}
-  .cred-pill-label{font-size:9px;letter-spacing:1.5px;}
-  .cred-pill-text{font-size:12px;}
-}
+/* ============ TRUST STRIP ============ */
+.trust-strip{padding:72px 0;background:var(--white);}
+.trust-strip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.trust-card{display:flex;align-items:center;gap:18px;padding:26px 28px;border-radius:var(--radius);background:var(--bg);border:1px solid var(--border);}
+.trust-logo{width:58px;height:58px;object-fit:contain;flex-shrink:0;border-radius:12px;background:var(--white);padding:7px;border:1px solid var(--border);}
+.trust-label{font-size:10.5px;font-weight:800;color:var(--lime-dark);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:3px;}
+.trust-title{font-size:17px;font-weight:800;color:var(--ink);line-height:1.25;}
+.trust-sub{font-size:13px;color:var(--muted);font-weight:600;margin-top:2px;}
 
-/* METHOD */
-.method-steps{display:flex;gap:0;margin-top:56px;position:relative;}
-.method-steps::before{content:'';position:absolute;top:28px;left:calc(16.666% + 20px);right:calc(16.666% + 20px);height:2px;background:linear-gradient(90deg,var(--lime),var(--navy));z-index:0;}
-.method-step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 24px;position:relative;z-index:1;}
-.method-step-num{width:56px;height:56px;border-radius:50%;background:var(--navy);color:var(--lime);font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:20px;border:3px solid var(--lime);box-shadow:0 0 0 6px var(--cream);}
-.method-step-title{font-size:17px;font-weight:800;color:var(--charcoal);margin-bottom:8px;}
-.method-step-body{font-size:14px;color:var(--slate);line-height:1.65;}
-@media(max-width:768px){
-  .method-steps{flex-direction:column;gap:32px;}
-  .method-steps::before{display:none;}
-  .method-step{flex-direction:row;text-align:left;gap:20px;align-items:flex-start;}
-  .method-step-num{flex-shrink:0;margin-bottom:0;}
-}
+/* ============ METHOD ============ */
+.method-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step;}
+.method-card{background:var(--white);border:1px solid var(--border);border-radius:var(--radius);padding:36px 30px;position:relative;box-shadow:var(--shadow-sm);}
+.method-num{width:52px;height:52px;border-radius:14px;background:var(--navy);color:var(--lime);font-size:22px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-bottom:22px;}
+.method-title{font-size:19px;font-weight:800;color:var(--ink);margin-bottom:10px;letter-spacing:-0.3px;}
+.method-body{font-size:15px;color:var(--slate);line-height:1.7;}
 
-/* WHY US */
-.why-split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
-.why-photo{border-radius:16px;overflow:hidden;height:460px;}
+/* ============ WHY US ============ */
+.why-split{display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;align-items:center;}
+.why-media{position:relative;}
+.why-photo{border-radius:24px;overflow:hidden;aspect-ratio:3/4;max-width:480px;box-shadow:var(--shadow-md);}
 .why-photo img{width:100%;height:100%;object-fit:cover;}
-.why-bullets{list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:28px;}
-.why-bullets li{font-size:15px;color:var(--slate);line-height:1.6;display:flex;align-items:flex-start;gap:10px;}
-.why-bullets li::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--lime);flex-shrink:0;margin-top:7px;}
-.why-body{font-size:16px;color:var(--slate);line-height:1.75;margin-top:16px;max-width:460px;}
+.why-stat{position:absolute;right:-16px;bottom:32px;background:var(--navy);border-radius:16px;padding:18px 24px;box-shadow:var(--shadow-lg);}
+.why-stat-num{font-size:24px;font-weight:900;color:var(--lime);line-height:1;}
+.why-stat-label{font-size:12px;font-weight:700;color:rgba(255,255,255,0.8);margin-top:5px;text-transform:uppercase;letter-spacing:1.5px;}
+.why-body{font-size:17px;color:var(--slate);line-height:1.75;margin-bottom:8px;}
+.why-bullets{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:28px;margin-bottom:36px;}
+.why-bullets li{font-size:15.5px;color:var(--slate);line-height:1.6;display:flex;align-items:flex-start;gap:13px;font-weight:500;}
+.why-bullets li svg{width:22px;height:22px;flex-shrink:0;stroke:var(--lime-dark);fill:var(--lime-tint);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:1px;}
 
-/* FAQ */
-.faq-list{max-width:740px;margin:48px auto 0;}
-.faq-item{border-bottom:1px solid var(--border);}
-.faq-item:first-child{border-top:1px solid var(--border);}
-.faq-q{width:100%;background:none;border:none;font-family:'Urbanist',sans-serif;font-size:16px;font-weight:700;color:var(--charcoal);padding:20px 0;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;gap:16px;}
+/* ============ FAQ ============ */
+.faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:12px;}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:box-shadow 0.25s,border-color 0.25s;}
+.faq-item.open{border-color:#cbd8ef;box-shadow:var(--shadow-md);}
+.faq-q{width:100%;background:none;border:none;font-family:'Urbanist',sans-serif;font-size:16.5px;font-weight:800;color:var(--ink);padding:22px 26px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;gap:16px;}
 .faq-q:hover{color:var(--navy);}
-.faq-chevron{width:20px;height:20px;stroke:var(--warm-gray);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.3s;flex-shrink:0;}
-.faq-item.open .faq-chevron{transform:rotate(180deg);}
-.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s ease;}
+.faq-chevron{width:34px;height:34px;flex-shrink:0;border-radius:50%;background:var(--bg);display:flex;align-items:center;justify-content:center;transition:transform 0.3s,background 0.3s;}
+.faq-chevron svg{width:16px;height:16px;stroke:var(--navy);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
+.faq-item.open .faq-chevron{transform:rotate(180deg);background:var(--lime);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.35s ease;}
 .faq-item.open .faq-a{max-height:400px;}
-.faq-a p{font-size:15px;color:var(--slate);line-height:1.7;padding-bottom:20px;}
+.faq-a p{font-size:15.5px;color:var(--slate);line-height:1.75;padding:0 26px 24px;}
 
-/* QUOTE FORM SECTION */
-.quote-section{background:var(--charcoal);padding:88px 32px;position:relative;}
-.quote-section::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent,transparent 40px,rgba(255,255,255,0.015) 40px,rgba(255,255,255,0.015) 41px);pointer-events:none;}
-.quote-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
-.quote-left h2{font-size:clamp(28px,4vw,42px);font-weight:900;color:#fff;letter-spacing:-1px;line-height:1.1;margin-bottom:16px;}
-.quote-left p{font-size:16px;color:rgba(255,255,255,0.65);line-height:1.75;margin-bottom:28px;}
-.quote-points{list-style:none;}
-.quote-points li{font-size:15px;color:rgba(255,255,255,0.7);padding:9px 0;display:flex;align-items:center;gap:10px;border-bottom:1px solid rgba(255,255,255,0.08);}
+/* ============ QUOTE ============ */
+.quote-section{background:linear-gradient(160deg,var(--ink) 0%,var(--navy) 70%);padding:104px 0;position:relative;overflow:hidden;}
+.quote-section::before{content:'';position:absolute;top:-200px;left:-140px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(132,204,22,0.12) 0%,transparent 65%);pointer-events:none;}
+.quote-inner{max-width:1160px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;position:relative;z-index:2;}
+.quote-left{padding-top:20px;}
+.quote-left .eyebrow{color:var(--lime);}
+.quote-left h2{font-size:clamp(30px,4vw,46px);font-weight:900;color:#fff;letter-spacing:-1.2px;line-height:1.08;margin-bottom:18px;}
+.quote-left>p{font-size:17px;color:rgba(255,255,255,0.7);line-height:1.75;margin-bottom:32px;max-width:440px;}
+.quote-points{list-style:none;display:flex;flex-direction:column;gap:4px;}
+.quote-points li{font-size:15px;font-weight:600;color:rgba(255,255,255,0.82);padding:11px 0;display:flex;align-items:flex-start;gap:12px;border-bottom:1px solid rgba(255,255,255,0.09);}
 .quote-points li:last-child{border:none;}
-.quote-points li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--amber);flex-shrink:0;}
-.quote-form-card{background:var(--white);border-radius:16px;padding:40px 36px;}
-.quote-form-card h3{font-size:22px;font-weight:800;color:var(--charcoal);margin-bottom:24px;text-align:center;}
+.quote-points li svg{width:20px;height:20px;flex-shrink:0;stroke:var(--lime);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;margin-top:2px;}
+.quote-phone{margin-top:28px;display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:14px;padding:15px 24px;transition:background 0.2s;}
+.quote-phone:hover{background:rgba(255,255,255,0.12);}
+.quote-phone svg{width:20px;height:20px;stroke:var(--lime);fill:none;stroke-width:2.5;stroke-linecap:round;}
+.quote-phone-label{font-size:11px;font-weight:700;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:2px;display:block;}
+.quote-phone-num{font-size:18px;font-weight:900;color:#fff;}
+.quote-form-card{background:var(--white);border-radius:24px;padding:40px 38px;box-shadow:var(--shadow-lg);}
+.quote-form-card h3{font-size:23px;font-weight:900;color:var(--ink);margin-bottom:6px;letter-spacing:-0.5px;}
+.quote-form-card .form-intro{font-size:14px;color:var(--muted);margin-bottom:24px;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .form-field{margin-bottom:14px;}
-.form-field label{display:block;font-size:13px;font-weight:700;color:var(--charcoal);margin-bottom:5px;}
-.form-field input,.form-field select,.form-field textarea{width:100%;font-family:'Urbanist',sans-serif;font-size:15px;padding:12px 14px;border:1px solid var(--border);border-radius:8px;color:var(--charcoal);background:var(--white);transition:border-color 0.2s,box-shadow 0.2s;outline:none;}
-.form-field input::placeholder,.form-field textarea::placeholder{color:#a0aec0;}
-.form-field select{color:var(--slate);}
-.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--navy);box-shadow:0 0 0 3px rgba(27,47,94,0.1);}
-.form-submit{width:100%;background:var(--lime);color:var(--charcoal);font-family:'Urbanist',sans-serif;font-size:16px;font-weight:800;padding:15px;border-radius:8px;border:none;cursor:pointer;transition:background 0.2s;margin-top:4px;}
-.form-submit:hover{background:var(--lime-dark);}
-.form-note{font-size:12px;color:var(--warm-gray);text-align:center;margin-top:10px;}
+.form-field label{display:block;font-size:13px;font-weight:800;color:var(--ink);margin-bottom:6px;}
+.form-field input,.form-field select,.form-field textarea{width:100%;font-family:'Urbanist',sans-serif;font-size:15px;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;color:var(--ink);background:var(--bg);transition:border-color 0.2s,box-shadow 0.2s,background 0.2s;outline:none;appearance:none;-webkit-appearance:none;}
+.form-field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%234a5568' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;color:var(--slate);cursor:pointer;}
+.form-field input::placeholder{color:#a3adc2;}
+.form-field input:focus,.form-field select:focus{border-color:var(--lime);background:var(--white);box-shadow:0 0 0 4px rgba(132,204,22,0.15);}
+.form-submit{width:100%;background:var(--lime);color:var(--ink);font-family:'Urbanist',sans-serif;font-size:16.5px;font-weight:900;padding:17px;border-radius:12px;border:none;cursor:pointer;transition:all 0.2s;margin-top:8px;box-shadow:0 6px 18px rgba(132,204,22,0.35);}
+.form-submit:hover{background:var(--lime-dark);transform:translateY(-2px);}
+.form-note{font-size:12.5px;color:var(--muted);text-align:center;margin-top:12px;}
 
-/* FOOTER */
-.footer{background:var(--white);padding:48px 32px 28px;border-top:1px solid var(--border);}
-.footer-inner{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;margin-bottom:36px;}
-.footer-brand img{height:36px;margin-bottom:10px;}
-.footer-tagline{font-size:11px;font-weight:700;color:var(--lime);text-transform:uppercase;letter-spacing:2px;margin-bottom:10px;}
-.footer-desc{font-size:13px;color:var(--slate);max-width:220px;line-height:1.65;}
-.footer-col h5{font-size:11px;font-weight:700;color:var(--charcoal);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px;}
+/* ============ FOOTER ============ */
+.footer{background:var(--white);padding:64px 0 28px;border-top:1px solid var(--border);}
+.footer-inner{max-width:1160px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
+.footer-brand img{height:48px;margin-bottom:14px;}
+.footer-tagline{font-size:11px;font-weight:800;color:var(--lime-dark);text-transform:uppercase;letter-spacing:3px;margin-bottom:12px;}
+.footer-desc{font-size:14px;color:var(--slate);max-width:240px;line-height:1.7;}
+.footer-col h5{font-size:11px;font-weight:800;color:var(--ink);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:16px;}
 .footer-col ul{list-style:none;}
-.footer-col li{margin-bottom:10px;}
-.footer-col a{font-size:13px;color:var(--slate);transition:color 0.2s;}
-.footer-col a:hover{color:var(--lime);}
-.footer-bottom{border-top:1px solid var(--border);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;max-width:1180px;margin:0 auto;}
-.footer-copy{font-size:12px;color:var(--warm-gray);}
-.footer-licensed{font-size:12px;color:var(--charcoal);font-weight:700;}
+.footer-col li{margin-bottom:11px;}
+.footer-col a{font-size:14px;color:var(--slate);transition:color 0.2s;font-weight:500;}
+.footer-col a:hover{color:var(--lime-dark);}
+.footer-bottom{border-top:1px solid var(--border);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;max-width:1160px;margin:0 auto;padding-left:24px;padding-right:24px;}
+.footer-copy{font-size:13px;color:var(--muted);}
+.footer-licensed{font-size:13px;color:var(--ink);font-weight:800;}
 
-/* MOBILE */
+/* ============ RESPONSIVE ============ */
 @media(max-width:1024px){
-  .hero-text{max-width:100%;}
-  .hero h1{font-size:clamp(40px,6vw,56px);}
-  .why-split{grid-template-columns:1fr;}
-  .why-photo{height:320px;}
-  .quote-inner{grid-template-columns:1fr;}
+  .hero-inner{grid-template-columns:1fr;gap:56px;padding:64px 24px 80px;}
+  .hero-sub{max-width:560px;}
+  .hero-media{max-width:460px;}
+  .hero-badge{left:16px;}
+  .hero-chip{right:16px;}
+  .services-grid{grid-template-columns:1fr 1fr;}
+  .trust-strip-grid{grid-template-columns:1fr;max-width:520px;margin:0 auto;}
+  .method-steps{grid-template-columns:1fr;max-width:560px;margin:0 auto;}
+  .why-split{grid-template-columns:1fr;gap:56px;}
+  .why-photo{max-width:460px;}
+  .why-stat{right:12px;}
+  .quote-inner{grid-template-columns:1fr;gap:56px;}
+  .footer-inner{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:768px){
-  .nav-inner{height:80px;}
-  .nav-logo img{height:68px;}
+  .nav-inner{height:70px;}
+  .nav-logo img{height:46px;}
   .nav-links,.nav-actions{display:none;}
   .hamburger{display:flex;}
   .nav-mobile-dropdown{
-    position:absolute;top:80px;left:0;right:0;
-    background:var(--white);padding:20px 24px;
-    box-shadow:0 8px 24px rgba(0,0,0,0.08);z-index:99;
-    flex-direction:column;gap:16px;border-bottom:1px solid var(--border);
+    position:absolute;top:70px;left:0;right:0;
+    background:var(--white);padding:22px 24px;
+    box-shadow:0 16px 32px rgba(13,26,58,0.1);z-index:99;
+    flex-direction:column;gap:18px;border-bottom:1px solid var(--border);
   }
-  .nav-mobile-dropdown a{color:var(--charcoal);font-size:15px;font-weight:600;}
-  .nav-mobile-dropdown a:hover{color:var(--navy);}
+  .nav-mobile-dropdown a{color:var(--ink);font-size:16px;font-weight:600;}
   .nav.nav-open .nav-mobile-dropdown{display:flex;}
-  .hero{min-height:70vh;padding:80px 0 60px;}
-  .hero-content{padding:0 20px;}
-  .hero h1{font-size:clamp(32px,8vw,44px);}
-  .section{padding:56px 20px;}
-  .stats-bar-inner{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-  .footer-inner{flex-direction:column;}
-  .quote-section{padding:56px 20px;}
-  .quote-inner{grid-template-columns:1fr;}
-  .quote-form-card{padding:28px 24px;}
-  .trust-strip-inner{flex-direction:column;gap:28px;}
-  .trust-strip-item{padding:0;justify-content:flex-start;width:100%;max-width:340px;}
-  .trust-strip-item:not(:last-child){border-right:none;border-bottom:1px solid var(--border);padding-bottom:28px;}
+  .nav-mobile-dropdown .nav-btn{background:var(--lime);color:var(--ink);text-align:center;font-weight:800;}
+  .hero-inner{padding:52px 24px 68px;}
+  .hero-btns .btn{flex:1;min-width:200px;}
+  .hero-trust{grid-template-columns:1fr 1fr;gap:12px 20px;}
+  .hero-photo{aspect-ratio:4/5;max-height:480px;}
+  .section{padding:72px 0;}
+  .section-head{margin-bottom:40px;}
+  .cred-bar-inner{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:20px 24px;}
+  .cred-bar-item{font-size:13px;}
+  .services-grid{grid-template-columns:1fr;}
+  .service-card{flex-direction:row;align-items:flex-start;}
+  .service-thumb{width:64px;height:64px;}
+  .trust-strip{padding:56px 0;}
+  .quote-section{padding:72px 0;}
+  .quote-form-card{padding:30px 24px;}
+  .form-row{grid-template-columns:1fr;gap:0;}
+  .footer-inner{grid-template-columns:1fr;gap:32px;}
+  .footer-bottom{flex-direction:column;align-items:flex-start;}
 }
-@media(max-width:480px){
-  .stats-bar-inner{grid-template-columns:1fr 1fr;}
-  .trust-strip-item{gap:14px;}
-  .trust-strip-logo{width:48px;height:48px;}
-  .trust-strip-title{font-size:15px;}
+@media(max-width:420px){
+  .hero h1{letter-spacing:-1.5px;}
+  .hero-badge{padding:13px 16px;left:12px;bottom:20px;}
+  .hero-badge-icon{width:38px;height:38px;}
+  .cred-bar-inner{grid-template-columns:1fr 1fr;}
 }
 
-/* SCROLL ANIMATIONS */
-.reveal{opacity:0;transform:translateY(32px);transition:opacity 0.6s ease,transform 0.6s ease;}
+/* ============ REVEAL ============ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.6s ease,transform 0.6s ease;}
 .reveal.visible{opacity:1;transform:translateY(0);}
-.reveal-left{opacity:0;transform:translateX(-32px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal-left{opacity:0;transform:translateX(-28px);transition:opacity 0.6s ease,transform 0.6s ease;}
 .reveal-left.visible{opacity:1;transform:translateX(0);}
-.reveal-right{opacity:0;transform:translateX(32px);transition:opacity 0.6s ease,transform 0.6s ease;}
+.reveal-right{opacity:0;transform:translateX(28px);transition:opacity 0.6s ease,transform 0.6s ease;}
 .reveal-right.visible{opacity:1;transform:translateX(0);}
 .reveal-delay-1{transition-delay:0.1s;}
 .reveal-delay-2{transition-delay:0.2s;}
 .reveal-delay-3{transition-delay:0.3s;}
+@media(prefers-reduced-motion:reduce){
+  .reveal,.reveal-left,.reveal-right{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
 </style>
 </head>
 <body>
@@ -276,14 +287,13 @@ img{max-width:100%;display:block;}
     </a>
     <ul class="nav-links">
       <li><a href="#services">Services</a></li>
-      <li><a href="#method">Our Method</a></li>
+      <li><a href="#method">Prevention Plan</a></li>
       <li><a href="#why-us">Why Us</a></li>
       <li><a href="#faq">FAQ</a></li>
-      <li><a href="#quote">Contact</a></li>
     </ul>
     <div class="nav-actions">
       <a href="tel:8887744290" class="nav-phone">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.21 4.11 2 2 0 0 1 6.18 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.21 4.11 2 2 0 0 1 6.18 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         (888) 774-4290
       </a>
       <a href="#quote" class="nav-btn">Free Quote</a>
@@ -294,229 +304,253 @@ img{max-width:100%;display:block;}
   </div>
   <div class="nav-mobile-dropdown">
     <a href="#services" onclick="closeNav()">Services</a>
-    <a href="#method" onclick="closeNav()">Our Method</a>
+    <a href="#method" onclick="closeNav()">Prevention Plan</a>
     <a href="#why-us" onclick="closeNav()">Why Us</a>
     <a href="#faq" onclick="closeNav()">FAQ</a>
-    <a href="#quote" onclick="closeNav()">Contact</a>
-    <a href="tel:8887744290" onclick="closeNav()" style="font-weight:700;color:var(--navy);">(888) 774-4290</a>
-    <a href="#quote" class="nav-btn" onclick="closeNav()" style="text-align:center;">Free Quote</a>
+    <a href="tel:8887744290" onclick="closeNav()" style="font-weight:800;color:var(--navy);">(888) 774-4290</a>
+    <a href="#quote" class="nav-btn" onclick="closeNav()">Free Quote</a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <img class="hero-bg" src="hero-bg.jpg" alt="Pest'Em technician treating home exterior">
-  <div class="hero-content">
-    <div class="hero-text">
-      <span class="hero-eyebrow">Warren County, NJ</span>
-      <h1>Your Home.<br><b>Off Limits.</b></h1>
-      <p class="hero-sub">Professional pest control for NJ homeowners. Licensed, insured, and backed by science.</p>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="hero-eyebrow">Blairstown &middot; Warren County, NJ</span>
+      <h1>We Get 'Em All.<br><b>Before They Get In.</b></h1>
+      <p class="hero-sub">Quarterly prevention plans for Warren County homes. We build a barrier around your house that stops ants, wasps, roaches, and rodents at the foundation &mdash; so you never meet them in your kitchen.</p>
       <div class="hero-btns">
-        <a href="#quote" class="btn-primary">Get a Free Quote</a>
-        <a href="tel:8887744290" class="btn-outline">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.21 4.11 2 2 0 0 1 6.18 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <a href="#quote" class="btn btn-lime">Start My Prevention Plan</a>
+        <a href="tel:8887744290" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.21 4.11 2 2 0 0 1 6.18 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           (888) 774-4290
         </a>
       </div>
       <div class="hero-trust">
-        <span class="hero-trust-item">Pet &amp; Family Safe</span>
-        <span class="hero-trust-item">Same-Week Service</span>
-        <span class="hero-trust-item">No Surprise Charges</span>
-        <span class="hero-trust-item">100% Guarantee</span>
+        <span class="hero-trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Pet &amp; Family Safe</span>
+        <span class="hero-trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Quarterly Barrier Protection</span>
+        <span class="hero-trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>No Surprise Charges</span>
+        <span class="hero-trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>100% Guarantee</span>
+      </div>
+    </div>
+    <div class="hero-media">
+      <span class="hero-chip">Same-Week Service</span>
+      <div class="hero-photo">
+        <img src="hero-bg.jpg" alt="Pest'Em technician treating a home exterior in Warren County NJ" fetchpriority="high">
+      </div>
+      <div class="hero-badge">
+        <div class="hero-badge-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div>
+          <div class="hero-badge-title">100% Guarantee</div>
+          <div class="hero-badge-sub">Free re-treatment if pests return</div>
+        </div>
       </div>
     </div>
   </div>
-</section>
+</header>
 
-<!-- STATS BAR -->
-<div class="stats-bar">
-  <div class="stats-bar-inner">
-    <div class="stats-bar-item reveal">
-      <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M3 21l2-6h14l2 6"/></svg>
+<!-- CRED BAR -->
+<div class="cred-bar">
+  <div class="cred-bar-inner">
+    <div class="cred-bar-item">
+      <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
       Farmer &amp; Family Owned
     </div>
-    <div class="stats-bar-item reveal reveal-delay-1">
+    <div class="cred-bar-item">
       <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
       NJ Licensed &amp; Insured
     </div>
-    <div class="stats-bar-item reveal reveal-delay-2">
-      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/></svg>
+    <div class="cred-bar-item">
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
       Year-Round Protection
     </div>
-    <div class="stats-bar-item reveal reveal-delay-3">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M12 14l-3 8h6l-3-8"/><path d="M8.5 6.5L6 2"/><path d="M15.5 6.5L18 2"/><polyline points="9.5 8 11 10 15 6"/></svg>
+    <div class="cred-bar-item">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
       Satisfaction Guaranteed
     </div>
   </div>
 </div>
 
 <!-- SERVICES -->
-<section class="section section-cream" id="services">
-  <div class="section-inner">
-    <div class="section-eyebrow reveal">What We Do</div>
-    <h2 class="section-title reveal reveal-delay-1">What We Treat</h2>
-    <p class="section-body reveal reveal-delay-2">From spring ticks to fall invaders — we cover the pests that actually affect Warren County homes.</p>
-    <div class="carousel-wrap">
-      <button class="carousel-arrow carousel-prev" onclick="scrollCarousel(-1)" aria-label="Previous">
-        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <div class="carousel" id="services-carousel">
-        <div class="carousel-card">
-          <img src="pest-tick.jpg" alt="Tick" class="carousel-card-img">
-          <div class="carousel-card-body">
-            <div class="carousel-name">Tick &amp; Mosquito Control</div>
-            <div class="carousel-tag">Exterior barrier spray timed to pest emergence using GDD data</div>
-          </div>
-        </div>
-        <div class="carousel-card">
-          <img src="pest-rodent.jpg" alt="Rodent" class="carousel-card-img">
-          <div class="carousel-card-body">
-            <div class="carousel-name">Rodent Exclusion</div>
-            <div class="carousel-tag">Bait stations, entry point sealing, and quarterly monitoring</div>
-          </div>
-        </div>
-        <div class="carousel-card">
-          <img src="pest-stinkbug.jpg" alt="Stink Bug" class="carousel-card-img">
-          <div class="carousel-card-body">
-            <div class="carousel-name">Stink Bug &amp; Overwintering Pests</div>
-            <div class="carousel-tag">Exterior barrier applied before fall migration indoors</div>
-          </div>
-        </div>
-        <div class="carousel-card">
-          <img src="pest-lanternfly.jpg" alt="Spotted Lanternfly" class="carousel-card-img">
-          <div class="carousel-card-body">
-            <div class="carousel-name">Spotted Lanternfly</div>
-            <div class="carousel-tag">Tree banding, systemic treatments, egg mass removal</div>
-          </div>
-        </div>
-        <div class="carousel-card">
-          <img src="pest-wasp.jpg" alt="Wasp" class="carousel-card-img">
-          <div class="carousel-card-body">
-            <div class="carousel-name">Wasp &amp; Hornet Removal</div>
-            <div class="carousel-tag">Safe nest removal from eaves, decks, and structures</div>
-          </div>
-        </div>
-        <div class="carousel-card">
-          <img src="pest-ant.jpg" alt="Ant" class="carousel-card-img">
-          <div class="carousel-card-body">
-            <div class="carousel-name">General Pest Control</div>
-            <div class="carousel-tag">Targeted treatment for ants, spiders, and invading insects</div>
-          </div>
+<section class="section section-bg" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow reveal">What We Prevent</div>
+      <h2 class="section-title reveal reveal-delay-1">We Get 'Em All &mdash; Before You Ever See 'Em</h2>
+      <p class="section-body reveal reveal-delay-2">Carpenter ants in spring, wasps all summer, stink bugs come fall. Our quarterly barrier keeps the whole lineup outside where it belongs &mdash; and if something's already moved in, we get 'em out.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-thumb"><img src="pest-ant.jpg" alt="Carpenter ant treatment" loading="lazy" width="76" height="76"></div>
+        <div>
+          <div class="service-name">Carpenter Ant Treatment</div>
+          <div class="service-tag">They don't eat wood &mdash; they hollow it out. We treat the colony and barrier the foundation so they never reach your framing</div>
         </div>
       </div>
-      <button class="carousel-arrow carousel-next" onclick="scrollCarousel(1)" aria-label="Next">
-        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-thumb"><img src="pest-wasp.jpg" alt="Wasp and hornet removal" loading="lazy" width="76" height="76"></div>
+        <div>
+          <div class="service-name">Wasp &amp; Hornet Removal</div>
+          <div class="service-tag">Safe nest removal from eaves, decks, and play areas &mdash; plus preventive treatment where they like to rebuild</div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-thumb"><img src="service-spraying.jpg" alt="Cockroach control" loading="lazy" width="76" height="76"></div>
+        <div>
+          <div class="service-name">Cockroach Control</div>
+          <div class="service-tag">Targeted baiting and crack-and-crevice treatment that clears them out &mdash; then keeps kitchens and baths that way</div>
+        </div>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-thumb"><img src="pest-rodent.jpg" alt="Rodent control" loading="lazy" width="76" height="76"></div>
+        <div>
+          <div class="service-name">Rodent Control</div>
+          <div class="service-tag">Entry point sealing, bait stations, and quarterly monitoring &mdash; mice can't move in if they can't get in</div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-thumb"><img src="pest-stinkbug.jpg" alt="Stink bug prevention" loading="lazy" width="76" height="76"></div>
+        <div>
+          <div class="service-name">Stink Bug Prevention</div>
+          <div class="service-tag">Exterior barrier applied before the fall march indoors &mdash; the treatment that only works if it happens early</div>
+        </div>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-thumb"><img src="pest-lanternfly.jpg" alt="Spotted lanternfly treatment" loading="lazy" width="76" height="76"></div>
+        <div>
+          <div class="service-name">Spotted Lanternfly Treatment</div>
+          <div class="service-tag">Egg mass removal and exterior treatment around your home's structure and trees</div>
+        </div>
+      </div>
+    </div>
+    <div class="services-cta reveal">
+      <a href="#quote">Every one of these is covered by the quarterly prevention plan
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
 <!-- TRUST STRIP -->
 <section class="trust-strip" id="licenses">
-  <div class="trust-strip-inner">
-    <div class="trust-strip-item reveal reveal-delay-1">
-      <img src="njdep-logo.png" alt="New Jersey Department of Environmental Protection" class="trust-strip-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-      <div style="display:none;width:64px;height:64px;background:var(--navy);border-radius:8px;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-size:13px;font-weight:800;color:#fff;text-align:center;line-height:1.2;">NJ<br>DEP</span></div>
-      <div class="trust-strip-text">
-        <span class="trust-strip-label">NJ DEP</span>
-        <span class="trust-strip-title">Licensed Applicator</span>
-        <span class="trust-strip-sub">Commercial Pesticide License</span>
+  <div class="wrap">
+    <div class="trust-strip-grid">
+      <div class="trust-card reveal reveal-delay-1">
+        <img src="njdep-logo.png" alt="New Jersey Department of Environmental Protection" class="trust-logo" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div style="display:none;width:58px;height:58px;background:var(--navy);border-radius:12px;align-items:center;justify-content:center;flex-shrink:0;"><span style="font-size:13px;font-weight:800;color:#fff;text-align:center;line-height:1.2;">NJ<br>DEP</span></div>
+        <div>
+          <div class="trust-label">NJ DEP</div>
+          <div class="trust-title">Licensed Applicator</div>
+          <div class="trust-sub">Commercial Pesticide License</div>
+        </div>
       </div>
-    </div>
-    <div class="trust-strip-item reveal reveal-delay-2">
-      <img src="icons8-security.png" alt="Fully Insured - General Liability" class="trust-strip-logo" onerror="this.style.display='none'">
-      <div class="trust-strip-text">
-        <span class="trust-strip-label">General Liability</span>
-        <span class="trust-strip-title">Fully Insured</span>
-        <span class="trust-strip-sub">On every job, every visit</span>
+      <div class="trust-card reveal reveal-delay-2">
+        <img src="icons8-security.png" alt="Fully Insured - General Liability" class="trust-logo" onerror="this.style.display='none'">
+        <div>
+          <div class="trust-label">General Liability</div>
+          <div class="trust-title">Fully Insured</div>
+          <div class="trust-sub">On every job, every visit</div>
+        </div>
       </div>
-    </div>
-    <div class="trust-strip-item reveal reveal-delay-3">
-      <img src="icons8-guarantee.png" alt="100% Satisfaction Guaranteed" class="trust-strip-logo" onerror="this.style.display='none'">
-      <div class="trust-strip-text">
-        <span class="trust-strip-label">Our Promise</span>
-        <span class="trust-strip-title">100% Guaranteed</span>
-        <span class="trust-strip-sub">Free re-treatment if pests return</span>
+      <div class="trust-card reveal reveal-delay-3">
+        <img src="icons8-guarantee.png" alt="100% Satisfaction Guaranteed" class="trust-logo" onerror="this.style.display='none'">
+        <div>
+          <div class="trust-label">Our Promise</div>
+          <div class="trust-title">100% Guaranteed</div>
+          <div class="trust-sub">Free re-treatment if pests return</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- OUR METHOD -->
-<section class="section section-cream" id="method">
-  <div class="section-inner">
-    <div class="section-center">
-      <div class="section-eyebrow reveal">Our Method</div>
-      <h2 class="section-title reveal reveal-delay-1">Science-Based. Not Calendar-Based.</h2>
+<section class="section section-bg" id="method">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow reveal">The Prevention Plan</div>
+      <h2 class="section-title reveal reveal-delay-1">Stop the Problem Before It Starts</h2>
+      <p class="section-body reveal reveal-delay-2">Most companies show up after you've got a problem. We show up so you never do. Four visits a year, timed to when Warren County pests actually emerge.</p>
     </div>
     <div class="method-steps">
-      <div class="method-step reveal reveal-delay-1">
-        <div class="method-step-num">1</div>
-        <div>
-          <div class="method-step-title">Identify First</div>
-          <div class="method-step-body">We confirm the pest and its biology before touching anything. No guesswork.</div>
-        </div>
+      <div class="method-card reveal reveal-delay-1">
+        <div class="method-num">1</div>
+        <div class="method-title">Exterior Barrier Spray</div>
+        <div class="method-body">We treat your foundation, eaves, door thresholds, and entry points &mdash; a protective perimeter that stops pests before they ever set foot inside.</div>
       </div>
-      <div class="method-step reveal reveal-delay-2">
-        <div class="method-step-num">2</div>
-        <div>
-          <div class="method-step-title">Treat at the Right Time</div>
-          <div class="method-step-body">GDD heat data tells us exactly when pests emerge. We treat that window, not a calendar date.</div>
-        </div>
+      <div class="method-card reveal reveal-delay-2">
+        <div class="method-num">2</div>
+        <div class="method-title">Interior Protection</div>
+        <div class="method-body">Anything that snuck in before we got there gets handled &mdash; targeted interior treatment in kitchens, basements, and attics, safe for kids and pets.</div>
       </div>
-      <div class="method-step reveal reveal-delay-3">
-        <div class="method-step-num">3</div>
-        <div>
-          <div class="method-step-title">Less Product, Better Results</div>
-          <div class="method-step-body">Targeted timing means fewer applications, stronger outcomes, and safer treatments for your family.</div>
-        </div>
+      <div class="method-card reveal reveal-delay-3">
+        <div class="method-num">3</div>
+        <div class="method-title">Quarterly Refresh</div>
+        <div class="method-body">Barriers fade; pests don't quit. We come back every quarter and re-up your protection right before the next wave emerges &mdash; timed to local heat data, not a corporate calendar.</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- WHY US -->
-<section class="section section-white" id="why-us">
-  <div class="section-inner">
+<section class="section" id="why-us">
+  <div class="wrap">
     <div class="why-split">
-      <div class="why-photo reveal-left">
-        <img src="service-foundation.jpg" alt="Pest'em technician treating home exterior" loading="lazy">
+      <div class="why-media reveal-left">
+        <div class="why-photo">
+          <img src="service-foundation.jpg" alt="Pest'em technician treating home exterior" loading="lazy">
+        </div>
+        <div class="why-stat">
+          <div class="why-stat-num">4x / yr</div>
+          <div class="why-stat-label">Barrier Refreshes</div>
+        </div>
       </div>
       <div class="reveal-right">
-        <div class="section-eyebrow">Why Pest'em</div>
-        <h2 class="section-title">Built Local. Built Different.</h2>
-        <p class="why-body">We live and work in Warren County. Our treatments are built around the biology of local pests, not a corporate playbook.</p>
+        <div class="eyebrow">Why Pest'em</div>
+        <h2 class="section-title">Built Local. Built to Keep 'Em Out.</h2>
+        <p class="why-body">We live and work in Warren County, and we'll tell you what the big franchises won't: the cheapest pest problem is the one that never happens. That's why everything we do starts outside your walls &mdash; and why our customers mostly forget what a pest problem even feels like.</p>
         <ul class="why-bullets">
-          <li>Treatments timed to pest biology, not a fixed calendar</li>
-          <li>Same technician, every visit. You know who's coming.</li>
-          <li>If pests come back between visits, so do we. No charge.</li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>Prevention-first: exterior barriers timed to local pest biology, not a fixed calendar</li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>Same technician, every visit. You know who's coming.</li>
+          <li><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>If anything gets past the barrier between visits, we come back free. That's the deal.</li>
         </ul>
+        <a href="#quote" class="btn btn-lime">Start My Prevention Plan</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section class="section section-cream" id="faq">
-  <div class="section-inner">
-    <div class="section-center">
-      <div class="section-eyebrow reveal">FAQ</div>
+<section class="section section-bg" id="faq">
+  <div class="wrap">
+    <div class="section-head center">
+      <div class="eyebrow reveal">FAQ</div>
       <h2 class="section-title reveal reveal-delay-1">Common Questions</h2>
     </div>
     <div class="faq-list">
 
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">
-          How often do you treat?
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          Why quarterly prevention instead of a one-time treatment?
+          <span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
-        <div class="faq-a"><p>Quarterly. We space treatments intentionally — pesticides need time to break down, and over-treating allows pests to build resistance. Four targeted visits per year is the science-backed approach.</p></div>
+        <div class="faq-a"><p>A one-time treatment kills what's there today. It does nothing about the carpenter ants scouting your foundation next spring or the stink bugs headed for your siding in October. The exterior barrier breaks down naturally over a season, so we refresh it every quarter &mdash; right before the next wave of local pests emerges. That's how you stop the problem before it starts, instead of paying to fix it after.</p></div>
+      </div>
+
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What does the quarterly plan include?
+          <span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-a"><p>Every visit includes a full exterior barrier spray around your foundation, eaves, and entry points, plus interior treatment wherever it's needed. It covers carpenter ants, wasps and hornets, cockroaches, rodents, stink bugs, spotted lanternflies, spiders &mdash; we get 'em all. And if anything shows up between visits, we come back at no charge.</p></div>
       </div>
 
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">
           Are the treatments safe for my family and pets?
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
         <div class="faq-a"><p>Yes. We use EPA-registered products applied at label rates. We follow all NJ re-entry interval requirements.</p></div>
       </div>
@@ -524,7 +558,7 @@ img{max-width:100%;display:block;}
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">
           Do I need to be home?
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
         <div class="faq-a"><p>Not for exterior treatments. We'll notify you before each visit and leave a service report.</p></div>
       </div>
@@ -532,7 +566,7 @@ img{max-width:100%;display:block;}
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">
           What if pests come back?
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
         <div class="faq-a"><p>We come back free. That's the guarantee, no questions asked.</p></div>
       </div>
@@ -540,7 +574,7 @@ img{max-width:100%;display:block;}
       <div class="faq-item reveal">
         <button class="faq-q" onclick="toggleFaq(this)">
           What licenses do you hold?
-          <svg class="faq-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+          <span class="faq-chevron"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
         <div class="faq-a"><p>We hold an NJ Applicator Business License and Category 7A certification for general and household pest control.</p></div>
       </div>
@@ -553,18 +587,27 @@ img{max-width:100%;display:block;}
 <section class="quote-section" id="quote">
   <div class="quote-inner">
     <div class="quote-left">
-      <h2 class="reveal">Ready to Protect Your Home?</h2>
-      <p class="reveal reveal-delay-1">Free quotes for Blairstown and all of Warren County. Same-week service available.</p>
+      <div class="eyebrow reveal">Free Quote</div>
+      <h2 class="reveal">Never Deal With Pests Again</h2>
+      <p class="reveal reveal-delay-1">Get your prevention plan quoted free &mdash; Blairstown and all of Warren County. Already have a problem? Same-week service, then we make sure it stays gone.</p>
       <ul class="quote-points">
-        <li>Ticks, mosquitoes, rodents, stink bugs, lanternflies, wasps</li>
-        <li>Exterior spray in spring and summer</li>
-        <li>Interior protection in fall and winter</li>
-        <li>Custom quote based on your property</li>
-        <li>100% satisfaction guarantee with free re-treatments</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Quarterly exterior barrier spray + interior protection</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Covers carpenter ants, wasps, roaches, rodents, stink bugs &amp; more</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Timed to when local pests emerge &mdash; not a corporate schedule</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Custom quote based on your property</li>
+        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Free re-treatment between visits if anything gets through</li>
       </ul>
+      <a href="tel:8887744290" class="quote-phone">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.21 4.11 2 2 0 0 1 6.18 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>
+          <span class="quote-phone-label">Prefer to talk?</span>
+          <span class="quote-phone-num">(888) 774-4290</span>
+        </span>
+      </a>
     </div>
     <div class="quote-form-card">
       <h3>Get Your Free Quote</h3>
+      <p class="form-intro">Tell us a little about your property and we'll build your prevention plan from there.</p>
       <form action="https://formsubmit.co/info@pestem.com" method="POST">
         <input type="hidden" name="_next" value="https://pestem.com/thanks.html">
         <input type="hidden" name="_subject" value="New Quote Request from pestem.com">
@@ -572,13 +615,15 @@ img{max-width:100%;display:block;}
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your full name" required>
         </div>
-        <div class="form-field">
-          <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
-        </div>
-        <div class="form-field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="you@email.com" required>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required>
+          </div>
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+          </div>
         </div>
         <div class="form-field">
           <label for="address">Address</label>
@@ -589,37 +634,25 @@ img{max-width:100%;display:block;}
           <select id="sqft" name="sqft">
             <option value="">Select square footage</option>
             <option value="Under 1,000 sq ft">Under 1,000 sq ft</option>
-            <option value="1,000–1,500 sq ft">1,000–1,500 sq ft</option>
-            <option value="1,500–2,000 sq ft">1,500–2,000 sq ft</option>
-            <option value="2,000–2,500 sq ft">2,000–2,500 sq ft</option>
-            <option value="2,500–3,000 sq ft">2,500–3,000 sq ft</option>
+            <option value="1,000–1,500 sq ft">1,000&ndash;1,500 sq ft</option>
+            <option value="1,500–2,000 sq ft">1,500&ndash;2,000 sq ft</option>
+            <option value="2,000–2,500 sq ft">2,000&ndash;2,500 sq ft</option>
+            <option value="2,500–3,000 sq ft">2,500&ndash;3,000 sq ft</option>
             <option value="3,000+ sq ft">3,000+ sq ft</option>
           </select>
         </div>
         <div class="form-field">
-          <label for="acres">Property Size (Lawn Treatment)</label>
-          <select id="acres" name="acres">
-            <option value="">Select property size</option>
-            <option value="No lawn treatment needed">No lawn treatment needed</option>
-            <option value="Under 0.25 acres">Under 0.25 acres</option>
-            <option value="0.25–0.5 acres">0.25–0.5 acres</option>
-            <option value="0.5–1 acre">0.5–1 acre</option>
-            <option value="1–2 acres">1–2 acres</option>
-            <option value="2+ acres">2+ acres</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label for="pest">Pest Concern</label>
+          <label for="pest">What Are You Looking For?</label>
           <select id="pest" name="pest">
-            <option value="">Select a pest concern</option>
-            <option value="Ticks & Mosquitoes">Ticks &amp; Mosquitoes</option>
+            <option value="">Select an option</option>
+            <option value="Quarterly Prevention Plan">Quarterly Prevention Plan</option>
+            <option value="Carpenter Ants">Carpenter Ants</option>
+            <option value="Wasps & Hornets">Wasps &amp; Hornets</option>
+            <option value="Cockroaches">Cockroaches</option>
             <option value="Rodents">Rodents</option>
             <option value="Stink Bugs">Stink Bugs</option>
             <option value="Spotted Lanternfly">Spotted Lanternfly</option>
-            <option value="Wasps & Hornets">Wasps &amp; Hornets</option>
-            <option value="Ants & Spiders">Ants &amp; Spiders</option>
-            <option value="General Pest Control">General Pest Control</option>
-            <option value="Other">Other</option>
+            <option value="Other">Other / Not Sure</option>
           </select>
         </div>
         <button type="submit" class="form-submit">Get My Free Quote</button>
@@ -633,25 +666,26 @@ img{max-width:100%;display:block;}
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <img src="logo-transparent-new.png?v=4" alt="Pest 'Em" style="height:36px;margin-bottom:8px;">
+      <img src="logo-transparent-new.png?v=4" alt="Pest 'Em">
       <div class="footer-tagline">WE GET 'EM ALL</div>
-      <p class="footer-desc">Warren County's year-round pest control. Quarterly treatments, year-round protection.</p>
+      <p class="footer-desc">Warren County's prevention-first pest control. Quarterly barrier treatments that stop pests before they ever get inside.</p>
     </div>
     <div class="footer-col">
       <h5>Services</h5>
       <ul>
-        <li><a href="#services">Tick &amp; Mosquito Control</a></li>
-        <li><a href="#services">Rodent Exclusion</a></li>
-        <li><a href="#services">Stink Bug Control</a></li>
+        <li><a href="#method">Quarterly Prevention Plan</a></li>
+        <li><a href="#services">Carpenter Ant Treatment</a></li>
+        <li><a href="#services">Wasp &amp; Hornet Removal</a></li>
+        <li><a href="#services">Cockroach Control</a></li>
+        <li><a href="#services">Rodent Control</a></li>
+        <li><a href="#services">Stink Bug Prevention</a></li>
         <li><a href="#services">Lanternfly Treatment</a></li>
-        <li><a href="#services">Wasp Removal</a></li>
-        <li><a href="#services">General Pest Control</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h5>Company</h5>
       <ul>
-        <li><a href="#method">Our Method</a></li>
+        <li><a href="#method">Prevention Plan</a></li>
         <li><a href="#why-us">Why Us</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#quote">Get a Quote</a></li>
@@ -662,8 +696,8 @@ img{max-width:100%;display:block;}
       <ul>
         <li><a href="tel:8887744290">(888) 774-4290</a></li>
         <li><a href="mailto:info@pestem.com">info@pestem.com</a></li>
-        <li style="color:var(--warm-gray);font-size:13px;">Blairstown, NJ 07825</li>
-        <li style="color:var(--warm-gray);font-size:13px;">Warren County, NJ</li>
+        <li style="color:var(--muted);font-size:14px;">Blairstown, NJ 07825</li>
+        <li style="color:var(--muted);font-size:14px;">Warren County, NJ</li>
       </ul>
     </div>
   </div>
@@ -687,34 +721,11 @@ function toggleFaq(btn){
   document.querySelectorAll('.faq-item').forEach(function(el){el.classList.remove('open');});
   if(!wasOpen) item.classList.add('open');
 }
-(function(){
-  var c = document.getElementById('services-carousel');
-  if(!c) return;
-  var speed = 1; // px per frame
-  var paused = false;
-  c.addEventListener('mouseenter', function(){ paused = true; });
-  c.addEventListener('mouseleave', function(){ paused = false; });
-  c.addEventListener('touchstart', function(){ paused = true; });
-  c.addEventListener('touchend', function(){ setTimeout(function(){ paused = false; }, 2000); });
-  function tick(){
-    if(!paused){
-      c.scrollLeft += speed;
-      // Reset to start when near end for infinite loop
-      if(c.scrollLeft >= c.scrollWidth - c.clientWidth - 10){
-        c.scrollLeft = 0;
-      }
-    }
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-  // Keep manual arrow buttons working
-  window.scrollCarousel = function(dir){ c.scrollBy({left: dir * 300, behavior:'smooth'}); };
-})();
 
 // Scroll reveal
 var revealObserver = new IntersectionObserver(function(entries){
   entries.forEach(function(e){
-    if(e.isIntersecting){ e.target.classList.add('visible'); }
+    if(e.isIntersecting){ e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
   });
 }, {threshold:0.15});
 document.querySelectorAll('.reveal,.reveal-left,.reveal-right').forEach(function(el){
