@@ -2,30 +2,35 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Thank You | Pest 'Em</title>
-<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Got It | Pest 'Em</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1B2F5E">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
+:root{--navy:#1B2F5E;--navy-deep:#0F1D3D;--ink:#16233F;--lime:#84CC16;--lime-press:#65A30D;--chartreuse:#D7FF3E;--white:#FFFFFF;color-scheme:light;}
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Urbanist',sans-serif;background:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;}
-.card{text-align:center;padding:60px 40px;max-width:480px;}
-.checkmark{width:72px;height:72px;margin:0 auto 24px;background:#e6f7e9;border-radius:50%;display:flex;align-items:center;justify-content:center;}
-.checkmark svg{width:36px;height:36px;stroke:#2a7a3a;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;}
-h1{font-size:32px;font-weight:800;color:#0e2d14;margin-bottom:12px;}
-p{font-size:17px;color:#555;line-height:1.7;margin-bottom:28px;}
-a.back{display:inline-block;font-size:15px;font-weight:700;color:#2a7a3a;border:2px solid #2a7a3a;padding:12px 28px;border-radius:8px;transition:all 0.2s;}
-a.back:hover{background:#2a7a3a;color:#fff;}
-a{text-decoration:none;color:inherit;}
+body{font-family:'Urbanist',sans-serif;background:var(--navy-deep);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;-webkit-font-smoothing:antialiased;}
+.card{background:var(--white);color:var(--ink);border:3px solid var(--navy);border-radius:16px;box-shadow:6px 6px 0 rgba(215,255,62,0.6);max-width:480px;width:100%;padding:48px 36px;text-align:center;}
+.check{width:74px;height:74px;border-radius:50%;background:var(--lime);display:flex;align-items:center;justify-content:center;margin:0 auto 22px;}
+.check svg{width:36px;height:36px;stroke:var(--ink);stroke-width:3;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+h1{font-family:'Archivo Black',sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:-0.015em;font-size:2.5rem;color:var(--navy);margin-bottom:12px;}
+p{font-size:1.0625rem;line-height:1.65;margin-bottom:26px;}
+p a{color:var(--navy);font-weight:800;}
+.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-weight:800;font-size:1rem;min-height:52px;padding:0.9em 1.8em;background:var(--lime);color:var(--ink);text-decoration:none;transition:background .15s;}
+.btn:hover{background:var(--lime-press);}
+a:focus-visible{outline:3px solid var(--navy);outline-offset:2px;}
 </style>
 </head>
 <body>
-<div class="card">
-  <div class="checkmark">
-    <svg viewBox="0 0 24 24"><polyline points="4,12 10,18 20,6"/></svg>
-  </div>
-  <h1>Thank You!</h1>
-  <p>We'll be in touch within a few hours.<br>Call us anytime at <a href="tel:8887744290" style="color:#2a7a3a;font-weight:700;">(888) 774-4290</a>.</p>
-  <a href="/" class="back">Back to Homepage</a>
-</div>
+<main class="card">
+  <div class="check"><svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg></div>
+  <h1>Got It.</h1>
+  <p>Your quote request went straight to the owner's phone. You'll hear back within the hour during business hours.<br><br>Can't wait? Call <a href="tel:+18887744290">(888) 774-4290</a>.</p>
+  <a class="btn" href="/">Back to pestem.com</a>
+</main>
 </body>
 </html>
