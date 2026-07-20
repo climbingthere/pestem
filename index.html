@@ -29,7 +29,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <!-- LCP hero preload -->
 <link rel="preload" as="image"
@@ -112,7 +112,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{
-  font-family:'Inter',-apple-system,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.0625rem;line-height:1.65;
+  font-family:'Archivo','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:1.0625rem;line-height:1.65;
   color:var(--ink);background:var(--cream);
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
   overflow-x:clip;
@@ -395,14 +395,18 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
   .pests-grid{grid-template-columns:1fr;row-gap:60px;}
   .trio{grid-template-columns:1fr;}
   .card{box-shadow:4px 4px 0 var(--navy);}
+  .hero-media{margin-inline:auto;}
   .hero-photo{aspect-ratio:4/3;}
   .hero-photo img{object-position:center 22%;}
+  .badge-license{left:12px;}
   .hero-ctas .btn{flex:1 1 100%;}
   .visits{grid-template-columns:1fr;}
   .plan-steps{grid-template-columns:1fr;}
   .ticket{grid-template-columns:1fr;}
   .ticket-stub{border-right:0;border-bottom:1px solid rgba(93,100,112,0.3);padding:26px 18px;}
   .foot-grid{grid-template-columns:1fr;}
+  .form-card{min-height:auto;}
+  .plan-cap{padding:12px 20px;font-size:1.05rem;}
 }
 @media(max-width:479px){
   .cmp{min-width:0;}
