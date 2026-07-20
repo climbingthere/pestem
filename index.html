@@ -29,7 +29,7 @@
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
 <!-- LCP hero preload -->
 <link rel="preload" as="image"
@@ -123,9 +123,9 @@ a{color:inherit;}
 .section{padding-block:clamp(3.5rem,9vw,6.25rem);}
 section[id]{scroll-margin-top:90px;}
 
-h2.sec-title{font-weight:800;letter-spacing:-0.03em;line-height:1.12;font-size:clamp(1.75rem,3.5vw,2.6rem);margin-bottom:0.6em;}
+h2.sec-title{font-weight:900;letter-spacing:-0.03em;line-height:1.1;font-size:clamp(2rem,4vw,3.1rem);margin-bottom:0.6em;}
 .hl{position:relative;display:inline-block;color:var(--ink);z-index:0;}
-.hl::before{content:'';position:absolute;inset:0.08em -0.12em;background:var(--chartreuse);transform:skew(-2deg);border-radius:4px;z-index:-1;}
+.hl::before{content:'';position:absolute;inset:0.1em -0.18em 0.02em;background:var(--chartreuse);border-radius:6px;z-index:-1;}
 .eyebrow{font-weight:800;font-size:0.8125rem;text-transform:uppercase;letter-spacing:0.1em;}
 .lead{font-weight:600;font-size:1.1875rem;}
 .fine{font-size:0.8125rem;color:var(--gray-mut);}
@@ -199,7 +199,7 @@ body.menu-open{overflow:hidden;}
 .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:clamp(2rem,5vw,4rem);align-items:center;}
 .hero-chip-owned{display:inline-block;background:var(--white);border:2px solid var(--navy);border-radius:10px;padding:7px 14px;font-weight:800;font-size:0.8125rem;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:22px;}
 h1{margin-bottom:20px;}
-.h1-shout{display:block;font-weight:800;letter-spacing:-0.035em;line-height:1.05;font-size:clamp(2.25rem,4.7vw,3.6rem);}
+.h1-shout{display:block;font-weight:900;letter-spacing:-0.035em;line-height:1.04;font-size:clamp(2.4rem,5vw,4rem);}
 .h1-geo{display:block;font-weight:700;font-size:1.125rem;letter-spacing:0;margin-top:14px;color:var(--ink);line-height:1.4;}
 .hero-sub{max-width:560px;margin-bottom:24px;}
 .hero-checks{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:28px;}
@@ -230,8 +230,8 @@ h1{margin-bottom:20px;}
 .legend .sw.pk{background:var(--navy);}
 .legend .sw.tr{background:var(--lime);}
 .pests-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;row-gap:66px;margin-top:44px;}
-.pest-card{position:relative;padding:56px 22px 20px;display:flex;flex-direction:column;gap:10px;}
-.pest-chip{position:absolute;top:-44px;left:22px;width:88px;height:88px;border-radius:50%;border:3px solid var(--navy);background:var(--tint);overflow:hidden;}
+.pest-card{position:relative;padding:62px 22px 20px;display:flex;flex-direction:column;gap:10px;}
+.pest-chip{position:absolute;top:-48px;left:22px;width:96px;height:96px;border-radius:50%;border:3px solid var(--navy);background:var(--tint);overflow:hidden;box-shadow:4px 4px 0 rgba(27,47,94,0.15);}
 .pest-chip img{width:100%;height:100%;object-fit:cover;}
 .pest-card h3{font-weight:800;font-size:1.2rem;line-height:1.25;letter-spacing:-0.01em;}
 .pest-card .p-body{font-size:0.9375rem;line-height:1.6;flex:1;}
@@ -529,7 +529,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
     <div class="pests-grid" data-reveal>
 
       <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-ant-176.webp" alt="Carpenter ant close-up" width="88" height="88" loading="lazy"></span>
+        <span class="pest-chip"><img src="pest-ant-192.webp" alt="Carpenter ant close-up" width="96" height="96" loading="lazy"></span>
         <h3>Carpenter Ant Control</h3>
         <p class="p-body">They nest in damp sills and porch posts, and you rarely see more than a few scouts. We find the nest, treat it directly, and barrier the perimeter.</p>
         <div class="mstrip" aria-hidden="true">
@@ -544,7 +544,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
       </div>
 
       <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-wasp-176.webp" alt="Yellowjacket wasp close-up" width="88" height="88" loading="lazy"></span>
+        <span class="pest-chip"><img src="pest-wasp-192.webp" alt="Yellowjacket wasp close-up" width="96" height="96" loading="lazy"></span>
         <h3>Wasp, Hornet &amp; Yellowjacket Nest Removal</h3>
         <p class="p-body">Eaves, soffits, deck rails, and ground nests. June nests are small and simple to treat. August nests are not. We handle both.</p>
         <div class="mstrip" aria-hidden="true">
@@ -559,7 +559,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
       </div>
 
       <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-roach-176.webp" alt="German cockroach close-up" width="88" height="88" loading="lazy"></span>
+        <span class="pest-chip"><img src="pest-roach-192.webp" alt="German cockroach close-up" width="96" height="96" loading="lazy"></span>
         <!-- Roach photo: Wikimedia Commons "Blattella germanica 1236168.jpg", CC BY 3.0 US -->
         <h3>Cockroach Extermination</h3>
         <p class="p-body">Kitchens and baths, behind the fridge, under the sink. Gel bait plus crack and crevice treatment, with the follow-up included.</p>
@@ -575,7 +575,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
       </div>
 
       <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-rodent-176.webp" alt="House mouse close-up" width="88" height="88" loading="lazy"></span>
+        <span class="pest-chip"><img src="pest-rodent-192.webp" alt="House mouse close-up" width="96" height="96" loading="lazy"></span>
         <h3>Mice &amp; Rat Control</h3>
         <p class="p-body">A mouse fits through a gap the width of a dime, and fall is the push indoors. Stations, traps, and entry point notes on every report.</p>
         <div class="mstrip" aria-hidden="true">
@@ -590,7 +590,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
       </div>
 
       <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-stinkbug-176.webp" alt="Brown marmorated stink bug close-up" width="88" height="88" loading="lazy"></span>
+        <span class="pest-chip"><img src="pest-stinkbug-192.webp" alt="Brown marmorated stink bug close-up" width="96" height="96" loading="lazy"></span>
         <h3>Stink Bug Control</h3>
         <p class="p-body">They gather on south facing siding in September and winter inside your walls. The barrier has to go on <strong>before</strong> they push in.</p>
         <div class="mstrip" aria-hidden="true">
@@ -605,7 +605,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
       </div>
 
       <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-lanternfly-176.webp" alt="Spotted lanternfly close-up" width="88" height="88" loading="lazy"></span>
+        <span class="pest-chip"><img src="pest-lanternfly-192.webp" alt="Spotted lanternfly close-up" width="96" height="96" loading="lazy"></span>
         <h3>Spotted Lanternfly Treatment</h3>
         <p class="p-body">Egg masses, nymphs, and adult swarms <strong>on your home, deck, and exterior perimeter</strong>. Hatch starts late April, and adults swarm from August to frost.</p>
         <div class="mstrip" aria-hidden="true">
