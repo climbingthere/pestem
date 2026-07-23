@@ -124,8 +124,8 @@ a{color:inherit;}
 section[id]{scroll-margin-top:90px;}
 
 h2.sec-title{font-weight:900;letter-spacing:-0.03em;line-height:1.1;font-size:clamp(2rem,4vw,3.1rem);margin-bottom:0.6em;}
-.hl{position:relative;display:inline-block;color:var(--ink);z-index:0;}
-.hl::before{content:'';position:absolute;inset:0.1em -0.18em 0.02em;background:var(--chartreuse);border-radius:6px;z-index:-1;}
+.hl{color:var(--ink);background:linear-gradient(var(--chartreuse),var(--chartreuse)) 0 88%/100% 45% no-repeat;padding:0 0.08em;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone;}
+.on-dark .hl{background:none;color:var(--chartreuse);padding:0;}
 .eyebrow{font-weight:800;font-size:0.8125rem;text-transform:uppercase;letter-spacing:0.1em;}
 .lead{font-weight:600;font-size:1.1875rem;}
 .fine{font-size:0.8125rem;color:var(--gray-mut);}
@@ -697,8 +697,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
     <div class="why-grid">
       <div data-reveal>
         <div class="photo-card why-photo">
-          <img src="owner-placeholder-480.webp" alt="The Pest 'Em owner" width="480" height="480" loading="lazy">
-          <!-- OWNER TODO: replace owner-placeholder-480.webp with a real photo of the owner (square, ~480px) -->
+          <img src="owner-eric-480.webp" alt="Eric, owner of Pest 'Em" width="480" height="480" loading="lazy">
         </div>
       </div>
       <div class="why-copy" data-reveal>
