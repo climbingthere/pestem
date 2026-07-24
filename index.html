@@ -124,7 +124,7 @@ a{color:inherit;}
 section[id]{scroll-margin-top:90px;}
 
 h2.sec-title{font-weight:900;letter-spacing:-0.03em;line-height:1.1;font-size:clamp(2rem,4vw,3.1rem);margin-bottom:0.6em;}
-.hl{text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:0.14em;text-underline-offset:0.09em;text-decoration-skip-ink:none;}
+.hl{text-decoration:underline;text-decoration-color:var(--lime);text-decoration-thickness:0.14em;text-underline-offset:0.09em;text-decoration-skip-ink:auto;}
 .on-dark .hl{text-decoration-color:var(--chartreuse);}
 .eyebrow{font-weight:800;font-size:0.8125rem;text-transform:uppercase;letter-spacing:0.1em;}
 .lead{font-weight:600;font-size:1.1875rem;}
@@ -212,7 +212,7 @@ h1{margin-bottom:20px;}
 /* Hero photo */
 .hero-media{position:relative;}
 .hero-photo{transform:rotate(1deg);aspect-ratio:4/5;}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 50%;}
 .badge-license{position:absolute;bottom:-18px;left:-14px;background:var(--white);border:2px solid var(--navy);border-radius:12px;padding:10px 16px;z-index:3;box-shadow:4px 4px 0 var(--navy);font-weight:800;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;line-height:1.4;}
 
 /* -------- Trust trio -------- */
@@ -226,20 +226,20 @@ h1{margin-bottom:20px;}
 /* -------- Pest grid -------- */
 .legend{display:flex;gap:18px;align-items:center;font-weight:700;font-size:0.8125rem;color:var(--gray-mut);margin-bottom:0.5rem;flex-wrap:wrap;}
 .legend .sw{display:inline-block;width:14px;height:10px;border-radius:3px;margin-right:6px;vertical-align:1px;}
-.legend .sw.on{background:rgba(27,47,94,0.35);}
+.legend .sw.on{background:rgba(27,47,94,0.5);}
 .legend .sw.pk{background:var(--navy);}
 .legend .sw.tr{background:var(--lime);}
 .pests-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;row-gap:66px;margin-top:44px;}
 .pest-card{position:relative;padding:62px 22px 20px;display:flex;flex-direction:column;gap:10px;}
-.pest-chip{position:absolute;top:-48px;left:22px;width:96px;height:96px;border-radius:50%;border:3px solid var(--navy);background:var(--tint);overflow:hidden;box-shadow:4px 4px 0 rgba(27,47,94,0.15);}
+.pest-chip{position:absolute;top:-48px;left:22px;width:96px;height:96px;border-radius:50%;border:3px solid var(--navy);background:var(--tint);overflow:hidden;box-shadow:3px 3px 0 var(--navy);}
 .pest-chip img{width:100%;height:100%;object-fit:cover;}
 .pest-card h3{font-weight:800;font-size:1.2rem;line-height:1.25;letter-spacing:-0.01em;}
 .pest-card .p-body{font-size:0.9375rem;line-height:1.6;flex:1;}
 .mstrip{margin-top:6px;}
 .m-letters{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;font-size:0.5625rem;font-weight:700;color:var(--gray-mut);text-align:center;margin-bottom:3px;}
 .m-cells{display:grid;grid-template-columns:repeat(12,1fr);gap:3px;}
-.m-cells i{height:10px;border-radius:3px;background:rgba(27,47,94,0.12);}
-.m-cells i.on{background:rgba(27,47,94,0.35);}
+.m-cells i{height:10px;border-radius:3px;background:rgba(27,47,94,0.06);box-shadow:inset 0 0 0 1px rgba(27,47,94,0.1);}
+.m-cells i.on{background:rgba(27,47,94,0.5);box-shadow:none;}
 .m-cells i.pk{background:var(--navy);}
 .m-cells i.tr{background:var(--lime);}
 .strip-cap{font-weight:700;font-size:0.75rem;color:var(--gray-mut);margin-top:6px;}
@@ -321,11 +321,14 @@ h1{margin-bottom:20px;}
 /* -------- Quote -------- */
 .on-dark{background:var(--navy-deep);color:#fff;}
 .on-dark h2.sec-title{color:#fff;}
-.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center;}
+.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:start;}
 .q-steer .eyebrow{color:rgba(255,255,255,0.7);display:block;margin-bottom:10px;}
 .q-tel{font-weight:800;font-size:clamp(1.9rem,4.2vw,3rem);color:var(--chartreuse);text-decoration:none;letter-spacing:-0.02em;display:inline-block;line-height:1.05;margin-bottom:16px;}
 .q-tel:hover{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:6px;}
 .q-steer p{color:rgba(255,255,255,0.82);max-width:420px;}
+.q-points{list-style:none;margin-top:22px;display:flex;flex-direction:column;gap:9px;}
+.q-points li{color:rgba(255,255,255,0.7);font-weight:600;font-size:0.9375rem;padding-left:22px;position:relative;}
+.q-points li::before{content:'';position:absolute;left:0;top:8px;width:9px;height:9px;border-radius:50%;background:var(--lime);}
 .form-card{background:var(--white);border:3px solid var(--navy);border-radius:14px;padding:clamp(22px,3vw,32px);color:var(--ink);min-height:540px;}
 .form-card h3{font-weight:800;font-size:1.25rem;margin-bottom:18px;letter-spacing:-0.01em;}
 .f-field{margin-bottom:16px;}
@@ -380,7 +383,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
 /* -------- Responsive -------- */
 @media(max-width:1023px){
   .hero-grid{grid-template-columns:1fr;gap:3rem;}
-  .hero-media{max-width:520px;}
+  .hero-media{max-width:520px;margin-inline:auto;}
   .pests-grid{grid-template-columns:1fr 1fr;}
   .plan-grid{grid-template-columns:1fr;gap:3.5rem;}
   .plan-media{margin:0 auto;}
@@ -393,7 +396,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
   .card{box-shadow:4px 4px 0 var(--navy);}
   .hero-media{margin-inline:auto;}
   .hero-photo{aspect-ratio:4/3;}
-  .hero-photo img{object-position:center 22%;}
+  .hero-photo img{object-position:center 62%;}
   .badge-license{left:12px;}
   .hero-ctas .btn{flex:1 1 100%;}
   .visits{grid-template-columns:1fr;}
@@ -417,7 +420,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
 <nav class="nav" id="nav" aria-label="Main">
   <div class="nav-inner">
     <a href="#top" class="nav-logo" aria-label="Pest 'Em home">
-      <img src="logo-transparent-new.png?v=4" alt="Pest 'Em" width="1024" height="569">
+      <img src="logo-transparent-new.png?v=5" alt="Pest 'Em" width="1024" height="569">
     </a>
     <ul class="nav-links">
       <li><a href="#pests">Pests</a></li>
@@ -446,7 +449,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
 <!-- Mobile overlay menu -->
 <div class="menu-overlay" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
   <div class="menu-top">
-    <img src="logo-transparent-new.png?v=4" alt="Pest 'Em">
+    <img src="logo-transparent-new.png?v=5" alt="Pest 'Em">
     <button class="menu-close" aria-label="Close menu" onclick="closeMenu()">&times;</button>
   </div>
   <ul class="menu-links">
@@ -470,7 +473,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
     <div>
       <span class="hero-chip-owned">Farmer &amp; Family Owned &middot; Warren County, NJ</span>
       <h1>
-        <span class="h1-shout">Pests run on nature's schedule. <span class="hl">So do we.</span></span>
+        <span class="h1-shout">Pests run on nature's schedule. <span class="hl" style="white-space:nowrap;">So do we.</span></span>
         <span class="h1-geo">Pest control in Warren County, NJ</span>
       </h1>
       <p class="hero-sub lead">Pest 'Em is a farmer and family owned pest control company serving Warren County. Quarterly prevention timed to the local pest season, with free re-treatments between visits.</p>
@@ -508,7 +511,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
     </div>
     <div class="card lift trio-card">
       <strong>Farmer &amp; Family Owned</strong>
-      <p>Based in Warren County. We read weather, land, and pest cycles for a living.</p>
+      <p>Based in Warren County. We read weather, land, and pest cycles for a living. Owner-operated, not a franchise.</p>
     </div>
     <div class="card lift trio-card">
       <strong>The Get 'Em Guarantee</strong>
@@ -522,10 +525,10 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
   <div class="wrap">
     <h2 class="sec-title" data-reveal>Pest control services in <span class="hl">Warren County</span>, NJ</h2>
     <p class="legend" data-reveal><span><i class="sw on"></i>Active</span><span><i class="sw pk"></i>Peak</span><span><i class="sw tr"></i>We treat</span></p>
-    <div class="pests-grid" data-reveal>
+    <div class="pests-grid">
 
-      <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-ant-192.webp" alt="Carpenter ant close-up" width="96" height="96" loading="lazy"></span>
+      <div class="card lift pest-card" data-reveal>
+        <span class="pest-chip"><img src="pest-ant-384.webp" alt="Carpenter ant close-up" width="96" height="96" loading="lazy"></span>
         <h3>Carpenter Ant Control</h3>
         <p class="p-body">They nest in damp sills and porch posts, and you rarely see more than a few scouts. We find the nest, treat it directly, and barrier the perimeter.</p>
         <div class="mstrip" aria-hidden="true">
@@ -539,8 +542,8 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
         </div>
       </div>
 
-      <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-wasp-192.webp" alt="Yellowjacket wasp close-up" width="96" height="96" loading="lazy"></span>
+      <div class="card lift pest-card" data-reveal>
+        <span class="pest-chip"><img src="pest-wasp-384.webp" alt="Yellowjacket wasp close-up" width="96" height="96" loading="lazy"></span>
         <h3>Wasp, Hornet &amp; Yellowjacket Nest Removal</h3>
         <p class="p-body">Eaves, soffits, deck rails, and ground nests. June nests are small and simple to treat. August nests are not. We handle both.</p>
         <div class="mstrip" aria-hidden="true">
@@ -554,11 +557,11 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
         </div>
       </div>
 
-      <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-roach-192.webp" alt="German cockroach close-up" width="96" height="96" loading="lazy"></span>
+      <div class="card lift pest-card" data-reveal>
+        <span class="pest-chip"><img src="pest-roach-384.webp" alt="German cockroach close-up" width="96" height="96" loading="lazy"></span>
         <!-- Roach photo: Wikimedia Commons "Blattella germanica 1236168.jpg", CC BY 3.0 US.
-             Ant photo: Wikimedia Commons "Carpenter Ant Genus Campanotus on Hydrangea paniculata 1876.jpg", CC BY 4.0.
-             Mouse photo: Wikimedia Commons "House mouse (Mus musculus) 2766.jpg", CC0. -->
+             Ant photo: Judy Gallagher, "Eastern Black Carpenter Ant, Leesylvania State Park" (Wikimedia Commons), CC BY 2.0.
+             Mouse photo: Wikimedia Commons "Mus musculus 131536695.jpg", CC0. -->
         <h3>Cockroach Extermination</h3>
         <p class="p-body">Kitchens and baths, behind the fridge, under the sink. Gel bait plus crack and crevice treatment, with the follow-up included.</p>
         <div class="mstrip" aria-hidden="true">
@@ -572,8 +575,8 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
         </div>
       </div>
 
-      <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-rodent-192.webp" alt="House mouse close-up" width="96" height="96" loading="lazy"></span>
+      <div class="card lift pest-card" data-reveal>
+        <span class="pest-chip"><img src="pest-rodent-384.webp" alt="House mouse close-up" width="96" height="96" loading="lazy"></span>
         <h3>Mice &amp; Rat Control</h3>
         <p class="p-body">A mouse fits through a gap the width of a dime, and fall is the push indoors. Stations, traps, and entry point notes on every report.</p>
         <div class="mstrip" aria-hidden="true">
@@ -587,8 +590,8 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
         </div>
       </div>
 
-      <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-stinkbug-192.webp" alt="Brown marmorated stink bug close-up" width="96" height="96" loading="lazy"></span>
+      <div class="card lift pest-card" data-reveal>
+        <span class="pest-chip"><img src="pest-stinkbug-384.webp" alt="Brown marmorated stink bug close-up" width="96" height="96" loading="lazy"></span>
         <h3>Stink Bug Control</h3>
         <p class="p-body">They gather on south facing siding in September and winter inside your walls. The barrier has to go on <strong>before</strong> they push in.</p>
         <div class="mstrip" aria-hidden="true">
@@ -602,8 +605,8 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
         </div>
       </div>
 
-      <div class="card lift pest-card">
-        <span class="pest-chip"><img src="pest-lanternfly-192.webp" alt="Spotted lanternfly close-up" width="96" height="96" loading="lazy"></span>
+      <div class="card lift pest-card" data-reveal>
+        <span class="pest-chip"><img src="pest-lanternfly-384.webp" alt="Spotted lanternfly close-up" width="96" height="96" loading="lazy"></span>
         <h3>Spotted Lanternfly Treatment</h3>
         <p class="p-body">Egg masses, nymphs, and adult swarms <strong>on your home, deck, and exterior perimeter</strong>. Hatch starts late April, and adults swarm from August to frost.</p>
         <div class="mstrip" aria-hidden="true">
@@ -627,7 +630,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
     <div class="plan-grid">
       <div class="plan-media" data-reveal>
         <div class="photo-card plan-photo">
-          <img src="service-foundation-560.webp" alt="Technician treating a home's foundation during a quarterly visit" width="560" height="786" loading="lazy">
+          <img src="service-visit-560.webp" srcset="service-visit-560.webp 560w, service-visit-1120.webp 1120w" sizes="(max-width: 1023px) 90vw, 420px" alt="Pest 'Em technician during a quarterly prevention visit" width="560" height="786" loading="lazy">
         </div>
       </div>
       <div class="card plan-card" data-reveal>
@@ -646,7 +649,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
             <li>Exterior Barrier Application</li>
             <li>Granular Perimeter Pass</li>
             <li>Interior Treatment (as needed)</li>
-            <li>Report &amp; Re-Entry Review<small>We walk you through what we did, including any re-entry precautions for children and pets.</small></li>
+            <li><div>Report &amp; Re-Entry Review<small>We walk you through what we did, including any re-entry precautions for children and pets.</small></div></li>
           </ol>
           <p class="plan-terms">Free re-treatments between visits &middot; no auto-renew &middot; cancel anytime.</p>
           <p class="plan-price">Flat per-visit pricing. Exact quote after your free inspection.</p>
@@ -781,6 +784,11 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
         <span class="eyebrow">Most folks just call:</span>
         <a class="q-tel" href="tel:+18887744290">(888) 774-4290</a>
         <p>The fastest way to get a quote. Replies within the hour during business hours.</p>
+        <ul class="q-points">
+          <li>Free re-treatments between visits</li>
+          <li>100% service guarantee</li>
+          <li>NJ DEP licensed pesticide applicator business</li>
+        </ul>
       </div>
       <div class="form-card" data-reveal>
         <h3>Or send it in writing:</h3>
@@ -827,7 +835,7 @@ fieldset.f-field legend{font-weight:700;font-size:0.875rem;margin-bottom:8px;pad
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-brand">
-        <img src="logo-transparent-new.png?v=4" alt="Pest 'Em">
+        <img src="logo-transparent-new.png?v=5" alt="Pest 'Em">
         <p class="foot-slogan">We Get 'Em All.</p>
       </div>
       <div class="foot-col">
@@ -908,7 +916,7 @@ addEventListener('keydown',function(e){if(e.key==='Escape') closeMenu();});
 if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
   var ro=new IntersectionObserver(function(es){
     es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});
-  },{threshold:0.12});
+  },{threshold:0.05,rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('[data-reveal]').forEach(function(el){ro.observe(el);});
 }else{
   document.querySelectorAll('[data-reveal]').forEach(function(el){el.classList.add('in');});
